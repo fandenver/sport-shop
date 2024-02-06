@@ -223,7 +223,7 @@ div.navBar {
     letter-spacing: 0;
     top: 3px;
     color: #4A4D4A;
-;
+    left: -5px;
 }
 
 #RequestCall {
@@ -451,11 +451,11 @@ body > div > div.contactWithMe > div:nth-child(3) {
 
 .mainMenu {
     display: inline-block;
+    position: absolute;
     width: 448px;
     height: 736px;
     top: 372px;
     left: 254px;
-    position: absolute;
 }
 
 .headerMainMenu {
@@ -490,64 +490,78 @@ body > div > div.contactWithMe > div:nth-child(3) {
     height: 676px;
     top: 60px;
     left: 1px;
-    /*background-color: green;*/
+}
+
+
+.left, .right {
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    left: 417px;
+}
+
+.left {
+    border-top: 3px solid #00156999;
+    border-left: 3px solid #00156999;
+    transform: rotate(-225deg);
 }
 
 .leftOne, .rightOne {
-    cursor: pointer;
-    position: absolute;
     top: 72px;
-    left: 417px;
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-}
-
-.leftOne {
-    border-top: 3px solid #00156999;
-    border-left: 3px solid #00156999;
-    transform: rotate(-225deg);
 }
 
 .leftTwo, .rightTwo {
-    cursor: pointer;
-    position: absolute;
     top: 112px;
-    left: 417px;
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-}
-
-.leftTwo {
-    border-top: 3px solid #00156999;
-    border-left: 3px solid #00156999;
-    transform: rotate(-225deg);
 }
 
 .leftTree, .rightTree {
-    cursor: pointer;
-    position: absolute;
     top: 155px;
-    left: 417px;
-    display: inline-block;
-    width: 8px;
-    height: 8px;
 }
 
-.leftTree {
-    border-top: 3px solid #00156999;
-    border-left: 3px solid #00156999;
-    transform: rotate(-225deg);
+.leftFour, .rightFour {
+    top: 198px;
 }
 
-.one {
-    display: inline-block;
-    position: absolute;
-    width: 339px;
-    height: 21px;
-    top: 69px;
-    left: 22px;
+.leftFive, .rightFive {
+    top: 241px;
+}
+
+.leftSix, .rightSix {
+    top: 284px;
+}
+
+.leftSeven, .rightSeven {
+    top: 330px;
+}
+
+.leftEight, .rightEight {
+    top: 394px;
+}
+
+.leftNine, .rightNine {
+    top: 458px;
+}
+
+.leftTen, .rightTen {
+    top: 527px;
+}
+
+.leftEleven, .rightEleven {
+    top: 570px;
+}
+
+.leftTwelve, .rightTwelve {
+    top: 613px;
+}
+
+.leftThirteen, .rightThirteen {
+    top: 656px;
+}
+
+.leftFourteen, .rightFourteen {
+    top: 699px;
 }
 
 .choiceChapter > div > :nth-child(1) {
@@ -558,123 +572,208 @@ body > div > div.contactWithMe > div:nth-child(3) {
     left: 21px;
 }
 
-.two{
+.commonSpanMainMenu {
     display: inline-block;
     position: absolute;
+    left: 22px;
+}
+
+.one {
+    width: 339px;
+    height: 21px;
+    top: 69px;
+}
+
+.two {
     width: 289px;
     height: 21px;
     top: 112px;
-    left: 21px;
 }
 
 .three {
-    display: inline-block;
-    position: absolute;
     width: 279px;
     height: 21px;
     top: 155px;
-    left: 21px;
 }
 
 .four {
-    display: inline-block;
-    position: absolute;
     width: 265px;
     height: 21px;
     top: 198px;
-    left: 21px;
 }
 
 .five {
-    display: inline-block;
-    position: absolute;
     width: 254px;
     height: 21px;
     top: 241px;
-    left: 21px;
 }
 
-
 .six {
-    display: inline-block;
-    position: absolute;
     width: 389px;
     height: 24px;
     top: 284px;
-    left: 22px;
 }
 
 .seven {
-    display: inline-block;
-    position: absolute;
     width: 372px;
     height: 42px;
     top: 330px;
-    left: 21px;
 }
 
 .eight {
-    display: inline-block;
-    position: absolute;
     width: 297px;
     height: 42px;
     top: 394px;
-    left: 22px;
 }
 
 .nine {
-    display: inline-block;
-    position: absolute;
     width: 337px;
     height: 47px;
     top: 458px;
-    left: 21px;
 }
 
 .ten {
-    display: inline-block;
-    position: absolute;
     width: 337px;
     height: 21px;
     top: 527px;
-    left: 21px;
 }
 
 .eleven {
-    display: inline-block;
-    position: absolute;
     width: 209px;
     height: 21px;
     top: 570px;
-    left: 21px;
 }
 
 .twelve {
-    display: inline-block;
-    position: absolute;
     width: 254px;
     height: 21px;
     top: 613px;
-    left: 21px;
 }
 
 .thirteen {
-    display: inline-block;
-    position: absolute;
     width: 107px;
     height: 21px;
     top: 656px;
-    left: 21px;
 }
 
 .fourteen {
-    display: inline-block;
-    position: absolute;
     width: 127px;
     height: 21px;
     top: 699px;
-    left: 21px;
 }
+
+.mainBanner {
+    display: inline-block;
+    position: absolute;
+    width: 927px;
+    height: 742px;
+    top: 372px;
+    left: 738px;
+    border-radius: 10px;
+}
+
+.mainBannerText {
+    display: inline-block;
+    position: absolute;
+    width: 922px;
+    height: 132px;
+    top: 2px;
+    left: 2px;
+    font-family: Rubik, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #4A4D4A;
+}
+
+.orangeText {
+    display: inline;
+    color: #FFAF37;
+}
+
+.mainBannerImage {
+    display: inline-block;
+    position: absolute;
+    width: 922px;
+    height: 590px;
+    top: 522px;
+    left: 740px;
+    border-radius: 10px;
+}
+
+.mainBannerImageInBlock {
+    display: inline-block;
+    position: absolute;
+    width: 922px;
+    height: 590px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px 0 #00000040;
+}
+
+.leftMain, .rightMain {
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    width: 240px;
+    height: 175px;
+    left: 1450px;
+    top: 960px;
+}
+
+.leftMain {
+    border-top: 8px solid #1F347B;
+    border-left: 8px solid #1F347B;
+    transform: rotate(-180deg);
+}
+
+.circle {
+    display: inline-block;
+    position: absolute;
+    background-color: #1F347B;
+    border-radius: 100%;
+    left: 1682px;
+    top: 955px;
+    width: 24px;
+    height: 24px;
+}
+
+.bannerTextOnImage {
+    display: inline-block;
+    position: absolute;
+    left: 1240px;
+    top: 700px;
+    height: 116px;
+    width: 422px;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: 550;
+    line-height: 37px;
+    font-family: Rubik, sans-serif;
+}
+
+#showOffer {
+    display: inline-block;
+    position: relative;
+    background-color: #FFAF37;
+    left: 1270px;
+    top: 0;
+    width: 330px;
+    height: 69px;
+    border: none;
+}
+
+.buttonTextBanner {
+    width: 257px;
+    height: 20px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
 
 
 
