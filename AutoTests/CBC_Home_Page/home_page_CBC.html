@@ -3,56 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>CBC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style_CBC.css">
 </head>
 <body>
 <div class="hatBlock">
-    <img src="images/img_label.png" alt="label" class="labelImg">
-    <div class="navBar">
-        <span class="sizesOne commonSizesNumber">Сервисный центр</span>
-        <span class="sizesTwo commonSizesNumber">Доставка и оплата</span>
-        <span class="sizesThree commonSizesNumber">Отзывы</span>
-        <span class="sizesFor commonSizesNumber">Личный кабинет</span>
-        <span class="sizesFive commonSizesNumber">О компании</span>
-        <span class="sizesSix commonSizesNumber">Контакты</span>
-    </div>
-    <div class="description">
-        <span>СВС - надежный поставщик компьютерной техники рядом с вами. 28 лет в Жуковском</span>
-    </div>
-    <div class="phoneNumber">
-        <img class="phone" src="images/phone.png" alt="no">
-        <span class="number">+7 495 723-09-71</span>
-        <button id="RequestCall">
-            <span>Заказать звонок</span>
-        </button>
-    </div>
-    <div>
+    <div class="innerContainer">
+        <div class="labelImg"></div>
+        <div class="navBar">
+            <span class="sizesOne commonSizesNumber">Сервисный центр</span>
+            <span class="sizesTwo commonSizesNumber">Доставка и оплата</span>
+            <span class="sizesThree commonSizesNumber">Отзывы</span>
+            <span class="sizesFor commonSizesNumber">Личный кабинет</span>
+            <span class="sizesFive commonSizesNumber">О компании</span>
+            <span class="sizesSix commonSizesNumber">Контакты</span>
+        </div>
+        <span class="description">СВС - надежный поставщик компьютерной техники рядом с вами. 28 лет в Жуковском</span>
+        <div class="phoneNumber">
+            <div class="phoneImage"></div>
+            <span class="number">+7 495 723-09-71</span>
+            <button id="RequestCall">
+                <span>Заказать звонок</span>
+            </button>
+        </div>
         <label class="numberAndButton">
             <input class="searchField" type="text" placeholder="Поиск">
             <button id="searchButton" type="submit">🔍</button>
         </label>
     </div>
     <div class="contactWithMe">
-        <div>
-            <img src="images/whatsApp.png" alt="no" class="whatsApp">
-            <span class="contactsOne">Напишите нам в Whats APP</span>
-        </div>
-        <div>
-            <img src="images/sms.png" alt="no" class="sms">
-            <span class="contactsTwo">mail@svs92.ru</span>
-        </div>
-        <div>
-            <img src="images/geo.png" alt="no" class="geo">
-            <span class="contactsThree">г. Волгоград<br>ул. Московская, 3</span>
-        </div>
+        <div class="whatsApp"></div>
+        <span class="contactsOne">Напишите нам в Whats APP</span>
+        <div class="sms"></div>
+        <span class="contactsTwo">mail@svs92.ru</span>
+        <div class="geo"></div>
+        <span class="contactsThree"><b class="city">г. Волгоград</b><br>ул. Московская, 3</span>
     </div>
     <div class="bottom_navBar">
-        <div class="align">
             <span class="bottom_navBar_one">КОМПЛЕКСНАЯ ПОСТАВКА</span>
             <span class="bottom_navBar_two">ПУСКО-НАКЛАДКА IT-ОБОРУДОВАНИЯ</span>
             <span class="bottom_navBar_three">АУДИТ И ОПТИМИЗАЦИЯ ПАРКА ПЕЧАТИ</span>
             <span class="bottom_navBar_for">ТЕНДЕРЫ</span>
-        </div>
     </div>
 </div>
 <div class="mainMenu">
@@ -146,45 +139,44 @@
         <div class="right rightFourteen"></div>
     </div>
 </div>
-<div class="mainBanner">
-        <span class="mainBannerText">Компьютерный магазин <span class="orangeText">СВС в Жуковском</span> Поставки компьютерной
-            техники, сервис-центр и услуги для компаний по IT-интеграции</span>
-</div>
-<div class="mainBannerImage">
-    <img src="images/mainBannerImage.png" alt="no" class="mainBannerImageInBlock">
-<div class="leftMain"></div>
-<div class="rightMain"></div>
-<span class="bannerTextOnImage">Поставки компьютерной техники для офисов <br> под “ключ”</span>
-<button id="showOffer">
-    <span class="buttonTextBanner">Смотреть предложение</span>
-</button>
-<div class="buttonBanner buttonBannerLeft">
-    <div class="leftBannerButton leftButtonBannerOne"></div>
-    <div class="rightBannerButton rightButtonBannerOne"></div>
-</div>
-<div class="buttonBanner buttonBannerRight">
-    <div class="leftBannerButton leftButtonBannerTwo"></div>
-    <div class="rightBannerButton rightButtonBannerTwo"></div>
-</div>
-</div>
-<div class="paginationBanner">
-    <div class="circlePagination circlePaginationOne"></div>
-    <div class="circlePagination"></div>
-    <div class="circlePagination"></div>
-    <div class="circlePagination"></div>
-    <div class="circlePagination"></div>
-</div>
-<div class="sideButtons">
-    <div class="oneSideButton">
-        <img src="images/sideMenuButtons/basket.png" alt="no" class="oneSideButtonImage">
-    </div>
-    <div class="twoSideButton">
-        <img src="images/sideMenuButtons/heart.png" alt="no" class="oneSideButtonImage">
-    </div>
-    <div class="threeSideButton">
-        <img src="images/sideMenuButtons/columns.png" alt="no" class="oneSideButtonImage">
-    </div>
-</div>
-<div class="circle"></div>
+<!--<div class="mainBanner">-->
+<!--        <span class="mainBannerText">Компьютерный магазин <span class="orangeText">СВС в Жуковском</span> Поставки компьютерной-->
+<!--            техники, сервис-центр и услуги для компаний по IT-интеграции</span>-->
+<!--</div>-->
+<!--<div class="mainBannerImage">-->
+<!--<div class="leftMain"></div>-->
+<!--<div class="rightMain"></div>-->
+<!--<span class="bannerTextOnImage">Поставки компьютерной техники для офисов <br> под “ключ”</span>-->
+<!--<button id="showOffer">-->
+<!--    <span class="buttonTextBanner">Смотреть предложение</span>-->
+<!--</button>-->
+<!--<div class="buttonBanner buttonBannerLeft">-->
+<!--    <div class="leftBannerButton leftButtonBannerOne"></div>-->
+<!--    <div class="rightBannerButton rightButtonBannerOne"></div>-->
+<!--</div>-->
+<!--<div class="buttonBanner buttonBannerRight">-->
+<!--    <div class="leftBannerButton leftButtonBannerTwo"></div>-->
+<!--    <div class="rightBannerButton rightButtonBannerTwo"></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="paginationBanner">-->
+<!--    <div class="circlePagination circlePaginationOne"></div>-->
+<!--    <div class="circlePagination"></div>-->
+<!--    <div class="circlePagination"></div>-->
+<!--    <div class="circlePagination"></div>-->
+<!--    <div class="circlePagination"></div>-->
+<!--</div>-->
+<!--<div class="sideButtons">-->
+<!--    <div class="oneSideButton">-->
+<!--        <img src="images/sideMenuButtons/basket.png" alt="no" class="oneSideButtonImage">-->
+<!--    </div>-->
+<!--    <div class="twoSideButton">-->
+<!--        <img src="images/sideMenuButtons/heart.png" alt="no" class="oneSideButtonImage">-->
+<!--    </div>-->
+<!--    <div class="threeSideButton">-->
+<!--        <img src="images/sideMenuButtons/columns.png" alt="no" class="oneSideButtonImage">-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div class="circle"></div>-->
 </body>
 </html>

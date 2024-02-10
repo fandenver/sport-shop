@@ -1,49 +1,61 @@
 body {
+    width: 100%;
+    height: 100%;
     max-width: 1920px;
-    height: 6762px;
-    top: 2177px;
-    left: 280px;
-    margin-left: auto;
-    margin-right: auto;
+    max-height: 6762px;
+    margin: 0 auto;
+    font-family: Rubik, sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
 }
 
 .hatBlock {
-    justify-content: center;
-    width: 1920px;
-    height: 864px;
     display: flex;
-    margin-top: 30px;
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+    max-height: 864px;
 }
 
-div.navBar {
-    margin-left: 20px;
+.innerContainer {
+    display: flex;
+    width: 1415px;
+    height: 163px;
+    margin: 15px auto auto 256px;
 }
+
 
 .labelImg {
     display: flex;
     position: relative;
-    width: 329px;
-    height: 138px;
-    left: 255px;
+    height: 106px;
+    width: 330px;
+    margin-left: 0;
+    background: url("images/img_label.png");
+    background-size: 330px;
 }
 
 .navBar {
     display: flex;
     position: relative;
-    align-items: center;
     width: 1046px;
     height: 24px;
-    top: 18px;
-    left: 275px;
-    gap: 48px;
+    gap: 44px;
+    margin-top: 0;
+    margin-left: 20px;
 }
 
 
 .commonSizesNumber {
-    font-family: Rubik, sans-serif;
+    margin: 0;
     font-weight: 500;
     text-align: center;
-    position: relative;
     line-height: 24px;
     font-size: 20px;
     letter-spacing: 0;
@@ -52,7 +64,6 @@ div.navBar {
 .sizesOne {
     width: 178px;
     height: 24px;
-
 }
 
 .commonSizesNumber::after {
@@ -119,11 +130,11 @@ div.navBar {
 }
 
 .description {
-    display: inline-block;
-    position: relative;
-    top: 70px;
-    margin-left: -765px;
-    /*width: 403px;*/
+    display: flex;
+    position: absolute;
+    margin-top: 59px;
+    margin-left: 355px;
+    width: 403px;
     height: 45px;
     color: #4A4D4A;
     font-family: Rubik, sans-serif;
@@ -135,45 +146,39 @@ div.navBar {
 }
 
 .phoneNumber {
-    display: inline-block;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
     width: 569px;
     height: 37px;
-    top: 70px;
-    left: 360px;
+    margin-top: 59px;
+    margin-left: 825px;
 }
 
-.phone {
-    display: inline-flex;
-    position: relative;
-    padding-top: 5px;
+.phoneImage {
     height: 52px;
     width: 52px;
-    right: 320px;
-    top: -12px
+    background: url("images/phone.png");
+    background-size: cover;
 }
 
+
 .number {
-    position: relative;
     font-family: Montserrat, sans-serif;
     font-size: 30px;
     font-weight: 700;
     letter-spacing: 0;
-    top: -30px;
     color: #4A4D4A;
-    right: 300px;
 }
 
 #RequestCall {
-    position: relative;
     text-align: center;
+    margin-right: 0;
     width: 240px;
     height: 37px;
-    top: -65px;
-    left: 30px;
     background-color: #FFAF37;
     border: none;
-    font-family: Rubik, sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 21px;
@@ -182,16 +187,16 @@ div.navBar {
 }
 
 .numberAndButton {
-    position: relative;
+    display: flex;
+    position: absolute;
+    justify-content: right;
+    margin-top: 120px;
+    margin-left: 0;
 }
 
 .searchField {
-    display: flex;
-    position: absolute;
     width: 690px;
     height: 40px;
-    top: 170px;
-    right: 462px;
 }
 
 .searchField::placeholder {
@@ -200,133 +205,104 @@ div.navBar {
 }
 
 #searchButton {
+    position: absolute;
     font-size: 20px;
     background-color: white;
     border: none;
-    position: relative;
-    right: 480px;
-    top: 185px;
+    margin-right: 10px;
+    margin-top: 4px;
 }
 
 .contactWithMe {
     display: flex;
-    position: relative;
-    top: 170px;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-between;
     height: 50px;
     width: 624px;
-    right: 354px;
-
+    margin-top: 135px;
+    margin-left: 1039px;
 }
 
 .whatsApp {
-    position: absolute;
     width: 39px;
     height: 38px;
-}
-
-
-body > div > div.contactWithMe > div:nth-child(1) {
-    height: 34px;
-    width: 144px;
-    position: relative;
+    background: url("images/whatsApp.png");
+    background-size: 44px;
 }
 
 .contactsOne {
-    display: flex;
-    position: absolute;
-    margin-left: 50px;
+    margin-left: 10px;
     height: 34px;
     width: 110px;
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
-    font-weight: bold;
-}
-
-body > div > div.contactWithMe > div:nth-child(2) {
-    height: 21px;
-    width: 164px;
-    position: relative;
-    padding-left: 20px;
 }
 
 .sms {
-    position: absolute;
+    margin-left: 76px;
     width: 49px;
     height: 38px;
-    padding-left: 60px;
+    background: url("images/sms.png");
+    background-size: 48px;
 }
 
 .contactsTwo {
-    display: flex;
-    position: absolute;
-    top: 7px;
+    margin-top: 4px;
+    margin-left: 12px;
     height: 21px;
     width: 164px;
-    padding-left: 120px;
     font-size: 18px;
-    text-align: center;
-    font-weight: bold;
-}
-
-body > div > div.contactWithMe > div:nth-child(3) {
-    height: 50px;
-    width: 176px;
-    position: relative;
 }
 
 .geo {
-    position: absolute;
     width: 45px;
     height: 45px;
-    padding-left: 110px;
-    top: -5px;
+    background: url("images/geo.png");
+    background-size: cover;
 }
 
 .contactsThree {
-    display: flex;
-    position: absolute;
-    padding-left: 160px;
     height: 50px;
     width: 176px;
     font-size: 16px;
-    text-align: left;
-    font-weight: bold;
+    text-align: center;
+}
+
+.city {
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .bottom_navBar {
     display: flex;
     position: absolute;
-    width: 1920px;
+    width: 100%;
     height: 60px;
-    top: 264px;
     background-color: #F0F0FF;
+    margin-top: 202px;
+    left: 0;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.align {
-    font-max-size: 18px;
-    display: flex;
-    gap: 116px;
-    padding-top: 20px;
-    position: relative;
-    left: 256px;
-    width: 1412px;
-    height: 29px;
-    font-weight: bold;
-    font-family: Rubik, sans-serif;
-}
 
 .bottom_navBar_one {
+    margin-left: 13%;
     display: flex;
-    position: relative;
     height: 29px;
     width: 245px;
 }
 
-.bottom_navBar_one::after {
+
+.bottom_navBar_one:after, .bottom_navBar_two::after,
+.bottom_navBar_three::after, .bottom_navBar_for::after {
     content: '';
     position: absolute;
     padding-top: 25px;
-    width: 220px;
     height: 2px;
     background-image: linear-gradient(to right, black 60%, transparent 0);
     background-position: bottom;
@@ -334,91 +310,68 @@ body > div > div.contactWithMe > div:nth-child(3) {
     background-repeat: repeat-x;
 }
 
+
+.bottom_navBar_one:after {
+    width: 232px;
+}
+
 .bottom_navBar_two {
     display: flex;
-    position: relative;
     width: 343px;
     height: 25px;
 }
 
 .bottom_navBar_two::after {
-    content: '';
-    position: absolute;
-    padding-top: 25px;
-    width: 310px;
-    height: 2px;
-    background-image: linear-gradient(to right, black 60%, transparent 0);
-    background-position: bottom;
-    background-size: 4px 1px;
-    background-repeat: repeat-x;
+    width: 340px;
 }
 
 .bottom_navBar_three {
     display: flex;
-    position: relative;
     width: 377px;
     height: 21px;
 }
 
 .bottom_navBar_three::after {
-    content: '';
-    position: absolute;
-    padding-top: 25px;
-    width: 330px;
-    height: 2px;
-    background-image: linear-gradient(to right, black 60%, transparent 0);
-    background-position: bottom;
-    background-size: 4px 1px;
-    background-repeat: repeat-x;
+    width: 360px;
 }
 
 .bottom_navBar_for {
     display: flex;
-    position: relative;
+    margin-right: 13%;
     width: 99px;
     height: 21px;
 }
 
 .bottom_navBar_for::after {
-    content: '';
-    position: absolute;
-    padding-top: 25px;
     width: 85px;
-    height: 2px;
-    background-image: linear-gradient(to right, black 60%, transparent 0);
-    background-position: bottom;
-    background-size: 4px 1px;
-    background-repeat: repeat-x;
 }
 
 .mainMenu {
-    display: inline-block;
-    position: relative;
+    display: flex;
+    position: absolute;
     width: 448px;
     height: 736px;
-    top: -612px;
-    left: 255px;
-    margin-left: auto;
+    top: 312px;
+    margin-left: 255px;
     margin-right: auto;
 }
 
 .headerMainMenu {
-    width: 448px;
+    display: inline-block;
+    width: 447px;
     height: 60px;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     background: #F0F0FF;
     font-weight: bold;
-    display: inline-block;
 }
 
 .headerSpan {
-    display: inline-block;
+    display: flex;
     position: relative;
     width: 106px;
     height: 26px;
-    top: 17px;
-    left: 21px;
-    font-family: Rubik, sans-serif;
+    margin-top: 17px;
+    margin-left: 21px;
     font-size: 24px;
     font-weight: 500;
     line-height: 29px;
@@ -427,13 +380,14 @@ body > div > div.contactWithMe > div:nth-child(3) {
 }
 
 .choiceChapter {
+    display: flex;
+    position: absolute;
+    margin-top: 60px;
     box-shadow: 0 4px 20px 0 #00000040;
     font-weight: 500;
     font-size: 18px;
     width: 447px;
     height: 676px;
-    top: 60px;
-    left: 1px;
 }
 
 
@@ -443,7 +397,7 @@ body > div > div.contactWithMe > div:nth-child(3) {
     display: inline-block;
     width: 8px;
     height: 8px;
-    left: 417px;
+    margin-left: 417px;
 }
 
 .left {
@@ -623,7 +577,6 @@ body > div > div.contactWithMe > div:nth-child(3) {
     height: 132px;
     top: 2px;
     left: 200px;
-    font-family: Rubik, sans-serif;
     font-size: 36px;
     font-weight: 700;
     line-height: 44px;
@@ -645,16 +598,18 @@ body > div > div.contactWithMe > div:nth-child(3) {
     top: -1200px;
     left: 755px;
     border-radius: 10px;
+    background: url("images/mainBannerImage.png");
+    background-size: cover;
 }
 
-.mainBannerImageInBlock {
-    display: inline-block;
-    position: relative;
-    width: 922px;
-    height: 590px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px 0 #00000040;
-}
+/*.mainBannerImageInBlock {*/
+/*    display: inline-block;*/
+/*    position: relative;*/
+/*    width: 922px;*/
+/*    height: 590px;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 4px 20px 0 #00000040;*/
+/*}*/
 
 .leftMain, .rightMain {
     cursor: pointer;
@@ -686,7 +641,7 @@ body > div > div.contactWithMe > div:nth-child(3) {
 .bannerTextOnImage {
     display: inline-block;
     position: relative;
-    right: 10px;
+    margin-right: 10px;
     bottom: 600px;
     height: 116px;
     width: 422px;
@@ -695,11 +650,10 @@ body > div > div.contactWithMe > div:nth-child(3) {
     color: #FFFFFF;
     font-weight: 550;
     line-height: 37px;
-    font-family: Rubik, sans-serif;
 }
 
 #showOffer {
-    display: inline-block;
+    display: block;
     position: relative;
     background-color: #FFAF37;
     left: 500px;
@@ -771,7 +725,7 @@ body > div > div.contactWithMe > div:nth-child(3) {
     position: relative;
     height: 20px;
     min-width: 152px;
-    right: 20px;
+    margin-right: 20px;
     bottom: 1480px;
 }
 
