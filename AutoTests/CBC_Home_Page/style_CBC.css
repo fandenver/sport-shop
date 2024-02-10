@@ -1,9 +1,6 @@
 body {
     width: 100%;
-    height: 100%;
-    max-width: 1920px;
-    max-height: 6762px;
-    margin: 0 auto;
+    margin: 0;
     font-family: Rubik, sans-serif;
     font-weight: 500;
     line-height: 24px;
@@ -17,16 +14,14 @@ body {
 
 .hatBlock {
     display: flex;
-    max-width: 1920px;
+    /*max-width: 1920px;*/
     width: 100%;
-    height: 100%;
-    max-height: 864px;
 }
 
 .innerContainer {
     display: flex;
-    width: 1415px;
-    height: 163px;
+    /*width: 1415px;*/
+    /*height: 163px;*/
     margin: 15px auto auto 256px;
 }
 
@@ -34,8 +29,8 @@ body {
 .labelImg {
     display: flex;
     position: relative;
-    height: 106px;
-    width: 330px;
+    height: 6.625em;
+    width: 20.625em;
     margin-left: 0;
     background: url("images/img_label.png");
     background-size: 330px;
@@ -44,7 +39,7 @@ body {
 .navBar {
     display: flex;
     position: relative;
-    width: 1046px;
+    width: 75%;
     height: 24px;
     gap: 44px;
     margin-top: 0;
@@ -278,9 +273,9 @@ body {
     display: flex;
     position: absolute;
     width: 100%;
-    height: 60px;
+    /*height: 60px;*/
     background-color: #F0F0FF;
-    margin-top: 202px;
+    margin-top: 10%;
     left: 0;
     justify-content: space-between;
     text-align: center;
@@ -351,7 +346,7 @@ body {
     position: absolute;
     width: 448px;
     height: 736px;
-    top: 312px;
+    margin-top: 176px;
     margin-left: 255px;
     margin-right: auto;
 }
@@ -381,7 +376,9 @@ body {
 
 .choiceChapter {
     display: flex;
+    flex-direction: column;
     position: absolute;
+    align-items: stretch;
     margin-top: 60px;
     box-shadow: 0 4px 20px 0 #00000040;
     font-weight: 500;
@@ -392,12 +389,14 @@ body {
 
 
 .left, .right {
-    cursor: pointer;
+    display: flex;
+    align-items: center;
     position: absolute;
-    display: inline-block;
     width: 8px;
     height: 8px;
-    margin-left: 417px;
+    margin-left: 377px;
+    cursor: pointer;
+    margin-bottom: 15px;
 }
 
 .left {
@@ -406,61 +405,6 @@ body {
     transform: rotate(-225deg);
 }
 
-.leftOne, .rightOne {
-    top: 72px;
-}
-
-.leftTwo, .rightTwo {
-    top: 112px;
-}
-
-.leftTree, .rightTree {
-    top: 155px;
-}
-
-.leftFour, .rightFour {
-    top: 198px;
-}
-
-.leftFive, .rightFive {
-    top: 241px;
-}
-
-.leftSix, .rightSix {
-    top: 284px;
-}
-
-.leftSeven, .rightSeven {
-    top: 330px;
-}
-
-.leftEight, .rightEight {
-    top: 394px;
-}
-
-.leftNine, .rightNine {
-    top: 458px;
-}
-
-.leftTen, .rightTen {
-    top: 527px;
-}
-
-.leftEleven, .rightEleven {
-    top: 570px;
-}
-
-.leftTwelve, .rightTwelve {
-    top: 613px;
-}
-
-.leftThirteen, .rightThirteen {
-    top: 656px;
-}
-
-.leftFourteen, .rightFourteen {
-    top: 699px;
-}
 
 .choiceChapter > div > :nth-child(1) {
     display: inline-block;
@@ -471,93 +415,82 @@ body {
 }
 
 .commonSpanMainMenu {
-    display: inline-block;
-    position: absolute;
+    position: relative;
+    display: flex;
     left: 22px;
+    margin-bottom: 22px;
 }
 
 .one {
     width: 339px;
     height: 21px;
-    top: 69px;
+    margin-top: 10px;
 }
 
 .two {
     width: 289px;
     height: 21px;
-    top: 112px;
 }
 
 .three {
     width: 279px;
     height: 21px;
-    top: 155px;
 }
 
 .four {
     width: 265px;
     height: 21px;
-    top: 198px;
 }
 
 .five {
     width: 254px;
     height: 21px;
-    top: 241px;
 }
 
 .six {
     width: 389px;
     height: 24px;
-    top: 284px;
+    /*top: 284px;*/
 }
 
 .seven {
     width: 372px;
     height: 42px;
-    top: 330px;
 }
 
 .eight {
     width: 297px;
     height: 42px;
-    top: 394px;
 }
 
 .nine {
     width: 337px;
     height: 47px;
-    top: 458px;
 }
 
 .ten {
     width: 337px;
     height: 21px;
-    top: 527px;
 }
 
 .eleven {
     width: 209px;
     height: 21px;
-    top: 570px;
 }
 
 .twelve {
     width: 254px;
     height: 21px;
-    top: 613px;
 }
 
 .thirteen {
     width: 107px;
     height: 21px;
-    top: 656px;
 }
 
 .fourteen {
     width: 127px;
     height: 21px;
-    top: 699px;
 }
 
 .mainBanner {
@@ -788,15 +721,3 @@ body {
     border-bottom-left-radius: 10px;
     border-top: 1px solid #1F347B;
 }
-
-
-
-
-
-
-
-
-
-
-
-
