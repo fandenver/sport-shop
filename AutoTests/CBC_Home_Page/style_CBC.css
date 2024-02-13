@@ -28,13 +28,12 @@ body {
 
 
 .labelImg {
-    display: flex;
-    position: relative;
-    height: 6.625em;
-    width: 20.625em;
+    height: 138px;
+    width: 329px;
     margin-left: 0;
-    background: url("images/img_label.png");
+    background: url("images/image_label.png");
     background-size: 330px;
+    margin-top: -12px;
 }
 
 .navBar {
@@ -160,8 +159,8 @@ body {
 }
 
 .phoneImage {
-    height: 52px;
-    width: 52px;
+    height: 30px;
+    width: 30px;
     background: url("images/phone.png");
     background-size: cover;
 }
@@ -235,10 +234,9 @@ body {
 }
 
 .whatsApp {
-    width: 39px;
-    height: 38px;
+    width: 24px;
+    height: 24px;
     background: url("images/whatsApp.png");
-    background-size: 44px;
 }
 
 .contactsOne {
@@ -251,11 +249,11 @@ body {
 }
 
 .sms {
-    margin-left: 76px;
-    width: 49px;
-    height: 38px;
+    margin-top: 9px;
+    margin-left: 80px;
+    width: 24px;
+    height: 18px;
     background: url("images/sms.png");
-    background-size: 48px;
 }
 
 .contactsTwo {
@@ -267,10 +265,10 @@ body {
 }
 
 .geo {
-    width: 45px;
-    height: 45px;
+    margin-top: 6px;
+    width: 20px;
+    height: 27px;
     background: url("images/geo.png");
-    background-size: cover;
 }
 
 .contactsThree {
@@ -666,7 +664,7 @@ body {
 }
 
 .leftButtonBannerTwo, .rightButtonBannerTwo {
-    left: 12px;
+    left: 15px;
     top: 15px;
 }
 
@@ -704,30 +702,41 @@ body {
 }
 
 .sideButtons {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     height: 271px;
     width: 90px;
-    right: 0;
+    left: 1813px;
     margin-top: -690px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     box-shadow: 0 4px 20px 0 #00000040;
+    cursor: pointer;
+}
+
+.oneSideButton, .twoSideButton , .threeSideButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s;
 }
 
 .oneSideButton {
-    display: inline-block;
-    position: relative;
     height: 90px;
     width: 90px;
     background-color: #1F347B;
     border-top-left-radius: 10px;
+    transition: background-color 0.5s;
+}
+
+.oneSideButton:hover {
+    background-color: #4f980a;
 }
 
 .oneSideButtonImage {
-    position: relative;
-    height: 60px;
-    width: 60px;
+    height: 30px;
+    width: 30px;
     top: 7px;
     left: 15px;
 }
@@ -735,13 +744,22 @@ body {
 .twoSideButton {
     height: 90px;
     width: 90px;
+    transition: background-color 0.5s;
+}
+
+.twoSideButton:hover {
+    background-color: #4f980a;
 }
 
 .threeSideButton {
-    height: 90px;
+    height: 91px;
     width: 90px;
     border-bottom-left-radius: 10px;
     border-top: 1px solid #1F347B;
+}
+
+.threeSideButton:hover {
+    background-color: #4f980a;
 }
 
 .manyBanners {
@@ -751,20 +769,27 @@ body {
     margin-left: 255px;
     height: 530px;
     width: 1410px;
-    background-color: #4f980a;
     font-family: Rubik, sans-serif;
+    font-size: 18px;
 }
 
-.workCBC {
+.workCBC, .reliableSupplier,
+.fullComplex, .orderKey,
+.directDeliveries, .qualityService,
+.cooperation {
     display: flex;
     justify-content: center;
     text-align: center;
-    height: 250px;
-    width: 330px;
-    background-color: #F0F0FF;
     box-shadow: 0 4px 20px 0 #00000040;
     transition: background-color 0.5s;
     cursor: pointer;
+    background-color: #FFFF;
+}
+
+.workCBC {
+    height: 250px;
+    width: 330px;
+    background-color: #F0F0FF;
 }
 
 .workCBC:hover {
@@ -779,20 +804,13 @@ body {
     font-weight: 500;
 }
 
-.ReliableSupplier {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: #FFF;
-    height: 246px;
+.reliableSupplier {
+    height: 250px;
     width: 323px;
     margin: 0 35px 34px 30px;
-    box-shadow: 0 4px 20px 0 #00000040;
-    transition: background-color 0.5s;
-    cursor: pointer;
 }
 
-.ReliableSupplier:hover {
+.reliableSupplier:hover {
     background-color: #cec9c9;
 }
 
@@ -807,8 +825,8 @@ body {
 
 .oneImageReliable {
     margin-left: 93px;
-    height: 68px;
-    width: 81px;
+    height: 60px;
+    width: 60px;
     background: url("images/manyBanners/oneImage.png");
 }
 
@@ -827,26 +845,19 @@ body {
 }
 
 .fullComplex {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: #FFF;
     margin: 0 32px 34px 0;
-    box-shadow: 0 4px 20px 0 #00000040;
-    transition: background-color 0.5s;
     height: 250px;
     width: 330px;
-    cursor: pointer;
 }
 
 .fullComplex:hover {
     background-color: #cec9c9;
 }
 
-.twoImageReliable {
-    margin-left: 93px;
-    height: 69px;
-    width: 101px;
+.twoImageReliableOne {
+    margin-left: 103px;
+    height: 62px;
+    width: 72px;
     background: url("images/manyBanners/twoImage.png");
 }
 
@@ -873,16 +884,9 @@ body {
 }
 
 .orderKey {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    background-color: #FFF;
     margin: 0 0 0 0;
-    box-shadow: 0 4px 20px 0 #00000040;
-    transition: background-color 0.5s;
     height: 250px;
     width: 330px;
-    cursor: pointer;
 }
 
 .orderKey:hover {
@@ -891,8 +895,8 @@ body {
 
 .threeImageOrderKey {
     margin-left: 58px;
-    height: 74px;
-    width: 62px;
+    height: 70px;
+    width: 50px;
     background: url("images/manyBanners/threeImage.png");
 }
 
@@ -912,9 +916,189 @@ body {
 }
 
 .orderKeySpanTwo {
-    /*font-size: 18px;*/
     height: 63px;
     width: 281px;
     margin-top: 12px;
     margin-left: -50px;
+}
+
+.directDeliveries {
+    flex-direction: column;
+    margin: -4px 0 0 0;
+    height: 250px;
+    width: 690px;
+}
+
+.directDeliveries:hover {
+    background-color: #cec9c9;
+}
+
+.spanDirectDeliveries {
+    display: flex;
+    width: 178px;
+    height: 181px;
+    margin: 29px 36px;
+}
+
+.fourImageDirectDeliveries {
+    margin-top: 24px;
+    margin-left: 310px;
+    height: 73px;
+    width: 70px;
+    background: url("images/manyBanners/manyPicturesBanner/fourImageTop.png");
+}
+
+.directDeliveriesSpanOne {
+    margin-left: 232px;
+    height: 29px;
+    width: 213px;
+    font-size: 24px;
+    padding-top: 8px;
+}
+
+.manyPictures {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    height: 67px;
+    width: 630px;
+}
+
+.oneBottom {
+    height: 56px;
+    width: 45px;
+}
+
+.twoBottom {
+    height: 44px;
+    width: 50px;
+}
+
+.threeBottom {
+    height: 15px;
+    width: 75px;
+}
+
+.fourBottom {
+    height: 60px;
+    width: 60px;
+}
+
+.fiveBottom {
+    height: 12px;
+    width: 80px;
+}
+
+.sixBottom {
+    height: 46px;
+    width: 70px;
+}
+
+.sevenBottom {
+    height: 23px;
+    width: 70px;
+}
+
+.qualityService {
+    flex-direction: column;
+    margin: -4px 0 0 27px;
+    height: 250px;
+    width: 330px;
+}
+
+.qualityService:hover {
+    background-color: #cec9c9;
+}
+
+.fiveImageOrderKey {
+    margin-left: 135px;
+    height: 63px;
+    width: 60px;
+    background: url("images/manyBanners/fiveImage.png");
+}
+
+.spanAndImageQualityService {
+    display: flex;
+    flex-direction: column;
+    width: 178px;
+    height: 181px;
+    margin: 29px 36px;
+}
+
+.qualityServiceSpanOne {
+    margin-left: auto;
+    margin-right: auto;
+    height: 29px;
+    width: 267px;
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.qualityServiceSpanTwo {
+    height: 84px;
+    width: 292px;
+    margin-top: 6px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cooperation {
+    flex-direction: column;
+    margin: -4px 0 0 33px;
+    height: 250px;
+    width: 330px;
+}
+
+.cooperation:hover {
+    background-color: #cec9c9;
+}
+
+.sixImageCooperation {
+    margin-left: auto;
+    margin-right: auto;
+    height: 54px;
+    width: 60px;
+    background: url("images/manyBanners/sixImage.png");
+}
+
+.cooperationSpanOne {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 29px;
+    width: 202px;
+    font-size: 24px;
+}
+
+.cooperationSpanTwo {
+    height: 84px;
+    width: 292px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.twoBanners {
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    width: 1449px;
+    height: 431px;
+    background-color: #4f980a;
+    margin-top: 98px;
+    margin-left: 228px;
+}
+
+.twoBannersNextDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 1408px;
+    height: 402px;
+    background-color: #b7fff6;
+    margin-right: 12px;
 }
