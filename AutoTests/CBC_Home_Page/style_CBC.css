@@ -13,6 +13,22 @@ body {
     box-sizing: border-box;
 }
 
+button {
+    background-color: #FFAF37;
+    cursor: pointer;
+    color: #FFFF;
+    font-size: 18px;
+    font-family: Rubik, sans-serif;
+    border: none;
+    line-height: 21px;
+    font-weight: 500;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: #4f980a;
+}
+
 .hatBlock {
     display: flex;
     /*max-width: 1920px;*/
@@ -31,7 +47,7 @@ body {
     height: 138px;
     width: 329px;
     margin-left: 0;
-    background: url("images/image_label.png");
+    background: url("images/hat/image_label.png");
     background-size: 330px;
     margin-top: -12px;
 }
@@ -161,7 +177,7 @@ body {
 .phoneImage {
     height: 30px;
     width: 30px;
-    background: url("images/phone.png");
+    background: url("images/hat/phone.png");
     background-size: cover;
 }
 
@@ -175,23 +191,9 @@ body {
 }
 
 #RequestCall {
-    cursor: pointer;
-    text-align: center;
     margin-right: 0;
     width: 240px;
     height: 37px;
-    background-color: #FFAF37;
-    border: none;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 21px;
-    letter-spacing: 0;
-    color: #FFFFFF;
-    transition: background-color 0.5s;
-}
-
-#RequestCall:hover {
-    background-color: #4f980a;
 }
 
 .numberAndButton {
@@ -236,7 +238,7 @@ body {
 .whatsApp {
     width: 24px;
     height: 24px;
-    background: url("images/whatsApp.png");
+    background: url("images/hat/whatsApp.png");
 }
 
 .contactsOne {
@@ -253,7 +255,7 @@ body {
     margin-left: 80px;
     width: 24px;
     height: 18px;
-    background: url("images/sms.png");
+    background: url("images/hat/sms.png");
 }
 
 .contactsTwo {
@@ -268,7 +270,7 @@ body {
     margin-top: 6px;
     width: 20px;
     height: 27px;
-    background: url("images/geo.png");
+    background: url("images/hat/geo.png");
 }
 
 .contactsThree {
@@ -544,7 +546,7 @@ body {
     margin-left: 747px;
     margin-top: 11px;
     border-radius: 10px;
-    background: url("images/mainBannerImage.png");
+    background: url("images/hat/mainBannerImage.png");
     background-size: cover;
 }
 
@@ -554,8 +556,8 @@ body {
     display: inline-block;
     width: 240px;
     height: 175px;
-    margin-left: 720px;
-    margin-top: 470px;
+    margin-left: 1468px;
+    margin-top: -125px;
 }
 
 .leftMain {
@@ -564,15 +566,22 @@ body {
     transform: rotate(-180deg);
 }
 
-.circle {
-    display: inline-block;
+.circle, .circleTwoBanners {
     position: absolute;
     background-color: #1F347B;
     border-radius: 50%;
-    margin-left: 1691px;
-    margin-top: -140px;
     width: 24px;
     height: 24px;
+}
+
+.circle {
+    left: 1691px;
+    margin-top: -140px;
+}
+
+.circleTwoBanners {
+    left: 207px;
+    margin-top: 165px;
 }
 
 .bannerTextOnImage {
@@ -590,28 +599,11 @@ body {
 }
 
 #showOffer {
-    display: inline-block;
     position: absolute;
-    background-color: #FFAF37;
     margin-left: 450px;
     margin-top: 330px;
     width: 330px;
     height: 69px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.5s;
-}
-
-#showOffer:hover {
-    background-color: #68b01d;
-}
-
-.buttonTextBanner {
-    width: 257px;
-    height: 20px;
-    color: #FFFFFF;
-    font-size: 18px;
-    font-weight: 700;
 }
 
 .buttonBanner {
@@ -673,12 +665,11 @@ body {
 }
 
 .paginationBanner {
-    display: flex;
     position: absolute;
     height: 20px;
     width: 152px;
-    margin-left: 1150px;
-    margin-top: -50px;
+    left: 1115px;
+    margin-top: 550px;
 }
 
 .circlePagination {
@@ -703,11 +694,11 @@ body {
 
 .sideButtons {
     display: flex;
+    position: fixed;
     flex-direction: column;
-    position: absolute;
     height: 271px;
     width: 90px;
-    left: 1813px;
+    left: 1810px;
     margin-top: -690px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -715,7 +706,7 @@ body {
     cursor: pointer;
 }
 
-.oneSideButton, .twoSideButton , .threeSideButton {
+.oneSideButton, .twoSideButton, .threeSideButton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1082,16 +1073,15 @@ body {
     margin-right: auto;
 }
 
-.twoBanners {
+.twoBannersMain {
     display: flex;
     align-content: flex-end;
     flex-wrap: wrap;
     flex-direction: row-reverse;
     width: 1449px;
     height: 431px;
-    background-color: #4f980a;
     margin-top: 98px;
-    margin-left: 228px;
+    margin-left: 215px;
 }
 
 .twoBannersNextDiv {
@@ -1099,6 +1089,140 @@ body {
     justify-content: space-between;
     width: 1408px;
     height: 402px;
-    background-color: #b7fff6;
-    margin-right: 12px;
+}
+
+
+.oneBanner, .twoBanner {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    height: 402px;
+    width: 688px;
+}
+
+.oneBanner {
+    background-color: #F0F0FF;
+}
+
+.oneBannerSmallImage {
+    position: absolute;
+    height: 59px;
+    width: 60px;
+    margin-left: 15px;
+    margin-top: 27px;
+}
+
+.twoBannerSpanAndButton {
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+    height: 239px;
+    width: 268px;
+    margin-top: 82px;
+    margin-left: 389px;
+}
+
+.oneBannerImage {
+    display: flex;
+    position: absolute;
+    height: 240px;
+    width: 323px;
+    margin-top: 162px;
+}
+
+.oneSpanOneBannerTwoBanners, .oneSpanTwoBannerTwoBanners {
+    font-size: 24px;
+    text-align: right;
+}
+
+.twoSpanOneBannerTwoBanners {
+    margin-top: 32px;
+    text-align: right;
+}
+
+#chooseTechnique {
+    margin-top: 16px;
+    height: 70px;
+    width: 300px;
+    text-transform: uppercase;
+}
+
+.twoBanner {
+    background-color: #E3E1FF;
+}
+
+.twoBannerSmallImage {
+    position: absolute;
+    height: 59px;
+    width: 60px;
+    margin-left: 20px;
+    margin-top: 27px;
+}
+
+.oneBannerSpanAndButton {
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+    height: 238px;
+    width: 537px;
+    margin-top: 82px;
+    margin-left: 106px;
+}
+
+.twoBannerImage {
+    display: flex;
+    position: absolute;
+    height: 240px;
+    width: 323px;
+    margin-top: 162px;
+}
+
+.twoSpanOneBannerTwoBanners {
+    margin-top: 32px;
+    text-align: right;
+}
+
+.twoSpanTwoBannerTwoBanners {
+    margin-top: 6px;
+    text-align: right;
+}
+
+#assembleOffice {
+    margin-top: 17px;
+    height: 69px;
+    width: 268px;
+    text-transform: uppercase;
+}
+
+
+.leftTwoBanners, .rightTwoBanners {
+    position: absolute;
+    width: 240px;
+    height: 175px;
+    left: 215px;
+}
+
+.leftTwoBanners {
+    border-top: 8px solid #1F347B;
+    border-left: 8px solid #1F347B;
+    transform: rotate(0deg);
+}
+
+.oneFooter {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    width: 1903px;
+    background-color: #F0F0FF;
+    margin-top: 100px;
+}
+
+.oneFooterCenterBanner {
+    display: flex;
+    flex-wrap: wrap;
+    height: 258px;
+    width: 1389px;
+    background-color: #4f980a;
+    margin-left: auto;
+    margin-right: auto;
 }
