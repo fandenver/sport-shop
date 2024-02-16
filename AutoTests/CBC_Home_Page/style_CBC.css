@@ -31,15 +31,13 @@ button:hover {
 
 .hatBlock {
     display: flex;
-    /*max-width: 1920px;*/
     width: 100%;
 }
 
 .innerContainer {
     display: flex;
-    /*width: 1415px;*/
-    /*height: 163px;*/
     margin: 15px auto auto 256px;
+
 }
 
 
@@ -64,6 +62,7 @@ button:hover {
 
 
 .commonSizesNumber {
+    cursor: pointer;
     margin: 0;
     font-weight: 500;
     text-align: center;
@@ -221,7 +220,7 @@ button:hover {
     background-color: white;
     border: none;
     margin-right: 10px;
-    margin-top: 4px;
+    margin-top: 8px;
 }
 
 .contactWithMe {
@@ -307,6 +306,18 @@ button:hover {
     margin-left: 242px;
 }
 
+
+.bottom_navBar_one, .bottom_navBar_two,
+.bottom_navBar_three, .bottom_navBar_four {
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.bottom_navBar_one:hover, .bottom_navBar_two:hover,
+.bottom_navBar_three:hover, .bottom_navBar_four:hover {
+    color: #FFAF37;
+}
+
 .bottom_navBar_one {
     display: flex;
     height: 29px;
@@ -315,7 +326,7 @@ button:hover {
 
 
 .bottom_navBar_one:after, .bottom_navBar_two::after,
-.bottom_navBar_three::after, .bottom_navBar_for::after {
+.bottom_navBar_three::after, .bottom_navBar_four::after {
     content: '';
     position: absolute;
     padding-top: 25px;
@@ -353,14 +364,14 @@ button:hover {
     width: 375px;
 }
 
-.bottom_navBar_for {
+.bottom_navBar_four {
     display: flex;
     width: 99px;
     height: 21px;
     padding-left: 12px;
 }
 
-.bottom_navBar_for::after {
+.bottom_navBar_four::after {
     width: 85px;
 }
 
@@ -733,6 +744,7 @@ button:hover {
 }
 
 .twoSideButton {
+    background-color: #FFFFFF;
     height: 90px;
     width: 90px;
     transition: background-color 0.5s;
@@ -743,6 +755,7 @@ button:hover {
 }
 
 .threeSideButton {
+    background-color: #FFFFFF;
     height: 91px;
     width: 90px;
     border-bottom-left-radius: 10px;
@@ -1218,11 +1231,131 @@ button:hover {
 }
 
 .oneFooterCenterBanner {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    list-style: none;
+    grid-row-gap: 18px;
+    grid-template-rows: 74px 166px;
+    grid-template-columns: 694px 695px;
     height: 258px;
     width: 1389px;
-    background-color: #4f980a;
     margin-left: auto;
     margin-right: auto;
+    padding: 0;
 }
+
+.onBlockOneFooter {
+    line-height: 37px;
+    font-size: 30px;
+    align-self: flex-start;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    height: 74px;
+    width: 687px;
+}
+
+.twoBlockOneFooter {
+    cursor: pointer;
+    justify-self: right;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    border: 2px solid #FFAF37;
+    margin-top: 3px;
+    margin-right: 10px;
+    height: 60px;
+    width: 400px;
+    transition: background-color 0.5s;
+}
+
+.twoBlockOneFooter:hover {
+    background-color: #4f980a;
+}
+
+.twoBlockOneFooterDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 400px;
+}
+
+.twoBlockOneFooterSpan {
+    font-size: 18px;
+    height: 24px;
+    width: 369px;
+
+}
+
+.threeBlockOneFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    height: 166px;
+    width: 1327px;
+    margin-left: 62px;
+    font-size: 20px;
+}
+
+
+.imagesOneBlockOneFooter, .imagesTwoBlockOneFooter,
+.imagesThreeBlockOneFooter, .imagesFourBlockOneFooter,
+.imagesFiveBlockOneFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imagesOneBlockOneFooter {
+    height: 161px;
+    width: 291px;
+}
+
+.imagesTwoBlockOneFooter {
+    height: 104px;
+    width: 200px;
+}
+
+.imagesThreeBlockOneFooter {
+    height: 161px;
+    width: 342px;
+}
+
+.imagesFourBlockOneFooter {
+    height: 85px;
+    width: 200px;
+}
+
+.imagesFiveBlockOneFooter {
+    height: 162px;
+    width: 150px;
+}
+
+.oneImageOneFooter {
+    height: 100px;
+    width: 120px;
+}
+
+.twoImageOneFooter {
+    height: 66px;
+    width: 200px;
+}
+
+.threeImageOneFooter {
+    height: 105px;
+    width: 200px;
+}
+
+.fourImageOneFooter {
+    height: 48px;
+    width: 200px;
+}
+
+.twoImageOneFooter {
+    height: 102px;
+    width: 150px;
+}
+
