@@ -5,6 +5,7 @@ body {
     font-weight: 500;
     line-height: 24px;
     color: #4A4D4A;
+    font-size: 18px;
 }
 
 *,
@@ -30,36 +31,32 @@ button:hover {
 }
 
 .hatBlock {
-    display: flex;
-    width: 100%;
+    display: grid;
+    grid-template-rows: 48px 63px 54px;
+    grid-template-columns: 767px 641px;
+    height: 163px;
+    width: 1395px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-.innerContainer {
-    display: flex;
-    margin: 15px auto auto 256px;
-
-}
-
 
 .labelImg {
+    grid-area: 1/1/2/1;
     height: 138px;
     width: 329px;
-    margin-left: 0;
-    background: url("images/hat/image_label.png");
-    background-size: 330px;
+    margin-left: -7px;
     margin-top: -12px;
 }
 
 .navBar {
+    grid-area: 1/1/1/2;
     display: flex;
-    position: relative;
-    width: 75%;
+    width: 1046px;
     height: 24px;
     gap: 44px;
     margin-top: 0;
-    margin-left: 20px;
+    margin-left: 360px;
 }
-
 
 .commonSizesNumber {
     cursor: pointer;
@@ -89,16 +86,23 @@ button:hover {
     position: relative;
     height: 2px;
     top: -11px;
-    left: 3px;
+    left: 0;
     background-image: linear-gradient(to right, black 60%, transparent 0);
     background-position: bottom;
-    background-size: 4px 1px;
+    background-size: 5px 1px;
     background-repeat: repeat-x;
+    transition: linear-gradient 0.5s;
 }
 
 
 .sizesOne:after {
     width: 181px;
+}
+
+.sizesOne:hover:after, .sizesTwo:hover:after,
+.sizesThree:hover:after, .sizesFour:hover:after,
+.sizesFive:hover:after, .sizesSix:hover:after {
+    background-image: linear-gradient(to right, #FFAF37 100%, transparent 0);
 }
 
 .sizesTwo {
@@ -107,7 +111,7 @@ button:hover {
 }
 
 .sizesTwo::after {
-    width: 186px;
+    width: 190px;
 }
 
 .sizesThree {
@@ -125,7 +129,7 @@ button:hover {
 }
 
 .sizesFour::after {
-    width: 166px;
+    width: 170px;
 }
 
 .sizesFive {
@@ -143,20 +147,15 @@ button:hover {
 }
 
 .sizesSix::after {
-    width: 90px;
+    width: 100px;
 }
 
 .description {
     display: flex;
-    position: absolute;
-    margin-top: 59px;
-    margin-left: 355px;
+    grid-area: 2/1/2/1;
+    margin: 5px auto auto 360px;
     width: 403px;
     height: 45px;
-    color: #4A4D4A;
-    font-family: Rubik, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
     line-height: 21px;
     letter-spacing: 0;
     text-align: left;
@@ -164,22 +163,18 @@ button:hover {
 
 .phoneNumber {
     display: flex;
+    grid-area: 2/2/2/2;
     justify-content: space-between;
-    align-items: center;
-    position: absolute;
     width: 569px;
     height: 37px;
-    margin-top: 59px;
-    margin-left: 825px;
+    margin: 5px 0 auto auto;
+    padding-right: 4px;
 }
 
 .phoneImage {
     height: 30px;
     width: 30px;
-    background: url("images/hat/phone.png");
-    background-size: cover;
 }
-
 
 .number {
     font-family: Montserrat, sans-serif;
@@ -190,20 +185,19 @@ button:hover {
 }
 
 #RequestCall {
-    margin-right: 0;
     width: 240px;
     height: 37px;
 }
 
 .numberAndButton {
     display: flex;
-    position: absolute;
-    justify-content: right;
-    margin-top: 120px;
-    margin-left: 0;
+    grid-area: 3/1/3/1;
+    margin-top: 15px;
+    margin-left: -7px;
 }
 
 .searchField {
+    position: relative;
     cursor: text;
     width: 690px;
     height: 40px;
@@ -219,34 +213,32 @@ button:hover {
     font-size: 20px;
     background-color: white;
     border: none;
-    margin-right: 10px;
+    margin-left: 639px;
     margin-top: 8px;
 }
 
 .contactWithMe {
     display: flex;
+    grid-area: 3/2/3/2;
     flex-direction: row;
-    position: absolute;
     justify-content: space-between;
+    align-items: center;
     height: 50px;
     width: 624px;
-    margin-top: 135px;
-    margin-left: 1039px;
+    margin-left: 14px;
 }
 
 .whatsApp {
     width: 24px;
     height: 24px;
-    background: url("images/hat/whatsApp.png");
 }
 
 .contactsOne {
     margin-left: 10px;
     height: 34px;
-    width: 115px;
+    width: 130px;
     font-size: 14px;
     line-height: 17px;
-    text-align: center;
 }
 
 .sms {
@@ -254,7 +246,6 @@ button:hover {
     margin-left: 80px;
     width: 24px;
     height: 18px;
-    background: url("images/hat/sms.png");
 }
 
 .contactsTwo {
@@ -266,10 +257,9 @@ button:hover {
 }
 
 .geo {
-    margin-top: 6px;
+    margin: 14px 6px auto 50px;
     width: 20px;
     height: 27px;
-    background: url("images/hat/geo.png");
 }
 
 .contactsThree {
@@ -277,6 +267,8 @@ button:hover {
     width: 176px;
     font-size: 16px;
     text-align: center;
+    margin-left: 16px;
+    padding-top: 3px;
 }
 
 .city {
@@ -286,26 +278,21 @@ button:hover {
 
 .bottom_navBar {
     display: flex;
-    position: absolute;
     width: 100%;
     height: 60px;
     background-color: #F0F0FF;
-    margin-top: 205px;
-    left: 0;
+    margin-top: 28px;
     justify-content: space-between;
-    text-align: center;
     padding: 15px;
-    font-size: 18px;
-    font-weight: 500;
 }
 
 .alignSpan {
     display: flex;
     justify-content: space-between;
     width: 1394px;
-    margin-left: 242px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 
 .bottom_navBar_one, .bottom_navBar_two,
 .bottom_navBar_three, .bottom_navBar_four {
@@ -318,28 +305,35 @@ button:hover {
     color: #FFAF37;
 }
 
-.bottom_navBar_one {
-    display: flex;
-    height: 29px;
-    width: 245px;
-}
-
-
 .bottom_navBar_one:after, .bottom_navBar_two::after,
 .bottom_navBar_three::after, .bottom_navBar_four::after {
     content: '';
     position: absolute;
-    padding-top: 25px;
+    margin-top: 30px;
     height: 2px;
     background-image: linear-gradient(to right, black 60%, transparent 0);
     background-position: bottom;
-    background-size: 4px 1px;
+    background-size: 5px 1px;
     background-repeat: repeat-x;
+    cursor: pointer;
 }
 
+.bottom_navBar_one:hover:after, .bottom_navBar_two:hover:after,
+.bottom_navBar_three:hover:after, .bottom_navBar_four:hover:after {
+    background-image: linear-gradient(to right, #FFAF37 100%, transparent 0);
+}
+
+.bottom_navBar_one {
+    display: flex;
+    position: relative;
+    height: 29px;
+    width: 245px;
+    left: -7px;
+}
 
 .bottom_navBar_one:after {
-    width: 232px;
+    left: 0;
+    width: 240px;
 }
 
 .bottom_navBar_two {
@@ -366,23 +360,33 @@ button:hover {
 
 .bottom_navBar_four {
     display: flex;
+    position: relative;
     width: 99px;
     height: 21px;
-    padding-left: 12px;
+    padding-left: 21px;
 }
 
 .bottom_navBar_four::after {
+    left: 0;
+    margin-left: 23px;
     width: 85px;
 }
 
+.afterNavBar {
+    display: flex;
+    justify-content: space-between;
+    width: 1410px;
+    height: 736px;
+    margin: 50px auto auto auto;
+}
+
+
 .mainMenu {
     display: flex;
-    position: absolute;
+    flex-direction: column;
     width: 448px;
     height: 736px;
-    margin-top: 176px;
-    margin-left: 255px;
-    margin-right: auto;
+    /*padding-left: ;*/
 }
 
 .headerMainMenu {
@@ -391,12 +395,10 @@ button:hover {
     height: 60px;
     border-radius: 10px 10px 0 0;
     background: #F0F0FF;
-    font-weight: bold;
 }
 
 .headerSpan {
     display: flex;
-    position: relative;
     width: 106px;
     height: 26px;
     margin-top: 17px;
@@ -420,7 +422,6 @@ button:hover {
     width: 447px;
     height: 676px;
 }
-
 
 .left, .right {
     display: flex;
@@ -526,13 +527,15 @@ button:hover {
     height: 21px;
 }
 
+
+.afterNavBarBannerAndSpan {
+    display: flex;
+    flex-direction: column;
+    margin-left: 42px;
+}
+
 .mainBanner {
-    display: inline-block;
-    position: relative;
-    border-radius: 10px;
-    margin-top: 168px;
-    margin-left: 745px;
-    width: 920px;
+    width: 922px;
     height: 132px;
     font-size: 36px;
     font-weight: 700;
@@ -542,9 +545,6 @@ button:hover {
     color: #4A4D4A;
 }
 
-.mainBannerText {
-
-}
 
 .orangeText {
     color: #FFAF37;
@@ -552,23 +552,27 @@ button:hover {
 
 .mainBannerImage {
     display: flex;
-    width: 902px;
-    height: 600px;
-    margin-left: 747px;
-    margin-top: 11px;
+    flex-direction: column;
+    width: 922px;
+    height: 590px;
     border-radius: 10px;
     background: url("images/hat/mainBannerImage.png");
     background-size: cover;
+    margin-top: 14px;
+}
+
+
+.leftAndRightMain {
+    display: flex;
+    position: absolute;
+    margin-left: 710px;
+    margin-top: 445px;
 }
 
 .leftMain, .rightMain {
-    cursor: pointer;
     position: absolute;
-    display: inline-block;
     width: 240px;
     height: 175px;
-    margin-left: 1468px;
-    margin-top: -125px;
 }
 
 .leftMain {
@@ -586,18 +590,17 @@ button:hover {
 }
 
 .circle {
-    left: 1691px;
-    margin-top: -140px;
+    position: absolute;
+    left: 224px;
+    margin-top: -5px;
 }
 
 .circleTwoBanners {
-    left: 207px;
-    margin-top: 165px;
+    position: absolute;
+    left: 220px;
 }
 
 .bannerTextOnImage {
-    display: inline-block;
-    position: absolute;
     margin-left: 400px;
     margin-top: 150px;
     height: 116px;
@@ -610,22 +613,29 @@ button:hover {
 }
 
 #showOffer {
-    position: absolute;
-    margin-left: 450px;
-    margin-top: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 440px;
     width: 330px;
     height: 69px;
 }
 
+.bannerButtonCommon {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+}
+
 .buttonBanner {
     cursor: pointer;
-    position: absolute;
-    margin-top: 250px;
     height: 50px;
     width: 50px;
     background-color: #FFFFFF;
-    border-radius: 100%;
+    border-radius: 50%;
     transition: background-color 0.5s;
+    padding: 20px;
 }
 
 .buttonBanner:hover {
@@ -637,12 +647,10 @@ button:hover {
 }
 
 .buttonBannerRight {
-    margin-left: 837px;
+    margin-left: 787px;
 }
 
 .leftBannerButton, .rightBannerButton {
-    position: relative;
-    display: inline-block;
     width: 16px;
     height: 16px;
 }
@@ -653,8 +661,9 @@ button:hover {
 }
 
 .leftButtonBannerOne {
-    left: 19px;
-    top: 16px;
+    position: relative;
+    bottom: 2px;
+    right: 2px;
 }
 
 .rightButtonBannerOne {
@@ -667,8 +676,9 @@ button:hover {
 }
 
 .leftButtonBannerTwo, .rightButtonBannerTwo {
-    left: 15px;
-    top: 15px;
+    position: relative;
+    right: 3px;
+    bottom: 2px;
 }
 
 .leftButtonBannerTwo {
@@ -676,16 +686,13 @@ button:hover {
 }
 
 .paginationBanner {
-    position: absolute;
+    display: flex;
+    margin: 170px auto auto 370px;
     height: 20px;
     width: 152px;
-    left: 1115px;
-    margin-top: 550px;
 }
 
 .circlePagination {
-    display: inline-flex;
-    position: relative;
     cursor: pointer;
     height: 20px;
     width: 20px;
@@ -707,14 +714,17 @@ button:hover {
     display: flex;
     position: fixed;
     flex-direction: column;
-    height: 271px;
-    width: 90px;
-    left: 1810px;
+    height: 30%;
+    width: 5%;
+    max-height: 271px;
+    max-width: 90px;
+    right: 0;
     margin-top: -690px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     box-shadow: 0 4px 20px 0 #00000040;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .oneSideButton, .twoSideButton, .threeSideButton {
@@ -737,8 +747,10 @@ button:hover {
 }
 
 .oneSideButtonImage {
-    height: 30px;
-    width: 30px;
+    max-height: 30px;
+    max-width: 30px;
+    height: 50%;
+    width: 50%;
     top: 7px;
     left: 15px;
 }
@@ -769,8 +781,9 @@ button:hover {
 .manyBanners {
     display: flex;
     flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 100px;
-    margin-left: 255px;
     height: 530px;
     width: 1410px;
     font-family: Rubik, sans-serif;
@@ -1088,22 +1101,25 @@ button:hover {
 
 .twoBannersMain {
     display: flex;
+    position: relative;
     align-content: flex-end;
     flex-wrap: wrap;
     flex-direction: row-reverse;
     width: 1449px;
     height: 431px;
     margin-top: 98px;
-    margin-left: 215px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .twoBannersNextDiv {
     display: flex;
+    position: relative;
     justify-content: space-between;
     width: 1408px;
     height: 402px;
+    left: -19px;
 }
-
 
 .oneBanner, .twoBanner {
     display: flex;
@@ -1212,7 +1228,8 @@ button:hover {
     position: absolute;
     width: 240px;
     height: 175px;
-    left: 215px;
+    left: 0;
+    top: 9px;
 }
 
 .leftTwoBanners {
@@ -1225,9 +1242,11 @@ button:hover {
     display: flex;
     align-items: center;
     height: 300px;
-    width: 1903px;
+    width: 100%;
     background-color: #F0F0FF;
     margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .oneFooterCenterBanner {
