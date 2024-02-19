@@ -1,6 +1,6 @@
 body {
     width: 100%;
-    margin: 0;
+    margin: 15px 0 0 0;
     font-family: Rubik, sans-serif;
     font-weight: 500;
     line-height: 24px;
@@ -570,7 +570,7 @@ button:hover {
     transform: rotate(-180deg);
 }
 
-.circle, .circleTwoBanners {
+.circle, .circleTwoBanners, .circleAfterManyPicturesBanner {
     position: absolute;
     background-color: #1F347B;
     border-radius: 50%;
@@ -579,14 +579,17 @@ button:hover {
 }
 
 .circle {
-    position: absolute;
     left: 224px;
     margin-top: -5px;
 }
 
 .circleTwoBanners {
-    position: absolute;
     left: 220px;
+}
+
+.circleAfterManyPicturesBanner {
+    top: 247px;
+    left: 1421px;
 }
 
 .bannerTextOnImage {
@@ -1498,3 +1501,245 @@ button:hover {
     border-left: 2px solid #4A4D4A;
     transform: rotate(-225deg);
 }
+
+.twoBannersAfterManyPicturesBanner {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 1408px;
+    height: 402px;
+    margin: 100px auto auto auto;
+}
+
+.oneAfterManyPicturesBanner, .twoAfterManyPicturesBanner {
+    display: flex;
+    position: relative;
+    width: 690px;
+    height: 402px;
+}
+
+.oneAfterManyPicturesBanner {
+    background-color: #F0F0FF;
+}
+
+.twoAfterManyPicturesBanner {
+    background-color: #E3E1FF;
+}
+
+.smallOneAfterManyPicturesBanner, .smallTwoAfterManyPicturesBanner {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 30px;
+    left: 15px;
+}
+
+.bigOneAfterManyPicturesBanner {
+    position: absolute;
+    top: 180px;
+    width: 273px;
+    height: 228px;
+    z-index: 100;
+}
+
+.bigTwoAfterManyPicturesBanner {
+    position: absolute;
+    top: 137px;
+    left: 5px;
+    width: 330px;
+    height: 254px;
+    z-index: 100;
+}
+
+.oneAfterManyPicturesBlock, .twoAfterManyPicturesBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.oneAfterManyPicturesBlock {
+    height: 227px;
+    width: 520px;
+    margin: 100px 35px auto auto;
+}
+
+.twoAfterManyPicturesBlock {
+    height: 220px;
+    width: 311px;
+    margin: 100px 35px auto auto;
+}
+
+.oneSpanAfterManyPictures, .fourSpanAfterManyPictures {
+    text-align: right;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.oneSpanAfterManyPictures {
+    width: 520px;
+    height: 84px;
+}
+
+.fourSpanAfterManyPictures {
+    width: 311px;
+    height: 52px;
+}
+
+.twoSpanAfterManyPictures, .fiveSpanAfterManyPictures {
+    text-align: right;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.twoSpanAfterManyPictures {
+    width: 464px;
+    height: 42px;
+}
+
+.fiveSpanAfterManyPictures {
+    width: 263px;
+    height: 63px;
+}
+
+#oneButtonAfterManyPicturesBanner {
+    width: 348px;
+    height: 65px;
+    text-transform: uppercase;
+}
+
+#twoButtonAfterManyPicturesBanner {
+    width: 268px;
+    height: 69px;
+    text-transform: uppercase;
+    z-index: 100;
+}
+
+.bigOneAfterManyPicturesBanner {
+    position: absolute;
+    top: 180px;
+    width: 273px;
+    height: 228px;
+    z-index: 100;
+}
+
+.oneAfterManyPicturesBlock, .twoAfterManyPicturesBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.oneAfterManyPicturesBlock {
+    height: 227px;
+    width: 520px;
+    margin: 100px 35px auto auto;
+}
+
+.oneSpanAfterManyPictures {
+    width: 520px;
+    height: 84px;
+    text-align: right;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.twoSpanAfterManyPictures {
+    width: 464px;
+    height: 42px;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+#oneButtonAfterManyPicturesBanner {
+    width: 348px;
+    height: 65px;
+    text-transform: uppercase;
+}
+
+.leftAfterManyPicturesBanner, .rightAfterManyPicturesBanner {
+    position: absolute;
+    width: 240px;
+    height: 175px;
+    top: 250px;
+    left: 1198px;
+}
+
+.leftAfterManyPicturesBanner {
+    border-top: 8px solid #1F347B;
+    border-left: 8px solid #1F347B;
+    transform: rotate(-180deg);
+}
+
+.twoFooter {
+    width: 100%;
+    height: 300px;
+    margin: 100px auto auto auto;
+    background-color: #F0F0FF;
+}
+
+.twoFooterBlockAndImage {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1225px;
+    height: 260px;
+
+}
+
+.twoFooterBlock {
+    display: flex;
+    flex-direction: column;
+    width: 487px;
+    height: 199px;
+    margin: 55px 240px auto auto;
+    left: 100px;
+    align-items: flex-start;
+}
+
+.twoFooterImage {
+    margin-top: 25px;
+    width: 464px;
+    height: 251px;
+}
+
+.twoFooterOneSpan {
+    width: 487px;
+    height: 60px;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.twoFooterTwoSpan {
+    font-size: 17px;
+    width: 343px;
+    height: 42px;
+    margin-bottom: 20px;
+}
+
+.twoFooterButton {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    width: 450px;
+    height: 61px;
+    border: 2px solid #FFAF37;
+    transition: background-color 0.5s;
+}
+
+.twoFooterButton:hover {
+    background-color: #4f980a;
+}
+
+.twoFooterButtonSpan {
+    margin: 17px auto auto 15px;
+}
+
+.arrowTwoFooter {
+    position: absolute;
+    left: 270px;
+    top: -31px;
+}
+
