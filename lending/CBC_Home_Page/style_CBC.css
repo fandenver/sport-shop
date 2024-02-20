@@ -1946,6 +1946,12 @@ button:hover {
 }
 
 .spanAfterCheckMark {
+    text-decoration: none;
     font-size: 10px;
     line-height: 15px;
+    transition: text-decoration 0.5s;
+}
+
+.spanAfterCheckMark:hover {
+    text-decoration: underline;
 }
