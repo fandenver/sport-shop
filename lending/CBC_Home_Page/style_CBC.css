@@ -542,6 +542,7 @@ button:hover {
 .mainBannerImage {
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 922px;
     height: 590px;
     border-radius: 10px;
@@ -550,27 +551,19 @@ button:hover {
     margin-top: 14px;
 }
 
-.leftAndRightMain {
-    display: flex;
-    position: absolute;
-    margin-left: 710px;
-    margin-top: 445px;
-}
-
-.leftMain, .rightMain {
+.leftMain {
     position: absolute;
     width: 240px;
     height: 175px;
-}
-
-.leftMain {
+    left: 710px;
+    top: 445px;
     border-top: 8px solid #1F347B;
     border-left: 8px solid #1F347B;
     transform: rotate(-180deg);
 }
 
 .circle, .circleTwoBanners, .circleAfterManyPicturesBanner,
-.circleAfterTwoFooter {
+.circleAfterTwoFooter, .circleBannerBeforeLastFooter {
     position: absolute;
     background-color: #1F347B;
     border-radius: 50%;
@@ -579,8 +572,8 @@ button:hover {
 }
 
 .circle {
-    left: 224px;
-    margin-top: -5px;
+    left: 934px;
+    top: 430px;
 }
 
 .circleTwoBanners {
@@ -593,8 +586,14 @@ button:hover {
 }
 
 .circleAfterTwoFooter {
-    left: 144px;
+    left: 143px;
     bottom: 171px;
+    background-color: rgba(31, 52, 123, 0.2);
+}
+
+.circleBannerBeforeLastFooter {
+    top: -9px;
+    left: 147px;
     background-color: rgba(31, 52, 123, 0.2);
 }
 
@@ -1222,15 +1221,12 @@ button:hover {
 }
 
 
-.leftTwoBanners, .rightTwoBanners {
+.leftTwoBanners {
     position: absolute;
     width: 240px;
     height: 175px;
     left: 0;
     top: 9px;
-}
-
-.leftTwoBanners {
     border-top: 8px solid #1F347B;
     border-left: 8px solid #1F347B;
     transform: rotate(0deg);
@@ -1663,15 +1659,12 @@ button:hover {
     text-transform: uppercase;
 }
 
-.leftAfterManyPicturesBanner, .rightAfterManyPicturesBanner {
+.leftAfterManyPicturesBanner {
     position: absolute;
     width: 240px;
     height: 175px;
     top: 250px;
     left: 1198px;
-}
-
-.leftAfterManyPicturesBanner {
     border-top: 8px solid #1F347B;
     border-left: 8px solid #1F347B;
     transform: rotate(-180deg);
@@ -1946,12 +1939,274 @@ button:hover {
 }
 
 .spanAfterCheckMark {
-    text-decoration: none;
     font-size: 10px;
     line-height: 15px;
-    transition: text-decoration 0.5s;
 }
 
 .spanAfterCheckMark:hover {
     text-decoration: underline;
+}
+
+.bannerBeforeLastFooter {
+    display: flex;
+    position: relative;
+    width: 1408px;
+    height: 608px;
+    margin: 100px auto auto auto;
+    border-right: 8px solid rgba(31, 52, 123, 0.2);
+    border-bottom: 8px solid rgba(31, 52, 123, 0.2);
+}
+
+.beforeLastFooterSpanAndImage {
+    display: flex;
+    flex-direction: column;
+    width: 1188px;
+    height: 514px;
+    margin: auto;
+}
+
+.beforeLastFooterSpanImage {
+    font-size: 30px;
+    line-height: 37px;
+    width: 579px;
+    height: 74px;
+    text-align: center;
+    margin: 0 auto auto auto;
+}
+
+.beforeLastFooterUnderSpanBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1188px;
+    height: 428px;
+}
+
+.beforeLastFooterSpanColumnBlock {
+    display: flex;
+    flex-direction: column;
+    width: 459px;
+    height: 274px;
+    font-size: 20px;
+    margin-top: 86px;
+}
+
+.oneBeforeLastFooterSpanColumnBlock {
+    display: flex;
+    padding-bottom: 10px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.newGeo {
+    width: 30px;
+    height: 40px;
+}
+
+.newPhone, .clock {
+    width: 30px;
+    height: 30px;
+}
+
+.newSMS {
+    width: 30px;
+    height: 22px;
+}
+
+.newWhatsApp {
+    width: 26px;
+    height: 26px;
+}
+
+.bannerBeforeLastFooterSpan {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.maps {
+    width: 553px;
+    height: 423px;
+    background: url("images/bannerBeforeLastFooter/maps.png");
+    background-size: cover;
+}
+
+.lineBorderLeftBannerBeforeLastFooter,
+.lineBorderTopBannerBeforeLastFooter {
+    position: absolute;
+    border-top: 8px solid rgba(31, 52, 123, 0.2);
+}
+
+.lineBorderLeftBannerBeforeLastFooter {
+    top: 170px;
+    width: 120px;
+    height: 430px;
+    border-left: 8px solid rgba(31, 52, 123, 0.2);
+}
+
+.lineBorderTopBannerBeforeLastFooter {
+    left: 170px;
+    width: 1230px;
+    height: 10px;
+}
+
+.lastFooter {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 343px;
+    margin-top: 100px;
+    background-color: #F0F0FF;
+}
+
+.lastFooterMainBlock {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 1408px;
+    height: 267px;
+}
+
+
+.lastFooterOneBlock, .lastFooterTwoBlock,
+.lastFooterThreeBlock, .lastFooterFourBlock,
+.lastFooterFiveBlock, .lastFooterSixBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.lastFooterOneBlock {
+    width: 209px;
+    height: 222px;
+}
+
+.CbsFooter {
+    width: 209px;
+    height: 94px;
+}
+
+.lastFooterOneSpan {
+    width: 209px;
+    height: 103px;
+    line-height: 21px;
+}
+
+.lastFooterTwoBlock {
+    width: 247px;
+    height: 212px;
+}
+
+.lastFooterBlockBigSpan {
+    font-weight: 700;
+}
+
+.lastFooterBlockSmallSpan {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.lastFooterThreeBlock {
+    width: 167px;
+    height: 176px;
+}
+
+.lastFooterFourBlock {
+    width: 155px;
+    height: 212px;
+}
+
+.lastFooterFiveBlock {
+    align-items: center;
+    width: 31px;
+    height: 220px;
+}
+
+.ig, .goldWhatsApp, .human {
+    width: 30px;
+    height: 30px;
+}
+
+.faceB {
+    width: 20px;
+    height: 41px;
+}
+
+.vk {
+    width: 30px;
+    height: 17px;
+}
+
+.lastFooterSixBlock {
+    width: 185px;
+    height: 168px;
+}
+
+.lastFooterSixBlockSpanImageOne, .lastFooterSixBlockSpanImageTwo,
+.lastFooterSixBlockSpanImageThree {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lastFooterSixBlockSpanImageOne {
+    width: 185px;
+    height: 22px;
+}
+
+.lastFooterSixBlockSpanImageTwo {
+    width: 162px;
+    height: 21px;
+}
+
+.lastFooterSixBlockSpanImageThree {
+    width: 185px;
+    height: 50px;
+}
+
+.lastPhone {
+    width: 18px;
+    height: 19px;
+}
+
+.lastSMS {
+    width: 24px;
+    height: 18px;
+}
+
+.lastGeo {
+    width: 20px;
+    height: 27px;
+}
+
+.lastFooterTwoSpan {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 146px;
+    height: 50px;
+}
+
+.lastFooterTwoSpanOne {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    text-align: left;
+    line-height: 29px;
+}
+
+.lastFooterTwoSpanTwo {
+    font-family: Montserrat, sans-serif;
+    line-height: 23px;
+    font-size: 16px;
+}
+
+.visa {
+    top: 200px;
+    margin-left: 1226px;
+    position: absolute;
+    width: 197px;
+    height: 60px;
 }
