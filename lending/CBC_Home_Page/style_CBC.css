@@ -581,8 +581,8 @@ button:hover {
 }
 
 .circleTwoBanners {
-    top: 140px;
-    left: -33px;
+    top: 138px;
+    left: -42px;
 }
 
 .circleAfterManyPicturesBanner {
@@ -1187,8 +1187,8 @@ button:hover {
     position: absolute;
     width: 240px;
     height: 175px;
-    left: -25px;
-    top: -25px;
+    left: -34px;
+    top: -33px;
     border-top: 8px solid #1F347B;
     border-left: 8px solid #1F347B;
     transform: rotate(0deg);
