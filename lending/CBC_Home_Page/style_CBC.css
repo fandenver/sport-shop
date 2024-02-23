@@ -1,5 +1,4 @@
 body {
-    width: 100%;
     margin: 15px 0 0 0;
     font-family: Rubik, sans-serif;
     font-weight: 500;
@@ -430,7 +429,29 @@ button:hover {
 .choiceChapter > div > :nth-child(1) {
     width: 20px;
     height: 16px;
-    margin-top: 3px;
+    margin-top: 4px;
+}
+
+.choiceChapter > div > :nth-child(2) {
+    margin-left: 12px;
+}
+
+#smallImageSize, #smallTwoImageSize,
+#smallFourImageSize, #smallFiveImageSize,
+#smallSixImageSize {
+    height: 20px;
+}
+
+#newSticker {
+    height: 10px;
+    margin-top: 6px;
+}
+
+#smallOneImageSize {
+    width: 15px;
+    height: 24px;
+    margin-top: -1px;
+    margin-left: -3px;
 }
 
 .commonSpanMainMenu {
@@ -466,6 +487,7 @@ button:hover {
 }
 
 .six {
+    padding-left: 7px;
     width: 389px;
     height: 24px;
 }
@@ -521,26 +543,21 @@ button:hover {
     width: 922px;
     height: 132px;
     font-size: 36px;
-    font-weight: 700;
     line-height: 44px;
     letter-spacing: 0;
     text-align: left;
     color: #4A4D4A;
+    font-family: Montserrat, sans-serif;
 }
 
 .bigText {
-    font-family: Montserrat, sans-serif;
+    font-weight: 700;
     line-height: 44px;
 }
 
 .orangeText {
-    font-family: Montserrat, sans-serif;
+    font-family: Rubik, sans-serif;
     color: #FFAF37;
-}
-
-.smallText {
-    font-weight: 500;
-    line-height: 42px;
 }
 
 .mainBannerImage {
@@ -645,11 +662,11 @@ button:hover {
 }
 
 .buttonBannerLeft {
-    margin-left: 15px;
+    margin-left: 5px;
 }
 
 .buttonBannerRight {
-    margin-left: 787px;
+    margin-left: 812px;
 }
 
 .leftBannerButton, .rightBannerButton {
@@ -820,7 +837,6 @@ button:hover {
     height: 111px;
     width: 256px;
     font-size: 30px;
-    font-weight: 500;
 }
 
 .reliableSupplier {
@@ -833,10 +849,6 @@ button:hover {
 }
 
 .spanAndImageReliable {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     width: 269px;
     height: 172px;
     margin: 37px 30px;
@@ -845,14 +857,31 @@ button:hover {
 .oneImageReliable {
     height: 60px;
     width: 60px;
-    background: url("images/manyBanners/oneImage.png");
+}
+
+
+.reliableSupplierSpanOne, .fullComplexSpanOne {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.reliableSupplierSpanTwo, .fullComplexSpanTwo,
+.orderKeySpanTwo, .cooperationSpanTwo, .qualityServiceSpanTwo {
+    font-weight: 400;
+}
+
+.spanAndImageReliable, .spanAndImageFullComplex,
+.spanAndImageOrderKey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .reliableSupplierSpanOne {
     height: 29px;
     width: 269px;
-    font-size: 24px;
-    padding-top: 10px;
+    line-height: 29px;
 }
 
 .reliableSupplierSpanTwo {
@@ -871,31 +900,27 @@ button:hover {
 }
 
 .twoImageReliableOne {
+    margin-top: 2px;
     height: 62px;
     width: 72px;
-    background: url("images/manyBanners/twoImage.png");
 }
 
 .spanAndImageFullComplex {
-    display: flex;
-    align-items: center;
     width: 292px;
     height: 181px;
     margin: 43px 27px;
-    flex-direction: column;
 }
 
 .fullComplexSpanOne {
     height: 31px;
     width: 215px;
-    font-size: 24px;
-    padding-top: 10px;
+    padding-top: 2px;
 }
 
 .fullComplexSpanTwo {
     height: 71px;
     width: 292px;
-    margin-top: 12px;
+    padding-top: 8px;
 }
 
 .orderKey {
@@ -910,13 +935,9 @@ button:hover {
 .threeImageOrderKey {
     height: 70px;
     width: 50px;
-    background: url("images/manyBanners/threeImage.png");
 }
 
 .spanAndImageOrderKey {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 178px;
     height: 181px;
     margin: 29px 36px;
@@ -926,13 +947,13 @@ button:hover {
     height: 29px;
     width: 187px;
     font-size: 24px;
-    padding-top: 8px;
+    margin-top: 6px;
 }
 
 .orderKeySpanTwo {
     height: 63px;
     width: 281px;
-    margin-top: 12px;
+    margin-top: 8px;
 }
 
 .directDeliveries {
@@ -954,25 +975,24 @@ button:hover {
 }
 
 .fourImageDirectDeliveries {
-    margin-top: 24px;
+    margin-top: -1px;
     height: 73px;
     width: 70px;
-    background: url("images/manyBanners/manyPicturesBanner/fourImageTop.png");
 }
 
 .directDeliveriesSpanOne {
     height: 29px;
     width: 213px;
     font-size: 24px;
-    padding-top: 8px;
+    padding-top: 12px;
 }
 
 .manyPictures {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 40px;
     justify-content: space-between;
+    margin-top: 40px;
     height: 67px;
     width: 630px;
 }
@@ -1058,22 +1078,23 @@ button:hover {
 }
 
 .sixImageCooperation {
+    margin-top: -8px;
     height: 54px;
     width: 60px;
-    background: url("images/manyBanners/sixImage.png");
 }
 
 .cooperationSpanOne {
-    margin-top: 17px;
+    padding-top: 11px;
     height: 29px;
     width: 202px;
     font-size: 24px;
 }
 
 .cooperationSpanTwo {
+    padding-top: 20px;
     height: 84px;
     width: 292px;
-    margin-top: 15px;
+    line-height: 21px;
 }
 
 .twoBannersNextDiv {
@@ -1124,11 +1145,21 @@ button:hover {
 .oneSpanOneBannerTwoBanners, .oneSpanTwoBannerTwoBanners {
     font-size: 24px;
     text-align: right;
+    line-height: 29px;
+}
+
+.twoSpanOneBannerTwoBanners, .twoSpanTwoBannerTwoBanners {
+    text-align: right;
+    font-weight: 400;
+    line-height: 21px;
 }
 
 .twoSpanOneBannerTwoBanners {
     margin-top: 32px;
-    text-align: right;
+}
+
+.twoSpanTwoBannerTwoBanners {
+    margin-top: 6px;
 }
 
 #chooseTechnique {
@@ -1165,23 +1196,12 @@ button:hover {
     margin-left: 389px;
 }
 
-.twoSpanOneBannerTwoBanners {
-    margin-top: 32px;
-    text-align: right;
-}
-
-.twoSpanTwoBannerTwoBanners {
-    margin-top: 6px;
-    text-align: right;
-}
-
 #assembleOffice {
     margin-top: 17px;
     height: 69px;
     width: 268px;
     text-transform: uppercase;
 }
-
 
 .leftTwoBanners {
     position: absolute;
@@ -1669,6 +1689,7 @@ button:hover {
 
 .twoFooterTwoSpan {
     font-size: 17px;
+    font-weight: 400;
     width: 343px;
     height: 42px;
     margin-bottom: 20px;
@@ -1892,6 +1913,7 @@ button:hover {
 }
 
 .spanAfterCheckMark {
+    font-weight: 400;
     font-size: 10px;
     line-height: 15px;
 }
@@ -1931,6 +1953,7 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 1188px;
     height: 428px;
 }
@@ -1946,8 +1969,8 @@ button:hover {
 
 .oneBeforeLastFooterSpanColumnBlock {
     display: flex;
-    padding-bottom: 10px;
     align-items: center;
+    padding-bottom: 10px;
     flex-grow: 1;
 }
 
@@ -1961,14 +1984,20 @@ button:hover {
     height: 30px;
 }
 
+.clock {
+    margin-bottom: 8px;
+}
+
 .newSMS {
     width: 30px;
     height: 22px;
+    margin-bottom: 8px;
 }
 
 .newWhatsApp {
     width: 26px;
     height: 26px;
+    margin-bottom: 8px;
 }
 
 .bannerBeforeLastFooterSpan {
@@ -2052,6 +2081,7 @@ button:hover {
 }
 
 .lastFooterBlockBigSpan {
+    line-height: 21px;
     font-weight: 700;
 }
 
@@ -2105,11 +2135,13 @@ button:hover {
 }
 
 .lastFooterSixBlockSpanImageOne {
+    font-family: Montserrat, sans-serif;
     width: 185px;
     height: 22px;
 }
 
 .lastFooterSixBlockSpanImageTwo {
+    margin-left: -3px;
     width: 162px;
     height: 21px;
 }
@@ -2140,6 +2172,7 @@ button:hover {
     text-align: center;
     width: 146px;
     height: 50px;
+    margin-right: 8px;
 }
 
 .lastFooterTwoSpanOne {
