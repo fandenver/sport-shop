@@ -2,6 +2,10 @@
 /shelf/
 /workspace.xml
 # Editor-based HTTP Client requests
+<<<<<<<< HEAD:.gitignore
 /httpRequests/
 /.idea/
 /node_modules/
+========
+/httpRequests/
+>>>>>>>> f96dd27 (Внутренний рефакторинг директории):.idea/.gitignore
