@@ -2,16 +2,18 @@
     background-color: #4f980a;
     display: flex;
     position: relative;
-    height: 300px;
+    height: 3300px;
     width: 300px;
     margin-left: 300px;
 }
 
 .childOne {
     background-color: #136477;
-    position: absolute;
-    display: block;
+    display: inline-block;
+    position: sticky;
     height: 50px;
     width: 50px;
     left: 20px;
+    padding-left: 130px;
+    overflow: hidden;
 }
