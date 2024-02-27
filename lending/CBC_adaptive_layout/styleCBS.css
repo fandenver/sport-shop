@@ -3,6 +3,20 @@
   color: #FFAF37;
 }
 
+.afterNavBar, .bottom_navBar .alignSpan {
+  display: flex;
+  justify-content: space-between;
+}
+
+.afterNavBar .afterNavBarBannerAndSpan, .afterNavBar .choiceChapter, .afterNavBar .mainMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.sideButtons {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+}
+
 body {
   margin: 15px 0 0 0;
   font-family: Rubik, sans-serif;
@@ -226,6 +240,434 @@ button:hover {
 .hatBlock .contactWithMe .city {
   font-size: 20px;
   font-weight: 600;
+}
+
+.bottom_navBar {
+  width: 100%;
+  height: 60px;
+  background-color: #F0F0FF;
+  margin-top: 28px;
+  padding: 15px;
+}
+.bottom_navBar .alignSpan {
+  width: 1394px;
+  margin: auto;
+}
+.bottom_navBar .alignSpan .bottom_navBar_one, .bottom_navBar .alignSpan .bottom_navBar_two,
+.bottom_navBar .alignSpan .bottom_navBar_three, .bottom_navBar .alignSpan .bottom_navBar_four {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+.bottom_navBar .alignSpan .bottom_navBar_one:hover, .bottom_navBar .alignSpan .bottom_navBar_two:hover,
+.bottom_navBar .alignSpan .bottom_navBar_three:hover, .bottom_navBar .alignSpan .bottom_navBar_four:hover {
+  color: #FFAF37;
+}
+.bottom_navBar .alignSpan .bottom_navBar_one::after, .bottom_navBar .alignSpan .bottom_navBar_two::after,
+.bottom_navBar .alignSpan .bottom_navBar_three::after, .bottom_navBar .alignSpan .bottom_navBar_four::after {
+  content: "";
+  position: absolute;
+  margin-top: 30px;
+  height: 2px;
+  background-image: linear-gradient(to right, black 60%, transparent 0);
+  background-position: bottom;
+  background-size: 5px 1px;
+  background-repeat: repeat-x;
+  cursor: pointer;
+}
+.bottom_navBar .alignSpan .bottom_navBar_one:hover:after, .bottom_navBar .alignSpan .bottom_navBar_two:hover:after,
+.bottom_navBar .alignSpan .bottom_navBar_three:hover:after, .bottom_navBar .alignSpan .bottom_navBar_four:hover:after {
+  background-image: linear-gradient(to right, #FFAF37 100%, transparent 0);
+}
+.bottom_navBar .alignSpan .bottom_navBar_one {
+  height: 29px;
+  width: 245px;
+  left: -7px;
+}
+.bottom_navBar .alignSpan .bottom_navBar_one::after {
+  left: 0;
+  width: 240px;
+}
+.bottom_navBar .alignSpan .bottom_navBar_two {
+  width: 350px;
+  height: 25px;
+  line-height: 21px;
+}
+.bottom_navBar .alignSpan .bottom_navBar_two::after {
+  width: 350px;
+}
+.bottom_navBar .alignSpan .bottom_navBar_three {
+  width: 385px;
+  height: 21px;
+  padding-left: 12px;
+}
+.bottom_navBar .alignSpan .bottom_navBar_three::after {
+  width: 375px;
+}
+.bottom_navBar .alignSpan .bottom_navBar_four {
+  width: 99px;
+  height: 21px;
+  padding-left: 21px;
+}
+.bottom_navBar .alignSpan .bottom_navBar_four::after {
+  left: 0;
+  margin-left: 23px;
+  width: 85px;
+}
+
+.afterNavBar {
+  width: 1410px;
+  height: 736px;
+  margin: 50px auto auto auto;
+}
+.afterNavBar .mainMenu {
+  width: 448px;
+  height: 736px;
+}
+.afterNavBar .headerMainMenu {
+  display: inline-block;
+  width: 447px;
+  height: 60px;
+  border-radius: 10px 10px 0 0;
+  background: #F0F0FF;
+}
+.afterNavBar .headerSpan {
+  display: flex;
+  width: 106px;
+  height: 26px;
+  margin: 17px auto auto 21px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0;
+  text-align: left;
+}
+.afterNavBar .choiceChapter {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+  width: 447px;
+  height: 676px;
+}
+.afterNavBar .choiceChapterOne {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  width: 447px;
+  height: 40px;
+}
+.afterNavBar .left {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  margin-left: 377px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.afterNavBar .left {
+  border-top: 2px solid rgba(0, 21, 105, 0.6);
+  border-left: 2px solid rgba(0, 21, 105, 0.6);
+  transform: rotate(-225deg);
+}
+.afterNavBar .choiceChapter > div > :nth-child(1) {
+  width: 20px;
+  height: 16px;
+  margin-top: 4px;
+}
+.afterNavBar .choiceChapter > div > :nth-child(2) {
+  margin-left: 12px;
+}
+.afterNavBar #smallImageSize, .afterNavBar #smallTwoImageSize,
+.afterNavBar #smallFourImageSize, .afterNavBar #smallFiveImageSize,
+.afterNavBar #smallSixImageSize {
+  height: 20px;
+}
+.afterNavBar #newSticker {
+  height: 10px;
+  margin-top: 6px;
+}
+.afterNavBar #smallOneImageSize {
+  width: 15px;
+  height: 24px;
+  margin-top: -1px;
+  margin-left: 2px;
+}
+.afterNavBar .commonSpanMainMenu {
+  display: flex;
+  margin-left: 22px;
+  margin-bottom: 22px;
+}
+.afterNavBar .one {
+  width: 339px;
+  height: 21px;
+  margin-top: 10px;
+}
+.afterNavBar .two {
+  width: 289px;
+  height: 21px;
+}
+.afterNavBar .three {
+  width: 279px;
+  height: 21px;
+}
+.afterNavBar .four {
+  width: 265px;
+  height: 21px;
+}
+.afterNavBar .five {
+  width: 254px;
+  height: 21px;
+}
+.afterNavBar .six {
+  padding-left: 3px;
+  width: 389px;
+  height: 24px;
+}
+.afterNavBar .seven {
+  width: 372px;
+  height: 42px;
+}
+.afterNavBar .eight {
+  width: 297px;
+  height: 42px;
+}
+.afterNavBar .nine {
+  width: 337px;
+  height: 47px;
+}
+.afterNavBar .ten {
+  width: 337px;
+  height: 21px;
+}
+.afterNavBar .eleven {
+  width: 209px;
+  height: 21px;
+}
+.afterNavBar .twelve {
+  width: 254px;
+  height: 21px;
+}
+.afterNavBar .thirteen {
+  width: 107px;
+  height: 21px;
+}
+.afterNavBar .fourteen {
+  width: 127px;
+  height: 21px;
+}
+.afterNavBar .afterNavBarBannerAndSpan {
+  margin-left: 42px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBanner {
+  width: 922px;
+  height: 132px;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #4A4D4A;
+  font-family: Montserrat, sans-serif;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBanner .bigText {
+  font-weight: 700;
+  line-height: 44px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBanner .orangeText {
+  font-family: Rubik, sans-serif;
+  color: #FFAF37;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 922px;
+  height: 590px;
+  border-radius: 10px;
+  background: url("images/hat/mainBannerImage.png");
+  background-size: cover;
+  margin-top: 14px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .leftMain {
+  position: absolute;
+  width: 240px;
+  height: 175px;
+  left: 715px;
+  top: 447px;
+  border-top: 8px solid #1F347B;
+  border-left: 8px solid #1F347B;
+  transform: rotate(-180deg);
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circle, .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleTwoBanners, .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleAfterManyPicturesBanner,
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleAfterTwoFooter, .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleBannerBeforeLastFooter {
+  position: absolute;
+  background-color: #1F347B;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circle {
+  left: 939px;
+  top: 430px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleTwoBanners {
+  top: 138px;
+  left: -42px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleAfterManyPicturesBanner {
+  top: 247px;
+  left: 1424px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleAfterTwoFooter {
+  left: 143px;
+  bottom: 171px;
+  background-color: rgba(31, 52, 123, 0.2);
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleBannerBeforeLastFooter {
+  top: -9px;
+  left: 147px;
+  background-color: rgba(31, 52, 123, 0.2);
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerTextOnImage {
+  margin-left: 400px;
+  margin-top: 150px;
+  height: 116px;
+  width: 422px;
+  text-align: center;
+  font-size: 30px;
+  color: #FFFFFF;
+  font-weight: 550;
+  line-height: 37px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage #showOffer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 440px;
+  width: 330px;
+  height: 69px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBanner {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  transition: background-color 0.5s;
+  padding: 20px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBanner:hover {
+  background-color: #4f980a;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBannerLeft {
+  margin-left: 5px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBannerRight {
+  margin-left: 812px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftBannerButton, .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightBannerButton {
+  width: 16px;
+  height: 16px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftBannerButton {
+  border-top: 5px solid #001569;
+  border-left: 5px solid #001569;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerOne {
+  position: relative;
+  bottom: 2px;
+  right: 2px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightButtonBannerOne {
+  left: 2px;
+  top: 16px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerOne {
+  transform: rotate(-45deg);
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerTwo, .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightButtonBannerTwo {
+  position: relative;
+  right: 3px;
+  bottom: 2px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .leftButtonBannerTwo {
+  transform: rotate(-225deg);
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner {
+  display: flex;
+  margin: 170px auto auto 370px;
+  height: 20px;
+  width: 152px;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePagination {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  margin-left: 4px;
+  border: 1px solid #FFFFFF;
+  transition: background-color 0.5s;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePagination:hover {
+  background-color: #4f980a;
+}
+.afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePaginationOne {
+  background-color: #FFAF37;
+}
+
+.sideButtons {
+  position: fixed;
+  height: 30%;
+  width: 5%;
+  max-height: 271px;
+  max-width: 90px;
+  right: 0;
+  margin-top: -690px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+.sideButtons .oneSideButton, .sideButtons .twoSideButton, .sideButtons .threeSideButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s;
+}
+.sideButtons .oneSideButton {
+  height: 90px;
+  width: 90px;
+  background-color: #1F347B;
+  border-top-left-radius: 10px;
+  transition: background-color 0.5s;
+}
+.sideButtons .oneSideButton:hover, .sideButtons .twoSideButton:hover, .sideButtons .threeSideButton:hover {
+  background-color: #4f980a;
+}
+.sideButtons .twoSideButton {
+  background-color: #FFFFFF;
+  height: 90px;
+  width: 90px;
+  transition: background-color 0.5s;
+}
+.sideButtons .threeSideButton {
+  background-color: #FFFFFF;
+  height: 91px;
+  width: 90px;
+  border-bottom-left-radius: 10px;
+  border-top: 1px solid #1F347B;
+}
+.sideButtons .oneSideButtonImage {
+  max-height: 30px;
+  max-width: 30px;
+  height: 50%;
+  width: 50%;
+  top: 7px;
+  left: 15px;
 }
 
 /*# sourceMappingURL=styleCBS.css.map */
