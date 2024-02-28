@@ -859,7 +859,6 @@ button:hover {
     width: 60px;
 }
 
-
 .reliableSupplierSpanOne, .fullComplexSpanOne {
     font-size: 24px;
     margin-top: 10px;
@@ -965,13 +964,6 @@ button:hover {
 
 .directDeliveries:hover {
     background-color: #cec9c9;
-}
-
-.spanDirectDeliveries {
-    display: flex;
-    width: 178px;
-    height: 181px;
-    margin: 29px 36px;
 }
 
 .fourImageDirectDeliveries {
@@ -1120,7 +1112,7 @@ button:hover {
     background-color: #E3E1FF;
 }
 
-.oneBannerSmallImage {
+.oneAndTwoBannerSmallImage {
     position: absolute;
     height: 59px;
     width: 60px;
@@ -1297,7 +1289,6 @@ button:hover {
     font-size: 20px;
 }
 
-
 .imagesOneBlockOneFooter, .imagesTwoBlockOneFooter,
 .imagesThreeBlockOneFooter, .imagesFourBlockOneFooter,
 .imagesFiveBlockOneFooter {
@@ -1350,11 +1341,6 @@ button:hover {
 .fourImageOneFooter {
     height: 48px;
     width: 200px;
-}
-
-.twoImageOneFooter {
-    height: 102px;
-    width: 150px;
 }
 
 .bannerManyPictures {
