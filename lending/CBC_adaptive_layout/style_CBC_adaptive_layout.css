@@ -1589,18 +1589,6 @@ button:hover {
     z-index: 100;
 }
 
-.oneAfterManyPicturesBlock, .twoAfterManyPicturesBanner {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.oneAfterManyPicturesBlock {
-    height: 227px;
-    width: 520px;
-    margin: 100px 35px auto auto;
-}
-
 .oneSpanAfterManyPictures {
     width: 520px;
     height: 84px;
@@ -1716,7 +1704,6 @@ button:hover {
     border-bottom: 8px solid rgba(31, 52, 123, 0.2);;
     border-left: 8px solid rgba(31, 52, 123, 0.2);;
     box-sizing: border-box;
-
 }
 
 .bannerAfterTwoFooterBlock {
@@ -1779,12 +1766,9 @@ button:hover {
     width: 240px;
     height: 110px;
     left: 171px;
-    bottom: -75px
-}
-
-.leftMainAfterTwoFooter {
-    border-top: 8px solid rgba(31, 52, 123, 0.2);;
-    border-left: 8px solid rgba(31, 52, 123, 0.2);;
+    bottom: -75px;
+    border-top: 8px solid rgba(31, 52, 123, 0.2);
+    border-left: 8px solid rgba(31, 52, 123, 0.2);
     transform: rotate(-270deg);
 }
 
@@ -1794,12 +1778,10 @@ button:hover {
     height: 1200px;
     left: -576px;
     top: -666px;
-}
-
-.leftMainAfterTwoFooterAfter {
     border-left: 8px solid rgba(31, 52, 123, 0.2);;
     transform: rotate(90deg);
 }
+
 
 .twoBannerAfterTwoFooter {
     display: flex;
