@@ -9,6 +9,8 @@
 $fontFamilyRubik: Rubik, sans-serif;
 $fontFamilyMontserrat: Montserrat, sans-serif;
 
+
+// Шаблоны
 %tplColorOrange {
   color: #FFAF37;
 }
@@ -27,7 +29,9 @@ $fontFamilyMontserrat: Montserrat, sans-serif;
   box-shadow: 0 4px 20px 0 #00000040;
 }
 
+//
 
+// Миксины
 @mixin backgroundImage($color, $percent) {
   background-image: linear-gradient(to right, $color $percent, transparent 0);
 }
@@ -43,40 +47,12 @@ $fontFamilyMontserrat: Montserrat, sans-serif;
   width: $width;
 }
 
-.circle, .circleTwoBanners, .circleAfterManyPicturesBanner,
-.circleAfterTwoFooter, .circleBannerBeforeLastFooter {
-  position: absolute;
-  background-color: #1F347B;
-  border-radius: 50%;
-  @include heightAndWidth(24px, 24px);
+@mixin topAndLeft($top, $left) {
+  top: $top;
+  left: $left;
 }
 
-.circle {
-  left: 939px;
-  top: 430px;
-}
-
-.circleTwoBanners {
-  top: 138px;
-  left: -42px;
-}
-
-.circleAfterManyPicturesBanner {
-  top: 247px;
-  left: 1424px;
-}
-
-.circleAfterTwoFooter {
-  left: 143px;
-  bottom: 171px;
-  background-color: rgba(31, 52, 123, 0.2);
-}
-
-.circleBannerBeforeLastFooter {
-  top: -9px;
-  left: 147px;
-  background-color: rgba(31, 52, 123, 0.2);
-}
+//
 
 body {
   margin: 15px 0 0 0;
@@ -108,12 +84,70 @@ body {
     }
   }
 
+  .circle, .circleTwoBanners, .circleAfterManyPicturesBanner,
+  .circleAfterTwoFooter, .circleBannerBeforeLastFooter {
+    @include heightAndWidth(24px, 24px);
+    position: absolute;
+    background-color: #1F347B;
+    border-radius: 50%;
+  }
+
+  .circle {
+    @include topAndLeft(430px, 939px);
+  }
+
+  .circleTwoBanners {
+    @include topAndLeft(138px, -42px);
+  }
+
+  .circleAfterManyPicturesBanner {
+    @include topAndLeft(247px, 1424px);
+  }
+
+  .circleAfterTwoFooter {
+    left: 143px;
+    bottom: 171px;
+    background-color: rgba(31, 52, 123, 0.2);
+  }
+
+  .circleBannerBeforeLastFooter {
+    @include topAndLeft(-9px, 147px);
+    background-color: rgba(31, 52, 123, 0.2);
+  }
+
+  .arrowLeftManyPictures {
+    @include heightAndWidth(20px, 20px);
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+
+    &::before {
+      @include heightAndWidth(2px, 40px);
+      background-color: #4A4D4A;
+      top: 58px;
+      left: 117px;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+    }
+
+    &::after {
+      @include heightAndWidth(10px, 10px);
+      @include topAndLeft(54px, 147px);
+      border-top: 2px solid #4A4D4A;
+      border-left: 2px solid #4A4D4A;
+      transform: rotate(-225deg);
+    }
+  }
+
   .hatBlock {
+    @include heightAndWidth(163px, 1395px);
     display: grid;
     grid-template-rows: 48px 63px 54px;
     grid-template-columns: 767px 641px;
-    height: 163px;
-    width: 1395px;
     margin: auto;
 
     .labelImg {
@@ -737,14 +771,10 @@ body {
     }
   }
 
-  //TODO: закончил с @include heightAndWidth
   .sideButtons {
+    @include heightAndWidth(271px, 90px);
     @extend %tplBoxShadow;
     position: fixed;
-    height: 30%;
-    width: 5%;
-    max-height: 271px;
-    max-width: 90px;
     right: 0;
     margin-top: -690px;
     border-top-left-radius: 10px;
@@ -758,8 +788,7 @@ body {
     }
 
     .oneSideButton {
-      height: 90px;
-      width: 90px;
+      @include heightAndWidth(90px, 90px);
       background-color: #1F347B;
       border-top-left-radius: 10px;
       transition: background-color 0.5s;
@@ -770,39 +799,32 @@ body {
     }
 
     .twoSideButton {
+      @include heightAndWidth(90px, 90px);
       background-color: #FFFFFF;
-      height: 90px;
-      width: 90px;
       transition: background-color 0.5s;
     }
 
     .threeSideButton {
+      @include heightAndWidth(91px, 90px);
       background-color: #FFFFFF;
-      height: 91px;
-      width: 90px;
       border-bottom-left-radius: 10px;
       border-top: 1px solid #1F347B;
     }
 
     .oneSideButtonImage {
-      max-height: 30px;
-      max-width: 30px;
-      height: 50%;
-      width: 50%;
-      top: 7px;
-      left: 15px;
+      @include heightAndWidth(30px, 30px);
+      @include topAndLeft(7px, 15px);
     }
   }
 
   .manyBanners {
+    @include heightAndWidth(530px, 1410px);
     display: grid;
     grid-gap: 30px;
     grid-template-columns: 330px 330px 330px 330px;
     grid-template-rows: 250px 250px;
     flex-wrap: wrap;
     margin: 100px auto auto auto;
-    height: 530px;
-    width: 1410px;
 
     .workCBC, .reliableSupplier,
     .fullComplex, .orderKey,
@@ -828,8 +850,7 @@ body {
 
     .spanAndImageReliable, .spanAndImageFullComplex,
     .spanAndImageOrderKey {
-      display: flex;
-      flex-direction: column;
+      @extend %tplFlexAndColumn;
       align-items: center;
       text-align: center;
     }
@@ -842,253 +863,210 @@ body {
     }
 
     .workCBC {
-      height: 250px;
-      width: 330px;
+      @include heightAndWidth(250px, 330px);
       background-color: #F0F0FF;
 
       .workCBCSpan {
+        @include heightAndWidth(111px, 256px);
         font-size: 30px;
         line-height: 38px;
-        height: 111px;
-        width: 256px;
       }
     }
 
     .reliableSupplier {
-      height: 250px;
-      width: 323px;
+      @include heightAndWidth(250px, 323px);
 
       .spanAndImageReliable {
-        width: 269px;
-        height: 172px;
+        @include heightAndWidth(172px, 269px);
         margin: 37px 30px;
 
         .oneImageReliable {
-          height: 60px;
-          width: 60px;
+          @include heightAndWidth(60px, 60px);
         }
 
         .reliableSupplierSpanOne {
-          height: 29px;
-          width: 269px;
+          @include heightAndWidth(29px, 269px);
           line-height: 29px;
         }
 
         .reliableSupplierSpanTwo {
-          height: 63px;
-          width: 194px;
+          @include heightAndWidth(63px, 194px);
           margin-top: 10px;
         }
       }
     }
 
     .fullComplex {
-      height: 250px;
-      width: 330px;
+      @include heightAndWidth(250px, 330px);
 
       .spanAndImageFullComplex {
-        width: 292px;
-        height: 181px;
+        @include heightAndWidth(181px, 292px);
         margin: 43px 27px;
 
         .twoImageReliableOne {
+          @include heightAndWidth(62px, 72px);
           margin-top: 2px;
-          height: 62px;
-          width: 72px;
         }
 
         .fullComplexSpanOne {
-          height: 31px;
-          width: 215px;
+          @include heightAndWidth(31px, 215px);
           padding-top: 2px;
         }
 
         .fullComplexSpanTwo {
-          height: 71px;
-          width: 292px;
+          @include heightAndWidth(71px, 292px);
           padding-top: 8px;
         }
       }
     }
 
     .orderKey {
-      height: 250px;
-      width: 330px;
+      @include heightAndWidth(250px, 330px);
 
       .spanAndImageOrderKey {
-        width: 178px;
-        height: 181px;
+        @include heightAndWidth(181px, 178px);
         margin: 29px 36px;
 
         .threeImageOrderKey {
-          height: 70px;
-          width: 50px;
+          @include heightAndWidth(70px, 50px);
         }
 
         .orderKeySpanOne {
-          height: 29px;
-          width: 187px;
+          @include heightAndWidth(29px, 187px);
           font-size: 24px;
           margin-top: 6px;
         }
 
         .orderKeySpanTwo {
-          height: 63px;
-          width: 281px;
+          @include heightAndWidth(63px, 281px);
           margin-top: 8px;
         }
       }
     }
 
     .directDeliveries {
+      @include heightAndWidth(250px, 690px);
       grid-area: 2/1/2/2;
       flex-direction: column;
-      height: 250px;
-      width: 690px;
 
       .fourImageDirectDeliveries {
+        @include heightAndWidth(73px, 70px);
         margin-top: -1px;
-        height: 73px;
-        width: 70px;
       }
 
       .directDeliveriesSpanOne {
-        height: 29px;
-        width: 213px;
+        @include heightAndWidth(29px, 213px);
         font-size: 24px;
         padding-top: 12px;
       }
 
       .manyPictures {
+        @include heightAndWidth(67px, 630px);
         @include flexAndAlign(space-between, center);
         flex-direction: row;
         margin-top: 40px;
-        height: 67px;
-        width: 630px;
 
         .oneBottom {
-          height: 56px;
-          width: 45px;
+          @include heightAndWidth(56px, 45px);
         }
 
         .twoBottom {
-          height: 44px;
-          width: 50px;
+          @include heightAndWidth(44px, 50px);
         }
 
         .threeBottom {
-          height: 15px;
-          width: 75px;
+          @include heightAndWidth(15px, 75px);
         }
 
         .fourBottom {
-          height: 60px;
-          width: 60px;
+          @include heightAndWidth(60px, 60px);
         }
 
         .fiveBottom {
-          height: 12px;
-          width: 80px;
+          @include heightAndWidth(12px, 80px);
         }
 
         .sixBottom {
-          height: 46px;
-          width: 70px;
+          @include heightAndWidth(46px, 70px);
         }
 
         .sevenBottom {
-          height: 23px;
-          width: 70px;
+          @include heightAndWidth(23px, 70px);
         }
       }
     }
 
     .qualityService {
-      display: flex;
-      flex-direction: column;
+      @include heightAndWidth(250px, 330px);
+      @extend %tplFlexAndColumn;
       align-items: center;
       grid-area: 2/3/2/3;
-      height: 250px;
-      width: 330px;
 
       .fiveImageOrderKey {
-        height: 63px;
-        width: 60px;
+        @include heightAndWidth(63px, 60px);
         background: url("images/manyBanners/fiveImage.png");
       }
 
       .qualityServiceSpanOne {
-        height: 29px;
-        width: 267px;
+        @include heightAndWidth(29px, 267px);
         font-size: 24px;
         margin-top: 15px;
       }
 
       .qualityServiceSpanTwo {
-        height: 84px;
-        width: 292px;
+        @include heightAndWidth(84px, 292px);
         margin-top: 6px;
       }
     }
 
     .cooperation {
-      display: flex;
-      flex-direction: column;
+      @extend %tplFlexAndColumn;
+      @include heightAndWidth(250px, 330px);
       align-items: center;
       grid-area: 2/4/2/4;
-      height: 250px;
-      width: 330px;
     }
 
     .sixImageCooperation {
+      @include heightAndWidth(54px, 60px);
       margin-top: -8px;
-      height: 54px;
-      width: 60px;
     }
 
     .cooperationSpanOne {
+      @include heightAndWidth(29px, 202px);
       padding-top: 11px;
-      height: 29px;
-      width: 202px;
       font-size: 24px;
     }
 
     .cooperationSpanTwo {
+      @include heightAndWidth(84px, 292px);
       padding-top: 20px;
-      height: 84px;
-      width: 292px;
       line-height: 21px;
     }
   }
 
   .twoBannersNextDiv {
+    @include heightAndWidth(402px, 1410px);
     display: flex;
     position: relative;
     justify-content: space-between;
-    width: 1410px;
-    height: 402px;
     margin: 130px auto auto auto;
 
     .leftTwoBanners {
+      @include heightAndWidth(175px, 240px);
+      @include topAndLeft(-33px, -34px);
       position: absolute;
-      width: 240px;
-      height: 175px;
-      left: -34px;
-      top: -33px;
       border-top: 8px solid #1F347B;
       border-left: 8px solid #1F347B;
       transform: rotate(0deg);
     }
 
     .oneBanner, .twoBanner {
+      @include heightAndWidth(402px, 688px);
       display: flex;
-      height: 402px;
-      width: 688px;
     }
 
     .oneBannerSpanAndButton, .twoBannerSpanAndButton {
-      display: flex;
-      flex-direction: column;
+      @extend %tplFlexAndColumn;
       align-items: self-end;
       margin-top: 82px;
       height: 239px;
@@ -1101,9 +1079,8 @@ body {
     }
 
     .oneAndTwoBannerSmallImage {
+      @include heightAndWidth(59px, 60px);
       position: absolute;
-      height: 59px;
-      width: 60px;
       margin-left: 15px;
       margin-top: 27px;
     }
@@ -1112,9 +1089,8 @@ body {
       background-color: #F0F0FF;
 
       .oneBannerImage {
+        @include heightAndWidth(240px, 323px);
         position: absolute;
-        height: 240px;
-        width: 323px;
         margin-top: 162px;
       }
 
@@ -1133,9 +1109,8 @@ body {
         }
 
         #chooseTechnique {
+          @include heightAndWidth(70px, 300px);
           margin-top: 16px;
-          height: 70px;
-          width: 300px;
           text-transform: uppercase;
         }
       }
@@ -1145,9 +1120,8 @@ body {
       background-color: #E3E1FF;
 
       .twoBannerImage {
+        @include heightAndWidth(262px, 344px);
         position: absolute;
-        height: 262px;
-        width: 344px;
         margin-top: 115px;
       }
 
@@ -1160,9 +1134,8 @@ body {
         }
 
         #assembleOffice {
+          @include heightAndWidth(69px, 268px);
           margin-top: 17px;
-          height: 69px;
-          width: 268px;
           text-transform: uppercase;
         }
       }
@@ -1170,35 +1143,33 @@ body {
   }
 
   .oneFooter {
+    @include heightAndWidth(300px, 100%);
     display: flex;
     align-items: center;
-    height: 300px;
-    width: 100%;
     background-color: #F0F0FF;
     margin-top: 100px;
 
     .oneFooterCenterBanner {
+      @include heightAndWidth(258px, 1389px);
       display: grid;
       list-style: none;
       grid-row-gap: 18px;
       grid-template-rows: 74px 166px;
       grid-template-columns: 694px 695px;
-      height: 258px;
-      width: 1389px;
       margin: auto;
       padding: 0;
 
       .onBlockOneFooter {
+        @include heightAndWidth(74px, 687px);
         line-height: 37px;
         font-size: 30px;
         align-self: flex-start;
         grid-column-start: 1;
         grid-row-start: 1;
-        height: 74px;
-        width: 687px;
       }
 
       .twoBlockOneFooter {
+        @include heightAndWidth(60px, 400px);
         cursor: pointer;
         justify-self: right;
         grid-column-start: 2;
@@ -1206,8 +1177,6 @@ body {
         border: 2px solid #FFAF37;
         margin-top: 3px;
         margin-right: 10px;
-        height: 60px;
-        width: 400px;
         transition: background-color 0.5s;
 
         &:hover {
@@ -1215,41 +1184,29 @@ body {
         }
 
         .twoBlockOneFooterDiv {
+          @include heightAndWidth(60px, 400px);
           @include flexAndAlign(center, center);
           position: relative;
-          height: 60px;
-          width: 400px;
 
           .twoBlockOneFooterSpan {
+            @include heightAndWidth(24px, 369px);
             position: relative;
-            height: 24px;
-            width: 369px;
           }
 
           .arrowTwoBlockOneFooterSpan {
+            @include topAndLeft(-30px, 225px);
             position: absolute;
-            top: -30px;
-            left: 225px;
-
-            .arrowLeftManyPictures {
-              width: 20px;
-              height: 20px;
-              position: relative;
-              display: inline-flex;
-              cursor: pointer;
-            }
           }
         }
       }
 
       .threeBlockOneFooter {
+        @include heightAndWidth(166px, 1327px);
         @include flexAndAlign(space-between, center);
         flex-direction: row;
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 2;
-        height: 166px;
-        width: 1327px;
         margin-left: 62px;
         font-size: 20px;
 
@@ -1263,40 +1220,362 @@ body {
         }
 
         .imagesOneBlockOneFooter {
-          height: 161px;
-          width: 291px;
+          @include heightAndWidth(161px, 291px);
 
           .oneImageOneFooter {
-            height: 100px;
-            width: 120px;
+            @include heightAndWidth(100px, 120px);
           }
         }
 
         .imagesTwoBlockOneFooter {
-          height: 104px;
-          width: 200px;
+          @include heightAndWidth(104px, 200px);
 
           .twoImageOneFooter {
-            height: 66px;
-            width: 200px;
+            @include heightAndWidth(66px, 200px);
           }
         }
 
         .imagesThreeBlockOneFooter {
-          height: 161px;
-          width: 342px;
+          @include heightAndWidth(161px, 342px);
         }
 
         .imagesFourBlockOneFooter {
-          height: 85px;
-          width: 200px;
+          @include heightAndWidth(162px, 150px);
         }
 
         .imagesFiveBlockOneFooter {
-          height: 162px;
-          width: 150px;
+          @include heightAndWidth(162px, 1509x);
         }
       }
+    }
+  }
+}
+
+.bannerManyPictures {
+  @include heightAndWidth(804px, 1410px);
+  display: grid;
+  grid-template-rows: 248px 248px 248px;
+  grid-template-columns: 330px 330px 330px 330px;
+  grid-gap: 30px;
+  margin: 100px auto auto auto;
+
+  .oneBannerManyPictures, .bannersManyPicturesContainer {
+    @include heightAndWidth(248px, 330px);
+    @include flexAndAlign(center, center);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: #FFFF;
+    box-shadow: 0 4px 20px 0 #00000040;
+    transition: color 0.5s;
+    cursor: pointer;
+  }
+
+  .oneBannerManyPictures:hover, .bannersManyPicturesContainer:hover {
+    color: #4f980a;
+  }
+
+  .commonImageBannerManyPictures {
+    @include heightAndWidth(154px, 180px);
+    margin-top: -20px;
+  }
+
+  .oneBannerManyPictures {
+    grid-area: 1/1/1/1;
+    background-color: #F0F0FF;
+
+    .oneBannerManyPicturesSpan {
+      font-size: 30px;
+      text-align: center;
+      line-height: 37px;
+    }
+  }
+
+  .twoBannerManyPicturesTwoSpan, .eightBannerManyPicturesTwoSpan {
+    @include heightAndWidth(21px, 303px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  .arrowBannerManyPictures {
+    position: absolute;
+    top: 146px;
+    left: 158px;
+  }
+
+  .eightImageBannerManyPictures {
+    @include heightAndWidth(187px, 222px);
+    position: absolute;
+    top: 5px;
+  }
+
+  .elevenImageBannerManyPictures {
+    @include heightAndWidth(126px, 195px);
+    top: 5px;
+  }
+
+  .eightBannerManyPicturesTwoSpan {
+    margin-top: 165px;
+  }
+
+  .spanElevenBannerManyPictures {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $fontFamilyMontserrat;
+  }
+
+  #showAllOffer {
+    @include heightAndWidth(70px, 283px);
+    font-size: 14px;
+  }
+}
+
+.twoBannersAfterManyPicturesBanner {
+  @include heightAndWidth(402px, 1408px);
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin: 100px auto auto auto;
+
+  .oneAfterManyPicturesBanner, .twoAfterManyPicturesBanner {
+    @include heightAndWidth(402px, 690px);
+    display: flex;
+    position: relative;
+  }
+
+  .smallOneAfterManyPicturesBanner, .smallTwoAfterManyPicturesBanner {
+    @include heightAndWidth(60px, 60px);
+    position: absolute;
+    top: 30px;
+    left: 15px;
+  }
+
+  .oneSpanAfterManyPictures, .fourSpanAfterManyPictures {
+    text-align: right;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  .oneAfterManyPicturesBlock, .twoAfterManyPicturesBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .oneAfterManyPicturesBanner {
+    background-color: #F0F0FF;
+
+    .bigOneAfterManyPicturesBanner {
+      @include heightAndWidth(228px, 273px);
+      position: absolute;
+      top: 180px;
+      z-index: 100;
+    }
+
+    .oneAfterManyPicturesBlock {
+      @include heightAndWidth(227px, 520px);
+      margin: 100px 35px auto auto;
+    }
+
+    .oneSpanAfterManyPictures {
+      @include heightAndWidth(84px, 520px);
+    }
+
+    .twoSpanAfterManyPictures {
+      @include heightAndWidth(42px, 464px);
+    }
+
+    #oneButtonAfterManyPicturesBanner {
+      @include heightAndWidth(65px, 348px);
+      text-transform: uppercase;
+    }
+  }
+
+  .twoSpanAfterManyPictures, .fiveSpanAfterManyPictures {
+    text-align: right;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  .twoAfterManyPicturesBanner {
+    background-color: #E3E1FF;
+
+    .fiveSpanAfterManyPictures {
+      @include heightAndWidth(63px, 263px);
+    }
+
+    #twoButtonAfterManyPicturesBanner {
+      @include heightAndWidth(69px, 268px);
+      text-transform: uppercase;
+      z-index: 100;
+    }
+
+    .bigTwoAfterManyPicturesBanner {
+      @include heightAndWidth(254px, 330px);
+      position: absolute;
+      top: 137px;
+      left: 5px;
+      z-index: 100;
+    }
+
+    .twoAfterManyPicturesBlock {
+      @include heightAndWidth(220px, 311px);
+      margin: 100px 35px auto auto;
+    }
+
+    .fourSpanAfterManyPictures {
+      @include heightAndWidth(52px, 311px);
+    }
+  }
+
+  .leftAfterManyPicturesBanner {
+    @include heightAndWidth(175px, 240px);
+    @include topAndLeft(260px, 1200px);
+    position: absolute;
+    border-top: 8px solid #1F347B;
+    border-left: 8px solid #1F347B;
+    transform: rotate(-180deg);
+  }
+
+  .circleAfterManyPicturesBanner {
+    @include topAndLeft(247px, 1424px);
+  }
+}
+
+.twoFooter {
+  @include heightAndWidth(300px, 100%);
+  margin: 100px auto auto auto;
+  background-color: #F0F0FF;
+
+  .twoFooterBlockAndImage {
+    @include heightAndWidth(260px, 1225px);
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+
+    .twoFooterBlock {
+      @include heightAndWidth(199px, 487px);
+      @extend %tplFlexAndColumn;
+      margin: 55px 240px auto auto;
+      left: 100px;
+      align-items: flex-start;
+
+      .twoFooterOneSpan {
+        @include heightAndWidth(60px, 487px);
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+
+      .twoFooterTwoSpan {
+        @include heightAndWidth(42px, 343px);
+        font-size: 17px;
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+
+      .twoFooterButton {
+        @include heightAndWidth(61px, 450px);
+        display: flex;
+        position: relative;
+        cursor: pointer;
+        border: 2px solid #FFAF37;
+        transition: background-color 0.5s;
+
+        &:hover {
+          background-color: #4f980a;
+        }
+
+        .twoFooterButtonSpan {
+          margin: 17px auto auto 15px;
+        }
+
+        .arrowTwoFooter {
+          position: absolute;
+          @include topAndLeft(-31px, 270px);
+        }
+      }
+    }
+
+    .twoFooterImage {
+      @include heightAndWidth(251px, 464px);
+      margin-top: 25px;
+    }
+  }
+}
+
+.bannerAfterTwoFooter {
+  @include heightAndWidth(334px, 1410px);
+  @include flexAndAlign(center, center);
+  position: relative;
+  margin: 100px auto auto auto;
+  border-bottom: 8px solid rgba(31, 52, 123, 0.2);;
+  border-left: 8px solid rgba(31, 52, 123, 0.2);;
+  box-sizing: border-box;
+
+  .bannerAfterTwoFooterBlock {
+    @include heightAndWidth(270px, 1330px);
+    @extend %tplFlexAndColumn;
+
+    .bannerAfterTwoFooterSpan {
+      @include heightAndWidth(74px, 680px);
+      display: inline-block;
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    .bannerAfterTwoFooterDiv {
+      @include flexAndAlign(space-between, center);
+      @include heightAndWidth(146px, 1326px);
+      margin: auto auto 20px auto;
+
+      .bannerAfterTwoFooterOne {
+        @include heightAndWidth(146px, 150px);
+      }
+
+      .bannerAfterTwoFooterTwo {
+        @include heightAndWidth(80px, 200px);
+      }
+
+      .bannerAfterTwoFooterThree {
+        @include heightAndWidth(138px, 200px);
+      }
+
+      .bannerAfterTwoFooterFour {
+        @include heightAndWidth(133px, 200px);
+      }
+
+      .bannerAfterTwoFooterFive {
+        @include heightAndWidth(112px, 200px);
+      }
+    }
+  }
+
+  .leftAndRightMainAfterTwoFooter {
+    display: flex;
+    position: absolute;
+    margin: 45px 0 0 710px;
+
+    .leftMainAfterTwoFooter {
+      @include heightAndWidth(110px, 240px);
+      position: absolute;
+      left: 171px;
+      bottom: -75px;
+      border-top: 8px solid rgba(31, 52, 123, 0.2);
+      border-left: 8px solid rgba(31, 52, 123, 0.2);
+      transform: rotate(-270deg);
+    }
+
+    .leftMainAfterTwoFooterAfter {
+      @include heightAndWidth(1200px, 240px);
+      @include topAndLeft(-666px, -576px);
+      position: absolute;
+      border-left: 8px solid rgba(31, 52, 123, 0.2);;
+      transform: rotate(90deg);
     }
   }
 }

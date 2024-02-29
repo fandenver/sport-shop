@@ -1,1142 +1,1724 @@
 body .hatBlock .navBar .sizesOne:hover, body .hatBlock .navBar .sizesTwo:hover, body .hatBlock .navBar .sizesThree:hover,
 body .hatBlock .navBar .sizesFour:hover, body .hatBlock .navBar .sizesFive:hover, body .hatBlock .navBar .sizesSix:hover {
-  color: #FFAF37;
+    color: #FFAF37;
 }
 
 body .afterNavBar, body .bottom_navBar .alignSpan {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
-body .afterNavBar .afterNavBarBannerAndSpan, body .afterNavBar .choiceChapter, body .afterNavBar .mainMenu {
-  display: flex;
-  flex-direction: column;
+.bannerAfterTwoFooter .bannerAfterTwoFooterBlock, .twoFooter .twoFooterBlockAndImage .twoFooterBlock, body .twoBannersNextDiv .oneBannerSpanAndButton, body .twoBannersNextDiv .twoBannerSpanAndButton, body .manyBanners .cooperation, body .manyBanners .qualityService, body .manyBanners .spanAndImageReliable, body .manyBanners .spanAndImageFullComplex,
+body .manyBanners .spanAndImageOrderKey, body .afterNavBar .afterNavBarBannerAndSpan, body .afterNavBar .choiceChapter, body .afterNavBar .mainMenu {
+    display: flex;
+    flex-direction: column;
 }
 
 body .sideButtons {
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
-}
-
-.circle, .circleTwoBanners, .circleAfterManyPicturesBanner,
-.circleAfterTwoFooter, .circleBannerBeforeLastFooter {
-  position: absolute;
-  background-color: #1F347B;
-  border-radius: 50%;
-  height: 24px;
-  width: 24px;
-}
-
-.circle {
-  left: 939px;
-  top: 430px;
-}
-
-.circleTwoBanners {
-  top: 138px;
-  left: -42px;
-}
-
-.circleAfterManyPicturesBanner {
-  top: 247px;
-  left: 1424px;
-}
-
-.circleAfterTwoFooter {
-  left: 143px;
-  bottom: 171px;
-  background-color: rgba(31, 52, 123, 0.2);
-}
-
-.circleBannerBeforeLastFooter {
-  top: -9px;
-  left: 147px;
-  background-color: rgba(31, 52, 123, 0.2);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
 }
 
 body {
-  margin: 15px 0 0 0;
-  font-family: Rubik, sans-serif;
-  font-weight: 500;
-  line-height: 24px;
-  color: #4A4D4A;
-  font-size: 18px;
+    margin: 15px 0 0 0;
+    font-family: Rubik, sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    color: #4A4D4A;
+    font-size: 18px;
 }
+
 body *,
 body *:before,
 body *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 body button {
-  background-color: #FFAF37;
-  cursor: pointer;
-  color: white;
-  font-size: 18px;
-  font-family: Rubik, sans-serif;
-  border: none;
-  line-height: 21px;
-  font-weight: 500;
-  transition: background-color 0.5s;
+    background-color: #FFAF37;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-family: Rubik, sans-serif;
+    border: none;
+    line-height: 21px;
+    font-weight: 500;
+    transition: background-color 0.5s;
 }
+
 body button:hover {
-  background-color: #4f980a;
+    background-color: #4f980a;
 }
+
+body .circle, body .circleTwoBanners, body .circleAfterManyPicturesBanner,
+body .circleAfterTwoFooter, body .circleBannerBeforeLastFooter {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    background-color: #1F347B;
+    border-radius: 50%;
+}
+
+body .circle {
+    top: 430px;
+    left: 939px;
+}
+
+body .circleTwoBanners {
+    top: 138px;
+    left: -42px;
+}
+
+body .circleAfterManyPicturesBanner {
+    top: 247px;
+    left: 1424px;
+}
+
+body .circleAfterTwoFooter {
+    left: 143px;
+    bottom: 171px;
+    background-color: rgba(31, 52, 123, 0.2);
+}
+
+body .circleBannerBeforeLastFooter {
+    top: -9px;
+    left: 147px;
+    background-color: rgba(31, 52, 123, 0.2);
+}
+
+body .arrowLeftManyPictures {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+body .arrowLeftManyPictures::before {
+    height: 2px;
+    width: 40px;
+    background-color: #4A4D4A;
+    top: 58px;
+    left: 117px;
+}
+
+body .arrowLeftManyPictures::before, body .arrowLeftManyPictures::after {
+    content: "";
+    position: absolute;
+}
+
+body .arrowLeftManyPictures::after {
+    height: 10px;
+    width: 10px;
+    top: 54px;
+    left: 147px;
+    border-top: 2px solid #4A4D4A;
+    border-left: 2px solid #4A4D4A;
+    transform: rotate(-225deg);
+}
+
 body .hatBlock {
-  display: grid;
-  grid-template-rows: 48px 63px 54px;
-  grid-template-columns: 767px 641px;
-  height: 163px;
-  width: 1395px;
-  margin: auto;
+    height: 163px;
+    width: 1395px;
+    display: grid;
+    grid-template-rows: 48px 63px 54px;
+    grid-template-columns: 767px 641px;
+    margin: auto;
 }
+
 body .hatBlock .labelImg {
-  grid-area: 1/1/2/1;
-  height: 138px;
-  width: 329px;
-  margin: -12px 0 0 -7px;
+    grid-area: 1/1/2/1;
+    height: 138px;
+    width: 329px;
+    margin: -12px 0 0 -7px;
 }
+
 body .hatBlock .navBar {
-  grid-area: 1/1/1/2;
-  display: flex;
-  height: 24px;
-  width: 1046px;
-  gap: 44px;
-  margin: 0 0 0 360px;
+    grid-area: 1/1/1/2;
+    display: flex;
+    height: 24px;
+    width: 1046px;
+    gap: 44px;
+    margin: 0 0 0 360px;
 }
+
 body .hatBlock .navBar .commonSizesNumber {
-  cursor: pointer;
-  margin: 0;
-  font-weight: 500;
-  text-align: center;
-  line-height: 24px;
-  font-size: 20px;
-  letter-spacing: 0;
-  transition: color 0.5s;
+    cursor: pointer;
+    margin: 0;
+    font-weight: 500;
+    text-align: center;
+    line-height: 24px;
+    font-size: 20px;
+    letter-spacing: 0;
+    transition: color 0.5s;
 }
+
 body .hatBlock .navBar .commonSizesNumber:after {
-  content: "";
-  display: inline-block;
-  position: relative;
-  height: 2px;
-  top: -11px;
-  left: 0;
-  background-image: linear-gradient(to right, #4A4D4A 60%, transparent 0);
-  background-position: bottom;
-  background-size: 5px 1px;
-  background-repeat: repeat-x;
-  transition: linear-gradient 0.5s;
+    content: "";
+    display: inline-block;
+    position: relative;
+    height: 2px;
+    top: -11px;
+    left: 0;
+    background-image: linear-gradient(to right, #4A4D4A 60%, transparent 0);
+    background-position: bottom;
+    background-size: 5px 1px;
+    background-repeat: repeat-x;
+    transition: linear-gradient 0.5s;
 }
+
 body .hatBlock .navBar .sizesOne {
-  height: 24px;
-  width: 178px;
+    height: 24px;
+    width: 178px;
 }
+
 body .hatBlock .navBar .sizesOne:after {
-  width: 181px;
+    width: 181px;
 }
+
 body .hatBlock .navBar .sizesOne:hover:after, body .hatBlock .navBar .sizesTwo:hover:after,
 body .hatBlock .navBar .sizesThree:hover:after, body .hatBlock .navBar .sizesFour:hover:after,
 body .hatBlock .navBar .sizesFive:hover:after, body .hatBlock .navBar .sizesSix:hover:after {
-  background-image: linear-gradient(to right, #FFAF37 100%, transparent 0);
+    background-image: linear-gradient(to right, #FFAF37 100%, transparent 0);
 }
+
 body .hatBlock .navBar .sizesTwo {
-  height: 24px;
-  width: 187px;
+    height: 24px;
+    width: 187px;
 }
+
 body .hatBlock .navBar .sizesTwo:after {
-  width: 190px;
+    width: 190px;
 }
+
 body .hatBlock .navBar .sizesThree {
-  height: 24px;
-  width: 78px;
+    height: 24px;
+    width: 78px;
 }
+
 body .hatBlock .navBar .sizesThree:after {
-  width: 81px;
+    width: 81px;
 }
+
 body .hatBlock .navBar .sizesFour {
-  height: 24px;
-  width: 167px;
+    height: 24px;
+    width: 167px;
 }
+
 body .hatBlock .navBar .sizesFour:after {
-  width: 170px;
+    width: 170px;
 }
+
 body .hatBlock .navBar .sizesFive {
-  height: 24px;
-  width: 117px;
+    height: 24px;
+    width: 117px;
 }
+
 body .hatBlock .navBar .sizesFive:after {
-  width: 122px;
+    width: 122px;
 }
+
 body .hatBlock .navBar .sizesSix {
-  height: 24px;
-  width: 99px;
+    height: 24px;
+    width: 99px;
 }
+
 body .hatBlock .navBar .sizesSix:after {
-  width: 100px;
+    width: 100px;
 }
+
 body .hatBlock .description {
-  height: 45px;
-  width: 403px;
-  display: flex;
-  grid-area: 2/1/2/1;
-  margin: 5px auto auto 360px;
-  line-height: 21px;
-  letter-spacing: 0;
-  text-align: left;
+    height: 45px;
+    width: 403px;
+    display: flex;
+    grid-area: 2/1/2/1;
+    margin: 5px auto auto 360px;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: left;
 }
+
 body .hatBlock .phoneNumber {
-  height: 37px;
-  width: 569px;
-  display: flex;
-  grid-area: 2/2/2/2;
-  justify-content: space-between;
-  margin: 5px 0 auto auto;
-  padding-right: 4px;
+    height: 37px;
+    width: 569px;
+    display: flex;
+    grid-area: 2/2/2/2;
+    justify-content: space-between;
+    margin: 5px 0 auto auto;
+    padding-right: 4px;
 }
+
 body .hatBlock .phoneNumber .phoneImage {
-  height: 30px;
-  width: 30px;
+    height: 30px;
+    width: 30px;
 }
+
 body .hatBlock .phoneNumber .number {
-  font-family: Montserrat, sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 36px;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 36px;
 }
+
 body .hatBlock .phoneNumber #RequestCall {
-  height: 37px;
-  width: 240px;
+    height: 37px;
+    width: 240px;
 }
+
 body .hatBlock .numberAndButton {
-  display: flex;
-  grid-area: 3/1/3/1;
-  margin: 15px 0 0 -7px;
+    display: flex;
+    grid-area: 3/1/3/1;
+    margin: 15px 0 0 -7px;
 }
+
 body .hatBlock .numberAndButton .searchField {
-  height: 40px;
-  width: 690px;
-  cursor: text;
+    height: 40px;
+    width: 690px;
+    cursor: text;
 }
+
 body .hatBlock .numberAndButton .searchField::placeholder {
-  font-size: 14px;
-  padding-left: 20px;
+    font-size: 14px;
+    padding-left: 20px;
 }
+
 body .hatBlock .numberAndButton #searchButton {
-  position: absolute;
-  font-size: 20px;
-  background-color: white;
-  border: none;
-  margin: 8px 0 0 639px;
+    position: absolute;
+    font-size: 20px;
+    background-color: white;
+    border: none;
+    margin: 8px 0 0 639px;
 }
+
 body .hatBlock .contactWithMe {
-  display: flex;
-  grid-area: 3/2/3/2;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  width: 624px;
-  margin-left: 14px;
+    display: flex;
+    grid-area: 3/2/3/2;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 624px;
+    margin-left: 14px;
 }
+
 body .hatBlock .contactWithMe .whatsApp {
-  height: 24px;
-  width: 24px;
+    height: 24px;
+    width: 24px;
 }
+
 body .hatBlock .contactWithMe .contactsOne {
-  margin-left: 10px;
-  height: 34px;
-  width: 130px;
-  font-size: 14px;
-  line-height: 17px;
+    margin-left: 10px;
+    height: 34px;
+    width: 130px;
+    font-size: 14px;
+    line-height: 17px;
 }
+
 body .hatBlock .contactWithMe .sms {
-  height: 18px;
-  width: 24px;
-  margin: 9px 0 0 80px;
+    height: 18px;
+    width: 24px;
+    margin: 9px 0 0 80px;
 }
+
 body .hatBlock .contactWithMe .contactsTwo {
-  height: 21px;
-  width: 164px;
-  margin: 4px 0 0 12px;
+    height: 21px;
+    width: 164px;
+    margin: 4px 0 0 12px;
 }
+
 body .hatBlock .contactWithMe .geo {
-  height: 27px;
-  width: 20px;
-  margin: 14px 0 0 66px;
+    height: 27px;
+    width: 20px;
+    margin: 14px 0 0 66px;
 }
+
 body .hatBlock .contactWithMe .contactsThree {
-  height: 50px;
-  width: 176px;
-  font-size: 16px;
-  text-align: center;
-  margin: 4px auto auto 10px;
+    height: 50px;
+    width: 176px;
+    font-size: 16px;
+    text-align: center;
+    margin: 4px auto auto 10px;
 }
+
 body .hatBlock .contactWithMe .city {
-  font-size: 20px;
-  font-weight: 600;
+    font-size: 20px;
+    font-weight: 600;
 }
+
 body .bottom_navBar {
-  height: 60px;
-  width: 100%;
-  width: 100%;
-  height: 60px;
-  background-color: #F0F0FF;
-  margin-top: 28px;
-  padding: 15px;
+    height: 60px;
+    width: 100%;
+    width: 100%;
+    height: 60px;
+    background-color: #F0F0FF;
+    margin-top: 28px;
+    padding: 15px;
 }
+
 body .bottom_navBar .alignSpan {
-  width: 1394px;
-  margin: auto;
+    width: 1394px;
+    margin: auto;
 }
+
 body .bottom_navBar .alignSpan .bottom_navBar_one, body .bottom_navBar .alignSpan .bottom_navBar_two,
 body .bottom_navBar .alignSpan .bottom_navBar_three, body .bottom_navBar .alignSpan .bottom_navBar_four {
-  display: flex;
-  position: relative;
-  cursor: pointer;
-  transition: color 0.5s;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    transition: color 0.5s;
 }
+
 body .bottom_navBar .alignSpan .bottom_navBar_one:hover, body .bottom_navBar .alignSpan .bottom_navBar_two:hover,
 body .bottom_navBar .alignSpan .bottom_navBar_three:hover, body .bottom_navBar .alignSpan .bottom_navBar_four:hover {
-  color: #FFAF37;
+    color: #FFAF37;
 }
+
 body .bottom_navBar .alignSpan .bottom_navBar_one::after, body .bottom_navBar .alignSpan .bottom_navBar_two::after,
 body .bottom_navBar .alignSpan .bottom_navBar_three::after, body .bottom_navBar .alignSpan .bottom_navBar_four::after {
-  content: "";
-  position: absolute;
-  margin-top: 30px;
-  height: 2px;
-  background-image: linear-gradient(to right, black 60%, transparent 0);
-  background-position: bottom;
-  background-size: 5px 1px;
-  background-repeat: repeat-x;
-  cursor: pointer;
+    content: "";
+    position: absolute;
+    margin-top: 30px;
+    height: 2px;
+    background-image: linear-gradient(to right, black 60%, transparent 0);
+    background-position: bottom;
+    background-size: 5px 1px;
+    background-repeat: repeat-x;
+    cursor: pointer;
 }
+
 body .bottom_navBar .alignSpan .bottom_navBar_one:hover:after, body .bottom_navBar .alignSpan .bottom_navBar_two:hover:after,
 body .bottom_navBar .alignSpan .bottom_navBar_three:hover:after, body .bottom_navBar .alignSpan .bottom_navBar_four:hover:after {
-  background-image: linear-gradient(to right, #FFAF37 100%, transparent 0);
+    background-image: linear-gradient(to right, #FFAF37 100%, transparent 0);
 }
+
 body .bottom_navBar .alignSpan .bottom_navBar_one {
-  height: 29px;
-  width: 245px;
-  left: -7px;
+    height: 29px;
+    width: 245px;
+    left: -7px;
 }
+
 body .bottom_navBar .alignSpan .bottom_navBar_one::after {
-  left: 0;
-  width: 240px;
+    left: 0;
+    width: 240px;
 }
+
 body .bottom_navBar .alignSpan .bottom_navBar_two {
-  height: 25px;
-  width: 350px;
-  line-height: 21px;
+    height: 25px;
+    width: 350px;
+    line-height: 21px;
 }
+
 body .bottom_navBar .alignSpan .bottom_navBar_two::after {
-  width: 350px;
+    width: 350px;
 }
+
 body .bottom_navBar .alignSpan .bottom_navBar_three {
-  height: 21px;
-  width: 385px;
-  padding-left: 12px;
+    height: 21px;
+    width: 385px;
+    padding-left: 12px;
 }
+
 body .bottom_navBar .alignSpan .bottom_navBar_three::after {
-  width: 375px;
+    width: 375px;
 }
+
 body .bottom_navBar .alignSpan .bottom_navBar_four {
-  height: 21px;
-  width: 99px;
-  padding-left: 21px;
+    height: 21px;
+    width: 99px;
+    padding-left: 21px;
 }
+
 body .bottom_navBar .alignSpan .bottom_navBar_four::after {
-  left: 0;
-  margin-left: 23px;
-  width: 85px;
+    left: 0;
+    margin-left: 23px;
+    width: 85px;
 }
+
 body .afterNavBar {
-  height: 736px;
-  width: 1410px;
-  margin: 50px auto auto auto;
+    height: 736px;
+    width: 1410px;
+    margin: 50px auto auto auto;
 }
+
 body .afterNavBar .mainMenu {
-  height: 736px;
-  width: 448px;
+    height: 736px;
+    width: 448px;
 }
+
 body .afterNavBar .headerMainMenu {
-  height: 60px;
-  width: 447px;
-  display: inline-block;
-  border-radius: 10px 10px 0 0;
-  background: #F0F0FF;
+    height: 60px;
+    width: 447px;
+    display: inline-block;
+    border-radius: 10px 10px 0 0;
+    background: #F0F0FF;
 }
+
 body .afterNavBar .headerSpan {
-  height: 26px;
-  width: 106px;
-  display: flex;
-  margin: 17px auto auto 21px;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 29px;
-  letter-spacing: 0;
-  text-align: left;
+    height: 26px;
+    width: 106px;
+    display: flex;
+    margin: 17px auto auto 21px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0;
+    text-align: left;
 }
+
 body .afterNavBar .choiceChapter {
-  height: 676px;
-  width: 447px;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+    height: 676px;
+    width: 447px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
 }
+
 body .afterNavBar .choiceChapterOne {
-  height: 40px;
-  width: 447px;
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
+    height: 40px;
+    width: 447px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
 }
+
 body .afterNavBar .left {
-  height: 9px;
-  width: 9px;
-  position: absolute;
-  margin-left: 377px;
-  cursor: pointer;
-  margin-top: 10px;
+    height: 9px;
+    width: 9px;
+    position: absolute;
+    margin-left: 377px;
+    cursor: pointer;
+    margin-top: 10px;
 }
+
 body .afterNavBar .left {
-  border-top: 2px solid rgba(0, 21, 105, 0.6);
-  border-left: 2px solid rgba(0, 21, 105, 0.6);
-  transform: rotate(-225deg);
+    border-top: 2px solid rgba(0, 21, 105, 0.6);
+    border-left: 2px solid rgba(0, 21, 105, 0.6);
+    transform: rotate(-225deg);
 }
+
 body .afterNavBar .choiceChapter > div > :nth-child(1) {
-  height: 16px;
-  width: 20px;
-  margin-top: 4px;
+    height: 16px;
+    width: 20px;
+    margin-top: 4px;
 }
+
 body .afterNavBar .choiceChapter > div > :nth-child(2) {
-  margin-left: 12px;
+    margin-left: 12px;
 }
+
 body .afterNavBar #smallImageSize, body .afterNavBar #smallTwoImageSize,
 body .afterNavBar #smallFourImageSize, body .afterNavBar #smallFiveImageSize,
 body .afterNavBar #smallSixImageSize {
-  height: 20px;
+    height: 20px;
 }
+
 body .afterNavBar #newSticker {
-  height: 10px;
-  margin-top: 6px;
+    height: 10px;
+    margin-top: 6px;
 }
+
 body .afterNavBar #smallOneImageSize {
-  height: 24px;
-  width: 15px;
-  margin-top: -1px;
-  margin-left: 2px;
+    height: 24px;
+    width: 15px;
+    margin-top: -1px;
+    margin-left: 2px;
 }
+
 body .afterNavBar .commonSpanMainMenu {
-  display: flex;
-  margin-left: 22px;
-  margin-bottom: 22px;
+    display: flex;
+    margin-left: 22px;
+    margin-bottom: 22px;
 }
+
 body .afterNavBar .one {
-  height: 21px;
-  width: 339px;
-  margin-top: 10px;
+    height: 21px;
+    width: 339px;
+    margin-top: 10px;
 }
+
 body .afterNavBar .two {
-  height: 21px;
-  width: 289px;
+    height: 21px;
+    width: 289px;
 }
+
 body .afterNavBar .three {
-  height: 21px;
-  width: 279px;
+    height: 21px;
+    width: 279px;
 }
+
 body .afterNavBar .four {
-  height: 21px;
-  width: 265px;
+    height: 21px;
+    width: 265px;
 }
+
 body .afterNavBar .five {
-  height: 21px;
-  width: 254px;
+    height: 21px;
+    width: 254px;
 }
+
 body .afterNavBar .six {
-  height: 24px;
-  width: 389px;
-  padding-left: 3px;
+    height: 24px;
+    width: 389px;
+    padding-left: 3px;
 }
+
 body .afterNavBar .seven {
-  height: 42px;
-  width: 372px;
+    height: 42px;
+    width: 372px;
 }
+
 body .afterNavBar .eight {
-  height: 42px;
-  width: 297px;
+    height: 42px;
+    width: 297px;
 }
+
 body .afterNavBar .nine {
-  height: 47px;
-  width: 337px;
+    height: 47px;
+    width: 337px;
 }
+
 body .afterNavBar .ten {
-  height: 21px;
-  width: 337px;
+    height: 21px;
+    width: 337px;
 }
+
 body .afterNavBar .eleven {
-  height: 21px;
-  width: 209px;
+    height: 21px;
+    width: 209px;
 }
+
 body .afterNavBar .twelve {
-  height: 21px;
-  width: 254px;
+    height: 21px;
+    width: 254px;
 }
+
 body .afterNavBar .thirteen {
-  height: 21px;
-  width: 107px;
+    height: 21px;
+    width: 107px;
 }
+
 body .afterNavBar .fourteen {
-  height: 21px;
-  width: 127px;
+    height: 21px;
+    width: 127px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan {
-  margin-left: 42px;
+    margin-left: 42px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBanner {
-  height: 132px;
-  width: 922px;
-  font-size: 36px;
-  line-height: 44px;
-  letter-spacing: 0;
-  text-align: left;
-  color: #4A4D4A;
-  font-family: Montserrat, sans-serif;
+    height: 132px;
+    width: 922px;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #4A4D4A;
+    font-family: Montserrat, sans-serif;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBanner .bigText {
-  font-weight: 700;
-  line-height: 44px;
+    font-weight: 700;
+    line-height: 44px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBanner .orangeText {
-  font-family: Rubik, sans-serif;
-  color: #FFAF37;
+    font-family: Rubik, sans-serif;
+    color: #FFAF37;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage {
-  height: 590px;
-  width: 922px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  border-radius: 10px;
-  background: url("images/hat/mainBannerImage.png");
-  background-size: cover;
-  margin-top: 14px;
+    height: 590px;
+    width: 922px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+    background: url("images/hat/mainBannerImage.png");
+    background-size: cover;
+    margin-top: 14px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .leftMain {
-  height: 175px;
-  width: 240px;
-  position: absolute;
-  left: 715px;
-  top: 447px;
-  border-top: 8px solid #1F347B;
-  border-left: 8px solid #1F347B;
-  transform: rotate(-180deg);
+    height: 175px;
+    width: 240px;
+    position: absolute;
+    left: 715px;
+    top: 447px;
+    border-top: 8px solid #1F347B;
+    border-left: 8px solid #1F347B;
+    transform: rotate(-180deg);
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circle, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleTwoBanners, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleAfterManyPicturesBanner,
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleAfterTwoFooter, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleBannerBeforeLastFooter {
-  height: 24px;
-  width: 24px;
-  position: absolute;
-  background-color: #1F347B;
-  border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    background-color: #1F347B;
+    border-radius: 50%;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circle {
-  left: 939px;
-  top: 430px;
+    left: 939px;
+    top: 430px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleTwoBanners {
-  top: 138px;
-  left: -42px;
+    top: 138px;
+    left: -42px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleAfterManyPicturesBanner {
-  top: 247px;
-  left: 1424px;
+    top: 247px;
+    left: 1424px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleAfterTwoFooter {
-  left: 143px;
-  bottom: 171px;
-  background-color: rgba(31, 52, 123, 0.2);
+    left: 143px;
+    bottom: 171px;
+    background-color: rgba(31, 52, 123, 0.2);
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .circleBannerBeforeLastFooter {
-  top: -9px;
-  left: 147px;
-  background-color: rgba(31, 52, 123, 0.2);
+    top: -9px;
+    left: 147px;
+    background-color: rgba(31, 52, 123, 0.2);
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerTextOnImage {
-  height: 116px;
-  width: 422px;
-  margin-left: 400px;
-  margin-top: 150px;
-  text-align: center;
-  font-size: 30px;
-  color: #FFFFFF;
-  font-weight: 550;
-  line-height: 37px;
+    height: 116px;
+    width: 422px;
+    margin-left: 400px;
+    margin-top: 150px;
+    text-align: center;
+    font-size: 30px;
+    color: #FFFFFF;
+    font-weight: 550;
+    line-height: 37px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage #showOffer {
-  height: 69px;
-  width: 330px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 440px;
+    height: 69px;
+    width: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 440px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBanner {
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  background-color: #FFFFFF;
-  border-radius: 50%;
-  transition: background-color 0.5s;
-  padding: 20px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    transition: background-color 0.5s;
+    padding: 20px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBanner:hover {
-  background-color: #4f980a;
+    background-color: #4f980a;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBannerLeft {
-  margin-left: 5px;
+    margin-left: 5px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBannerRight {
-  margin-left: 812px;
+    margin-left: 812px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftBannerButton, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightBannerButton {
-  height: 16px;
-  width: 16px;
+    height: 16px;
+    width: 16px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftBannerButton {
-  border-top: 5px solid #001569;
-  border-left: 5px solid #001569;
+    border-top: 5px solid #001569;
+    border-left: 5px solid #001569;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerOne {
-  position: relative;
-  bottom: 2px;
-  right: 2px;
+    position: relative;
+    bottom: 2px;
+    right: 2px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightButtonBannerOne {
-  left: 2px;
-  top: 16px;
+    left: 2px;
+    top: 16px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerOne {
-  transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerTwo, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightButtonBannerTwo {
-  position: relative;
-  right: 3px;
-  bottom: 2px;
+    position: relative;
+    right: 3px;
+    bottom: 2px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .leftButtonBannerTwo {
-  transform: rotate(-225deg);
+    transform: rotate(-225deg);
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner {
-  height: 20px;
-  width: 152px;
-  display: flex;
-  margin: 170px auto auto 370px;
+    height: 20px;
+    width: 152px;
+    display: flex;
+    margin: 170px auto auto 370px;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePagination {
-  height: 20px;
-  width: 20px;
-  cursor: pointer;
-  border-radius: 100%;
-  margin-left: 4px;
-  border: 1px solid #FFFFFF;
-  transition: background-color 0.5s;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    border-radius: 100%;
+    margin-left: 4px;
+    border: 1px solid #FFFFFF;
+    transition: background-color 0.5s;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePagination:hover {
-  background-color: #4f980a;
+    background-color: #4f980a;
 }
+
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePaginationOne {
-  background-color: #FFAF37;
+    background-color: #FFAF37;
 }
+
 body .sideButtons {
-  position: fixed;
-  height: 30%;
-  width: 5%;
-  max-height: 271px;
-  max-width: 90px;
-  right: 0;
-  margin-top: -690px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  cursor: pointer;
-  z-index: 1000;
+    height: 271px;
+    width: 90px;
+    position: fixed;
+    right: 0;
+    margin-top: -690px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
 }
+
 body .sideButtons .oneSideButton, body .sideButtons .twoSideButton, body .sideButtons .threeSideButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s;
 }
+
 body .sideButtons .oneSideButton {
-  height: 90px;
-  width: 90px;
-  background-color: #1F347B;
-  border-top-left-radius: 10px;
-  transition: background-color 0.5s;
+    height: 90px;
+    width: 90px;
+    background-color: #1F347B;
+    border-top-left-radius: 10px;
+    transition: background-color 0.5s;
 }
+
 body .sideButtons .oneSideButton:hover, body .sideButtons .twoSideButton:hover, body .sideButtons .threeSideButton:hover {
-  background-color: #4f980a;
+    background-color: #4f980a;
 }
+
 body .sideButtons .twoSideButton {
-  background-color: #FFFFFF;
-  height: 90px;
-  width: 90px;
-  transition: background-color 0.5s;
+    height: 90px;
+    width: 90px;
+    background-color: #FFFFFF;
+    transition: background-color 0.5s;
 }
+
 body .sideButtons .threeSideButton {
-  background-color: #FFFFFF;
-  height: 91px;
-  width: 90px;
-  border-bottom-left-radius: 10px;
-  border-top: 1px solid #1F347B;
+    height: 91px;
+    width: 90px;
+    background-color: #FFFFFF;
+    border-bottom-left-radius: 10px;
+    border-top: 1px solid #1F347B;
 }
+
 body .sideButtons .oneSideButtonImage {
-  max-height: 30px;
-  max-width: 30px;
-  height: 50%;
-  width: 50%;
-  top: 7px;
-  left: 15px;
+    height: 30px;
+    width: 30px;
+    top: 7px;
+    left: 15px;
 }
+
 body .manyBanners {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: 330px 330px 330px 330px;
-  grid-template-rows: 250px 250px;
-  flex-wrap: wrap;
-  margin: 100px auto auto auto;
-  height: 530px;
-  width: 1410px;
+    height: 530px;
+    width: 1410px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 330px 330px 330px 330px;
+    grid-template-rows: 250px 250px;
+    flex-wrap: wrap;
+    margin: 100px auto auto auto;
 }
+
 body .manyBanners .workCBC, body .manyBanners .reliableSupplier,
 body .manyBanners .fullComplex, body .manyBanners .orderKey,
 body .manyBanners .directDeliveries, body .manyBanners .qualityService,
 body .manyBanners .cooperation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
-  transition: background-color 0.5s;
-  cursor: pointer;
-  background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+    transition: background-color 0.5s;
+    cursor: pointer;
+    background-color: white;
 }
+
 body .manyBanners .reliableSupplierSpanOne, body .manyBanners .fullComplexSpanOne {
-  font-size: 24px;
-  margin-top: 10px;
+    font-size: 24px;
+    margin-top: 10px;
 }
+
 body .manyBanners .reliableSupplierSpanTwo, body .manyBanners .fullComplexSpanTwo,
 body .manyBanners .orderKeySpanTwo, body .manyBanners .cooperationSpanTwo, body .manyBanners .qualityServiceSpanTwo {
-  font-weight: 400;
+    font-weight: 400;
 }
+
 body .manyBanners .spanAndImageReliable, body .manyBanners .spanAndImageFullComplex,
 body .manyBanners .spanAndImageOrderKey {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    align-items: center;
+    text-align: center;
 }
+
 body .manyBanners .workCBC:hover, body .manyBanners .reliableSupplier:hover,
 body .manyBanners .fullComplex:hover, body .manyBanners .orderKey:hover,
 body .manyBanners .directDeliveries:hover, body .manyBanners .qualityService:hover,
 body .manyBanners .cooperation:hover {
-  background-color: #cec9c9;
+    background-color: #cec9c9;
 }
+
 body .manyBanners .workCBC {
-  height: 250px;
-  width: 330px;
-  background-color: #F0F0FF;
+    height: 250px;
+    width: 330px;
+    background-color: #F0F0FF;
 }
+
 body .manyBanners .workCBC .workCBCSpan {
-  font-size: 30px;
-  line-height: 38px;
-  height: 111px;
-  width: 256px;
+    height: 111px;
+    width: 256px;
+    font-size: 30px;
+    line-height: 38px;
 }
+
 body .manyBanners .reliableSupplier {
-  height: 250px;
-  width: 323px;
+    height: 250px;
+    width: 323px;
 }
+
 body .manyBanners .reliableSupplier .spanAndImageReliable {
-  width: 269px;
-  height: 172px;
-  margin: 37px 30px;
+    height: 172px;
+    width: 269px;
+    margin: 37px 30px;
 }
+
 body .manyBanners .reliableSupplier .spanAndImageReliable .oneImageReliable {
-  height: 60px;
-  width: 60px;
+    height: 60px;
+    width: 60px;
 }
+
 body .manyBanners .reliableSupplier .spanAndImageReliable .reliableSupplierSpanOne {
-  height: 29px;
-  width: 269px;
-  line-height: 29px;
+    height: 29px;
+    width: 269px;
+    line-height: 29px;
 }
+
 body .manyBanners .reliableSupplier .spanAndImageReliable .reliableSupplierSpanTwo {
-  height: 63px;
-  width: 194px;
-  margin-top: 10px;
+    height: 63px;
+    width: 194px;
+    margin-top: 10px;
 }
+
 body .manyBanners .fullComplex {
-  height: 250px;
-  width: 330px;
+    height: 250px;
+    width: 330px;
 }
+
 body .manyBanners .fullComplex .spanAndImageFullComplex {
-  width: 292px;
-  height: 181px;
-  margin: 43px 27px;
+    height: 181px;
+    width: 292px;
+    margin: 43px 27px;
 }
+
 body .manyBanners .fullComplex .spanAndImageFullComplex .twoImageReliableOne {
-  margin-top: 2px;
-  height: 62px;
-  width: 72px;
+    height: 62px;
+    width: 72px;
+    margin-top: 2px;
 }
+
 body .manyBanners .fullComplex .spanAndImageFullComplex .fullComplexSpanOne {
-  height: 31px;
-  width: 215px;
-  padding-top: 2px;
+    height: 31px;
+    width: 215px;
+    padding-top: 2px;
 }
+
 body .manyBanners .fullComplex .spanAndImageFullComplex .fullComplexSpanTwo {
-  height: 71px;
-  width: 292px;
-  padding-top: 8px;
+    height: 71px;
+    width: 292px;
+    padding-top: 8px;
 }
+
 body .manyBanners .orderKey {
-  height: 250px;
-  width: 330px;
+    height: 250px;
+    width: 330px;
 }
+
 body .manyBanners .orderKey .spanAndImageOrderKey {
-  width: 178px;
-  height: 181px;
-  margin: 29px 36px;
+    height: 181px;
+    width: 178px;
+    margin: 29px 36px;
 }
+
 body .manyBanners .orderKey .spanAndImageOrderKey .threeImageOrderKey {
-  height: 70px;
-  width: 50px;
+    height: 70px;
+    width: 50px;
 }
+
 body .manyBanners .orderKey .spanAndImageOrderKey .orderKeySpanOne {
-  height: 29px;
-  width: 187px;
-  font-size: 24px;
-  margin-top: 6px;
+    height: 29px;
+    width: 187px;
+    font-size: 24px;
+    margin-top: 6px;
 }
+
 body .manyBanners .orderKey .spanAndImageOrderKey .orderKeySpanTwo {
-  height: 63px;
-  width: 281px;
-  margin-top: 8px;
+    height: 63px;
+    width: 281px;
+    margin-top: 8px;
 }
+
 body .manyBanners .directDeliveries {
-  grid-area: 2/1/2/2;
-  flex-direction: column;
-  height: 250px;
-  width: 690px;
+    height: 250px;
+    width: 690px;
+    grid-area: 2/1/2/2;
+    flex-direction: column;
 }
+
 body .manyBanners .directDeliveries .fourImageDirectDeliveries {
-  margin-top: -1px;
-  height: 73px;
-  width: 70px;
+    height: 73px;
+    width: 70px;
+    margin-top: -1px;
 }
+
 body .manyBanners .directDeliveries .directDeliveriesSpanOne {
-  height: 29px;
-  width: 213px;
-  font-size: 24px;
-  padding-top: 12px;
+    height: 29px;
+    width: 213px;
+    font-size: 24px;
+    padding-top: 12px;
 }
+
 body .manyBanners .directDeliveries .manyPictures {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  margin-top: 40px;
-  height: 67px;
-  width: 630px;
+    height: 67px;
+    width: 630px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 40px;
 }
+
 body .manyBanners .directDeliveries .manyPictures .oneBottom {
-  height: 56px;
-  width: 45px;
+    height: 56px;
+    width: 45px;
 }
+
 body .manyBanners .directDeliveries .manyPictures .twoBottom {
-  height: 44px;
-  width: 50px;
+    height: 44px;
+    width: 50px;
 }
+
 body .manyBanners .directDeliveries .manyPictures .threeBottom {
-  height: 15px;
-  width: 75px;
+    height: 15px;
+    width: 75px;
 }
+
 body .manyBanners .directDeliveries .manyPictures .fourBottom {
-  height: 60px;
-  width: 60px;
+    height: 60px;
+    width: 60px;
 }
+
 body .manyBanners .directDeliveries .manyPictures .fiveBottom {
-  height: 12px;
-  width: 80px;
+    height: 12px;
+    width: 80px;
 }
+
 body .manyBanners .directDeliveries .manyPictures .sixBottom {
-  height: 46px;
-  width: 70px;
+    height: 46px;
+    width: 70px;
 }
+
 body .manyBanners .directDeliveries .manyPictures .sevenBottom {
-  height: 23px;
-  width: 70px;
+    height: 23px;
+    width: 70px;
 }
+
 body .manyBanners .qualityService {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: 2/3/2/3;
-  height: 250px;
-  width: 330px;
+    height: 250px;
+    width: 330px;
+    align-items: center;
+    grid-area: 2/3/2/3;
 }
+
 body .manyBanners .qualityService .fiveImageOrderKey {
-  height: 63px;
-  width: 60px;
-  background: url("images/manyBanners/fiveImage.png");
+    height: 63px;
+    width: 60px;
+    background: url("images/manyBanners/fiveImage.png");
 }
+
 body .manyBanners .qualityService .qualityServiceSpanOne {
-  height: 29px;
-  width: 267px;
-  font-size: 24px;
-  margin-top: 15px;
+    height: 29px;
+    width: 267px;
+    font-size: 24px;
+    margin-top: 15px;
 }
+
 body .manyBanners .qualityService .qualityServiceSpanTwo {
-  height: 84px;
-  width: 292px;
-  margin-top: 6px;
+    height: 84px;
+    width: 292px;
+    margin-top: 6px;
 }
+
 body .manyBanners .cooperation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-area: 2/4/2/4;
-  height: 250px;
-  width: 330px;
+    height: 250px;
+    width: 330px;
+    align-items: center;
+    grid-area: 2/4/2/4;
 }
+
 body .manyBanners .sixImageCooperation {
-  margin-top: -8px;
-  height: 54px;
-  width: 60px;
+    height: 54px;
+    width: 60px;
+    margin-top: -8px;
 }
+
 body .manyBanners .cooperationSpanOne {
-  padding-top: 11px;
-  height: 29px;
-  width: 202px;
-  font-size: 24px;
+    height: 29px;
+    width: 202px;
+    padding-top: 11px;
+    font-size: 24px;
 }
+
 body .manyBanners .cooperationSpanTwo {
-  padding-top: 20px;
-  height: 84px;
-  width: 292px;
-  line-height: 21px;
+    height: 84px;
+    width: 292px;
+    padding-top: 20px;
+    line-height: 21px;
 }
+
 body .twoBannersNextDiv {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  width: 1410px;
-  height: 402px;
-  margin: 130px auto auto auto;
+    height: 402px;
+    width: 1410px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin: 130px auto auto auto;
 }
+
 body .twoBannersNextDiv .leftTwoBanners {
-  position: absolute;
-  width: 240px;
-  height: 175px;
-  left: -34px;
-  top: -33px;
-  border-top: 8px solid #1F347B;
-  border-left: 8px solid #1F347B;
-  transform: rotate(0deg);
+    height: 175px;
+    width: 240px;
+    top: -33px;
+    left: -34px;
+    position: absolute;
+    border-top: 8px solid #1F347B;
+    border-left: 8px solid #1F347B;
+    transform: rotate(0deg);
 }
+
 body .twoBannersNextDiv .oneBanner, body .twoBannersNextDiv .twoBanner {
-  display: flex;
-  height: 402px;
-  width: 688px;
+    height: 402px;
+    width: 688px;
+    display: flex;
 }
+
 body .twoBannersNextDiv .oneBannerSpanAndButton, body .twoBannersNextDiv .twoBannerSpanAndButton {
-  display: flex;
-  flex-direction: column;
-  align-items: self-end;
-  margin-top: 82px;
-  height: 239px;
+    align-items: self-end;
+    margin-top: 82px;
+    height: 239px;
 }
+
 body .twoBannersNextDiv .twoSpanOneBannerTwoBanners, body .twoBannersNextDiv .twoSpanTwoBannerTwoBanners {
-  text-align: right;
-  font-weight: 400;
-  line-height: 21px;
+    text-align: right;
+    font-weight: 400;
+    line-height: 21px;
 }
+
 body .twoBannersNextDiv .oneAndTwoBannerSmallImage {
-  position: absolute;
-  height: 59px;
-  width: 60px;
-  margin-left: 15px;
-  margin-top: 27px;
+    height: 59px;
+    width: 60px;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 27px;
 }
+
 body .twoBannersNextDiv .oneBanner {
-  background-color: #F0F0FF;
+    background-color: #F0F0FF;
 }
+
 body .twoBannersNextDiv .oneBanner .oneBannerImage {
-  position: absolute;
-  height: 240px;
-  width: 323px;
-  margin-top: 162px;
+    height: 240px;
+    width: 323px;
+    position: absolute;
+    margin-top: 162px;
 }
+
 body .twoBannersNextDiv .oneBanner .oneSpanOneBannerTwoBanners, body .twoBannersNextDiv .oneBanner .oneSpanTwoBannerTwoBanners {
-  font-size: 24px;
-  text-align: right;
-  line-height: 29px;
+    font-size: 24px;
+    text-align: right;
+    line-height: 29px;
 }
+
 body .twoBannersNextDiv .oneBanner .oneBannerSpanAndButton {
-  width: 537px;
-  margin-left: 106px;
+    width: 537px;
+    margin-left: 106px;
 }
+
 body .twoBannersNextDiv .oneBanner .oneBannerSpanAndButton .twoSpanOneBannerTwoBanners {
-  margin-top: 32px;
+    margin-top: 32px;
 }
+
 body .twoBannersNextDiv .oneBanner .oneBannerSpanAndButton #chooseTechnique {
-  margin-top: 16px;
-  height: 70px;
-  width: 300px;
-  text-transform: uppercase;
+    height: 70px;
+    width: 300px;
+    margin-top: 16px;
+    text-transform: uppercase;
 }
+
 body .twoBannersNextDiv .twoBanner {
-  background-color: #E3E1FF;
+    background-color: #E3E1FF;
 }
+
 body .twoBannersNextDiv .twoBanner .twoBannerImage {
-  position: absolute;
-  height: 262px;
-  width: 344px;
-  margin-top: 115px;
+    height: 262px;
+    width: 344px;
+    position: absolute;
+    margin-top: 115px;
 }
+
 body .twoBannersNextDiv .twoBanner .twoBannerSpanAndButton {
-  width: 268px;
-  margin-left: 389px;
+    width: 268px;
+    margin-left: 389px;
 }
+
 body .twoBannersNextDiv .twoBanner .twoBannerSpanAndButton .twoSpanTwoBannerTwoBanners {
-  margin-top: 6px;
+    margin-top: 6px;
 }
+
 body .twoBannersNextDiv .twoBanner .twoBannerSpanAndButton #assembleOffice {
-  margin-top: 17px;
-  height: 69px;
-  width: 268px;
-  text-transform: uppercase;
+    height: 69px;
+    width: 268px;
+    margin-top: 17px;
+    text-transform: uppercase;
 }
+
 body .oneFooter {
-  display: flex;
-  align-items: center;
-  height: 300px;
-  width: 100%;
-  background-color: #F0F0FF;
-  margin-top: 100px;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #F0F0FF;
+    margin-top: 100px;
 }
+
 body .oneFooter .oneFooterCenterBanner {
-  display: grid;
-  list-style: none;
-  grid-row-gap: 18px;
-  grid-template-rows: 74px 166px;
-  grid-template-columns: 694px 695px;
-  height: 258px;
-  width: 1389px;
-  margin: auto;
-  padding: 0;
+    height: 258px;
+    width: 1389px;
+    display: grid;
+    list-style: none;
+    grid-row-gap: 18px;
+    grid-template-rows: 74px 166px;
+    grid-template-columns: 694px 695px;
+    margin: auto;
+    padding: 0;
 }
+
 body .oneFooter .oneFooterCenterBanner .onBlockOneFooter {
-  line-height: 37px;
-  font-size: 30px;
-  align-self: flex-start;
-  grid-column-start: 1;
-  grid-row-start: 1;
-  height: 74px;
-  width: 687px;
+    height: 74px;
+    width: 687px;
+    line-height: 37px;
+    font-size: 30px;
+    align-self: flex-start;
+    grid-column-start: 1;
+    grid-row-start: 1;
 }
+
 body .oneFooter .oneFooterCenterBanner .twoBlockOneFooter {
-  cursor: pointer;
-  justify-self: right;
-  grid-column-start: 2;
-  grid-row-start: 1;
-  border: 2px solid #FFAF37;
-  margin-top: 3px;
-  margin-right: 10px;
-  height: 60px;
-  width: 400px;
-  transition: background-color 0.5s;
+    height: 60px;
+    width: 400px;
+    cursor: pointer;
+    justify-self: right;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    border: 2px solid #FFAF37;
+    margin-top: 3px;
+    margin-right: 10px;
+    transition: background-color 0.5s;
 }
+
 body .oneFooter .oneFooterCenterBanner .twoBlockOneFooter:hover {
-  background-color: #4f980a;
+    background-color: #4f980a;
 }
+
 body .oneFooter .oneFooterCenterBanner .twoBlockOneFooter .twoBlockOneFooterDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 60px;
-  width: 400px;
+    height: 60px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
+
 body .oneFooter .oneFooterCenterBanner .twoBlockOneFooter .twoBlockOneFooterDiv .twoBlockOneFooterSpan {
-  position: relative;
-  height: 24px;
-  width: 369px;
+    height: 24px;
+    width: 369px;
+    position: relative;
 }
+
 body .oneFooter .oneFooterCenterBanner .twoBlockOneFooter .twoBlockOneFooterDiv .arrowTwoBlockOneFooterSpan {
-  position: absolute;
-  top: -30px;
-  left: 225px;
+    top: -30px;
+    left: 225px;
+    position: absolute;
 }
-body .oneFooter .oneFooterCenterBanner .twoBlockOneFooter .twoBlockOneFooterDiv .arrowTwoBlockOneFooterSpan .arrowLeftManyPictures {
-  width: 20px;
-  height: 20px;
-  position: relative;
-  display: inline-flex;
-  cursor: pointer;
-}
+
 body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  height: 166px;
-  width: 1327px;
-  margin-left: 62px;
-  font-size: 20px;
+    height: 166px;
+    width: 1327px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    margin-left: 62px;
+    font-size: 20px;
 }
+
 body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesOneBlockOneFooter, body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesTwoBlockOneFooter,
 body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesThreeBlockOneFooter, body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFourBlockOneFooter,
 body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFiveBlockOneFooter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
+
 body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesOneBlockOneFooter {
-  height: 161px;
-  width: 291px;
+    height: 161px;
+    width: 291px;
 }
+
 body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesOneBlockOneFooter .oneImageOneFooter {
-  height: 100px;
-  width: 120px;
+    height: 100px;
+    width: 120px;
 }
+
 body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesTwoBlockOneFooter {
-  height: 104px;
-  width: 200px;
+    height: 104px;
+    width: 200px;
 }
+
 body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesTwoBlockOneFooter .twoImageOneFooter {
-  height: 66px;
-  width: 200px;
+    height: 66px;
+    width: 200px;
 }
+
 body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesThreeBlockOneFooter {
-  height: 161px;
-  width: 342px;
+    height: 161px;
+    width: 342px;
 }
+
 body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFourBlockOneFooter {
-  height: 85px;
-  width: 200px;
+    height: 162px;
+    width: 150px;
 }
+
 body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFiveBlockOneFooter {
-  height: 162px;
-  width: 150px;
+    height: 162px;
+    width: 1509x;
+}
+
+.bannerManyPictures {
+    height: 804px;
+    width: 1410px;
+    display: grid;
+    grid-template-rows: 248px 248px 248px;
+    grid-template-columns: 330px 330px 330px 330px;
+    grid-gap: 30px;
+    margin: 100px auto auto auto;
+}
+
+.bannerManyPictures .oneBannerManyPictures, .bannerManyPictures .bannersManyPicturesContainer {
+    height: 248px;
+    width: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+    transition: color 0.5s;
+    cursor: pointer;
+}
+
+.bannerManyPictures .oneBannerManyPictures:hover, .bannerManyPictures .bannersManyPicturesContainer:hover {
+    color: #4f980a;
+}
+
+.bannerManyPictures .commonImageBannerManyPictures {
+    height: 154px;
+    width: 180px;
+    margin-top: -20px;
+}
+
+.bannerManyPictures .oneBannerManyPictures {
+    grid-area: 1/1/1/1;
+    background-color: #F0F0FF;
+}
+
+.bannerManyPictures .oneBannerManyPictures .oneBannerManyPicturesSpan {
+    font-size: 30px;
+    text-align: center;
+    line-height: 37px;
+}
+
+.bannerManyPictures .twoBannerManyPicturesTwoSpan, .bannerManyPictures .eightBannerManyPicturesTwoSpan {
+    height: 21px;
+    width: 303px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.bannerManyPictures .arrowBannerManyPictures {
+    position: absolute;
+    top: 146px;
+    left: 158px;
+}
+
+.bannerManyPictures .eightImageBannerManyPictures {
+    height: 187px;
+    width: 222px;
+    position: absolute;
+    top: 5px;
+}
+
+.bannerManyPictures .elevenImageBannerManyPictures {
+    height: 126px;
+    width: 195px;
+    top: 5px;
+}
+
+.bannerManyPictures .eightBannerManyPicturesTwoSpan {
+    margin-top: 165px;
+}
+
+.bannerManyPictures .spanElevenBannerManyPictures {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Montserrat, sans-serif;
+}
+
+.bannerManyPictures #showAllOffer {
+    height: 70px;
+    width: 283px;
+    font-size: 14px;
+}
+
+.twoBannersAfterManyPicturesBanner {
+    height: 402px;
+    width: 1408px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin: 100px auto auto auto;
+}
+
+.twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner, .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner {
+    height: 402px;
+    width: 690px;
+    display: flex;
+    position: relative;
+}
+
+.twoBannersAfterManyPicturesBanner .smallOneAfterManyPicturesBanner, .twoBannersAfterManyPicturesBanner .smallTwoAfterManyPicturesBanner {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 30px;
+    left: 15px;
+}
+
+.twoBannersAfterManyPicturesBanner .oneSpanAfterManyPictures, .twoBannersAfterManyPicturesBanner .fourSpanAfterManyPictures {
+    text-align: right;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBlock, .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner {
+    background-color: #F0F0FF;
+}
+
+.twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .bigOneAfterManyPicturesBanner {
+    height: 228px;
+    width: 273px;
+    position: absolute;
+    top: 180px;
+    z-index: 100;
+}
+
+.twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .oneAfterManyPicturesBlock {
+    height: 227px;
+    width: 520px;
+    margin: 100px 35px auto auto;
+}
+
+.twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .oneSpanAfterManyPictures {
+    height: 84px;
+    width: 520px;
+}
+
+.twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .twoSpanAfterManyPictures {
+    height: 42px;
+    width: 464px;
+}
+
+.twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner #oneButtonAfterManyPicturesBanner {
+    height: 65px;
+    width: 348px;
+    text-transform: uppercase;
+}
+
+.twoBannersAfterManyPicturesBanner .twoSpanAfterManyPictures, .twoBannersAfterManyPicturesBanner .fiveSpanAfterManyPictures {
+    text-align: right;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner {
+    background-color: #E3E1FF;
+}
+
+.twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .fiveSpanAfterManyPictures {
+    height: 63px;
+    width: 263px;
+}
+
+.twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner #twoButtonAfterManyPicturesBanner {
+    height: 69px;
+    width: 268px;
+    text-transform: uppercase;
+    z-index: 100;
+}
+
+.twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .bigTwoAfterManyPicturesBanner {
+    height: 254px;
+    width: 330px;
+    position: absolute;
+    top: 137px;
+    left: 5px;
+    z-index: 100;
+}
+
+.twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .twoAfterManyPicturesBlock {
+    height: 220px;
+    width: 311px;
+    margin: 100px 35px auto auto;
+}
+
+.twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .fourSpanAfterManyPictures {
+    height: 52px;
+    width: 311px;
+}
+
+.twoBannersAfterManyPicturesBanner .leftAfterManyPicturesBanner {
+    height: 175px;
+    width: 240px;
+    top: 260px;
+    left: 1200px;
+    position: absolute;
+    border-top: 8px solid #1F347B;
+    border-left: 8px solid #1F347B;
+    transform: rotate(-180deg);
+}
+
+.twoBannersAfterManyPicturesBanner .circleAfterManyPicturesBanner {
+    top: 247px;
+    left: 1424px;
+}
+
+.twoFooter {
+    height: 300px;
+    width: 100%;
+    margin: 100px auto auto auto;
+    background-color: #F0F0FF;
+}
+
+.twoFooter .twoFooterBlockAndImage {
+    height: 260px;
+    width: 1225px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.twoFooter .twoFooterBlockAndImage .twoFooterBlock {
+    height: 199px;
+    width: 487px;
+    margin: 55px 240px auto auto;
+    left: 100px;
+    align-items: flex-start;
+}
+
+.twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterOneSpan {
+    height: 60px;
+    width: 487px;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterTwoSpan {
+    height: 42px;
+    width: 343px;
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton {
+    height: 61px;
+    width: 450px;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #FFAF37;
+    transition: background-color 0.5s;
+}
+
+.twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton:hover {
+    background-color: #4f980a;
+}
+
+.twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton .twoFooterButtonSpan {
+    margin: 17px auto auto 15px;
+}
+
+.twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton .arrowTwoFooter {
+    position: absolute;
+    top: -31px;
+    left: 270px;
+}
+
+.twoFooter .twoFooterBlockAndImage .twoFooterImage {
+    height: 251px;
+    width: 464px;
+    margin-top: 25px;
+}
+
+.bannerAfterTwoFooter {
+    height: 334px;
+    width: 1410px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 100px auto auto auto;
+    border-bottom: 8px solid rgba(31, 52, 123, 0.2);
+    border-left: 8px solid rgba(31, 52, 123, 0.2);
+    box-sizing: border-box;
+}
+
+.bannerAfterTwoFooter .bannerAfterTwoFooterBlock {
+    height: 270px;
+    width: 1330px;
+}
+
+.bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterSpan {
+    height: 74px;
+    width: 680px;
+    display: inline-block;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+.bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 146px;
+    width: 1326px;
+    margin: auto auto 20px auto;
+}
+
+.bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterOne {
+    height: 146px;
+    width: 150px;
+}
+
+.bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterTwo {
+    height: 80px;
+    width: 200px;
+}
+
+.bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterThree {
+    height: 138px;
+    width: 200px;
+}
+
+.bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterFour {
+    height: 133px;
+    width: 200px;
+}
+
+.bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterFive {
+    height: 112px;
+    width: 200px;
+}
+
+.bannerAfterTwoFooter .leftAndRightMainAfterTwoFooter {
+    display: flex;
+    position: absolute;
+    margin: 45px 0 0 710px;
+}
+
+.bannerAfterTwoFooter .leftAndRightMainAfterTwoFooter .leftMainAfterTwoFooter {
+    height: 110px;
+    width: 240px;
+    position: absolute;
+    left: 171px;
+    bottom: -75px;
+    border-top: 8px solid rgba(31, 52, 123, 0.2);
+    border-left: 8px solid rgba(31, 52, 123, 0.2);
+    transform: rotate(-270deg);
+}
+
+.bannerAfterTwoFooter .leftAndRightMainAfterTwoFooter .leftMainAfterTwoFooterAfter {
+    height: 1200px;
+    width: 240px;
+    top: -666px;
+    left: -576px;
+    position: absolute;
+    border-left: 8px solid rgba(31, 52, 123, 0.2);
+    transform: rotate(90deg);
 }
 
 /*# sourceMappingURL=styleCBS.css.map */
