@@ -179,7 +179,7 @@ button:hover {
     line-height: 36px;
 }
 
-#RequestCall {
+#requestCall {
     width: 240px;
     height: 37px;
 }
@@ -451,7 +451,7 @@ button:hover {
     width: 15px;
     height: 24px;
     margin-top: -1px;
-    margin-left: 2px;
+    margin-left: -3px;
 }
 
 .commonSpanMainMenu {
@@ -487,7 +487,7 @@ button:hover {
 }
 
 .six {
-    padding-left: 3px;
+    padding-left: 7px;
     width: 389px;
     height: 24px;
 }
@@ -567,7 +567,7 @@ button:hover {
     width: 922px;
     height: 590px;
     border-radius: 10px;
-    background: url("images/hat/mainBannerImage.png");
+    background: url("images_adaptive_layout/hat/mainBannerImage.png");
     background-size: cover;
     margin-top: 14px;
 }
@@ -859,7 +859,6 @@ button:hover {
     width: 60px;
 }
 
-
 .reliableSupplierSpanOne, .fullComplexSpanOne {
     font-size: 24px;
     margin-top: 10px;
@@ -967,13 +966,6 @@ button:hover {
     background-color: #cec9c9;
 }
 
-.spanDirectDeliveries {
-    display: flex;
-    width: 178px;
-    height: 181px;
-    margin: 29px 36px;
-}
-
 .fourImageDirectDeliveries {
     margin-top: -1px;
     height: 73px;
@@ -1048,7 +1040,7 @@ button:hover {
 .fiveImageOrderKey {
     height: 63px;
     width: 60px;
-    background: url("images/manyBanners/fiveImage.png");
+    background: url("images_adaptive_layout/manyBanners/fiveImage.png");
 }
 
 .qualityServiceSpanOne {
@@ -1297,7 +1289,6 @@ button:hover {
     font-size: 20px;
 }
 
-
 .imagesOneBlockOneFooter, .imagesTwoBlockOneFooter,
 .imagesThreeBlockOneFooter, .imagesFourBlockOneFooter,
 .imagesFiveBlockOneFooter {
@@ -1350,11 +1341,6 @@ button:hover {
 .fourImageOneFooter {
     height: 48px;
     width: 200px;
-}
-
-.twoImageOneFooter {
-    height: 102px;
-    width: 150px;
 }
 
 .bannerManyPictures {
@@ -1603,18 +1589,6 @@ button:hover {
     z-index: 100;
 }
 
-.oneAfterManyPicturesBlock, .twoAfterManyPicturesBanner {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.oneAfterManyPicturesBlock {
-    height: 227px;
-    width: 520px;
-    margin: 100px 35px auto auto;
-}
-
 .oneSpanAfterManyPictures {
     width: 520px;
     height: 84px;
@@ -1730,7 +1704,6 @@ button:hover {
     border-bottom: 8px solid rgba(31, 52, 123, 0.2);;
     border-left: 8px solid rgba(31, 52, 123, 0.2);;
     box-sizing: border-box;
-
 }
 
 .bannerAfterTwoFooterBlock {
@@ -1793,12 +1766,9 @@ button:hover {
     width: 240px;
     height: 110px;
     left: 171px;
-    bottom: -75px
-}
-
-.leftMainAfterTwoFooter {
-    border-top: 8px solid rgba(31, 52, 123, 0.2);;
-    border-left: 8px solid rgba(31, 52, 123, 0.2);;
+    bottom: -75px;
+    border-top: 8px solid rgba(31, 52, 123, 0.2);
+    border-left: 8px solid rgba(31, 52, 123, 0.2);
     transform: rotate(-270deg);
 }
 
@@ -1808,12 +1778,10 @@ button:hover {
     height: 1200px;
     left: -576px;
     top: -666px;
-}
-
-.leftMainAfterTwoFooterAfter {
     border-left: 8px solid rgba(31, 52, 123, 0.2);;
     transform: rotate(90deg);
 }
+
 
 .twoBannerAfterTwoFooter {
     display: flex;
@@ -1894,7 +1862,7 @@ button:hover {
 .checkBoxAndSpan {
     display: flex;
     justify-content: space-between;
-    width: 211px;
+    width: 205px;
     height: 30px;
 }
 
@@ -2007,7 +1975,7 @@ button:hover {
 .maps {
     width: 553px;
     height: 423px;
-    background: url("images/bannerBeforeLastFooter/maps.png");
+    background: url("images_adaptive_layout/bannerBeforeLastFooter/maps.png");
     background-size: cover;
 }
 
@@ -2049,7 +2017,6 @@ button:hover {
     height: 267px;
 }
 
-
 .lastFooterOneBlock, .lastFooterTwoBlock,
 .lastFooterThreeBlock, .lastFooterFourBlock,
 .lastFooterFiveBlock, .lastFooterSixBlock {
@@ -2058,13 +2025,12 @@ button:hover {
     justify-content: space-between;
 }
 
-
 .lastFooterOneBlock {
     width: 209px;
     height: 222px;
 }
 
-.CbsFooter {
+.cbsFooter {
     width: 209px;
     height: 94px;
 }
