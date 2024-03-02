@@ -27,20 +27,29 @@
         <img src="images_adaptive_layout/hat/phone.png" alt="no" class="phoneImage">
         <span class="number">+7 495 723-09-71</span>
         <button id="requestCall">Заказать звонок</button>
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <div class="modal-contentSpanAndClose">
+        <div id="modalGetCall">
+            <div class="modalContent">
+                <div class="modalContentSpanAndClose">
                     <span class="modalContentHeader">Заполните свои данные<br> для заказа обратного звонка:</span>
                     <span class="close">&times;</span>
                 </div>
-                <label class="modalContentBlock">
-                    <input class="modalContentBlockOneInput" placeholder="Имя *" type="text">
-                    <input class="modalContentBlockOneInput" placeholder="+7 --- --- -- -- *" type="number">
-                    <input class="modalContentBlockOneInput" placeholder="Комментарий *" type="text">
-                    <button id="sendRequest">Отправить запрос</button>
-                </label>
+                <div class="modalContentBlock">
+                    <label>
+                        <input class="modalContentBlockOneInput" placeholder="Имя *" type="text">
+                        <input class="modalContentBlockOneInput" placeholder="+7 --- --- -- -- *" type="number">
+                        <input class="modalContentBlockOneInput" placeholder="Комментарий *" type="text">
+                        <button id="sendRequest">Отправить запрос</button>
+                    </label>
+                    <div class="checkBoxAndSpan">
+                        <div class="checkMarkBlock">
+                            <img src="images_adaptive_layout/twoBannerAfterTwoFooter/checkMark.png" alt="no"
+                                 class="checkMark">
+                        </div>
+                        <span class="spanAfterCheckMark">Нажимая на кнопку я соглашаюсь<br> с политикой конфиденциальности</span>
+                    </div>
+                </div>
+                <img src="images_adaptive_layout/oneModal/oneModal.png" alt="no" class="oneModalImage">
             </div>
-            <img src="images_adaptive_layout/oneModal/oneModal.png" alt="no" class="oneModal">
         </div>
     </div>
     <label class="numberAndButton">

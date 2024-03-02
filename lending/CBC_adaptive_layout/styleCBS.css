@@ -11,13 +11,17 @@ body .afterNavBar, body .bottom_navBar .alignSpan {
 body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan, body .lastFooter .lastFooterMainBlock .lastFooterOneBlock, body .lastFooter .lastFooterMainBlock .lastFooterTwoBlock,
 body .lastFooter .lastFooterMainBlock .lastFooterThreeBlock, body .lastFooter .lastFooterMainBlock .lastFooterFourBlock,
 body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage, body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage, body .twoBannerAfterTwoFooter, body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock, body .twoFooter .twoFooterBlockAndImage .twoFooterBlock, body .twoBannersNextDiv .oneBannerSpanAndButton, body .twoBannersNextDiv .twoBannerSpanAndButton, body .manyBanners .cooperation, body .manyBanners .qualityService, body .manyBanners .spanAndImageReliable, body .manyBanners .spanAndImageFullComplex,
-body .manyBanners .spanAndImageOrderKey, body .afterNavBar .afterNavBarBannerAndSpan, body .afterNavBar .choiceChapter, body .afterNavBar .mainMenu, body .hatBlock .phoneNumber .modalContentBlock {
+body .manyBanners .spanAndImageOrderKey, body .afterNavBar .afterNavBarBannerAndSpan, body .afterNavBar .choiceChapter, body .afterNavBar .mainMenu, body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentBlock {
   display: flex;
   flex-direction: column;
 }
 
 body .sideButtons {
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+}
+
+.noScroll {
+  overflow: hidden;
 }
 
 body {
@@ -103,6 +107,34 @@ body .arrowLeftManyPictures::after {
   border-top: 2px solid #4A4D4A;
   border-left: 2px solid #4A4D4A;
   transform: rotate(-225deg);
+}
+body .checkBoxAndSpan {
+  height: 30px;
+  width: 205px;
+  display: flex;
+  justify-content: space-between;
+}
+body .checkBoxAndSpan .checkMarkBlock {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #4A4D4A;
+}
+body .checkBoxAndSpan .checkMarkBlock .checkMark {
+  height: 15px;
+  width: 15px;
+}
+body .checkBoxAndSpan .spanAfterCheckMark {
+  cursor: text;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+}
+body .checkBoxAndSpan .spanAfterCheckMark:hover {
+  text-decoration: underline;
 }
 body .hatBlock {
   height: 163px;
@@ -231,19 +263,21 @@ body .hatBlock .phoneNumber #requestCall {
   height: 37px;
   width: 240px;
 }
-body .hatBlock .phoneNumber .modal {
+body .hatBlock .phoneNumber #modalGetCall {
   height: 500px;
   width: 764px;
-  top: 0;
+  top: 68px;
   left: -500px;
   display: flex;
   justify-content: center;
   align-items: center;
   display: none;
   position: absolute;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+  border-radius: 10px;
   z-index: 200;
 }
-body .hatBlock .phoneNumber .modal-content {
+body .hatBlock .phoneNumber #modalGetCall .modalContent {
   height: 100%;
   width: 100%;
   display: flex;
@@ -252,52 +286,52 @@ body .hatBlock .phoneNumber .modal-content {
   border-radius: 10px;
   background-color: white;
 }
-body .hatBlock .phoneNumber .modal-contentSpanAndClose {
+body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentSpanAndClose {
   display: flex;
   flex-direction: row;
 }
-body .hatBlock .phoneNumber .modalContentHeader {
+body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentSpanAndClose .modalContentHeader {
   height: 48px;
   width: 382px;
   text-align: center;
-  margin: 30px auto auto 200px;
+  margin: 30px auto 20px 200px;
   color: #4A4D4A;
   font-size: 20px;
 }
-body .hatBlock .phoneNumber .modalContentBlock {
+body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentSpanAndClose .close {
+  margin: 10px 10px auto auto;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  transition: color 0.5s;
+}
+body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentSpanAndClose .close:hover {
+  color: #001569;
+  text-decoration: none;
+  cursor: pointer;
+}
+body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentBlock {
   height: 346px;
   width: 331px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin-left: 80px;
   z-index: 100;
 }
-body .hatBlock .phoneNumber .modalContentBlockOneInput, body .hatBlock .phoneNumber #sendRequest {
+body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentBlock .modalContentBlockOneInput, body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentBlock #sendRequest {
   height: 60px;
   width: 330px;
   margin-bottom: 20px;
 }
-body .hatBlock .phoneNumber .modalContentBlockOneInput::placeholder, body .hatBlock .phoneNumber #sendRequest::placeholder {
+body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentBlock .modalContentBlockOneInput::placeholder, body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentBlock #sendRequest::placeholder {
   padding-left: 10px;
 }
-body .hatBlock .phoneNumber .oneModal {
+body .hatBlock .phoneNumber #modalGetCall .modalContent .oneModalImage {
   height: 254px;
   width: 397px;
   top: 230px;
   left: 360px;
   position: absolute;
-}
-body .hatBlock .phoneNumber .close {
-  margin: 10px 10px auto auto;
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-body .hatBlock .phoneNumber .close:hover {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
 }
 body .hatBlock .numberAndButton {
   display: flex;
@@ -1564,33 +1598,6 @@ body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterT
   width: 330px;
   height: 80px;
   margin-bottom: 20px;
-}
-body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage .checkBoxAndSpan {
-  height: 30px;
-  width: 205px;
-  display: flex;
-  justify-content: space-between;
-}
-body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage .checkBoxAndSpan .checkMarkBlock {
-  height: 30px;
-  width: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  background-color: #4A4D4A;
-}
-body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage .checkBoxAndSpan .checkMarkBlock .checkMark {
-  height: 15px;
-  width: 15px;
-}
-body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage .checkBoxAndSpan .spanAfterCheckMark {
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 15px;
-}
-body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage .checkBoxAndSpan .spanAfterCheckMark:hover {
-  text-decoration: underline;
 }
 body .bannerBeforeLastFooter {
   height: 608px;
