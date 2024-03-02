@@ -28,27 +28,39 @@
         <span class="number">+7 495 723-09-71</span>
         <button id="requestCall">Заказать звонок</button>
         <div id="modalGetCall">
-            <div class="modalContent">
-                <div class="modalContentSpanAndClose">
-                    <span class="modalContentHeader">Заполните свои данные<br> для заказа обратного звонка:</span>
-                    <span class="close">&times;</span>
-                </div>
-                <div class="modalContentBlock">
-                    <label>
-                        <input class="modalContentBlockOneInput" placeholder="Имя *" type="text">
-                        <input class="modalContentBlockOneInput" placeholder="+7 --- --- -- -- *" type="number">
-                        <input class="modalContentBlockOneInput" placeholder="Комментарий *" type="text">
-                        <button id="sendRequest">Отправить запрос</button>
-                    </label>
-                    <div class="checkBoxAndSpan">
-                        <div class="checkMarkBlock">
-                            <img src="images_adaptive_layout/twoBannerAfterTwoFooter/checkMark.png" alt="no"
-                                 class="checkMark">
-                        </div>
-                        <span class="spanAfterCheckMark">Нажимая на кнопку я соглашаюсь<br> с политикой конфиденциальности</span>
+            <div class="modalContentSpanAndClose">
+                <span class="modalContentHeader">Заполните свои данные<br> для заказа обратного звонка:</span>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modalContentBlock">
+                <label>
+                    <input class="modalContentBlockOneInput" placeholder="Имя *" type="text">
+                    <input class="modalContentBlockOneInput" placeholder="+7 --- --- -- -- *" type="number">
+                    <input class="modalContentBlockOneInput" placeholder="Комментарий *" type="text">
+                    <button id="sendRequest">Отправить запрос</button>
+                </label>
+                <div class="checkBoxAndSpan">
+                    <div class="checkMarkBlock">
+                        <img src="images_adaptive_layout/twoBannerAfterTwoFooter/checkMark.png" alt="no"
+                             class="checkMark">
                     </div>
+                    <span class="spanAfterCheckMark">Нажимая на кнопку я соглашаюсь<br> с политикой конфиденциальности</span>
                 </div>
-                <img src="images_adaptive_layout/oneModal/oneModal.png" alt="no" class="oneModalImage">
+            </div>
+            <img src="images_adaptive_layout/oneModal/oneModal.png" alt="no" class="oneModalImage">
+        </div>
+        <div id="overModal">
+            <div class="oneRowOverModal">
+                <img src="images_adaptive_layout/oneModal/overModal/overModalLabel.png" alt="no" class="overModalLabel">
+                <span class="close">&times;</span>
+            </div>
+            <span class="twoRowOverModal">«Благодарим за ваш запрос. В ближайшее<br> время с вами свяжется наш специалист!»</span>
+            <div class="threeRowOverModal">
+                <img src="images_adaptive_layout/oneModal/overModal/overModalBigImage.png" alt="no"
+                     class="overModalBigImage">
+                <img src="images_adaptive_layout/oneModal/overModal/overModalSmallImage.png" alt="no"
+                     class="overModalSmallImage">
+                <span id="threeRowOverModalSpan" class="close">Закрыть</span>
             </div>
         </div>
     </div>

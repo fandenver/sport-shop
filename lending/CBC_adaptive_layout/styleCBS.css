@@ -11,7 +11,7 @@ body .afterNavBar, body .bottom_navBar .alignSpan {
 body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan, body .lastFooter .lastFooterMainBlock .lastFooterOneBlock, body .lastFooter .lastFooterMainBlock .lastFooterTwoBlock,
 body .lastFooter .lastFooterMainBlock .lastFooterThreeBlock, body .lastFooter .lastFooterMainBlock .lastFooterFourBlock,
 body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage, body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage, body .twoBannerAfterTwoFooter, body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock, body .twoFooter .twoFooterBlockAndImage .twoFooterBlock, body .twoBannersNextDiv .oneBannerSpanAndButton, body .twoBannersNextDiv .twoBannerSpanAndButton, body .manyBanners .cooperation, body .manyBanners .qualityService, body .manyBanners .spanAndImageReliable, body .manyBanners .spanAndImageFullComplex,
-body .manyBanners .spanAndImageOrderKey, body .afterNavBar .afterNavBarBannerAndSpan, body .afterNavBar .choiceChapter, body .afterNavBar .mainMenu, body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentBlock {
+body .manyBanners .spanAndImageOrderKey, body .afterNavBar .afterNavBarBannerAndSpan, body .afterNavBar .choiceChapter, body .afterNavBar .mainMenu, body .hatBlock .phoneNumber #modalGetCall .modalContentBlock {
   display: flex;
   flex-direction: column;
 }
@@ -22,6 +22,20 @@ body .sideButtons {
 
 .noScroll {
   overflow: hidden;
+}
+
+.close {
+  margin: 10px 10px auto auto;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  transition: color 0.5s;
+}
+
+.close:hover {
+  color: #001569;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 body {
@@ -268,29 +282,20 @@ body .hatBlock .phoneNumber #modalGetCall {
   width: 764px;
   top: 68px;
   left: -500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   display: none;
   position: absolute;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
   border-radius: 10px;
   z-index: 200;
-}
-body .hatBlock .phoneNumber #modalGetCall .modalContent {
-  height: 100%;
-  width: 100%;
-  display: flex;
   flex-direction: column;
   border: 2px solid #4A4D4A;
-  border-radius: 10px;
   background-color: white;
 }
-body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentSpanAndClose {
+body .hatBlock .phoneNumber #modalGetCall .modalContentSpanAndClose {
   display: flex;
   flex-direction: row;
 }
-body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentSpanAndClose .modalContentHeader {
+body .hatBlock .phoneNumber #modalGetCall .modalContentSpanAndClose .modalContentHeader {
   height: 48px;
   width: 382px;
   text-align: center;
@@ -298,19 +303,7 @@ body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentSpanAndClos
   color: #4A4D4A;
   font-size: 20px;
 }
-body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentSpanAndClose .close {
-  margin: 10px 10px auto auto;
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  transition: color 0.5s;
-}
-body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentSpanAndClose .close:hover {
-  color: #001569;
-  text-decoration: none;
-  cursor: pointer;
-}
-body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentBlock {
+body .hatBlock .phoneNumber #modalGetCall .modalContentBlock {
   height: 346px;
   width: 331px;
   align-items: flex-start;
@@ -318,20 +311,85 @@ body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentBlock {
   margin-left: 80px;
   z-index: 100;
 }
-body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentBlock .modalContentBlockOneInput, body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentBlock #sendRequest {
+body .hatBlock .phoneNumber #modalGetCall .modalContentBlock .modalContentBlockOneInput, body .hatBlock .phoneNumber #modalGetCall .modalContentBlock #sendRequest {
   height: 60px;
   width: 330px;
   margin-bottom: 20px;
 }
-body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentBlock .modalContentBlockOneInput::placeholder, body .hatBlock .phoneNumber #modalGetCall .modalContent .modalContentBlock #sendRequest::placeholder {
+body .hatBlock .phoneNumber #modalGetCall .modalContentBlock .modalContentBlockOneInput::placeholder, body .hatBlock .phoneNumber #modalGetCall .modalContentBlock #sendRequest::placeholder {
   padding-left: 10px;
 }
-body .hatBlock .phoneNumber #modalGetCall .modalContent .oneModalImage {
+body .hatBlock .phoneNumber #modalGetCall .oneModalImage {
   height: 254px;
   width: 397px;
   top: 230px;
   left: 360px;
   position: absolute;
+}
+body .hatBlock #overModal {
+  height: 500px;
+  width: 500px;
+  top: 70px;
+  left: -367px;
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+  border: 2px solid #4A4D4A;
+  border-radius: 10px;
+  background-color: white;
+  z-index: 200;
+  justify-content: space-between;
+}
+body .hatBlock #overModal .oneRowOverModal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+body .hatBlock #overModal .oneRowOverModal .overModalLabel {
+  height: 99px;
+  width: 146px;
+  margin: 15px auto auto 38px;
+}
+body .hatBlock #overModal .twoRowOverModal {
+  margin-top: 33px;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+body .hatBlock #overModal .threeRowOverModal {
+  height: 295px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+body .hatBlock #overModal .threeRowOverModal .overModalBigImage {
+  height: 185px;
+  width: 190px;
+  top: 259px;
+  left: 38px;
+  position: absolute;
+}
+body .hatBlock #overModal .threeRowOverModal .overModalSmallImage {
+  height: 146px;
+  width: 146px;
+  top: 298px;
+  left: 184px;
+  position: absolute;
+}
+body .hatBlock #overModal .threeRowOverModal #threeRowOverModalSpan {
+  cursor: pointer;
+  font-size: 14px;
+  color: #001569;
+  transition: color 0.5s;
+  margin: auto 25px 40px auto;
+}
+body .hatBlock #overModal .threeRowOverModal #threeRowOverModalSpan:hover {
+  color: #4f980a;
+  text-decoration: underline;
 }
 body .hatBlock .numberAndButton {
   display: flex;

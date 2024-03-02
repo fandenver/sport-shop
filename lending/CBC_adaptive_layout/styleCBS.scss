@@ -60,6 +60,20 @@ $boxShadow: 0 4px 20px 0 #00000040;
   overflow: hidden;
 }
 
+.close {
+  margin: 10px 10px auto auto;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  transition: color 0.5s;
+}
+
+.close:hover {
+  color: #001569;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 body {
   margin: 15px 0 0 0;
   font-family: $fontFamilyRubik;
@@ -320,70 +334,113 @@ body {
       #modalGetCall {
         @include heightAndWidth(500px, 764px);
         @include topAndLeft(68px, -500px);
-        @include flexAndAlign(center, center);
         display: none;
         position: absolute;
         box-shadow: $boxShadow;
         border-radius: 10px;
         z-index: 200;
+        flex-direction: column;
+        border: 2px solid #4A4D4A;
+        background-color: #FFFF;
 
-        .modalContent {
-          @include heightAndWidth(100%, 100%);
+        .modalContentSpanAndClose {
           display: flex;
-          flex-direction: column;
-          border: 2px solid #4A4D4A;
-          border-radius: 10px;
-          background-color: #FFFF;
+          flex-direction: row;
 
-          .modalContentSpanAndClose {
-            display: flex;
-            flex-direction: row;
+          .modalContentHeader {
+            @include heightAndWidth(48px, 382px);
+            text-align: center;
+            margin: 30px auto 20px 200px;
+            color: #4A4D4A;
+            font-size: 20px;
+          }
+        }
 
-            .modalContentHeader {
-              @include heightAndWidth(48px, 382px);
-              text-align: center;
-              margin: 30px auto 20px 200px;
-              color: #4A4D4A;
-              font-size: 20px;
-            }
+        .modalContentBlock {
+          @include heightAndWidth(346px, 331px);
+          @extend %tplFlexAndColumn;
+          align-items: flex-start;
+          justify-content: center;
+          margin-left: 80px;
+          z-index: 100;
 
-            .close {
-              margin: 10px 10px auto auto;
-              color: #aaa;
-              float: right;
-              font-size: 28px;
-              transition: color 0.5s;
-            }
+          .modalContentBlockOneInput, #sendRequest {
+            @include heightAndWidth(60px, 330px);
+            margin-bottom: 20px;
 
-            .close:hover {
-              color: #001569;
-              text-decoration: none;
-              cursor: pointer;
+            &::placeholder {
+              padding-left: 10px;
             }
           }
+        }
 
-          .modalContentBlock {
-            @include heightAndWidth(346px, 331px);
-            @extend %tplFlexAndColumn;
-            align-items: flex-start;
-            justify-content: center;
-            margin-left: 80px;
-            z-index: 100;
+        .oneModalImage {
+          @include heightAndWidth(254px, 397px);
+          @include topAndLeft(230px, 360px);
+          position: absolute;
+        }
+      }
+    }
 
-            .modalContentBlockOneInput, #sendRequest {
-              @include heightAndWidth(60px, 330px);
-              margin-bottom: 20px;
+    #overModal {
+      @include heightAndWidth(500px, 500px);
+      @include topAndLeft(70px, -367px);
+      display: none;
+      position: absolute;
+      flex-direction: column;
+      box-shadow: $boxShadow;
+      border: 2px solid #4A4D4A;
+      border-radius: 10px;
+      background-color: #FFFF;
+      z-index: 200;
+      justify-content: space-between;
 
-              &::placeholder {
-                padding-left: 10px;
-              }
-            }
-          }
+      .oneRowOverModal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
 
-          .oneModalImage {
-            @include heightAndWidth(254px, 397px);
-            @include topAndLeft(230px, 360px);
-            position: absolute;
+        .overModalLabel {
+          @include heightAndWidth(99px, 146px);
+          margin: 15px auto auto 38px;
+        }
+      }
+
+      .twoRowOverModal {
+        margin-top: 33px;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+      }
+
+      .threeRowOverModal {
+        @include heightAndWidth(295px, 100%);
+        @include flexAndAlign(flex-end, flex-end);
+
+        .overModalBigImage {
+          @include heightAndWidth(185px, 190px);
+          @include topAndLeft(259px, 38px);
+          position: absolute;
+        }
+
+        .overModalSmallImage {
+          @include heightAndWidth(146px, 146px);
+          @include topAndLeft(298px, 184px);
+          position: absolute;
+        }
+
+        #threeRowOverModalSpan {
+          cursor: pointer;
+          font-size: 14px;
+          color: #001569;
+          transition: color 0.5s;
+          margin: auto 25px 40px auto;
+
+          &:hover {
+            color: #4f980a;
+            text-decoration: underline;
           }
         }
       }
