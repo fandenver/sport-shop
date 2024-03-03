@@ -1,8 +1,3 @@
-body .hatBlock .navBar .sizesOne:hover, body .hatBlock .navBar .sizesTwo:hover, body .hatBlock .navBar .sizesThree:hover,
-body .hatBlock .navBar .sizesFour:hover, body .hatBlock .navBar .sizesFive:hover, body .hatBlock .navBar .sizesSix:hover {
-  color: #FFAF37;
-}
-
 body .afterNavBar, body .bottom_navBar .alignSpan {
   display: flex;
   justify-content: space-between;
@@ -18,6 +13,30 @@ body .manyBanners .spanAndImageOrderKey, body .afterNavBar .afterNavBarBannerAnd
 
 body .sideButtons {
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+}
+
+button {
+  background-color: #FFAF37;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: Rubik, sans-serif;
+  border: none;
+  line-height: 21px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: background-color 0.5s, color 0.5s;
+}
+button:hover {
+  background-color: #001569;
+  color: #FFAF37;
+}
+
+input {
+  cursor: text;
+  font-size: 14px;
+  padding-left: 20px;
+  color: #4A4D4A;
 }
 
 .noScroll {
@@ -50,20 +69,6 @@ body *,
 body *:before,
 body *:after {
   box-sizing: border-box;
-}
-body button {
-  background-color: #FFAF37;
-  cursor: pointer;
-  color: white;
-  font-size: 18px;
-  font-family: Rubik, sans-serif;
-  border: none;
-  line-height: 21px;
-  font-weight: 500;
-  transition: background-color 0.5s;
-}
-body button:hover {
-  background-color: #4f980a;
 }
 body .circle, body .circleTwoBanners, body .circleAfterManyPicturesBanner,
 body .circleAfterTwoFooter, body .circleBannerBeforeLastFooter {
@@ -202,6 +207,10 @@ body .hatBlock .navBar .sizesOne {
 body .hatBlock .navBar .sizesOne:after {
   width: 181px;
 }
+body .hatBlock .navBar .sizesOne:hover, body .hatBlock .navBar .sizesTwo:hover, body .hatBlock .navBar .sizesThree:hover,
+body .hatBlock .navBar .sizesFour:hover, body .hatBlock .navBar .sizesFive:hover, body .hatBlock .navBar .sizesSix:hover {
+  color: #FFAF37;
+}
 body .hatBlock .navBar .sizesOne:hover:after, body .hatBlock .navBar .sizesTwo:hover:after,
 body .hatBlock .navBar .sizesThree:hover:after, body .hatBlock .navBar .sizesFour:hover:after,
 body .hatBlock .navBar .sizesFive:hover:after, body .hatBlock .navBar .sizesSix:hover:after {
@@ -316,9 +325,6 @@ body .hatBlock .phoneNumber #modalGetCall .modalContentBlock .modalContentBlockO
   width: 330px;
   margin-bottom: 20px;
 }
-body .hatBlock .phoneNumber #modalGetCall .modalContentBlock .modalContentBlockOneInput::placeholder, body .hatBlock .phoneNumber #modalGetCall .modalContentBlock #sendRequest::placeholder {
-  padding-left: 10px;
-}
 body .hatBlock .phoneNumber #modalGetCall .oneModalImage {
   height: 254px;
   width: 397px;
@@ -388,7 +394,7 @@ body .hatBlock #overModal .threeRowOverModal #threeRowOverModalSpan {
   margin: auto 25px 40px auto;
 }
 body .hatBlock #overModal .threeRowOverModal #threeRowOverModalSpan:hover {
-  color: #4f980a;
+  color: #001569;
   text-decoration: underline;
 }
 body .hatBlock .numberAndButton {
@@ -399,9 +405,8 @@ body .hatBlock .numberAndButton {
 body .hatBlock .numberAndButton .searchField {
   height: 40px;
   width: 690px;
-  cursor: text;
 }
-body .hatBlock .numberAndButton .searchField::placeholder {
+body .hatBlock .numberAndButton .searchField:placeholder-shown {
   font-size: 14px;
   padding-left: 20px;
 }
@@ -566,22 +571,11 @@ body .afterNavBar .choiceChapter {
   width: 447px;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
 }
-body .afterNavBar .choiceChapterOne {
-  height: 40px;
-  width: 447px;
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-}
 body .afterNavBar .left {
   height: 9px;
   width: 9px;
-  position: absolute;
-  margin-left: 377px;
+  margin-right: 15px;
   cursor: pointer;
-  margin-top: 10px;
-}
-body .afterNavBar .left {
   border-top: 2px solid rgba(0, 21, 105, 0.6);
   border-left: 2px solid rgba(0, 21, 105, 0.6);
   transform: rotate(-225deg);
@@ -589,7 +583,7 @@ body .afterNavBar .left {
 body .afterNavBar .choiceChapter > div > :nth-child(1) {
   height: 16px;
   width: 20px;
-  margin-top: 4px;
+  margin-left: 20px;
 }
 body .afterNavBar .choiceChapter > div > :nth-child(2) {
   margin-left: 12px;
@@ -607,70 +601,65 @@ body .afterNavBar #smallOneImageSize {
   height: 24px;
   width: 15px;
   margin-top: -1px;
-  margin-left: 2px;
+  margin-left: 22px;
 }
 body .afterNavBar .commonSpanMainMenu {
   display: flex;
-  margin-left: 22px;
-  margin-bottom: 22px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-grow: 1;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+body .afterNavBar .commonSpanMainMenu:hover {
+  background-color: #FFAF37;
+}
+body .afterNavBar .choiceChapterOneBlockBack {
+  background-color: #001569;
+  flex-grow: 1;
 }
 body .afterNavBar .one {
-  height: 21px;
-  width: 339px;
-  margin-top: 10px;
+  margin-right: 85px;
 }
 body .afterNavBar .two {
-  height: 21px;
-  width: 289px;
+  margin-right: 138px;
 }
 body .afterNavBar .three {
-  height: 21px;
-  width: 279px;
+  margin-right: 152px;
 }
 body .afterNavBar .four {
-  height: 21px;
-  width: 265px;
+  margin-right: 159px;
 }
 body .afterNavBar .five {
-  height: 21px;
-  width: 254px;
+  margin-right: 162px;
 }
 body .afterNavBar .six {
-  height: 24px;
-  width: 389px;
-  padding-left: 3px;
+  margin-right: 36px;
 }
 body .afterNavBar .seven {
-  height: 42px;
-  width: 372px;
+  margin-right: 53px;
 }
 body .afterNavBar .eight {
-  height: 42px;
-  width: 297px;
+  margin-right: 146px;
 }
 body .afterNavBar .nine {
-  height: 47px;
-  width: 337px;
+  margin-right: 106px;
 }
 body .afterNavBar .ten {
-  height: 21px;
-  width: 337px;
+  margin-right: 93px;
 }
 body .afterNavBar .eleven {
-  height: 21px;
-  width: 209px;
+  margin-right: 210px;
 }
 body .afterNavBar .twelve {
-  height: 21px;
-  width: 254px;
+  margin-right: 173px;
 }
 body .afterNavBar .thirteen {
-  height: 21px;
-  width: 107px;
+  margin-right: 310px;
 }
 body .afterNavBar .fourteen {
-  height: 21px;
-  width: 127px;
+  margin-right: 289px;
 }
 body .afterNavBar .afterNavBarBannerAndSpan {
   margin-left: 42px;
@@ -700,7 +689,7 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage {
   flex-direction: column;
   position: relative;
   border-radius: 10px;
-  background: url("images_adaptive_layout/hat/mainBannerImage.png");
+  background: url("../images_adaptive_layout/hat/mainBannerImage.png");
   background-size: cover;
   margin-top: 14px;
 }
@@ -721,7 +710,7 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerTextOnImage 
   margin-top: 150px;
   text-align: center;
   font-size: 30px;
-  color: #FFFFFF;
+  color: white;
   font-weight: 550;
   line-height: 37px;
 }
@@ -743,13 +732,13 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon
   height: 50px;
   width: 50px;
   cursor: pointer;
-  background-color: #FFFFFF;
+  background-color: white;
   border-radius: 50%;
   transition: background-color 0.5s;
   padding: 20px;
 }
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBanner:hover {
-  background-color: #4f980a;
+  background-color: #FFAF37;
 }
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBannerLeft {
   margin-left: 5px;
@@ -797,11 +786,11 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .
   cursor: pointer;
   border-radius: 100%;
   margin-left: 4px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid white;
   transition: background-color 0.5s;
 }
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePagination:hover {
-  background-color: #4f980a;
+  background-color: #FFAF37;
 }
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePaginationOne {
   background-color: #FFAF37;
@@ -831,18 +820,18 @@ body .sideButtons .oneSideButton {
   transition: background-color 0.5s;
 }
 body .sideButtons .oneSideButton:hover, body .sideButtons .twoSideButton:hover, body .sideButtons .threeSideButton:hover {
-  background-color: #4f980a;
+  background-color: #001569;
 }
 body .sideButtons .twoSideButton {
   height: 90px;
   width: 90px;
-  background-color: #FFFFFF;
+  background-color: white;
   transition: background-color 0.5s;
 }
 body .sideButtons .threeSideButton {
   height: 91px;
   width: 90px;
-  background-color: #FFFFFF;
+  background-color: white;
   border-bottom-left-radius: 10px;
   border-top: 1px solid #1F347B;
 }
@@ -1039,7 +1028,7 @@ body .manyBanners .qualityService {
 body .manyBanners .qualityService .fiveImageOrderKey {
   height: 63px;
   width: 60px;
-  background: url("images_adaptive_layout/manyBanners/fiveImage.png");
+  background: url("../images_adaptive_layout/manyBanners/fiveImage.png");
 }
 body .manyBanners .qualityService .qualityServiceSpanOne {
   height: 29px;
@@ -1202,10 +1191,11 @@ body .oneFooter .oneFooterCenterBanner .twoBlockOneFooter {
   border: 2px solid #FFAF37;
   margin-top: 3px;
   margin-right: 10px;
-  transition: background-color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
 }
 body .oneFooter .oneFooterCenterBanner .twoBlockOneFooter:hover {
-  background-color: #4f980a;
+  background-color: #001569;
+  color: #FFAF37;
 }
 body .oneFooter .oneFooterCenterBanner .twoBlockOneFooter .twoBlockOneFooterDiv {
   height: 60px;
@@ -1298,7 +1288,7 @@ body .bannerManyPictures .oneBannerManyPictures, body .bannerManyPictures .banne
   cursor: pointer;
 }
 body .bannerManyPictures .oneBannerManyPictures:hover, body .bannerManyPictures .bannersManyPicturesContainer:hover {
-  color: #4f980a;
+  color: #001569;
 }
 body .bannerManyPictures .commonImageBannerManyPictures {
   height: 154px;
@@ -1502,10 +1492,11 @@ body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton {
   position: relative;
   cursor: pointer;
   border: 2px solid #FFAF37;
-  transition: background-color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
 }
 body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton:hover {
-  background-color: #4f980a;
+  background-color: #001569;
+  color: #FFAF37;
 }
 body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton .twoFooterButtonSpan {
   margin: 17px auto auto 15px;
@@ -1644,11 +1635,6 @@ body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterT
   margin-bottom: 30px;
   border: 1px solid #4A4D4A;
 }
-body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage .twoBannerAfterTwoFooterField::placeholder {
-  font-size: 14px;
-  padding-left: 20px;
-  color: #4A4D4A;
-}
 body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage #getConsultation {
   height: 80px;
   width: 330px;
@@ -1726,7 +1712,7 @@ body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnde
 body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .maps {
   height: 423px;
   width: 553px;
-  background: url("images_adaptive_layout/bannerBeforeLastFooter/maps.png");
+  background: url("../images_adaptive_layout/bannerBeforeLastFooter/maps.png");
   background-size: cover;
 }
 body .bannerBeforeLastFooter .lineBorderLeftBannerBeforeLastFooter,

@@ -1,0 +1,44 @@
+@import "../variables/variables.scss";
+
+.errorBlockMain {
+  @include heightAndWidth(700px, 1430px);
+  display: flex;
+  margin: auto;
+
+  .labelError {
+    @include heightAndWidth(138px, 329px);
+    margin: -4px 0 0 2px;
+  }
+
+  .errorBlock {
+    @include heightAndWidth(700px, 830px);
+    @extend %tplFlexAndColumn;
+    align-items: center;
+    font-family: $fontFamilyRubik;
+    font-weight: 500;
+    color: #4A4D4A;
+    margin: 36px 0 0 -10px;
+
+    .error_404 {
+      @include heightAndWidth(403px, 804px);
+      margin-bottom: 25px;
+    }
+
+    .errorBlockSpanOne {
+      font-size: 36px;
+      line-height: 43px;
+      margin-bottom: 25px;
+    }
+
+    .errorBlockSpanTwo {
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 25px;
+    }
+
+    #errorBlockBtn {
+      @include heightAndWidth(60px, 330px);
+      font-size: 18px;
+    }
+  }
+}

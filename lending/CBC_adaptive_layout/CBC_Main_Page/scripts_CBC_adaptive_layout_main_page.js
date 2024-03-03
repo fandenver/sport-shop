@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const overModalBtn = document.getElementById('sendRequest');
     const openOverModal = document.getElementById('overModal');
     const closeBtn = document.getElementsByClassName('close');
+    const redirectErrorPage = document.getElementById('showOffer');
 
     if (closeBtn.length > 0) {
         const firstCloseBtn = closeBtn[0];
@@ -48,11 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         disableBlock();
     });
 
-    // Код не влияет ни на что
-    // window.addEventListener('click', (event) => {
-    //     if (event.target === modal) {
-    //         modal.style.display = 'none';
-    //         enableScroll();
-    //     }
-    // });
+    redirectErrorPage.addEventListener('click', () => {
+        window.location.href = 'http://localhost:63342/repos-UI/lending/CBC_adaptive_layout/CBC_404/CBC_404.html';
+    })
 })
