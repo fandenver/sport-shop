@@ -1,0 +1,71 @@
+.errorBlockMain .errorBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: #FFAF37;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: Rubik, sans-serif;
+  border: none;
+  line-height: 21px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: background-color 0.5s, color 0.5s;
+}
+button:hover {
+  background-color: #001569;
+  color: #FFAF37;
+}
+
+input {
+  cursor: text;
+  font-size: 14px;
+  padding-left: 20px;
+  color: #4A4D4A;
+}
+
+.errorBlockMain {
+  height: 700px;
+  width: 1430px;
+  display: flex;
+  margin: auto;
+}
+.errorBlockMain .labelError {
+  height: 138px;
+  width: 329px;
+  margin: -4px 0 0 2px;
+}
+.errorBlockMain .errorBlock {
+  height: 700px;
+  width: 830px;
+  align-items: center;
+  font-family: Rubik, sans-serif;
+  font-weight: 500;
+  color: #4A4D4A;
+  margin: 36px 0 0 -10px;
+}
+.errorBlockMain .errorBlock .error_404 {
+  height: 403px;
+  width: 804px;
+  margin-bottom: 25px;
+}
+.errorBlockMain .errorBlock .errorBlockSpanOne {
+  font-size: 36px;
+  line-height: 43px;
+  margin-bottom: 25px;
+}
+.errorBlockMain .errorBlock .errorBlockSpanTwo {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+.errorBlockMain .errorBlock #errorBlockBtn {
+  height: 60px;
+  width: 330px;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=CBC_404.css.map */

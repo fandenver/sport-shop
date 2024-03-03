@@ -567,7 +567,7 @@ button:hover {
     width: 922px;
     height: 590px;
     border-radius: 10px;
-    background: url("images_adaptive_layout/hat/mainBannerImage.png");
+    background: url("../images_adaptive_layout/hat/mainBannerImage.png");
     background-size: cover;
     margin-top: 14px;
 }
@@ -1040,7 +1040,7 @@ button:hover {
 .fiveImageOrderKey {
     height: 63px;
     width: 60px;
-    background: url("images_adaptive_layout/manyBanners/fiveImage.png");
+    background: url("../images_adaptive_layout/manyBanners/fiveImage.png");
 }
 
 .qualityServiceSpanOne {
@@ -1975,7 +1975,7 @@ button:hover {
 .maps {
     width: 553px;
     height: 423px;
-    background: url("images_adaptive_layout/bannerBeforeLastFooter/maps.png");
+    background: url("../images_adaptive_layout/bannerBeforeLastFooter/maps.png");
     background-size: cover;
 }
 

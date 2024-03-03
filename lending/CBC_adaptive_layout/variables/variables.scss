@@ -1,0 +1,84 @@
+// 1. вложенность
+// 2. неотображаемое в браузере комментирвоание
+// 3. @import "styleCBS.scss" - импорт css из другого файла
+// 4. переменные
+// 5. @extend %tplFlexStyle - использование шаблона
+// 6. @include draft(18px) - использование миксина
+// 7. математические формулы: width: 300px / 960px *100%;
+
+// Переменные
+$fontFamilyRubik: Rubik, sans-serif;
+$fontFamilyMontserrat: Montserrat, sans-serif;
+$colorWhite: #FFFF;
+$colorGray: #4A4D4A;
+$colorOrange: #FFAF37;
+$colorBlue: #001569;
+$boxShadow: 0 4px 20px 0 #00000040;
+$backgroundTransition: background-color 0.5s;
+//-----------------------------------------------
+
+// Шаблоны
+%tplFlexAndSpace {
+  display: flex;
+  justify-content: space-between;
+}
+
+%tplFlexAndColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+%tplBoxShadow {
+  box-shadow: 0 4px 20px 0 #00000040;
+}
+
+//-----------------------------------------------
+
+// Миксины
+@mixin backgroundImage($color, $percent) {
+  background-image: linear-gradient(to right, $color $percent, transparent 0);
+}
+
+@mixin flexAndAlign($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin heightAndWidth($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin topAndLeft($top, $left) {
+  top: $top;
+  left: $left;
+}
+
+//-----------------------------------------------
+
+// Стили повторяющихся элементов
+button {
+  background-color: $colorOrange;
+  color: $colorWhite;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: $fontFamilyRubik;
+  border: none;
+  line-height: 21px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: $backgroundTransition, color 0.5s;
+
+  &:hover {
+    background-color: $colorBlue;
+    color: $colorOrange;
+  }
+}
+
+input {
+  cursor: text;
+  font-size: 14px;
+  padding-left: 20px;
+  color: $colorGray;
+}
