@@ -664,9 +664,25 @@ body .afterNavBar .fourteen {
 body .afterNavBar .afterNavBarBannerAndSpan {
   margin-left: 42px;
 }
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu {
+  height: 752px;
+  width: 922px;
+  background-color: #4f980a;
+  display: none;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productMenuBlock {
+  height: 320px;
+  width: 210px;
+  background-color: #001569;
+}
 body .afterNavBar .afterNavBarBannerAndSpan .mainBanner {
   height: 132px;
   width: 922px;
+  display: flex;
   font-size: 36px;
   line-height: 44px;
   letter-spacing: 0;
