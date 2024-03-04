@@ -677,8 +677,28 @@ body {
       @extend %tplFlexAndColumn;
       margin-left: 42px;
 
+      .productMenu {
+        @include heightAndWidth(752px, 922px);
+        background-color: #4f980a;
+        display: none;
+        justify-content: space-between;
+        align-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .productMenuBlock {
+          @include heightAndWidth(320px, 210px);
+          background-color: #001569;
+
+          .fiveProduct, .sixProduct, .sevenProduct, .eightProduct {
+            //align-items: flex-end;
+          }
+        }
+      }
+
       .mainBanner {
         @include heightAndWidth(132px, 922px);
+        display: flex;
         font-size: 36px;
         line-height: 44px;
         letter-spacing: 0;
