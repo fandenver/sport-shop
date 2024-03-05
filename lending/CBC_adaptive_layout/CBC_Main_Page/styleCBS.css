@@ -6,7 +6,7 @@ body .afterNavBar, body .bottom_navBar .alignSpan {
 body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan, body .lastFooter .lastFooterMainBlock .lastFooterOneBlock, body .lastFooter .lastFooterMainBlock .lastFooterTwoBlock,
 body .lastFooter .lastFooterMainBlock .lastFooterThreeBlock, body .lastFooter .lastFooterMainBlock .lastFooterFourBlock,
 body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage, body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage, body .twoBannerAfterTwoFooter, body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock, body .twoFooter .twoFooterBlockAndImage .twoFooterBlock, body .twoBannersNextDiv .oneBannerSpanAndButton, body .twoBannersNextDiv .twoBannerSpanAndButton, body .manyBanners .cooperation, body .manyBanners .qualityService, body .manyBanners .spanAndImageReliable, body .manyBanners .spanAndImageFullComplex,
-body .manyBanners .spanAndImageOrderKey, body .afterNavBar .afterNavBarBannerAndSpan, body .afterNavBar .choiceChapter, body .afterNavBar .mainMenu, body .hatBlock .phoneNumber #modalGetCall .modalContentBlock {
+body .manyBanners .spanAndImageOrderKey, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productMenuBlock, body .afterNavBar .afterNavBarBannerAndSpan, body .afterNavBar .choiceChapter, body .afterNavBar .mainMenu, body .hatBlock .phoneNumber #modalGetCall .modalContentBlock {
   display: flex;
   flex-direction: column;
 }
@@ -667,17 +667,169 @@ body .afterNavBar .afterNavBarBannerAndSpan {
 body .afterNavBar .afterNavBarBannerAndSpan .productMenu {
   height: 752px;
   width: 922px;
-  background-color: #4f980a;
   display: none;
+  position: relative;
   justify-content: space-between;
   align-content: space-between;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productMenuBlock {
   height: 320px;
   width: 210px;
-  background-color: #001569;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+  border: 0.4px solid #4A4D4A;
+  border-radius: 4px;
+  transition: background-color 0.5s;
+  font-size: 14px;
+  text-align: center;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct:hover, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct:hover,
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct:hover, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct:hover {
+  background-color: #cec9c9;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct {
+  background-color: #F0F0FF;
+  cursor: pointer;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct .pmPhoneMain {
+  height: 116px;
+  width: 45px;
+  margin-top: 45px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct .oneProductSpan {
+  margin-top: 22px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct {
+  background-color: #F0F0FF;
+  cursor: pointer;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct .pmTabletMain {
+  height: 118px;
+  width: 81px;
+  margin-top: 45px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct .twoProductSpan {
+  margin-top: 20px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct {
+  background-color: #F0F0FF;
+  cursor: pointer;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct .pmPodsMain {
+  height: 117px;
+  width: 93px;
+  margin-top: 48px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct .threeProductSpan {
+  margin-top: 18px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct {
+  background-color: #F0F0FF;
+  cursor: pointer;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct .pmCaseMain {
+  height: 117px;
+  width: 93px;
+  margin-top: 48px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct .fourProductSpan {
+  margin-top: 18px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fiveProduct, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .sixProduct, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .sevenProduct, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .eightProduct {
+  display: flex;
+  justify-content: space-between;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmPhone {
+  height: 94px;
+  width: 59px;
+  margin-top: 8px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmPods {
+  margin-top: 16px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmClock {
+  margin-top: 9px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmTablet {
+  margin-top: 9px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanOne {
+  margin-top: 12px;
+  font-weight: 600;
+  color: black;
+  line-height: 17px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fiveProductSpanOneTwo {
+  margin-top: 4px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanTwo {
+  font-weight: 300;
+  line-height: 21px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .sevenProductSpanOneTwo {
+  margin-top: 11px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanThree {
+  font-weight: 400;
+  line-height: 21px;
+  color: black;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanFour {
+  color: #001569;
+  font-size: 24px;
+  line-height: 29px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .inBasket {
+  height: 50px;
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 14px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct {
+  height: 20px;
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 350px;
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #4A4D4A;
+  font-size: 14px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductSpan {
+  font-weight: 400;
+  line-height: 21px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenOne, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenTwo, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenThree {
+  height: 8px;
+  width: 8px;
+  position: absolute;
+  margin-right: 15px;
+  cursor: pointer;
+  border-top: 1px solid #4A4D4A;
+  border-left: 1px solid #4A4D4A;
+  transform: rotate(-135deg);
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenOne {
+  top: 3px;
+  left: 127px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenTwo {
+  top: 3px;
+  left: 258px;
+}
+body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenThree {
+  top: 3px;
+  left: 357px;
 }
 body .afterNavBar .afterNavBarBannerAndSpan .mainBanner {
   height: 132px;

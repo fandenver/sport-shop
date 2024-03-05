@@ -679,19 +679,184 @@ body {
 
       .productMenu {
         @include heightAndWidth(752px, 922px);
-        background-color: #4f980a;
         display: none;
+        position: relative;
         justify-content: space-between;
         align-content: space-between;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
 
         .productMenuBlock {
           @include heightAndWidth(320px, 210px);
-          background-color: #001569;
+          @extend %tplFlexAndColumn;
+          align-items: center;
+          background-color: $colorWhite;
+          box-shadow: $boxShadow;
+          border: 0.4px solid #4A4D4A;
+          border-radius: 4px;
+          transition: $backgroundTransition;
+          font-size: 14px;
+          text-align: center;
+        }
 
-          .fiveProduct, .sixProduct, .sevenProduct, .eightProduct {
-            //align-items: flex-end;
+        .oneProduct:hover, .twoProduct:hover,
+        .threeProduct:hover, .fourProduct:hover {
+          background-color: #cec9c9;
+        }
+
+        .oneProduct {
+          background-color: #F0F0FF;
+          cursor: pointer;
+
+          .pmPhoneMain {
+            @include heightAndWidth(116px, 45px);
+            margin-top: 45px;
+          }
+
+          .oneProductSpan {
+            margin-top: 22px;
+          }
+        }
+
+        .twoProduct {
+          background-color: #F0F0FF;
+          cursor: pointer;
+
+          .pmTabletMain {
+            @include heightAndWidth(118px, 81px);
+            margin-top: 45px;
+          }
+
+          .twoProductSpan {
+            margin-top: 20px;
+          }
+        }
+
+        .threeProduct {
+          background-color: #F0F0FF;
+          cursor: pointer;
+
+          .pmPodsMain {
+            @include heightAndWidth(117px, 93px);
+            margin-top: 48px;
+          }
+
+          .threeProductSpan {
+            margin-top: 18px;
+          }
+        }
+
+        .fourProduct {
+          background-color: #F0F0FF;
+          cursor: pointer;
+
+          .pmCaseMain {
+            @include heightAndWidth(117px, 93px);
+            margin-top: 48px;
+          }
+
+          .fourProductSpan {
+            margin-top: 18px;
+          }
+        }
+
+        .fiveProduct, .sixProduct, .sevenProduct, .eightProduct {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .pmPhone {
+          @include heightAndWidth(94px, 59px);
+          margin-top: 8px;
+        }
+
+        .pmPods {
+          margin-top: 16px;
+        }
+
+        .pmClock {
+          margin-top: 9px;
+        }
+
+        .pmTablet {
+          margin-top: 9px;
+        }
+
+        .productBlockSpanOne {
+          margin-top: 12px;
+          font-weight: 600;
+          color: black;
+          line-height: 17px;
+        }
+
+        .fiveProductSpanOneTwo {
+          margin-top: 4px;
+        }
+
+        .productBlockSpanTwo {
+          font-weight: 300;
+          line-height: 21px;
+        }
+
+        .sevenProductSpanOneTwo {
+          margin-top: 11px;
+        }
+
+        .productBlockSpanThree {
+          font-weight: 400;
+          line-height: 21px;
+          color: black;
+        }
+
+        .productBlockSpanFour {
+          color: $colorBlue;
+          font-size: 24px;
+          line-height: 29px;
+        }
+
+        .inBasket {
+          @include heightAndWidth(50px, 190px);
+          @include flexAndAlign(center, center);
+          gap: 11px;
+          margin-bottom: 14px;
+        }
+
+        .blockBetweenTwoRowProduct {
+          @include heightAndWidth(20px, 350px);
+          @include flexAndAlign(space-between, center);
+          top: 350px;
+          display: flex;
+          position: absolute;
+          flex-direction: row;
+          justify-content: space-between;
+          color: #4A4D4A;
+          font-size: 14px;
+
+          .blockBetweenTwoRowProductSpan {
+            font-weight: 400;
+            line-height: 21px;
+          }
+
+          .leftBlockBetweenOne, .leftBlockBetweenTwo, .leftBlockBetweenThree {
+            @include heightAndWidth(8px, 8px);
+            position: absolute;
+            margin-right: 15px;
+            cursor: pointer;
+            border-top: 1px solid #4A4D4A;
+            border-left: 1px solid #4A4D4A;
+            transform: rotate(-135deg);
+          }
+
+          .leftBlockBetweenOne {
+            @include topAndLeft(3px, 127px);
+          }
+
+          .leftBlockBetweenTwo {
+            @include topAndLeft(3px, 258px);
+          }
+
+          .leftBlockBetweenThree {
+            @include topAndLeft(3px, 357px);
           }
         }
       }

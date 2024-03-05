@@ -5,10 +5,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const openOverModal = document.getElementById('overModal');
     const closeBtn = document.getElementsByClassName('close');
     const redirectErrorPage = document.getElementById('showOffer');
-    const openMenuProducts = document.getElementsByClassName('commonSpanMainMenu')[0];
+    const openMenuProducts = document.querySelectorAll('div.commonSpanMainMenu');
     const showProductMenu = document.getElementsByClassName('productMenu')[0];
     const hideSpan = document.getElementsByClassName('mainBanner')[0];
     const hideMainBanner = document.getElementsByClassName('mainBannerImage')[0];
+
+    function disableScroll() {
+        document.body.classList.add('noScroll');
+    }
+
+    function enableScroll() {
+        document.body.classList.remove('noScroll');
+    }
 
     if (closeBtn.length > 0) {
         const firstCloseBtn = closeBtn[0];
@@ -31,22 +39,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function disableScroll() {
-        document.body.classList.add('noScroll');
-    }
-
-    function enableScroll() {
-        document.body.classList.remove('noScroll');
-    }
-
     function disableBlock() {
         modal.style.display = 'none';
     }
 
-    openMenuProducts.addEventListener('click', () => {
-        showProductMenu.style.display = 'flex';
-        hideSpan.style.display = 'none';
-        hideMainBanner.style.display = 'none';
+    openMenuProducts.forEach(element => {
+        element.addEventListener('click', () => {
+            showProductMenu.style.display = 'flex';
+            hideSpan.style.display = 'none';
+            hideMainBanner.style.display = 'none';
+        })
     });
 
     openModalBtn.addEventListener('click', () => {
