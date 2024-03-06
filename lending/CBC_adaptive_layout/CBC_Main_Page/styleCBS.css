@@ -673,6 +673,15 @@ body .afterNavBar .afterNavBarBannerAndSpan .productMenu {
   align-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  animation: fadeIn 0.9s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productMenuBlock {
   height: 320px;
@@ -804,6 +813,7 @@ body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProd
   justify-content: space-between;
   color: #4A4D4A;
   font-size: 14px;
+  cursor: pointer;
 }
 body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductSpan {
   font-weight: 400;
@@ -841,6 +851,15 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBanner {
   text-align: left;
   color: #4A4D4A;
   font-family: Montserrat, sans-serif;
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 body .afterNavBar .afterNavBarBannerAndSpan .mainBanner .bigText {
   font-weight: 700;
@@ -860,6 +879,15 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage {
   background: url("../images_adaptive_layout/hat/mainBannerImage.png");
   background-size: cover;
   margin-top: 14px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .leftMain {
   height: 175px;
