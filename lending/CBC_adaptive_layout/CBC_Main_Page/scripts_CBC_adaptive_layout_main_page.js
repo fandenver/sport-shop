@@ -45,10 +45,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     openMenuProducts.forEach(element => {
         element.addEventListener('click', () => {
-            showProductMenu.style.display = 'flex';
-            hideSpan.style.display = 'none';
-            hideMainBanner.style.display = 'none';
-        })
+            if (showProductMenu.style.display === 'none' || showProductMenu.style.display === '') {
+                showProductMenu.style.display = 'flex';
+                hideSpan.style.display = 'none';
+                hideMainBanner.style.display = 'none';
+            } else {
+                showProductMenu.style.display = 'none';
+                hideSpan.style.display = 'flex';
+                hideMainBanner.style.display = 'flex';
+            }
+        });
     });
 
     openModalBtn.addEventListener('click', () => {
