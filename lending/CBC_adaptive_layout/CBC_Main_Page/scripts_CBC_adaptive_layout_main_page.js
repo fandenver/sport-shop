@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const overModalBtn = document.getElementById('sendRequest');
     const openOverModal = document.getElementById('overModal');
     const closeBtn = document.getElementsByClassName('close');
-    const redirectErrorPage = document.getElementById('showOffer');
+    const redirectErrorPage = document.querySelectorAll('div > button');
     const openMenuProducts = document.querySelectorAll('div.commonSpanMainMenu');
     const showProductMenu = document.getElementsByClassName('productMenu')[0];
     const hideSpan = document.getElementsByClassName('mainBanner')[0];
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function oneEvent(background, backgroundSize) {
-        newImage.style.background = background;
+        newImage.style.backgroundImage = background;
         newImage.style.backgroundSize = backgroundSize;
     }
 
@@ -74,32 +74,49 @@ document.addEventListener('DOMContentLoaded', function () {
         circleColorFive
     ];
 
+    circleArr.forEach((circle, index) => {
+        circle.addEventListener('click', () => {
+            currentImageIndex = index;
+            oneEvent(`url("${imagePaths[currentImageIndex]}")`, 'cover');
+
+            if (currentImageIndex === 2) {
+                textImage.style.color = 'black';
+            } else {
+                textImage.style.color = '';
+            }
+
+            circleArr.forEach((el, idx) => {
+                if (idx === currentImageIndex) {
+                    el.classList.add('circlePaginationOne');
+                } else {
+                    el.classList.remove('circlePaginationOne');
+                }
+            });
+        });
+    });
+
     showNewImageRight.addEventListener('click', () => {
-        // Обновляем изображение
         currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
 
         oneEvent(`url("${imagePaths[currentImageIndex]}")`, 'cover');
 
-        // Меняем класс у элемента массива circleArr
         const prevIndex = currentImageIndex === 0 ? imagePaths.length - 1 : currentImageIndex - 1;
         circleArr[prevIndex].classList.remove('circlePaginationOne');
         circleArr[currentImageIndex].classList.add('circlePaginationOne');
 
-        if (currentImageIndex === 2) { // Проверка, если текущее изображение - третье в массиве
-            textImage.style.color = 'black'; // Изменение цвета текста
+        if (currentImageIndex === 2) {
+            textImage.style.color = 'black';
         } else {
-            textImage.style.color = ''; // Сброс цвета текста
+            textImage.style.color = '';
         }
     });
 
     showNewImageLeft.addEventListener('click', () => {
         circleArr[currentImageIndex].classList.remove('circlePaginationOne');
 
-        // Уменьшаем индекс изображения для перемещения в обратном порядке
         currentImageIndex = (currentImageIndex === 0) ? imagePaths.length - 1 : currentImageIndex - 1;
         oneEvent(`url("${imagePaths[currentImageIndex]}")`, 'cover');
 
-        // Добавляем класс предыдущему элементу
         circleArr[currentImageIndex].classList.add('circlePaginationOne');
 
         if (currentImageIndex === 2) {
@@ -133,7 +150,11 @@ document.addEventListener('DOMContentLoaded', function () {
         disableBlock();
     });
 
-    redirectErrorPage.addEventListener('click', () => {
-        window.location.href = 'http://localhost:63342/repos-UI/lending/CBC_adaptive_layout/CBC_404/CBC_404.html';
+    redirectErrorPage.forEach(button => {
+        if (button.id !== 'requestCall' && button.id !== 'sendRequest') {
+            button.addEventListener('click', () => {
+                window.location.href = 'http://localhost:63342/repos-UI/lending/CBC_adaptive_layout/CBC_404/CBC_404.html';
+            })
+        }
     })
 })

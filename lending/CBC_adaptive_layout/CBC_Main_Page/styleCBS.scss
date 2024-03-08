@@ -121,6 +121,7 @@ body {
 
   .hatBlock {
     @include heightAndWidth(163px, 1395px);
+    position: relative;
     display: grid;
     grid-template-rows: 48px 63px 54px;
     grid-template-columns: 767px 641px;
@@ -377,12 +378,6 @@ body {
 
       .searchField {
         @include heightAndWidth(40px, 690px);
-
-
-        &:placeholder-shown {
-          font-size: 14px;
-          padding-left: 20px;
-        }
       }
 
       #searchButton {
@@ -391,6 +386,53 @@ body {
         background-color: white;
         border: none;
         margin: 8px 0 0 639px;
+      }
+    }
+
+    #oneDropDawn {
+      @include topAndLeft(165px, -7px);
+      display: none;
+      position: absolute;
+      max-height: 690px;
+      max-width: 690px;
+      overflow-x: hidden;
+      background-color: $colorWhite;
+      box-shadow: $boxShadow;
+      z-index: 400;
+      cursor: pointer;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      border: 1px solid $colorBlue;
+
+      &::-webkit-scrollbar {
+        background-color: #FFFF;
+        width: 7px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 21, 105, 0.7);
+      }
+
+      .noResultsMessage {
+        @include heightAndWidth(69px, 688px);
+        display: none;
+        padding-left: 20px;
+        align-items: center;
+      }
+
+      .optionDropDawn {
+        @include heightAndWidth(69px, 688px);
+        display: flex;
+        align-items: center;
+        color: $colorGray;
+        transition: color 0.5s, background-color 0.5s;
+        padding-left: 20px;
+        border-bottom: 1px solid rgba(74, 77, 74, 0.5);
+
+        &:hover {
+          background-color: $colorBlue;
+          color: $colorOrange;
+        }
       }
     }
 
@@ -855,8 +897,8 @@ body {
           }
 
           .blockBetweenTwoRowProductSpan:hover, .blockBetweenTwoRowProductOneSpan:hover {
-              color: $colorOrange;
-            }
+            color: $colorOrange;
+          }
 
           .leftBlockBetweenOne, .leftBlockBetweenTwo, .leftBlockBetweenThree {
             @include heightAndWidth(8px, 8px);
@@ -953,6 +995,7 @@ body {
           color: $colorWhite;
           font-weight: 550;
           line-height: 37px;
+          transition: color 0.5s;
         }
 
         #showOffer {
@@ -1050,7 +1093,7 @@ body {
 
   .sideButtons {
     @include heightAndWidth(271px, 90px);
-    @extend %tplBoxShadow;
+    box-shadow: $boxShadow;
     position: fixed;
     right: 0;
     margin-top: -690px;
@@ -1903,7 +1946,6 @@ body {
           width: 330px;
           height: 80px;
           margin-bottom: 30px;
-          border: 1px solid $colorGray;
         }
 
         #getConsultation {

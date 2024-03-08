@@ -11,10 +11,6 @@ body .manyBanners .spanAndImageOrderKey, body .afterNavBar .afterNavBarBannerAnd
   flex-direction: column;
 }
 
-body .sideButtons {
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
-}
-
 button {
   background-color: #FFAF37;
   color: white;
@@ -34,9 +30,19 @@ button:hover {
 
 input {
   cursor: text;
-  font-size: 14px;
+  font-size: 18px;
   padding-left: 20px;
-  color: #4A4D4A;
+  color: rgb(74, 77, 74);
+  font-family: Rubik, sans-serif;
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input:focus {
+  border: 1px solid #001569;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  outline: none;
 }
 
 .noScroll {
@@ -62,7 +68,7 @@ body {
   font-family: Rubik, sans-serif;
   font-weight: 500;
   line-height: 24px;
-  color: #4A4D4A;
+  color: rgb(74, 77, 74);
   font-size: 18px;
 }
 body *,
@@ -110,7 +116,7 @@ body .arrowLeftManyPictures {
 body .arrowLeftManyPictures::before {
   height: 2px;
   width: 40px;
-  background-color: #4A4D4A;
+  background-color: rgb(74, 77, 74);
   top: 58px;
   left: 117px;
 }
@@ -123,8 +129,8 @@ body .arrowLeftManyPictures::after {
   width: 10px;
   top: 54px;
   left: 147px;
-  border-top: 2px solid #4A4D4A;
-  border-left: 2px solid #4A4D4A;
+  border-top: 2px solid rgb(74, 77, 74);
+  border-left: 2px solid rgb(74, 77, 74);
   transform: rotate(-225deg);
 }
 body .checkBoxAndSpan {
@@ -140,7 +146,7 @@ body .checkBoxAndSpan .checkMarkBlock {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-color: #4A4D4A;
+  background-color: rgb(74, 77, 74);
 }
 body .checkBoxAndSpan .checkMarkBlock .checkMark {
   height: 15px;
@@ -158,6 +164,7 @@ body .checkBoxAndSpan .spanAfterCheckMark:hover {
 body .hatBlock {
   height: 163px;
   width: 1395px;
+  position: relative;
   display: grid;
   grid-template-rows: 48px 63px 54px;
   grid-template-columns: 767px 641px;
@@ -194,7 +201,7 @@ body .hatBlock .navBar .commonSizesNumber:after {
   height: 2px;
   top: -11px;
   left: 0;
-  background-image: linear-gradient(to right, #4A4D4A 60%, transparent 0);
+  background-image: linear-gradient(to right, rgb(74, 77, 74) 60%, transparent 0);
   background-position: bottom;
   background-size: 5px 1px;
   background-repeat: repeat-x;
@@ -297,7 +304,7 @@ body .hatBlock .phoneNumber #modalGetCall {
   border-radius: 10px;
   z-index: 200;
   flex-direction: column;
-  border: 2px solid #4A4D4A;
+  border: 2px solid rgb(74, 77, 74);
   background-color: white;
 }
 body .hatBlock .phoneNumber #modalGetCall .modalContentSpanAndClose {
@@ -309,7 +316,7 @@ body .hatBlock .phoneNumber #modalGetCall .modalContentSpanAndClose .modalConten
   width: 382px;
   text-align: center;
   margin: 30px auto 20px 200px;
-  color: #4A4D4A;
+  color: rgb(74, 77, 74);
   font-size: 20px;
 }
 body .hatBlock .phoneNumber #modalGetCall .modalContentBlock {
@@ -341,7 +348,7 @@ body .hatBlock #overModal {
   position: absolute;
   flex-direction: column;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
-  border: 2px solid #4A4D4A;
+  border: 2px solid rgb(74, 77, 74);
   border-radius: 10px;
   background-color: white;
   z-index: 200;
@@ -406,16 +413,56 @@ body .hatBlock .numberAndButton .searchField {
   height: 40px;
   width: 690px;
 }
-body .hatBlock .numberAndButton .searchField:placeholder-shown {
-  font-size: 14px;
-  padding-left: 20px;
-}
 body .hatBlock .numberAndButton #searchButton {
   position: absolute;
   font-size: 20px;
   background-color: white;
   border: none;
   margin: 8px 0 0 639px;
+}
+body .hatBlock #oneDropDawn {
+  top: 165px;
+  left: -7px;
+  display: none;
+  position: absolute;
+  max-height: 690px;
+  max-width: 690px;
+  overflow-x: hidden;
+  background-color: white;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+  z-index: 400;
+  cursor: pointer;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border: 1px solid #001569;
+}
+body .hatBlock #oneDropDawn::-webkit-scrollbar {
+  background-color: white;
+  width: 7px;
+}
+body .hatBlock #oneDropDawn::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 21, 105, 0.7);
+}
+body .hatBlock #oneDropDawn .noResultsMessage {
+  height: 69px;
+  width: 688px;
+  display: none;
+  padding-left: 20px;
+  align-items: center;
+}
+body .hatBlock #oneDropDawn .optionDropDawn {
+  height: 69px;
+  width: 688px;
+  display: flex;
+  align-items: center;
+  color: rgb(74, 77, 74);
+  transition: color 0.5s, background-color 0.5s;
+  padding-left: 20px;
+  border-bottom: 1px solid rgba(74, 77, 74, 0.5);
+}
+body .hatBlock #oneDropDawn .optionDropDawn:hover {
+  background-color: #001569;
+  color: #FFAF37;
 }
 body .hatBlock .contactWithMe {
   display: flex;
@@ -857,7 +904,7 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBanner {
   line-height: 44px;
   letter-spacing: 0;
   text-align: left;
-  color: #4A4D4A;
+  color: rgb(74, 77, 74);
   font-family: Montserrat, sans-serif;
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -918,6 +965,7 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerTextOnImage 
   color: white;
   font-weight: 550;
   line-height: 37px;
+  transition: color 0.5s;
 }
 body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage #showOffer {
   height: 69px;
@@ -1003,6 +1051,7 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .
 body .sideButtons {
   height: 271px;
   width: 90px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
   position: fixed;
   right: 0;
   margin-top: -690px;
@@ -1838,7 +1887,6 @@ body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterT
   width: 330px;
   height: 80px;
   margin-bottom: 30px;
-  border: 1px solid #4A4D4A;
 }
 body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage #getConsultation {
   height: 80px;

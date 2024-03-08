@@ -10,7 +10,7 @@
 $fontFamilyRubik: Rubik, sans-serif;
 $fontFamilyMontserrat: Montserrat, sans-serif;
 $colorWhite: #FFFF;
-$colorGray: #4A4D4A;
+$colorGray: rgb(74, 77, 74);
 $colorOrange: #FFAF37;
 $colorBlue: #001569;
 $boxShadow: 0 4px 20px 0 #00000040;
@@ -26,10 +26,6 @@ $backgroundTransition: background-color 0.5s;
 %tplFlexAndColumn {
   display: flex;
   flex-direction: column;
-}
-
-%tplBoxShadow {
-  box-shadow: 0 4px 20px 0 #00000040;
 }
 
 //-----------------------------------------------
@@ -78,7 +74,19 @@ button {
 
 input {
   cursor: text;
-  font-size: 14px;
+  font-size: 18px;
   padding-left: 20px;
   color: $colorGray;
+  font-family: $fontFamilyRubik;
+
+  &[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &:focus {
+    border: 1px solid $colorBlue;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    outline: none;
+  }
 }
