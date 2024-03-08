@@ -22,9 +22,19 @@ button:hover {
 
 input {
   cursor: text;
-  font-size: 14px;
+  font-size: 18px;
   padding-left: 20px;
-  color: #4A4D4A;
+  color: rgb(74, 77, 74);
+  font-family: Rubik, sans-serif;
+}
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input:focus {
+  border: 1px solid #001569;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  outline: none;
 }
 
 .errorBlockMain {
