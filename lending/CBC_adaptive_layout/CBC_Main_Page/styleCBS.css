@@ -587,7 +587,7 @@ body .bottom_navBar .alignSpan .toolTipOne, body .bottom_navBar .alignSpan .tool
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
   display: none;
   position: absolute;
   color: rgb(74, 77, 74);
@@ -596,6 +596,8 @@ body .bottom_navBar .alignSpan .toolTipOne, body .bottom_navBar .alignSpan .tool
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
   z-index: 500;
   animation: fadeIn 0.4s ease-in-out;
+  overflow: hidden;
+  font-size: 12px;
 }
 @keyframes fadeIn {
   from {
