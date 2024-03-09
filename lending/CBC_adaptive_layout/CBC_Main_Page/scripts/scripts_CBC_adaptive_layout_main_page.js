@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const overModalBtn = document.getElementById('sendRequest');
     const openOverModal = document.getElementById('overModal');
     const closeBtn = document.getElementsByClassName('close');
-    const redirectErrorPage = document.querySelectorAll('div > button');
     const openMenuProducts = document.querySelectorAll('div.commonSpanMainMenu');
     const showProductMenu = document.getElementsByClassName('productMenu')[0];
     const hideSpan = document.getElementsByClassName('mainBanner')[0];
@@ -20,12 +19,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const circleColorFive = document.querySelector('div.paginationBanner > div:nth-child(5)');
     let currentImageIndex = 0;
 
+
     function disableScroll() {
-        document.body.classList.add('noScroll');
+        document.body.style.overflow = 'hidden';
     }
 
     function enableScroll() {
-        document.body.classList.remove('noScroll');
+        document.body.style.overflow = 'scroll';
     }
 
     if (closeBtn.length > 0) {
@@ -149,12 +149,4 @@ document.addEventListener('DOMContentLoaded', function () {
         openOverModal.style.display = 'flex';
         disableBlock();
     });
-
-    redirectErrorPage.forEach(button => {
-        if (button.id !== 'requestCall' && button.id !== 'sendRequest') {
-            button.addEventListener('click', () => {
-                window.location.href = 'http://localhost:63342/repos-UI/lending/CBC_adaptive_layout/CBC_404/CBC_404.html';
-            })
-        }
-    })
 })

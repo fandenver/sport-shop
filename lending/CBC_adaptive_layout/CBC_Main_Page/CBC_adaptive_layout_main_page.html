@@ -9,8 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="styleCBS.css">
-    <script src="scripts_CBC_adaptive_layout_main_page.js"></script>
-    <script src="dropDawn.js"></script>
+    <script src="scripts/scripts_CBC_adaptive_layout_main_page.js"></script>
+    <script src="scripts/dropDawn.js"></script>
+    <script src="scripts/redirect.js"></script>
+    <script src="scripts/toolTip.js"></script>
 </head>
 <body>
 <div class="hatBlock">
@@ -102,10 +104,22 @@
 </div>
 <div class="bottom_navBar">
     <div class="alignSpan">
-        <span class="bottom_navBar_one">КОМПЛЕКСНАЯ ПОСТАВКА</span>
-        <span class="bottom_navBar_two">ПУСКО-НАКЛАДКА IT-ОБОРУДОВАНИЯ</span>
-        <span class="bottom_navBar_three">АУДИТ И ОПТИМИЗАЦИЯ ПАРКА ПЕЧАТИ</span>
-        <span class="bottom_navBar_four">ТЕНДЕРЫ</span>
+        <div class="bottom_navBar_one">
+            <span>КОМПЛЕКСНАЯ ПОСТАВКА</span>
+            <div class="toolTipOne">Текст тултипа</div>
+        </div>
+        <div class="bottom_navBar_two">
+            <span>ПУСКО-НАКЛАДКА IT-ОБОРУДОВАНИЯ</span>
+            <div class="toolTipTwo">Текст тултипа</div>
+        </div>
+        <div class="bottom_navBar_three">
+            <span>АУДИТ И ОПТИМИЗАЦИЯ ПАРКА ПЕЧАТИ</span>
+            <div class="toolTipThree">Текст тултипа</div>
+        </div>
+        <div class="bottom_navBar_four">
+            <span>ТЕНДЕРЫ</span>
+            <div class="toolTipFour">Текст тултипа</div>
+        </div>
     </div>
 </div>
 <div class="afterNavBar">
@@ -287,15 +301,15 @@
     </div>
 </div>
 <div class="sideButtons">
-    <div class="oneSideButton">
+    <button class="oneSideButton">
         <img src="../images_adaptive_layout/sideMenuButtons/basket.png" alt="no" class="oneSideButtonImage">
-    </div>
-    <div class="twoSideButton">
+    </button>
+    <button class="twoSideButton">
         <img src="../images_adaptive_layout/sideMenuButtons/heart.png" alt="no" class="oneSideButtonImage">
-    </div>
-    <div class="threeSideButton">
+    </button>
+    <button class="threeSideButton">
         <img src="../images_adaptive_layout/sideMenuButtons/columns.png" alt="no" class="oneSideButtonImage">
-    </div>
+    </button>
 </div>
 <div class="manyBanners">
     <div class="workCBC">
@@ -381,13 +395,9 @@
 <div class="oneFooter">
     <div class="oneFooterCenterBanner">
         <div class="onBlockOneFooter">Работаем с государственными заказчиками<br> по требовательным ТЗ</div>
-        <div class="twoBlockOneFooter">
-            <div class="twoBlockOneFooterDiv">
-                <span class="twoBlockOneFooterSpan">УЗНАТЬ О РАБОТЕ С ТЕНДЕРАМИ</span>
-                <div class="arrowTwoBlockOneFooterSpan">
-                    <div class="arrowLeftManyPictures"></div>
-                </div>
-            </div>
+        <button id="twoBlockOneFooter">УЗНАТЬ О РАБОТЕ С ТЕНДЕРАМИ</button>
+        <div class="arrowTwoBlockOneFooterSpan">
+            <div class="arrowLeftManyPictures hoverArrow"></div>
         </div>
         <div class="threeBlockOneFooter">
             <div class="imagesOneBlockOneFooter">
@@ -560,11 +570,9 @@
         <div class="twoFooterBlock">
             <span class="twoFooterOneSpan">Ремонт и обслуживание компьютерной<br> техники в сервис-центре СВС</span>
             <span class="twoFooterTwoSpan">Ремонтируем компьютеры, ноутбуки,<br> оргтехнику, серверное оборудование.</span>
-            <div class="twoFooterButton">
-                <span class="twoFooterButtonSpan">ПОСМОТРЕТЬ УСЛУГИ СЕРВИС ЦЕНТРА</span>
-                <div class="arrowTwoFooter">
-                    <div class="arrowLeftManyPictures"></div>
-                </div>
+            <button class="twoFooterButton">ПОСМОТРЕТЬ УСЛУГИ СЕРВИС ЦЕНТРА</button>
+            <div class="arrowTwoFooter">
+                <div class="arrowLeftManyPictures"></div>
             </div>
         </div>
         <img src="../images_adaptive_layout/twoFooter/twoFooterImage.png" alt="no" class="twoFooterImage">
