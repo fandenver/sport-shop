@@ -59,6 +59,129 @@ input:focus {
   cursor: pointer;
 }
 
+.toolTipOne, .toolTipTwo, .toolTipThree,
+.toolTipFour, .toolTypeBavBarOne,
+.toolTypeBavBarTwo, .toolTypeBavBarThree,
+.toolTypeBavBarFour, .toolTypeBavBarFive,
+.toolTypeBavBarSix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  position: absolute;
+  text-align: left;
+  color: rgb(74, 77, 74);
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+  z-index: 500;
+  animation: fadeIn 0.4s ease-in-out;
+  font-size: 12px;
+  line-height: 17px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.toolTipOne::after, .toolTipTwo::after,
+.toolTipThree::after, .toolTipFour::after,
+.toolTypeBavBarOne::after, .toolTypeBavBarTwo::after,
+.toolTypeBavBarThree::after, .toolTypeBavBarFour::after,
+.toolTypeBavBarFive::after, .toolTypeBavBarSix::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 10px 10px;
+  border-color: white transparent;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.boldText {
+  font-weight: 700;
+}
+
+.toolTipOne {
+  height: 120px;
+  width: 240px;
+  top: 43px;
+  left: 0;
+  padding-left: 5px;
+}
+
+.toolTipTwo {
+  height: 120px;
+  width: 346px;
+  top: 43px;
+  left: 0;
+  padding-left: 15px;
+}
+
+.toolTipThree {
+  height: 120px;
+  width: 369px;
+  top: 43px;
+  left: 11px;
+  padding-left: 12px;
+}
+
+.toolTipFour {
+  height: 120px;
+  width: 106px;
+  top: 43px;
+  left: 14px;
+  text-align: center;
+  padding-left: 7px;
+}
+
+.toolTypeBavBarOne {
+  height: 120px;
+  width: 100px;
+  top: 43px;
+  left: 14px;
+}
+
+.toolTypeBavBarTwo {
+  height: 120px;
+  width: 100px;
+  top: 43px;
+  left: 14px;
+}
+
+.toolTypeBavBarThree {
+  height: 120px;
+  width: 100px;
+  top: 43px;
+  left: 14px;
+}
+
+.toolTypeBavBarFour {
+  height: 120px;
+  width: 100px;
+  top: 43px;
+  left: 14px;
+}
+
+.toolTypeBavBarFive {
+  height: 120px;
+  width: 100px;
+  top: 43px;
+  left: 14px;
+}
+
+.toolTypeBavBarSix {
+  height: 120px;
+  width: 100px;
+  top: 43px;
+  left: 14px;
+}
+
 body {
   margin: 15px 0 0 0;
   font-family: Rubik, sans-serif;
@@ -174,12 +297,16 @@ body .hatBlock .labelImg {
   margin: -12px 0 0 -7px;
 }
 body .hatBlock .navBar {
-  grid-area: 1/1/1/2;
-  display: flex;
   height: 24px;
   width: 1046px;
+  grid-area: 1/1/1/2;
+  display: flex;
+  position: relative;
   gap: 44px;
   margin: 0 0 0 360px;
+}
+body .hatBlock .navBar .relativeDivNavBar {
+  position: relative;
 }
 body .hatBlock .navBar .commonSizesNumber {
   cursor: pointer;
@@ -558,64 +685,6 @@ body .bottom_navBar .alignSpan .bottom_navBar_one {
 body .bottom_navBar .alignSpan .bottom_navBar_one::after {
   left: 0;
   width: 240px;
-}
-body .bottom_navBar .alignSpan .toolTipOne {
-  height: 170px;
-  width: 240px;
-  top: 43px;
-  left: 0;
-}
-body .bottom_navBar .alignSpan .toolTipTwo {
-  height: 170px;
-  width: 346px;
-  top: 43px;
-  left: 0;
-}
-body .bottom_navBar .alignSpan .toolTipThree {
-  height: 170px;
-  width: 369px;
-  top: 43px;
-  left: 11px;
-}
-body .bottom_navBar .alignSpan .toolTipFour {
-  height: 170px;
-  width: 86px;
-  top: 43px;
-  left: 21px;
-}
-body .bottom_navBar .alignSpan .toolTipOne, body .bottom_navBar .alignSpan .toolTipTwo, body .bottom_navBar .alignSpan .toolTipThree, body .bottom_navBar .alignSpan .toolTipFour {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  display: none;
-  position: absolute;
-  color: rgb(74, 77, 74);
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
-  z-index: 500;
-  animation: fadeIn 0.4s ease-in-out;
-  overflow: hidden;
-  font-size: 12px;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-body .bottom_navBar .alignSpan .toolTipOne::after {
-  content: "";
-  position: absolute;
-  border-style: solid;
-  border-width: 0 10px 10px;
-  border-color: white transparent;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 body .bottom_navBar .alignSpan .bottom_navBar_two {
   height: 25px;

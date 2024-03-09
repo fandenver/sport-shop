@@ -104,3 +104,105 @@ input {
   text-decoration: none;
   cursor: pointer;
 }
+
+.toolTipOne, .toolTipTwo, .toolTipThree,
+.toolTipFour, .toolTypeBavBarOne,
+.toolTypeBavBarTwo, .toolTypeBavBarThree,
+.toolTypeBavBarFour, .toolTypeBavBarFive,
+.toolTypeBavBarSix {
+  @include flexAndAlign(center, center);
+  display: none;
+  position: absolute;
+  text-align: left;
+  color: $colorGray;
+  border-radius: 10px;
+  background-color: $colorWhite;
+  box-shadow: $boxShadow;
+  z-index: 500;
+  animation: fadeIn 0.4s ease-in-out;
+  font-size: 12px;
+  line-height: 17px;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.toolTipOne::after, .toolTipTwo::after,
+.toolTipThree::after, .toolTipFour::after,
+.toolTypeBavBarOne::after, .toolTypeBavBarTwo::after,
+.toolTypeBavBarThree::after, .toolTypeBavBarFour::after,
+.toolTypeBavBarFive::after, .toolTypeBavBarSix::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 10px 10px;
+  border-color: $colorWhite transparent;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.boldText {
+  font-weight: 700;
+}
+
+.toolTipOne {
+  @include heightAndWidth(120px, 240px);
+  @include topAndLeft(43px, 0);
+  padding-left: 5px;
+}
+
+.toolTipTwo {
+  @include heightAndWidth(120px, 346px);
+  @include topAndLeft(43px, 0);
+  padding-left: 15px;
+}
+
+.toolTipThree {
+  @include heightAndWidth(120px, 369px);
+  @include topAndLeft(43px, 11px);
+  padding-left: 12px;
+}
+
+.toolTipFour {
+  @include heightAndWidth(120px, 106px);
+  @include topAndLeft(43px, 14px);
+  text-align: center;
+  padding-left: 7px;
+}
+
+.toolTypeBavBarOne {
+  @include heightAndWidth(120px, 100px);
+  @include topAndLeft(43px, 14px);
+}
+
+.toolTypeBavBarTwo {
+  @include heightAndWidth(120px, 100px);
+  @include topAndLeft(43px, 14px);
+}
+
+.toolTypeBavBarThree {
+  @include heightAndWidth(120px, 100px);
+  @include topAndLeft(43px, 14px);
+}
+
+.toolTypeBavBarFour {
+  @include heightAndWidth(120px, 100px);
+  @include topAndLeft(43px, 14px);
+}
+
+.toolTypeBavBarFive {
+  @include heightAndWidth(120px, 100px);
+  @include topAndLeft(43px, 14px);
+}
+
+.toolTypeBavBarSix {
+  @include heightAndWidth(120px, 100px);
+  @include topAndLeft(43px, 14px);
+}
