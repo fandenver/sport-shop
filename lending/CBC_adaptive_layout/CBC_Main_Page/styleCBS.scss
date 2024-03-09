@@ -118,11 +118,16 @@ body {
     }
 
     .navBar {
+      @include heightAndWidth(24px, 1046px);
       grid-area: 1/1/1/2;
       display: flex;
-      @include heightAndWidth(24px, 1046px);
+      position: relative;
       gap: 44px;
       margin: 0 0 0 360px;
+
+      .relativeDivNavBar {
+        position: relative;
+      }
 
       .commonSizesNumber {
         cursor: pointer;
@@ -525,63 +530,6 @@ body {
           left: 0;
           width: 240px;
         }
-      }
-
-      .toolTipOne {
-        @include heightAndWidth(170px, 240px);
-        @include topAndLeft(43px, 0);
-      }
-
-      .toolTipTwo {
-        @include heightAndWidth(170px, 346px);
-        @include topAndLeft(43px, 0);
-      }
-
-      .toolTipThree {
-        @include heightAndWidth(170px, 369px);
-        @include topAndLeft(43px, 11px);
-      }
-
-      .toolTipFour {
-        @include heightAndWidth(170px, 86px);
-        @include topAndLeft(43px, 21px);
-      }
-
-
-
-      .toolTipOne, .toolTipTwo, .toolTipThree, .toolTipFour {
-        @include flexAndAlign(center, center);
-        text-align: left;
-        display: none;
-        position: absolute;
-        color: $colorGray;
-        border-radius: 10px;
-        background-color: $colorWhite;
-        box-shadow: $boxShadow;
-        z-index: 500;
-        animation: fadeIn 0.4s ease-in-out;
-        overflow: hidden;
-        font-size: 12px;
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
-      }
-
-      .toolTipOne::after {
-        content: '';
-        position: absolute;
-        border-style: solid;
-        border-width: 0 10px 10px;
-        border-color: $colorWhite transparent;
-        top: -10px;
-        left: 50%;
-        transform: translateX(-50%);
       }
 
       .bottom_navBar_two {

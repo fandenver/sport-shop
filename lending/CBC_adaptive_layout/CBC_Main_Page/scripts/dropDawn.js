@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         searchButton.addEventListener('click', () => {
             if (searchText !== '') {
                 searchButton.addEventListener('click', () => {
-                    window.location.href = '../../CBC_404/CBC_404.html';
+                    window.location.href = '../CBC_404/CBC_404.html';
                 })
             } else {
                 window.location.href = '';
