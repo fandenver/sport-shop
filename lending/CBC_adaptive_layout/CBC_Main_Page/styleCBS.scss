@@ -551,7 +551,7 @@ body {
 
       .toolTipOne, .toolTipTwo, .toolTipThree, .toolTipFour {
         @include flexAndAlign(center, center);
-        text-align: center;
+        text-align: left;
         display: none;
         position: absolute;
         color: $colorGray;
@@ -560,6 +560,8 @@ body {
         box-shadow: $boxShadow;
         z-index: 500;
         animation: fadeIn 0.4s ease-in-out;
+        overflow: hidden;
+        font-size: 12px;
 
         @keyframes fadeIn {
           from {
