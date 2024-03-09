@@ -37,6 +37,24 @@ input:focus {
   outline: none;
 }
 
+.close {
+  margin: 10px 10px auto auto;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  transition: color 0.5s;
+}
+
+.close:hover {
+  color: #001569;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  overflow: hidden;
+}
+
 .errorBlockMain {
   height: 700px;
   width: 1430px;

@@ -1,5 +1,9 @@
 @import "../variables/variables.scss";
 
+body {
+  overflow: hidden;
+}
+
 .errorBlockMain {
   @include heightAndWidth(700px, 1430px);
   display: flex;

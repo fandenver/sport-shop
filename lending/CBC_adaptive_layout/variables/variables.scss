@@ -90,3 +90,17 @@ input {
     outline: none;
   }
 }
+
+.close {
+  margin: 10px 10px auto auto;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  transition: color 0.5s;
+}
+
+.close:hover {
+  color: $colorBlue;
+  text-decoration: none;
+  cursor: pointer;
+}

@@ -45,10 +45,6 @@ input:focus {
   outline: none;
 }
 
-.noScroll {
-  overflow: hidden;
-}
-
 .close {
   margin: 10px 10px auto auto;
   color: #aaa;
@@ -70,6 +66,7 @@ body {
   line-height: 24px;
   color: rgb(74, 77, 74);
   font-size: 18px;
+  overflow: scroll;
 }
 body *,
 body *:before,
@@ -442,6 +439,7 @@ body .hatBlock #oneDropDawn::-webkit-scrollbar {
 }
 body .hatBlock #oneDropDawn::-webkit-scrollbar-thumb {
   background-color: rgba(0, 21, 105, 0.7);
+  border-radius: 10px;
 }
 body .hatBlock #oneDropDawn .noResultsMessage {
   height: 69px;
@@ -537,11 +535,11 @@ body .bottom_navBar .alignSpan .bottom_navBar_three:hover, body .bottom_navBar .
 }
 body .bottom_navBar .alignSpan .bottom_navBar_one::after, body .bottom_navBar .alignSpan .bottom_navBar_two::after,
 body .bottom_navBar .alignSpan .bottom_navBar_three::after, body .bottom_navBar .alignSpan .bottom_navBar_four::after {
+  background-image: linear-gradient(to right, black 60%, transparent 0);
   content: "";
   position: absolute;
   margin-top: 30px;
   height: 2px;
-  background-image: linear-gradient(to right, black 60%, transparent 0);
   background-position: bottom;
   background-size: 5px 1px;
   background-repeat: repeat-x;
@@ -554,11 +552,68 @@ body .bottom_navBar .alignSpan .bottom_navBar_three:hover:after, body .bottom_na
 body .bottom_navBar .alignSpan .bottom_navBar_one {
   height: 29px;
   width: 245px;
+  position: relative;
   left: -7px;
 }
 body .bottom_navBar .alignSpan .bottom_navBar_one::after {
   left: 0;
   width: 240px;
+}
+body .bottom_navBar .alignSpan .toolTipOne {
+  height: 170px;
+  width: 240px;
+  top: 43px;
+  left: 0;
+}
+body .bottom_navBar .alignSpan .toolTipTwo {
+  height: 170px;
+  width: 346px;
+  top: 43px;
+  left: 0;
+}
+body .bottom_navBar .alignSpan .toolTipThree {
+  height: 170px;
+  width: 369px;
+  top: 43px;
+  left: 11px;
+}
+body .bottom_navBar .alignSpan .toolTipFour {
+  height: 170px;
+  width: 86px;
+  top: 43px;
+  left: 21px;
+}
+body .bottom_navBar .alignSpan .toolTipOne, body .bottom_navBar .alignSpan .toolTipTwo, body .bottom_navBar .alignSpan .toolTipThree, body .bottom_navBar .alignSpan .toolTipFour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: none;
+  position: absolute;
+  color: rgb(74, 77, 74);
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
+  z-index: 500;
+  animation: fadeIn 0.4s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body .bottom_navBar .alignSpan .toolTipOne::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 10px 10px;
+  border-color: white transparent;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 body .bottom_navBar .alignSpan .bottom_navBar_two {
   height: 25px;
@@ -566,7 +621,7 @@ body .bottom_navBar .alignSpan .bottom_navBar_two {
   line-height: 21px;
 }
 body .bottom_navBar .alignSpan .bottom_navBar_two::after {
-  width: 350px;
+  width: 346px;
 }
 body .bottom_navBar .alignSpan .bottom_navBar_three {
   height: 21px;
@@ -574,7 +629,7 @@ body .bottom_navBar .alignSpan .bottom_navBar_three {
   padding-left: 12px;
 }
 body .bottom_navBar .alignSpan .bottom_navBar_three::after {
-  width: 375px;
+  width: 368px;
 }
 body .bottom_navBar .alignSpan .bottom_navBar_four {
   height: 21px;
@@ -1419,6 +1474,7 @@ body .oneFooter .oneFooterCenterBanner {
   height: 258px;
   width: 1389px;
   display: grid;
+  position: relative;
   list-style: none;
   grid-row-gap: 18px;
   grid-template-rows: 74px 166px;
@@ -1435,39 +1491,35 @@ body .oneFooter .oneFooterCenterBanner .onBlockOneFooter {
   grid-column-start: 1;
   grid-row-start: 1;
 }
-body .oneFooter .oneFooterCenterBanner .twoBlockOneFooter {
+body .oneFooter .oneFooterCenterBanner #twoBlockOneFooter {
   height: 60px;
   width: 400px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   justify-self: right;
   grid-column-start: 2;
   grid-row-start: 1;
   border: 2px solid #FFAF37;
-  margin-top: 3px;
-  margin-right: 10px;
+  padding-left: 20px;
   transition: background-color 0.5s, color 0.5s;
+  background-color: #F0F0FF;
+  color: rgb(74, 77, 74);
 }
-body .oneFooter .oneFooterCenterBanner .twoBlockOneFooter:hover {
+body .oneFooter .oneFooterCenterBanner #twoBlockOneFooter:hover {
   background-color: #001569;
   color: #FFAF37;
 }
-body .oneFooter .oneFooterCenterBanner .twoBlockOneFooter .twoBlockOneFooterDiv {
-  height: 60px;
-  width: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-body .oneFooter .oneFooterCenterBanner .twoBlockOneFooter .twoBlockOneFooterDiv .twoBlockOneFooterSpan {
-  height: 24px;
-  width: 369px;
-  position: relative;
-}
-body .oneFooter .oneFooterCenterBanner .twoBlockOneFooter .twoBlockOneFooterDiv .arrowTwoBlockOneFooterSpan {
+body .oneFooter .oneFooterCenterBanner .arrowTwoBlockOneFooterSpan {
   top: -30px;
-  left: 225px;
+  left: 1215px;
   position: absolute;
+}
+body .oneFooter .oneFooterCenterBanner .arrowTwoBlockOneFooterSpan .hoverArrow {
+  transition: background-color 0.5s;
+}
+body .oneFooter .oneFooterCenterBanner .arrowTwoBlockOneFooterSpan .hoverArrow:hover::before {
+  background-color: #FFAF37;
 }
 body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter {
   height: 166px;
@@ -1715,6 +1767,7 @@ body .twoFooter .twoFooterBlockAndImage {
   height: 260px;
   width: 1225px;
   display: flex;
+  position: relative;
   justify-content: space-between;
   margin: auto;
 }
@@ -1743,22 +1796,21 @@ body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton {
   height: 61px;
   width: 450px;
   display: flex;
-  position: relative;
-  cursor: pointer;
+  align-items: center;
   border: 2px solid #FFAF37;
+  background-color: #F0F0FF;
+  color: rgb(74, 77, 74);
   transition: background-color 0.5s, color 0.5s;
+  padding-left: 20px;
 }
 body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton:hover {
   background-color: #001569;
   color: #FFAF37;
 }
-body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton .twoFooterButtonSpan {
-  margin: 17px auto auto 15px;
-}
-body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton .arrowTwoFooter {
+body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .arrowTwoFooter {
+  top: 166px;
+  left: 310px;
   position: absolute;
-  top: -31px;
-  left: 270px;
 }
 body .twoFooter .twoFooterBlockAndImage .twoFooterImage {
   height: 251px;
