@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const toolTipMainBar = document.querySelectorAll('.alignSpan > div > div');
     const buttonsArray = Array.from(buttonNavBar);
     const spanToolTipNavBar = document.querySelectorAll('.navBar > div > span');
-    const toolTipNavBar = document.querySelectorAll('.navBar > div > div');
     const spanArray = Array.from(spanToolTipNavBar);
+    const toolTipNavBar = document.querySelectorAll('.navBar > div > div');
 
     buttonsArray.forEach((button, index) => {
         button.addEventListener('mouseover', () => {

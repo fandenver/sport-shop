@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const overModalBtn = document.getElementById('sendRequest');
     const openOverModal = document.getElementById('overModal');
     const closeBtn = document.getElementsByClassName('close');
-    const openMenuProducts = document.querySelectorAll('div.commonSpanMainMenu');
     const showProductMenu = document.getElementsByClassName('productMenu')[0];
     const hideSpan = document.getElementsByClassName('mainBanner')[0];
     const hideMainBanner = document.getElementsByClassName('mainBannerImage')[0];
@@ -17,8 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const circleColorThree = document.querySelector('div.paginationBanner > div:nth-child(3)');
     const circleColorFour = document.querySelector('div.paginationBanner > div:nth-child(4)');
     const circleColorFive = document.querySelector('div.paginationBanner > div:nth-child(5)');
+    const commonMainMenuSelector = document.querySelectorAll('.commonSpanMainMenu');
+    const arrowMainMenu = document.querySelectorAll('.left');
     let currentImageIndex = 0;
-
 
     function disableScroll() {
         document.body.style.overflow = 'hidden';
@@ -126,16 +126,24 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    openMenuProducts.forEach(element => {
-        element.addEventListener('click', () => {
-            if (showProductMenu.style.display === 'none' || showProductMenu.style.display === '') {
-                showProductMenu.style.display = 'flex';
-                hideSpan.style.display = 'none';
-                hideMainBanner.style.display = 'none';
-            } else {
+    commonMainMenuSelector.forEach((commonMainMenu, index) => {
+        commonMainMenu.addEventListener('click', () => {
+            arrowMainMenu.forEach((arrow, idx) => {
+                if (idx !== index) {
+                    arrow.style.transform = 'rotate(-225deg)';
+                }
+            });
+
+            if (arrowMainMenu[index].style.transform === 'rotate(-135deg)') {
+                arrowMainMenu[index].style.transform = 'rotate(-225deg)';
                 showProductMenu.style.display = 'none';
                 hideSpan.style.display = 'flex';
                 hideMainBanner.style.display = 'flex';
+            } else {
+                arrowMainMenu[index].style.transform = 'rotate(-135deg)';
+                showProductMenu.style.display = 'flex';
+                hideSpan.style.display = 'none';
+                hideMainBanner.style.display = 'none';
             }
         });
     });
