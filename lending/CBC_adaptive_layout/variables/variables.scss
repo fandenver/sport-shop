@@ -64,11 +64,10 @@ button {
   line-height: 21px;
   font-weight: 500;
   text-transform: uppercase;
-  transition: $backgroundTransition, color 0.5s;
+  transition: $backgroundTransition;
 
   &:hover {
     background-color: $colorBlue;
-    color: $colorOrange;
   }
 }
 
@@ -152,57 +151,61 @@ input {
   font-weight: 700;
 }
 
+// toolType bottom_navBar
+.toolTipOne, .toolTipTwo, .toolTipThree, .toolTipFour {
+  @include topAndLeft(43px, 0);
+}
+
 .toolTipOne {
   @include heightAndWidth(120px, 240px);
-  @include topAndLeft(43px, 0);
   padding-left: 5px;
 }
 
 .toolTipTwo {
   @include heightAndWidth(120px, 346px);
-  @include topAndLeft(43px, 0);
   padding-left: 15px;
 }
 
 .toolTipThree {
   @include heightAndWidth(120px, 369px);
-  @include topAndLeft(43px, 11px);
   padding-left: 12px;
 }
 
 .toolTipFour {
   @include heightAndWidth(120px, 106px);
-  @include topAndLeft(43px, 14px);
   text-align: center;
   padding-left: 7px;
 }
 
+// navVar
+.toolTypeBavBarOne, .toolTypeBavBarTwo, .toolTypeBavBarThree,
+.toolTypeBavBarFour, .toolTypeBavBarFive, .toolTypeBavBarSix {
+  @include topAndLeft(43px, 0px);
+  text-align: left;
+  padding: 2px;
+}
+
 .toolTypeBavBarOne {
-  @include heightAndWidth(120px, 100px);
-  @include topAndLeft(43px, 14px);
+  @include heightAndWidth(120px, 177px);
 }
 
 .toolTypeBavBarTwo {
-  @include heightAndWidth(120px, 100px);
-  @include topAndLeft(43px, 14px);
+  @include heightAndWidth(120px, 185px);
 }
 
 .toolTypeBavBarThree {
-  @include heightAndWidth(120px, 100px);
-  @include topAndLeft(43px, 14px);
+  @include heightAndWidth(120px, 78px);
 }
 
 .toolTypeBavBarFour {
-  @include heightAndWidth(120px, 100px);
-  @include topAndLeft(43px, 14px);
+  @include heightAndWidth(120px, 167px);
 }
 
 .toolTypeBavBarFive {
-  @include heightAndWidth(120px, 100px);
-  @include topAndLeft(43px, 14px);
+  @include heightAndWidth(120px, 116px);
 }
 
 .toolTypeBavBarSix {
-  @include heightAndWidth(120px, 100px);
-  @include topAndLeft(43px, 14px);
+  @include heightAndWidth(120px, 95px);
 }
+
