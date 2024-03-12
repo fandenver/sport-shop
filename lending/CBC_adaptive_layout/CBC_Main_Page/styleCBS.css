@@ -181,7 +181,7 @@ body {
   line-height: 24px;
   color: rgb(74, 77, 74);
   font-size: 18px;
-  overflow: scroll;
+  overflow: visible;
 }
 body *,
 body *:before,
@@ -274,27 +274,31 @@ body .checkBoxAndSpan .spanAfterCheckMark:hover {
   text-decoration: underline;
 }
 body .hatBlock {
-  height: 163px;
-  width: 1395px;
+  max-width: 1395px;
+  max-height: 163px;
   position: relative;
   display: grid;
-  grid-template-rows: 48px 63px 54px;
-  grid-template-columns: 767px 641px;
+  grid-template-rows: 29% 38.4% 32.6%;
+  grid-template-columns: 54.5% 45.5%;
   margin: auto;
+}
+@media screen and (max-width: 999px) {
+  body .hatBlock {
+    max-width: 999px;
+  }
 }
 body .hatBlock .labelImg {
   grid-area: 1/1/2/1;
-  height: 138px;
-  width: 329px;
   margin: -12px 0 0 -7px;
 }
 body .hatBlock .navBar {
   height: 24px;
   width: 1046px;
+  max-width: 1046px;
+  max-height: 24px;
   grid-area: 1/1/1/2;
   display: flex;
-  position: relative;
-  gap: 44px;
+  justify-content: space-between;
   margin: 0 0 0 360px;
 }
 body .hatBlock .navBar .relativeDivNavBar {
@@ -314,18 +318,14 @@ body .hatBlock .navBar .commonSizesNumber::after {
   background-image: linear-gradient(to right, rgb(74, 77, 74) 60%, transparent 0);
   content: "";
   display: inline-block;
-  position: relative;
+  position: absolute;
   height: 2px;
-  top: -11px;
+  top: 35px;
   left: 0;
   background-position: bottom;
   background-size: 5px 1px;
   background-repeat: repeat-x;
   transition: linear-gradient 0.5s;
-}
-body .hatBlock .navBar .sizesOne {
-  height: 24px;
-  width: 178px;
 }
 body .hatBlock .navBar .sizesOne:after {
   width: 178px;
@@ -338,41 +338,6 @@ body .hatBlock .navBar .sizesOne:hover:after, body .hatBlock .navBar .sizesTwo:h
 body .hatBlock .navBar .sizesThree:hover:after, body .hatBlock .navBar .sizesFour:hover:after,
 body .hatBlock .navBar .sizesFive:hover:after, body .hatBlock .navBar .sizesSix:hover:after {
   background-image: linear-gradient(to right, #FFAF37 100%, transparent 0);
-}
-body .hatBlock .navBar .sizesTwo {
-  height: 24px;
-  width: 187px;
-}
-body .hatBlock .navBar .sizesTwo:after {
-  width: 186px;
-}
-body .hatBlock .navBar .sizesThree {
-  height: 24px;
-  width: 78px;
-}
-body .hatBlock .navBar .sizesThree:after {
-  width: 78px;
-}
-body .hatBlock .navBar .sizesFour {
-  height: 24px;
-  width: 167px;
-}
-body .hatBlock .navBar .sizesFour:after {
-  width: 166px;
-}
-body .hatBlock .navBar .sizesFive {
-  height: 24px;
-  width: 117px;
-}
-body .hatBlock .navBar .sizesFive:after {
-  width: 116px;
-}
-body .hatBlock .navBar .sizesSix {
-  height: 24px;
-  width: 99px;
-}
-body .hatBlock .navBar .sizesSix:after {
-  width: 96px;
 }
 body .hatBlock .description {
   height: 45px;
