@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function enableScroll() {
-        document.body.style.overflow = 'scroll';
+        document.body.style.overflow = 'visible';
     }
 
     if (closeBtn.length > 0) {

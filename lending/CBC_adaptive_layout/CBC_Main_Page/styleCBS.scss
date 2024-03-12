@@ -7,7 +7,7 @@ body {
   line-height: 24px;
   color: $colorGray;
   font-size: 18px;
-  overflow: scroll;
+  overflow: visible;
 
   *,
   *:before,
@@ -103,25 +103,36 @@ body {
   }
 
   .hatBlock {
-    @include heightAndWidth(163px, 1395px);
+    //@include heightAndWidth(163px, 1395px);
+    max-width: 1395px;
+    max-height: 163px;
+    //width: 1395px;
     position: relative;
     display: grid;
-    grid-template-rows: 48px 63px 54px;
-    grid-template-columns: 767px 641px;
+    //grid-template-rows: 48px 63px 54px;
+    //grid-template-columns: 767px 641px;
+    grid-template-rows: 29% 38.4% 32.6%;
+    grid-template-columns: 54.5% 45.5%;
     margin: auto;
 
+    @media screen and (max-width: 999px) {
+      max-width: 999px;
+    }
+
     .labelImg {
+      //@include heightAndWidth(138px, 329px);
       grid-area: 1/1/2/1;
-      @include heightAndWidth(138px, 329px);
       margin: -12px 0 0 -7px;
     }
 
     .navBar {
       @include heightAndWidth(24px, 1046px);
+      max-width: 1046px;
+      max-height: 24px;
       grid-area: 1/1/1/2;
       display: flex;
-      position: relative;
-      gap: 44px;
+      justify-content: space-between;
+      //gap: 44px;
       margin: 0 0 0 360px;
 
       .relativeDivNavBar {
@@ -142,9 +153,9 @@ body {
           @include backgroundImage($colorGray, 60%);
           content: '';
           display: inline-block;
-          position: relative;
+          position: absolute;
           height: 2px;
-          top: -11px;
+          top: 35px;
           left: 0;
           background-position: bottom;
           background-size: 5px 1px;
@@ -152,15 +163,15 @@ body {
           transition: linear-gradient 0.5s;
         }
       }
-
+      //
       .sizesOne {
-        @include heightAndWidth(24px, 178px);
+        //@include heightAndWidth(24px, 178px);
 
         &:after {
           width: 178px;
         }
       }
-
+      //
       .sizesOne:hover, .sizesTwo:hover, .sizesThree:hover,
       .sizesFour:hover, .sizesFive:hover, .sizesSix:hover {
         color: $colorOrange;
@@ -171,46 +182,46 @@ body {
       .sizesFive:hover:after, .sizesSix:hover:after {
         @include backgroundImage($colorOrange, 100%);
       }
-
-      .sizesTwo {
-        @include heightAndWidth(24px, 187px);
-
-        &:after {
-          width: 186px;
-        }
-      }
-
-      .sizesThree {
-        @include heightAndWidth(24px, 78px);
-
-        &:after {
-          width: 78px;
-        }
-      }
-
-      .sizesFour {
-        @include heightAndWidth(24px, 167px);
-
-        &:after {
-          width: 166px;
-        }
-      }
-
-      .sizesFive {
-        @include heightAndWidth(24px, 117px);
-
-        &:after {
-          width: 116px;
-        }
-      }
-
-      .sizesSix {
-        @include heightAndWidth(24px, 99px);
-
-        &:after {
-          width: 96px;
-        }
-      }
+      //
+      //.sizesTwo {
+      //  //@include heightAndWidth(24px, 187px);
+      //
+      //  &:after {
+      //    width: 186px;
+      //  }
+      //}
+      //
+      //.sizesThree {
+      //  //@include heightAndWidth(24px, 78px);
+      //
+      //  &:after {
+      //    width: 78px;
+      //  }
+      //}
+      //
+      //.sizesFour {
+      //  //@include heightAndWidth(24px, 167px);
+      //
+      //  &:after {
+      //    width: 166px;
+      //  }
+      //}
+      //
+      //.sizesFive {
+      //  @include heightAndWidth(24px, 117px);
+      //
+      //  &:after {
+      //    width: 116px;
+      //  }
+      //}
+      //
+      //.sizesSix {
+      //  //@include heightAndWidth(24px, 99px);
+      //
+      //  &:after {
+      //    width: 96px;
+      //  }
+      //}
     }
 
     .description {
