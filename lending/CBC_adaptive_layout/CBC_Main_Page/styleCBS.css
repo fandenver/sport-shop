@@ -15,13 +15,18 @@ button {
   background-color: #FFAF37;
   color: white;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 0.94vw;
   font-family: Rubik, sans-serif;
   border: none;
-  line-height: 21px;
+  line-height: 1.1vw;
   font-weight: 500;
   text-transform: uppercase;
   transition: background-color 0.5s;
+}
+@media screen and (min-width: 1903px) {
+  button {
+    font-size: 18px;
+  }
 }
 button:hover {
   background-color: #001569;
@@ -180,8 +185,13 @@ body {
   font-weight: 500;
   line-height: 24px;
   color: rgb(74, 77, 74);
-  font-size: 18px;
+  font-size: 0.94vw;
   overflow: visible;
+}
+@media screen and (min-width: 1903px) {
+  body {
+    font-size: 18px;
+  }
 }
 body *,
 body *:before,
@@ -274,7 +284,8 @@ body .checkBoxAndSpan .spanAfterCheckMark:hover {
   text-decoration: underline;
 }
 body .hatBlock {
-  max-width: 1395px;
+  width: 74%;
+  max-width: 1412px;
   max-height: 163px;
   position: relative;
   display: grid;
@@ -282,24 +293,23 @@ body .hatBlock {
   grid-template-columns: 54.5% 45.5%;
   margin: auto;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1510px) {
   body .hatBlock {
-    max-width: 999px;
+    max-width: 1500px;
+    background-color: #4f980a;
   }
 }
 body .hatBlock .labelImg {
+  width: 43%;
   grid-area: 1/1/2/1;
-  margin: -12px 0 0 -7px;
+  margin: -12px 0 0 0;
 }
 body .hatBlock .navBar {
-  height: 24px;
-  width: 1046px;
-  max-width: 1046px;
-  max-height: 24px;
+  width: 137%;
   grid-area: 1/1/1/2;
   display: flex;
   justify-content: space-between;
-  margin: 0 0 0 360px;
+  margin-left: 47%;
 }
 body .hatBlock .navBar .relativeDivNavBar {
   position: relative;
@@ -310,9 +320,14 @@ body .hatBlock .navBar .commonSizesNumber {
   font-weight: 500;
   text-align: center;
   line-height: 24px;
-  font-size: 20px;
+  font-size: 1.05vw;
   letter-spacing: 0;
   transition: color 0.5s;
+}
+@media screen and (min-width: 1903px) {
+  body .hatBlock .navBar .commonSizesNumber {
+    font-size: 20px;
+  }
 }
 body .hatBlock .navBar .commonSizesNumber::after {
   background-image: linear-gradient(to right, rgb(74, 77, 74) 60%, transparent 0);
@@ -320,15 +335,22 @@ body .hatBlock .navBar .commonSizesNumber::after {
   display: inline-block;
   position: absolute;
   height: 2px;
-  top: 35px;
+  top: 29px;
   left: 0;
   background-position: bottom;
   background-size: 5px 1px;
   background-repeat: repeat-x;
   transition: linear-gradient 0.5s;
 }
-body .hatBlock .navBar .sizesOne:after {
-  width: 178px;
+@media screen and (max-width: 1366px) {
+  body .hatBlock .navBar .commonSizesNumber::after {
+    display: none;
+  }
+}
+body .hatBlock .navBar .sizesOne:after, body .hatBlock .navBar .sizesTwo:after,
+body .hatBlock .navBar .sizesThree:after, body .hatBlock .navBar .sizesFour:after,
+body .hatBlock .navBar .sizesFive:after, body .hatBlock .navBar .sizesSix:after {
+  width: 100%;
 }
 body .hatBlock .navBar .sizesOne:hover, body .hatBlock .navBar .sizesTwo:hover, body .hatBlock .navBar .sizesThree:hover,
 body .hatBlock .navBar .sizesFour:hover, body .hatBlock .navBar .sizesFive:hover, body .hatBlock .navBar .sizesSix:hover {
@@ -340,39 +362,38 @@ body .hatBlock .navBar .sizesFive:hover:after, body .hatBlock .navBar .sizesSix:
   background-image: linear-gradient(to right, #FFAF37 100%, transparent 0);
 }
 body .hatBlock .description {
-  height: 45px;
-  width: 403px;
   display: flex;
   grid-area: 2/1/2/1;
-  margin: 5px auto auto 360px;
+  margin: 5px auto auto 47%;
   line-height: 21px;
   letter-spacing: 0;
   text-align: left;
 }
 body .hatBlock .phoneNumber {
-  height: 37px;
-  width: 569px;
+  height: 58%;
+  width: 89%;
   display: flex;
-  position: relative;
   grid-area: 2/2/2/2;
-  justify-content: space-between;
-  margin: 5px 0 auto auto;
-  padding-right: 4px;
+  justify-content: space-around;
+  margin: 5px 0 auto 12.5%;
 }
 body .hatBlock .phoneNumber .phoneImage {
-  height: 30px;
-  width: 30px;
+  width: 6%;
 }
 body .hatBlock .phoneNumber .number {
   font-family: Montserrat, sans-serif;
-  font-size: 30px;
+  font-size: 1.56vw;
   font-weight: 700;
   letter-spacing: 0;
   line-height: 36px;
 }
+@media screen and (min-width: 1903px) {
+  body .hatBlock .phoneNumber .number {
+    font-size: 30px;
+  }
+}
 body .hatBlock .phoneNumber #requestCall {
-  height: 37px;
-  width: 240px;
+  width: 42%;
 }
 body .hatBlock .phoneNumber #modalGetCall {
   height: 500px;
@@ -485,21 +506,22 @@ body .hatBlock #overModal .threeRowOverModal #threeRowOverModalSpan:hover {
   color: #001569;
   text-decoration: underline;
 }
-body .hatBlock .numberAndButton {
+body .hatBlock .inputAndButton {
   display: flex;
+  position: relative;
   grid-area: 3/1/3/1;
-  margin: 15px 0 0 -7px;
+  margin: 15px 0 0 0;
 }
-body .hatBlock .numberAndButton .searchField {
-  height: 40px;
-  width: 690px;
+body .hatBlock .inputAndButton .searchField {
+  height: 105%;
+  width: 89.8%;
 }
-body .hatBlock .numberAndButton #searchButton {
+body .hatBlock .inputAndButton #searchButton {
   position: absolute;
-  font-size: 20px;
+  font-size: 100%;
   background-color: white;
   border: none;
-  margin: 8px 0 0 639px;
+  margin: 1% 0 0 83.4%;
 }
 body .hatBlock #oneDropDawn {
   top: 165px;
@@ -518,7 +540,7 @@ body .hatBlock #oneDropDawn {
   border: 1px solid #001569;
 }
 body .hatBlock #oneDropDawn::-webkit-scrollbar {
-  background-color: white;
+  background-color: #F0F0FF;
   width: 7px;
 }
 body .hatBlock #oneDropDawn::-webkit-scrollbar-thumb {
@@ -552,20 +574,21 @@ body .hatBlock .contactWithMe {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
-  width: 624px;
+  height: 90%;
+  width: 99%;
   margin-left: 14px;
 }
-body .hatBlock .contactWithMe .whatsApp {
-  height: 24px;
-  width: 24px;
-}
 body .hatBlock .contactWithMe .contactsOne {
-  margin-left: 10px;
-  height: 34px;
-  width: 130px;
-  font-size: 14px;
+  margin-left: 1.7%;
+  height: 73%;
+  width: 100%;
   line-height: 17px;
+  font-size: 0.73vw;
+}
+@media screen and (min-width: 1903px) {
+  body .hatBlock .contactWithMe .contactsOne {
+    font-size: 14px;
+  }
 }
 body .hatBlock .contactWithMe .sms {
   height: 18px;

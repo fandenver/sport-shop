@@ -58,13 +58,19 @@ button {
   background-color: $colorOrange;
   color: $colorWhite;
   cursor: pointer;
-  font-size: 18px;
+  //font-size: 18px;
+  font-size: 0.94vw;
   font-family: $fontFamilyRubik;
   border: none;
-  line-height: 21px;
+  //line-height: 21px;
+  line-height: 1.1vw;
   font-weight: 500;
   text-transform: uppercase;
   transition: $backgroundTransition;
+
+  @media screen and (min-width: 1903px){
+    font-size: 18px;
+  }
 
   &:hover {
     background-color: $colorBlue;
