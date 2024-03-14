@@ -34,7 +34,7 @@ button:hover {
 
 input {
   cursor: text;
-  font-size: 18px;
+  font-size: 0.94vw;
   padding-left: 20px;
   color: rgb(74, 77, 74);
   font-family: Rubik, sans-serif;
@@ -293,10 +293,9 @@ body .hatBlock {
   grid-template-columns: 54.5% 45.5%;
   margin: auto;
 }
-@media screen and (max-width: 1510px) {
+@media screen and (max-width: 1650px) {
   body .hatBlock {
-    max-width: 1500px;
-    background-color: #4f980a;
+    height: 130px;
   }
 }
 body .hatBlock .labelImg {
@@ -523,6 +522,9 @@ body .hatBlock .inputAndButton #searchButton {
   border: none;
   margin: 1% 0 0 83.4%;
 }
+body .hatBlock .inputAndButton #searchButton .searchButtonImage {
+  width: 0.94vw;
+}
 body .hatBlock #oneDropDawn {
   top: 165px;
   left: -7px;
@@ -568,15 +570,36 @@ body .hatBlock #oneDropDawn .optionDropDawn:hover {
   background-color: #001569;
   color: #FFAF37;
 }
+@media screen and (max-width: 1520px) {
+  body .hatBlock {
+    margin-left: 1%;
+  }
+}
 body .hatBlock .contactWithMe {
-  display: flex;
   grid-area: 3/2/3/2;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 90%;
-  width: 99%;
-  margin-left: 14px;
+  height: 100%;
+  width: 100%;
+  margin-left: 0;
+}
+body .hatBlock .contactWithMe .contactWithMeBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3%;
+}
+body .hatBlock .contactWithMe .contactWithMeBlockOne {
+  width: 22%;
+}
+body .hatBlock .contactWithMe .contactWithMeBlockThree {
+  width: 27%;
+}
+body .hatBlock .contactWithMe .whatsApp {
+  height: 24px;
+  width: 24px;
 }
 body .hatBlock .contactWithMe .contactsOne {
   margin-left: 1.7%;
@@ -593,27 +616,15 @@ body .hatBlock .contactWithMe .contactsOne {
 body .hatBlock .contactWithMe .sms {
   height: 18px;
   width: 24px;
-  margin: 9px 0 0 80px;
-}
-body .hatBlock .contactWithMe .contactsTwo {
-  height: 21px;
-  width: 164px;
-  margin: 4px 0 0 12px;
-}
-body .hatBlock .contactWithMe .geo {
-  height: 27px;
-  width: 20px;
-  margin: 14px 0 0 66px;
 }
 body .hatBlock .contactWithMe .contactsThree {
-  height: 50px;
-  width: 176px;
-  font-size: 16px;
+  font-size: 0.84vw;
+  height: 73%;
+  width: 100%;
   text-align: center;
-  margin: 4px auto auto 10px;
 }
 body .hatBlock .contactWithMe .city {
-  font-size: 20px;
+  font-size: 1.05vw;
   font-weight: 600;
 }
 body .bottom_navBar {
