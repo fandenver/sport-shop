@@ -6,6 +6,11 @@
 // 6. @include draft(18px) - использование миксина
 // 7. математические формулы: width: 300px / 960px *100%;
 
+// выстоа ноута - 696px
+// высота монитора - 912px
+// ширина ноута - 1536px
+// ширина монитора - 1919px
+
 // Переменные
 $fontFamilyRubik: Rubik, sans-serif;
 $fontFamilyMontserrat: Montserrat, sans-serif;
@@ -13,8 +18,10 @@ $colorWhite: #FFFF;
 $colorGray: rgb(74, 77, 74);
 $colorOrange: #FFAF37;
 $colorBlue: #001569;
-$boxShadow: 0 4px 20px 0 #00000040;
+//$boxShadow: 0 4px 20px 0 #00000040;
+$boxShadow: 0 0.208vw 1.042vw 0 #00000040;
 $backgroundTransition: background-color 0.5s;
+$maxWidthLaptop: 1536px;
 //-----------------------------------------------
 
 // Шаблоны
@@ -51,6 +58,18 @@ $backgroundTransition: background-color 0.5s;
   left: $left;
 }
 
+@mixin maxWidth() {
+  @media (max-width: 1536px) {
+    @content
+  }
+}
+
+@mixin minWidth() {
+  @media (min-width: 1919px) {
+    @content
+  }
+}
+
 //-----------------------------------------------
 
 // Стили повторяющихся элементов
@@ -84,6 +103,10 @@ input {
   padding-left: 20px;
   color: $colorGray;
   font-family: $fontFamilyRubik;
+
+  @include minWidth(){
+    font-size: 18px;
+  }
 
   &[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -215,4 +238,3 @@ input {
 .toolTypeBavBarSix {
   @include heightAndWidth(120px, 95px);
 }
-
