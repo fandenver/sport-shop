@@ -597,6 +597,7 @@ body .hatBlock .contactWithMe .contactWithMeBlock {
 body .hatBlock .contactWithMe .whatsApp {
   height: 24px;
   width: 24px;
+  margin-left: 20px;
 }
 body .hatBlock .contactWithMe .contactsOne {
   margin-left: 10px;
@@ -608,7 +609,7 @@ body .hatBlock .contactWithMe .contactsOne {
 body .hatBlock .contactWithMe .sms {
   height: 18px;
   width: 24px;
-  margin: 9px 0 0 75px;
+  margin: 9px 0 0 55px;
 }
 body .hatBlock .contactWithMe .contactsTwo {
   height: 21px;
@@ -618,14 +619,14 @@ body .hatBlock .contactWithMe .contactsTwo {
 body .hatBlock .contactWithMe .geo {
   height: 27px;
   width: 20px;
-  margin: 14px 0 0 0;
+  margin: 14px 0 0 14px;
 }
 body .hatBlock .contactWithMe .contactsThree {
   height: 50px;
   width: 176px;
   font-size: 16px;
   text-align: center;
-  margin: 4px auto auto 5px;
+  margin: 4px 0 0 -8px;
 }
 body .hatBlock .contactWithMe .city {
   font-size: 20px;
