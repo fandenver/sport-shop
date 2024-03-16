@@ -1,13 +1,22 @@
 @import "../variables/_var.scss";
 
 body {
-  margin: 15px 0 0 0;
   font-family: $fontFamilyRubik;
   font-weight: 500;
-  line-height: 24px;
   color: $colorGray;
-  font-size: 18px;
   overflow: visible;
+
+  @include minWidth() {
+    margin: 15px 0 0 0;
+    line-height: 24px;
+    font-size: 18px;
+  }
+
+  @include maxWidth() {
+    margin: 12.09px 0 0 0;
+    line-height: 19.3px;
+    font-size: 14.51px;
+  }
 
   *,
   *:before,
@@ -47,16 +56,33 @@ body {
   }
 
   .arrowLeftManyPictures {
-    @include heightAndWidth(20px, 20px);
     position: relative;
     display: inline-flex;
     cursor: pointer;
+    
+    @include minWidth() {
+      @include heightAndWidth(20px, 20px);
+    }
+
+    @include maxWidth() {
+      @include heightAndWidth(16.12px, 16.12px);
+    }
 
     &::before {
-      @include heightAndWidth(2px, 40px);
       background-color: $colorGray;
-      top: 58px;
-      left: 117px;
+
+
+      @include minWidth() {
+        @include heightAndWidth(2px, 40px);
+        top: 58px;
+        left: 117px;
+      }
+
+      @include maxWidth() {
+        @include heightAndWidth(1.612px, 32.25px);
+        top: 46.77px;
+        left: 94.35px;
+      }
     }
 
     &::before,
@@ -71,6 +97,16 @@ body {
       border-top: 2px solid $colorGray;
       border-left: 2px solid $colorGray;
       transform: rotate(-225deg);
+
+      @include minWidth() {
+        @include heightAndWidth(10px, 10px);
+        @include topAndLeft(54px, 147px);
+      }
+
+      @include maxWidth() {
+        @include heightAndWidth(8.06px, 8.06px);
+        @include topAndLeft(43.5px, 118.54px);
+      }
     }
   }
 
@@ -1592,15 +1628,23 @@ body {
   }
 
   .bannerManyPictures {
-    @include heightAndWidth(804px, 1410px);
     display: grid;
-    grid-template-rows: 248px 248px 248px;
-    grid-template-columns: 330px 330px 330px 330px;
-    grid-gap: 30px;
-    margin: 100px auto auto auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @include minWidth() {
+      @include heightAndWidth(804px, 1410px);
+      margin: 100px auto auto auto;
+      grid-gap: 30px;
+    }
+
+    @include maxWidth() {
+      @include heightAndWidth(648px, 1137px);
+      margin: 80.64px auto auto auto;
+      grid-gap: 24.19px;
+    }
 
     .oneBannerManyPictures, .bannersManyPicturesContainer {
-      @include heightAndWidth(248px, 330px);
       @include flexAndAlign(center, center);
       display: flex;
       position: relative;
@@ -1616,8 +1660,15 @@ body {
     }
 
     .commonImageBannerManyPictures {
-      @include heightAndWidth(154px, 180px);
-      margin-top: -20px;
+      @include minWidth() {
+        @include heightAndWidth(154px, 180px);
+        margin-top: -20px;
+      }
+
+      @include maxWidth() {
+        @include heightAndWidth(124px, 145.16px);
+        margin-top: -16px;
+      }
     }
 
     .oneBannerManyPictures {
@@ -1625,51 +1676,110 @@ body {
       background-color: #F0F0FF;
 
       .oneBannerManyPicturesSpan {
-        font-size: 30px;
         text-align: center;
-        line-height: 37px;
+
+        @include minWidth() {
+          font-size: 30px;
+          line-height: 37px;
+        }
+
+        @include maxWidth() {
+          font-size: 24.19px;
+          line-height: 29.83px;
+        }
       }
     }
 
     .twoBannerManyPicturesTwoSpan, .eightBannerManyPicturesTwoSpan {
-      @include heightAndWidth(21px, 303px);
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-top: 30px;
+
+      @include minWidth() {
+        @include heightAndWidth(21px, 303px);
+        margin-top: 30px;
+      }
+
+      @include maxWidth() {
+        @include heightAndWidth(16.93px, 244.35px);
+        margin-top: 24.19px;
+      }
     }
 
     .arrowBannerManyPictures {
       position: absolute;
-      top: 146px;
-      left: 158px;
+
+      @include minWidth() {
+        top: 146px;
+        left: 158px;
+      }
+
+      @include maxWidth() {
+        top: 117px;
+        left: 127px;
+      }
     }
 
     .eightImageBannerManyPictures {
-      @include heightAndWidth(187px, 222px);
       position: absolute;
-      top: 5px;
+
+      @include minWidth() {
+        @include heightAndWidth(187px, 222px);
+        top: 5px;
+      }
+
+      @include maxWidth() {
+        @include heightAndWidth(150.8px, 179px);
+        top: 4px;
+      }
     }
 
     .elevenImageBannerManyPictures {
-      @include heightAndWidth(126px, 195px);
-      top: 5px;
+      @include minWidth() {
+        @include heightAndWidth(126px, 195px);
+        top: 5px;
+      }
+
+      @include maxWidth() {
+        @include heightAndWidth(101.6px, 157.2px);
+        top: 4px;
+      }
     }
 
     .eightBannerManyPicturesTwoSpan {
-      margin-top: 165px;
+      @include minWidth() {
+        margin-top: 165px;
+      }
+
+      @include maxWidth() {
+        margin-top: 133px;
+      }
     }
 
     .spanElevenBannerManyPictures {
-      font-size: 14px;
       font-weight: 400;
       font-family: $fontFamilyMontserrat;
+
+      @include minWidth() {
+        font-size: 14px;
+      }
+
+      @include maxWidth() {
+        font-size: 11.29px;
+      }
     }
 
     #showAllOffer {
-      @include heightAndWidth(70px, 283px);
-      font-size: 14px;
+      @include minWidth() {
+        @include heightAndWidth(70px, 283px);
+        font-size: 14px;
+      }
+
+      @include maxWidth() {
+        @include heightAndWidth(56.45px, 228.22px);
+        font-size: 11.29px;
+      }
     }
   }
 

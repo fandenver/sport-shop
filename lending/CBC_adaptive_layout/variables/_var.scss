@@ -9,7 +9,8 @@
 // выстоа ноута - 696px
 // высота монитора - 912px
 // ширина ноута - 1536px
-// ширина монитора - 1919px
+// ширина монитора - 1920px
+// значение деления размеров = 1.25
 
 // Переменные
 $fontFamilyRubik: Rubik, sans-serif;
@@ -57,13 +58,13 @@ $backgroundTransition: background-color 0.5s;
 }
 
 @mixin maxWidth() {
-  @media (max-width: 1536px) {
+  @media (max-width: 1919px) {
     @content
   }
 }
 
 @mixin minWidth() {
-  @media (min-width: 1919px) {
+  @media (min-width: 1920px) {
     @content
   }
 }
