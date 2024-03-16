@@ -441,6 +441,7 @@ body {
 
       .whatsApp {
         @include heightAndWidth(24px, 24px);
+        margin-left: 20px;
       }
 
       .contactsOne {
@@ -453,7 +454,7 @@ body {
 
       .sms {
         @include heightAndWidth(18px, 24px);
-        margin: 9px 0 0 75px;
+        margin: 9px 0 0 55px;
       }
 
       .contactsTwo {
@@ -463,14 +464,14 @@ body {
 
       .geo {
         @include heightAndWidth(27px, 20px);
-        margin: 14px 0 0 0;
+        margin: 14px 0 0 14px;
       }
 
       .contactsThree {
         @include heightAndWidth(50px, 176px);
         font-size: 16px;
         text-align: center;
-        margin: 4px auto auto 5px;
+        margin: 4px 0 0 -8px;
       }
 
       .city {
