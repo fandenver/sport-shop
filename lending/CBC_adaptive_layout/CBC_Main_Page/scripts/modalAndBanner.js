@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const hideMainBanner = document.getElementsByClassName('mainBannerImage')[0];
     const showNewImageRight = document.getElementsByClassName('buttonBannerRight')[0];
     const showNewImageLeft = document.getElementsByClassName('buttonBannerLeft')[0];
-    const newImage = document.getElementsByClassName('mainBannerImage')[0];
     const textImage = document.getElementsByClassName('bannerTextOnImage')[0];
     const circleColorOne = document.querySelector('div.paginationBanner > div:nth-child(1)');
     const circleColorTwo = document.querySelector('div.paginationBanner > div:nth-child(2)');
@@ -19,6 +18,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const commonMainMenuSelector = document.querySelectorAll('.commonSpanMainMenu');
     const arrowMainMenu = document.querySelectorAll('.left');
     let currentImageIndex = 0;
+
+    hideMainBanner.addEventListener('mouseover', () => {
+        showNewImageRight.style.display = 'block';
+        showNewImageLeft.style.display = 'block';
+    });
+
+    hideMainBanner.addEventListener('mouseleave', () => {
+        showNewImageRight.style.display = 'none';
+        showNewImageLeft.style.display = 'none';
+    });
 
     function disableScroll() {
         document.body.style.overflow = 'hidden';
@@ -54,8 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function oneEvent(background, backgroundSize) {
-        newImage.style.backgroundImage = background;
-        newImage.style.backgroundSize = backgroundSize;
+        hideMainBanner.style.backgroundImage = background;
+        hideMainBanner.style.backgroundSize = backgroundSize;
     }
 
     const imagePaths = [
@@ -125,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
             textImage.style.color = '';
         }
     });
+
 
     commonMainMenuSelector.forEach((commonMainMenu, index) => {
         commonMainMenu.addEventListener('click', () => {
