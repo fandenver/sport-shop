@@ -1108,11 +1108,33 @@ body {
           }
 
           .buttonBannerLeft {
+            display: none;
             margin-left: 0.26vw;
+            animation: fadeIn 0.4s ease-in-out;
+
+            @keyframes fadeIn {
+              from {
+                opacity: 0;
+              }
+              to {
+                opacity: 1;
+              }
+            }
           }
 
           .buttonBannerRight {
+            display: none;
             margin-left: 42.313vw;
+            animation: fadeIn 0.4s ease-in-out;
+
+            @keyframes fadeIn {
+              from {
+                opacity: 0;
+              }
+              to {
+                opacity: 1;
+              }
+            }
           }
 
           .leftBannerButton, .rightBannerButton {
