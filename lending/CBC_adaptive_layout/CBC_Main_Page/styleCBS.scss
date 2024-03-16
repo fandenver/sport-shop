@@ -1,4 +1,4 @@
-@import "../variables/_var";
+@import "../variables/_var.scss";
 
 body {
   margin: 15px 0 0 0;
@@ -6,12 +6,8 @@ body {
   font-weight: 500;
   line-height: 24px;
   color: $colorGray;
-  font-size: 0.94vw;
+  font-size: 18px;
   overflow: visible;
-
-  @media screen and (min-width: 1903px) {
-    font-size: 18px;
-  }
 
   *,
   *:before,
@@ -107,43 +103,26 @@ body {
   }
 
   .hatBlock {
-    @include heightAndWidth(8.494vw, 72.694vw);
-    //height: 130%;
-    max-width: 1412px;
-    max-height: 163px;
-    //width: 1395px;
+    @include heightAndWidth(163px, 1395px);
     position: relative;
     display: grid;
-    grid-template-rows: 2.501vw 3.282vw 2.813vw;
-    grid-template-columns: 39.968vw 33.402vw;
+    grid-template-rows: 48px 63px 54px;
+    grid-template-columns: 767px 641px;
     margin: auto;
 
-    @include maxWidth(){
-      height: 130px;
-    }
-
-    @include minWidth(){
-      grid-template-rows: 48px 63px 54px;
-      grid-template-columns: 767px 641px;
-    }
-
     .labelImg {
-      @include heightAndWidth(7.191vw, 17.144vw);
       grid-area: 1/1/2/1;
-      margin: -12px 0 0 0;
+      @include heightAndWidth(138px, 329px);
+      margin: -12px 0 0 -7px;
     }
 
     .navBar {
-      //@include heightAndWidth(24px, 1046px);
-      width: 137%;
-      //max-width: 1046px;
-      //max-height: 24px;
+      @include heightAndWidth(24px, 1046px);
       grid-area: 1/1/1/2;
       display: flex;
-      justify-content: space-between;
-      //gap: 44px;
-      margin-left: 47%;
-      //margin-left: 360px;
+      position: relative;
+      gap: 44px;
+      margin: 0 0 0 360px;
 
       .relativeDivNavBar {
         position: relative;
@@ -155,145 +134,118 @@ body {
         font-weight: 500;
         text-align: center;
         line-height: 24px;
-        //font-size: 20px;
-        font-size: 1.05vw;
+        font-size: 20px;
         letter-spacing: 0;
         transition: color 0.5s;
-
-        @media screen and (min-width: 1903px) {
-          font-size: 20px;
-        }
 
         &::after {
           @include backgroundImage($colorGray, 60%);
           content: '';
           display: inline-block;
-          position: absolute;
+          position: relative;
           height: 2px;
-          top: 29px;
+          top: -11px;
           left: 0;
           background-position: bottom;
           background-size: 5px 1px;
           background-repeat: repeat-x;
           transition: linear-gradient 0.5s;
         }
+      }
 
-        @media screen and (max-width: 1366px) {
-          &::after {
-            display: none;
-          }
+      .sizesOne {
+        @include heightAndWidth(24px, 178px);
+
+        &:after {
+          width: 178px;
         }
       }
 
-      .sizesOne:after, .sizesTwo:after,
-      .sizesThree:after, .sizesFour:after,
-      .sizesFive:after, .sizesSix:after {
-        width: 100%;
-      }
-
-      //  .sizesOne {
-      //    //@include heightAndWidth(24px, 178px);
-      //
-      //    &:after {
-      //      //width: 178px;
-      //      width: 100%;
-      //    }
-      //  }
-      //  //
       .sizesOne:hover, .sizesTwo:hover, .sizesThree:hover,
       .sizesFour:hover, .sizesFive:hover, .sizesSix:hover {
         color: $colorOrange;
       }
 
-      //
       .sizesOne:hover:after, .sizesTwo:hover:after,
       .sizesThree:hover:after, .sizesFour:hover:after,
       .sizesFive:hover:after, .sizesSix:hover:after {
         @include backgroundImage($colorOrange, 100%);
       }
 
-      //  //
-      //  .sizesTwo {
-      //    //@include heightAndWidth(24px, 187px);
-      //
-      //    &:after {
-      //      width: 186px;
-      //    }
-      //  }
-      //  //
-      //  .sizesThree {
-      //    //@include heightAndWidth(24px, 78px);
-      //
-      //    &:after {
-      //      width: 78px;
-      //    }
-      //  }
-      //  //
-      //  .sizesFour {
-      //    //@include heightAndWidth(24px, 167px);
-      //
-      //    &:after {
-      //      width: 166px;
-      //    }
-      //  }
-      //  //
-      //  .sizesFive {
-      //    //@include heightAndWidth(24px, 117px);
-      //
-      //    &:after {
-      //      width: 116px;
-      //    }
-      //  }
-      //  //
-      //  .sizesSix {
-      //    //@include heightAndWidth(24px, 99px);
-      //
-      //    &:after {
-      //      width: 96px;
-      //    }
-      //  }
+      .sizesTwo {
+        @include heightAndWidth(24px, 187px);
+
+        &:after {
+          width: 186px;
+        }
+      }
+
+      .sizesThree {
+        @include heightAndWidth(24px, 78px);
+
+        &:after {
+          width: 78px;
+        }
+      }
+
+      .sizesFour {
+        @include heightAndWidth(24px, 167px);
+
+        &:after {
+          width: 166px;
+        }
+      }
+
+      .sizesFive {
+        @include heightAndWidth(24px, 117px);
+
+        &:after {
+          width: 116px;
+        }
+      }
+
+      .sizesSix {
+        @include heightAndWidth(24px, 99px);
+
+        &:after {
+          width: 96px;
+        }
+      }
     }
 
     .description {
-      //@include heightAndWidth(45px, 403px);
+      @include heightAndWidth(45px, 403px);
       display: flex;
       grid-area: 2/1/2/1;
-      margin: 5px auto auto 47%;
+      margin: 5px auto auto 360px;
       line-height: 21px;
       letter-spacing: 0;
       text-align: left;
     }
 
     .phoneNumber {
-      //@include heightAndWidth(37px, 569px);
-      @include heightAndWidth(58%, 89%);
+      @include heightAndWidth(37px, 569px);
       display: flex;
-      //position: relative;
+      position: relative;
       grid-area: 2/2/2/2;
-      justify-content: space-around;
-      margin: 5px 0 auto 12.5%;
+      justify-content: space-between;
+      margin: 5px 0 auto auto;
+      padding-right: 4px;
 
       .phoneImage {
-        //@include heightAndWidth(30px, 30px);
-        width: 6%;
+        @include heightAndWidth(30px, 30px);
       }
 
       .number {
         font-family: $fontFamilyMontserrat;
-        font-size: 1.56vw;
+        font-size: 30px;
         font-weight: 700;
         letter-spacing: 0;
         line-height: 36px;
-
-        @media screen and (min-width: 1903px) {
-          font-size: 30px;
-        }
       }
 
       #requestCall {
-        //@include heightAndWidth(37px, 240px);
-        //@include heightAndWidth(100%, 42%);
-        width: 42%
+        @include heightAndWidth(37px, 240px);
       }
 
       #modalGetCall {
@@ -409,25 +361,19 @@ body {
 
     .inputAndButton {
       display: flex;
-      position: relative;
       grid-area: 3/1/3/1;
-      margin: 15px 0 0 0;
+      margin: 15px 0 0 -7px;
 
       .searchField {
-        @include heightAndWidth(105%, 89.8%);
+        @include heightAndWidth(40px, 690px);
       }
 
       #searchButton {
         position: absolute;
-        font-size: 100%;
+        font-size: 20px;
         background-color: white;
         border: none;
-        margin: 1% 0 0 83.4%;
-
-
-        .searchButtonImage {
-          width: 0.94vw;
-        }
+        margin: 8px 0 0 639px;
       }
     }
 
@@ -447,7 +393,7 @@ body {
       border: 1px solid $colorBlue;
 
       &::-webkit-scrollbar {
-        background-color: #F0F0FF;
+        background-color: #FFFF;
         width: 7px;
       }
 
@@ -479,44 +425,18 @@ body {
       }
     }
 
-    @media screen and (max-width: 1520px) {
-      margin-left: 1%;
-    }
-
-
     .contactWithMe {
-      grid-area: 3/2/3/2;
       display: flex;
+      grid-area: 3/2/3/2;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      //height: 50px;
-      height: 100%;
-      //width: 624px;
-      width: 100%;
-      margin-left: 0;
-      //margin-left: 3%;
-
-      //@media screen and (max-width: 1536px) {
-      //}
-
-      //@media screen and (min-width: 1903px) {
-      //  @include heightAndWidth(50px, 624px);
-      //}
+      height: 50px;
+      width: 624px;
+      margin-left: 14px;
 
       .contactWithMeBlock {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 3%;
-      }
-
-      .contactWithMeBlockOne {
-        width: 22%;
-      }
-
-      .contactWithMeBlockThree {
-        width: 27%;
       }
 
       .whatsApp {
@@ -524,81 +444,54 @@ body {
       }
 
       .contactsOne {
-        margin-left: 1.7%;
-        height: 73%;
-        width: 100%;
+        margin-left: 10px;
+        height: 34px;
+        width: 130px;
+        font-size: 14px;
         line-height: 17px;
-        font-size: 0.73vw;
-
-        @media screen and (min-width: 1903px) {
-          font-size: 14px;
-        }
       }
 
       .sms {
         @include heightAndWidth(18px, 24px);
-        //margin: 1% 0 0 -10%;
+        margin: 9px 0 0 75px;
       }
 
       .contactsTwo {
-        //@include heightAndWidth(21px, 164px);
-        //margin: 1% 0 0 1.5%;
+        @include heightAndWidth(21px, 164px);
+        margin: 4px 0 0 12px;
       }
 
       .geo {
-        //@include heightAndWidth(27px, 20px);
-        //margin: 2.4% -18% 0 0;
+        @include heightAndWidth(27px, 20px);
+        margin: 14px 0 0 0;
       }
 
       .contactsThree {
-        //@include heightAndWidth(50px, 176px);
-        //font-size: 16px;
-        font-size: 0.84vw;
-        height: 73%;
-        width: 100%;
+        @include heightAndWidth(50px, 176px);
+        font-size: 16px;
         text-align: center;
-        //margin: 4px auto auto 13%;
-
-        @include minWidth(){
-          font-size: 16px;
-        }
+        margin: 4px auto auto 5px;
       }
 
       .city {
-        //font-size: 20px;
-        font-size: 1.05vw;
+        font-size: 20px;
         font-weight: 600;
-        
-        @media (min-width: 1919px) {
-          font-size: 20px;
-        }
       }
     }
   }
 
   .bottom_navBar {
-    //@include heightAndWidth(60px, 100%);
+    @include heightAndWidth(60px, 100%);
     width: 100%;
-    height: 6.579vw;
-    max-height: 60px;
+    height: 60px;
     background-color: #F0F0FF;
     margin-top: 28px;
     padding: 15px;
 
-    @media (max-width: $maxWidthLaptop) {
-      height: 46px;
-    }
-
     .alignSpan {
       @extend %tplFlexAndSpace;
-      max-width: 1413px;
-      width: 73.579vw;
+      width: 1394px;
       margin: auto;
-
-      @media (max-width: $maxWidthLaptop) {
-        width: 1130px;
-        margin-top: -6px;
-      }
 
       .bottom_navBar_one, .bottom_navBar_two,
       .bottom_navBar_three, .bottom_navBar_four {
@@ -618,70 +511,98 @@ body {
         @include backgroundImage(black, 60%);
         content: '';
         position: absolute;
-        margin-top: 1.56vw;
+        margin-top: 30px;
         height: 2px;
         background-position: bottom;
         background-size: 5px 1px;
         background-repeat: repeat-x;
         cursor: pointer;
-        width: 100%;
       }
 
       .bottom_navBar_one:hover:after, .bottom_navBar_two:hover:after,
       .bottom_navBar_three:hover:after, .bottom_navBar_four:hover:after {
         @include backgroundImage($colorOrange, 100%);
       }
+
+      .bottom_navBar_one {
+        @include heightAndWidth(29px, 245px);
+        position: relative;
+        left: -7px;
+
+        &::after {
+          left: 0;
+          width: 240px;
+        }
+      }
+
+      .bottom_navBar_two {
+        @include heightAndWidth(25px, 350px);
+        line-height: 21px;
+
+        &::after {
+          width: 346px;
+        }
+      }
+
+      .bottom_navBar_three {
+        @include heightAndWidth(21px, 385px);
+        padding-left: 12px;
+
+        &::after {
+          width: 368px;
+        }
+      }
+
+      .bottom_navBar_four {
+        @include heightAndWidth(21px, 99px);
+        padding-left: 21px;
+
+        &::after {
+          left: 0;
+          margin-left: 23px;
+          width: 85px;
+        }
+      }
     }
   }
 
   .afterNavBar {
-    //@include heightAndWidth(736px, 1410px);
+    @include heightAndWidth(736px, 1410px);
     @extend %tplFlexAndSpace;
-    max-width: 1413px;
-    width: 73.589vw;
-    margin: 2.6vw auto auto auto;
+    margin: 50px auto auto auto;
 
     .mainMenu {
-      //@include heightAndWidth(736px, 448px);
+      @include heightAndWidth(736px, 448px);
       @extend %tplFlexAndColumn;
-      width: 23.345vw;
     }
 
     .headerMainMenu {
-      //@include heightAndWidth(60px, 447px);
-      max-width: 447px;
-      max-height: 60px;
-      height: 3.126vw;
-      width: 23.293vw;
+      @include heightAndWidth(60px, 447px);
       display: inline-block;
       border-radius: 10px 10px 0 0;
       background: #F0F0FF;
     }
 
     .headerSpan {
-      //@include heightAndWidth(26px, 106px);
+      @include heightAndWidth(26px, 106px);
       display: flex;
-      margin: 0.885vw auto auto 1.094vw;
-      font-size: 1.25vw;
+      margin: 17px auto auto 21px;
+      font-size: 24px;
       font-weight: 500;
-      line-height: 1.511vw;
+      line-height: 29px;
       letter-spacing: 0;
       text-align: left;
     }
 
     .choiceChapter {
-      //@include heightAndWidth(676px, 447px);
+      @include heightAndWidth(676px, 447px);
       @extend %tplFlexAndColumn;
-      max-width: 447px;
-      max-height: 676px;
-      width: 23.293vw;
-      height: 35.226vw;
       box-shadow: $boxShadow;
     }
 
     .left {
-      @include heightAndWidth(0.468vw, 0.468vw);
-      margin-right: 0.78vw;
+      @include heightAndWidth(9px, 9px);
+      margin-right: 15px;
       cursor: pointer;
       border-top: 3px solid #00156999;
       border-left: 3px solid #00156999;
@@ -695,33 +616,29 @@ body {
     }
 
     .choiceChapter > div > :nth-child(1) {
-      //@include heightAndWidth(16px, 20px);
-      width: 1.052vw;
-      height: 0.833vw;
-      margin-left: 1.042vw;
+      @include heightAndWidth(16px, 20px);
+      margin-left: 20px;
     }
 
     .choiceChapter > div > :nth-child(2) {
-      margin-left: 0.625vw;
+      margin-left: 12px;
     }
 
     #smallImageSize, #smallTwoImageSize,
     #smallFourImageSize, #smallFiveImageSize,
     #smallSixImageSize {
-      height: 1.042vw;
+      height: 20px;
     }
 
     #newSticker {
-      height: 0.521vw;
-      margin-top: 0.312vw;
+      height: 10px;
+      margin-top: 6px;
     }
 
     #smallOneImageSize {
-      //@include heightAndWidth(24px, 15px);
-      width: 0.781vw;
-      height: 1.25vw;
-      margin-top: 0.05vw;
-      margin-left: 1.126vw;
+      @include heightAndWidth(24px, 15px);
+      margin-top: -1px;
+      margin-left: 22px;
     }
 
     .commonSpanMainMenu {
@@ -743,67 +660,67 @@ body {
     }
 
     .one {
-      margin-right: 4.429vw;
+      margin-right: 85px;
     }
 
     .two {
-      margin-right: 7.191vw;
+      margin-right: 138px;
     }
 
     .three {
-      margin-right: 7.92vw;
+      margin-right: 152px;
     }
 
     .four {
-      margin-right: 8.285vw;
+      margin-right: 159px;
     }
 
     .five {
-      margin-right: 8.441vw;
+      margin-right: 162px;
     }
 
     .six {
-      margin-right: 1.875vw;
+      margin-right: 36px;
     }
 
     .seven {
-      margin-right: 2.761vw;
+      margin-right: 53px;
     }
 
     .eight {
-      margin-right: 7.608vw;
+      margin-right: 146px;
     }
 
     .nine {
-      margin-right: 5.523vw;
+      margin-right: 106px;
     }
 
     .ten {
-      margin-right: 4.846vw;
+      margin-right: 93px;
     }
 
     .eleven {
-      margin-right: 10.943vw;
+      margin-right: 210px;
     }
 
     .twelve {
-      margin-right: 9.015vw;
+      margin-right: 173px;
     }
 
     .thirteen {
-      margin-right: 16.154vw;
+      margin-right: 310px;
     }
 
     .fourteen {
-      margin-right: 15.059vw;
+      margin-right: 289px;
     }
 
     .afterNavBarBannerAndSpan {
       @extend %tplFlexAndColumn;
-      margin-left: 2.188vw;
+      margin-left: 42px;
 
       .productMenu {
-        @include heightAndWidth(39.187vw, 48.045vw);
+        @include heightAndWidth(752px, 922px);
         display: none;
         position: relative;
         justify-content: space-between;
@@ -822,15 +739,15 @@ body {
         }
 
         .productMenuBlock {
-          @include heightAndWidth(16.67vw, 10.943vw);
+          @include heightAndWidth(320px, 210px);
           @extend %tplFlexAndColumn;
           align-items: center;
           background-color: $colorWhite;
           box-shadow: $boxShadow;
           border: 0.4px solid #4A4D4A;
-          border-radius: 0.208vw;
+          border-radius: 4px;
           transition: $backgroundTransition;
-          font-size: 0.729vw;
+          font-size: 14px;
           text-align: center;
         }
 
@@ -844,12 +761,12 @@ body {
           cursor: pointer;
 
           .pmPhoneMain {
-            @include heightAndWidth(6.044vw, 2.344vw);
-            margin-top: 2.344vw;
+            @include heightAndWidth(116px, 45px);
+            margin-top: 45px;
           }
 
           .oneProductSpan {
-            margin-top: 1.146vw;
+            margin-top: 22px;
           }
         }
 
@@ -858,12 +775,12 @@ body {
           cursor: pointer;
 
           .pmTabletMain {
-            @include heightAndWidth(6.149vw, 4.22vw);
-            margin-top: 2.344vw;
+            @include heightAndWidth(118px, 81px);
+            margin-top: 45px;
           }
 
           .twoProductSpan {
-            margin-top: 1.042vw;
+            margin-top: 20px;
           }
         }
 
@@ -872,12 +789,12 @@ body {
           cursor: pointer;
 
           .pmPodsMain {
-            @include heightAndWidth(6.096vw, 4.856vw);
-            margin-top: 2.501vw;
+            @include heightAndWidth(117px, 93px);
+            margin-top: 48px;
           }
 
           .threeProductSpan {
-            margin-top: 0.937vw;
+            margin-top: 18px;
           }
         }
 
@@ -886,12 +803,12 @@ body {
           cursor: pointer;
 
           .pmCaseMain {
-            @include heightAndWidth(6.09vw, 4.846vw);
+            @include heightAndWidth(117px, 93px);
             margin-top: 48px;
           }
 
           .fourProductSpan {
-            margin-top: 0.937vw;
+            margin-top: 18px;
           }
         }
 
@@ -1008,10 +925,10 @@ body {
       }
 
       .mainBanner {
-        @include heightAndWidth(6.878vw, 48.045vw);
+        @include heightAndWidth(132px, 922px);
         display: flex;
-        font-size: 1.875vw;
-        line-height: 2.292vw;
+        font-size: 36px;
+        line-height: 44px;
         letter-spacing: 0;
         text-align: left;
         color: $colorGray;
@@ -1029,7 +946,7 @@ body {
 
         .bigText {
           font-weight: 700;
-          line-height: 2.292vw;
+          line-height: 44px;
         }
 
         .orangeText {
@@ -1039,16 +956,14 @@ body {
       }
 
       .mainBannerImage {
-        @include heightAndWidth(30.745vw, 48.045vw);
-        max-width: 922px;
-        max-height: 590px;
+        @include heightAndWidth(590px, 922px);
         display: flex;
         flex-direction: column;
         position: relative;
-        border-radius: 0.521vw;
+        border-radius: 10px;
         background-image: url("../images_adaptive_layout/hat/mainBannerImage.png");
         background-size: cover;
-        margin-top: 0.729vw;
+        margin-top: 14px;
         animation: fadeIn 0.5s ease-in-out;
         transition: background-image 0.5s;
 
@@ -1062,45 +977,45 @@ body {
         }
 
         .leftMain {
-          @include heightAndWidth(9.119vw, 12.506vw);
+          @include heightAndWidth(175px, 240px);
           position: absolute;
-          left: 37.258vw;
-          top: 23.293vw;
-          border-top: 0.416vw solid #1F347B;
-          border-left: 0.416vw solid #1F347B;
+          left: 715px;
+          top: 447px;
+          border-top: 8px solid #1F347B;
+          border-left: 8px solid #1F347B;
           transform: rotate(-180deg);
         }
 
         .bannerTextOnImage {
-          @include heightAndWidth(6.044vw, 21.99vw);
-          margin-left: 20.844vw;
-          margin-top: 7.816vw;
+          @include heightAndWidth(116px, 422px);
+          margin-left: 400px;
+          margin-top: 150px;
           text-align: center;
-          font-size: 1.563vw;
+          font-size: 30px;
           color: $colorWhite;
           font-weight: 550;
-          line-height: 1.928vw;
+          line-height: 37px;
           transition: color 0.5s;
         }
 
         #showOffer {
-          @include heightAndWidth(3.595vw, 17.196vw);
+          @include heightAndWidth(69px, 330px);
           @include flexAndAlign(center, center);
-          margin-left: 22.928vw;
+          margin-left: 440px;
         }
 
         .bannerButtonCommon {
-          @include heightAndWidth(2.605vw, 100%);
+          @include heightAndWidth(50px, 100%);
           display: flex;
           flex-direction: row;
 
           .buttonBanner {
-            @include heightAndWidth(2.605vw, 2.605vw);
+            @include heightAndWidth(50px, 50px);
             cursor: pointer;
             background-color: $colorWhite;
             border-radius: 50%;
             transition: $backgroundTransition;
-            padding: 1.042vw;
+            padding: 20px;
 
             &:hover {
               background-color: $colorOrange;
@@ -1109,8 +1024,8 @@ body {
 
           .buttonBannerLeft {
             display: none;
-            margin-left: 0.26vw;
-            animation: fadeIn 0.4s ease-in-out;
+            margin-left: 5px;
+            animation: fadeIn 0.5s ease-in-out;
 
             @keyframes fadeIn {
               from {
@@ -1124,8 +1039,8 @@ body {
 
           .buttonBannerRight {
             display: none;
-            margin-left: 42.313vw;
-            animation: fadeIn 0.4s ease-in-out;
+            margin-left: 812px;
+            animation: fadeIn 0.5s ease-in-out;
 
             @keyframes fadeIn {
               from {
@@ -1138,23 +1053,23 @@ body {
           }
 
           .leftBannerButton, .rightBannerButton {
-            @include heightAndWidth(0.833vw, 0.833vw);
+            @include heightAndWidth(16px, 16px);
           }
 
           .leftBannerButton {
-            border-top: 0.26vw solid #001569;
-            border-left: 0.26vw solid #001569;
+            border-top: 5px solid #001569;
+            border-left: 5px solid #001569;
           }
 
           .leftButtonBannerOne {
             position: relative;
-            bottom: 0.104vw;
-            right: 0.104vw;
+            bottom: 2px;
+            right: 2px;
           }
 
           .rightButtonBannerOne {
-            left: 0.104vw;
-            top: 0.104vw;
+            left: 2px;
+            top: 16px;
           }
 
           .leftButtonBannerOne {
@@ -1163,8 +1078,8 @@ body {
 
           .leftButtonBannerTwo, .rightButtonBannerTwo {
             position: relative;
-            right: 0.156vw;
-            bottom: 0.104vw;
+            right: 3px;
+            bottom: 2px;
           }
         }
 
@@ -1173,15 +1088,15 @@ body {
         }
 
         .paginationBanner {
-          @include heightAndWidth(1.042vw, 7.92vw);
+          @include heightAndWidth(20px, 152px);
           display: flex;
-          margin: 8.858vw auto auto 19.28vw;
+          margin: 170px auto auto 370px;
 
           .circlePagination {
-            @include heightAndWidth(1.042vw, 1.042vw);
+            @include heightAndWidth(20px, 20px);
             cursor: pointer;
             border-radius: 100%;
-            margin-left: 0.208vw;
+            margin-left: 4px;
             border: 1px solid $colorWhite;
             transition: $backgroundTransition;
 
@@ -1199,15 +1114,19 @@ body {
   }
 
   .sideButtons {
-    @include heightAndWidth(14.121vw, 4.689vw);
+    @include heightAndWidth(271px, 90px);
     box-shadow: $boxShadow;
     position: fixed;
     right: 0;
-    margin-top: -35.956vw;
-    border-top-left-radius: 0.521vw;
-    border-bottom-left-radius: 0.521vw;
+    margin-top: -690px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     cursor: pointer;
     z-index: 1000;
+
+    @media (max-width: 1536px) {
+      display: none;
+    }
 
     .oneSideButton, .twoSideButton, .threeSideButton {
       @include flexAndAlign(center, center);
@@ -1215,9 +1134,9 @@ body {
     }
 
     .oneSideButton {
-      @include heightAndWidth(4.689vw, 4.689vw);
+      @include heightAndWidth(90px, 90px);
       background-color: #1F347B;
-      border-top-left-radius: 0.521vw;
+      border-top-left-radius: 10px;
       transition: $backgroundTransition;
     }
 
@@ -1226,21 +1145,21 @@ body {
     }
 
     .twoSideButton {
-      @include heightAndWidth(4.689vw, 4.689vw);
+      @include heightAndWidth(90px, 90px);
       background-color: $colorWhite;
       transition: $backgroundTransition;
     }
 
     .threeSideButton {
-      @include heightAndWidth(4.689vw, 4.689vw);
+      @include heightAndWidth(91px, 90px);
       background-color: $colorWhite;
-      border-bottom-left-radius: 0.521vw;
+      border-bottom-left-radius: 10px;
       border-top: 1px solid #1F347B;
     }
 
     .oneSideButtonImage {
-      @include heightAndWidth(1.563vw, 1.563vw);
-      @include topAndLeft(0.364vw, 0.781vw);
+      @include heightAndWidth(30px, 30px);
+      @include topAndLeft(7px, 15px);
     }
   }
 

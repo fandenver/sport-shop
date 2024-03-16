@@ -14,14 +14,12 @@
 // Переменные
 $fontFamilyRubik: Rubik, sans-serif;
 $fontFamilyMontserrat: Montserrat, sans-serif;
-$colorWhite: rgb(255, 255, 255);
+$colorWhite: #FFFF;
 $colorGray: rgb(74, 77, 74);
 $colorOrange: #FFAF37;
 $colorBlue: #001569;
-//$boxShadow: 0 4px 20px 0 #00000040;
-$boxShadow: 0 0.208vw 1.042vw 0 #00000040;
+$boxShadow: 0 4px 20px 0 #00000040;
 $backgroundTransition: background-color 0.5s;
-$maxWidthLaptop: 1536px;
 //-----------------------------------------------
 
 // Шаблоны
@@ -69,7 +67,6 @@ $maxWidthLaptop: 1536px;
     @content
   }
 }
-
 //-----------------------------------------------
 
 // Стили повторяющихся элементов
@@ -77,19 +74,13 @@ button {
   background-color: $colorOrange;
   color: $colorWhite;
   cursor: pointer;
-  //font-size: 18px;
-  font-size: 0.94vw;
+  font-size: 18px;
   font-family: $fontFamilyRubik;
   border: none;
-  //line-height: 21px;
-  line-height: 1.1vw;
+  line-height: 21px;
   font-weight: 500;
   text-transform: uppercase;
   transition: $backgroundTransition;
-
-  @media screen and (min-width: 1903px) {
-    font-size: 18px;
-  }
 
   &:hover {
     background-color: $colorBlue;
@@ -98,15 +89,10 @@ button {
 
 input {
   cursor: text;
-  //font-size: 18px;
-  font-size: 0.94vw;
+  font-size: 18px;
   padding-left: 20px;
   color: $colorGray;
   font-family: $fontFamilyRubik;
-
-  @include minWidth(){
-    font-size: 18px;
-  }
 
   &[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -238,3 +224,4 @@ input {
 .toolTypeBavBarSix {
   @include heightAndWidth(120px, 95px);
 }
+
