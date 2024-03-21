@@ -1,10 +1,11 @@
 @import "../variables/_var.scss";
 
-body {
+html, body {
   font-family: $fontFamilyRubik;
   font-weight: 500;
   color: $colorGray;
   overflow: visible;
+  height: 100%;
 
   @include minWidth() {
     margin: 15px 0 0 0;
@@ -18,12 +19,6 @@ body {
     font-size: 14.51px;
   }
 
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-  }
-
   .circle, .circleTwoBanners, .circleAfterManyPicturesBanner,
   .circleAfterTwoFooter, .circleBannerBeforeLastFooter {
     @include heightAndWidth(24px, 24px);
@@ -34,6 +29,7 @@ body {
 
   .circle {
     @include topAndLeft(430px, 939px);
+    padding-bottom: 10px;
   }
 
   .circleTwoBanners {
@@ -56,33 +52,15 @@ body {
   }
 
   .arrowLeftManyPictures {
-    position: relative;
+    @include heightAndWidth(20px, 20px);
     display: inline-flex;
     cursor: pointer;
-    
-    @include minWidth() {
-      @include heightAndWidth(20px, 20px);
-    }
-
-    @include maxWidth() {
-      @include heightAndWidth(16.12px, 16.12px);
-    }
 
     &::before {
       background-color: $colorGray;
-
-
-      @include minWidth() {
-        @include heightAndWidth(2px, 40px);
-        top: 58px;
-        left: 117px;
-      }
-
-      @include maxWidth() {
-        @include heightAndWidth(1.612px, 32.25px);
-        top: 46.77px;
-        left: 94.35px;
-      }
+      @include heightAndWidth(2px, 40px);
+      top: 58px;
+      left: 117px;
     }
 
     &::before,
@@ -97,16 +75,6 @@ body {
       border-top: 2px solid $colorGray;
       border-left: 2px solid $colorGray;
       transform: rotate(-225deg);
-
-      @include minWidth() {
-        @include heightAndWidth(10px, 10px);
-        @include topAndLeft(54px, 147px);
-      }
-
-      @include maxWidth() {
-        @include heightAndWidth(8.06px, 8.06px);
-        @include topAndLeft(43.5px, 118.54px);
-      }
     }
   }
 
@@ -402,6 +370,15 @@ body {
 
       .searchField {
         @include heightAndWidth(40px, 690px);
+
+        &[type="search"]::-webkit-search-cancel-button {
+          //display: inline-block;
+          //-webkit-appearance: none;
+          margin-right: 70px;
+          font-size: 20px;
+          //background: url('path/to/your/cross-icon.png') no-repeat center;
+          cursor: pointer;
+        }
       }
 
       #searchButton {
@@ -604,26 +581,37 @@ body {
   }
 
   .afterNavBar {
-    @include heightAndWidth(736px, 1410px);
+    //@include heightAndWidth(736px, 1410px);
     @extend %tplFlexAndSpace;
+    max-width: 1470px;
+    width: 100%;
     margin: 50px auto auto auto;
+    padding: 0 30px;
 
     .mainMenu {
-      @include heightAndWidth(736px, 448px);
+      //@include heightAndWidth(736px, 448px);
       @extend %tplFlexAndColumn;
+      max-width: 448px;
+      width: 100%;
+      min-width: 316px;
     }
 
     .headerMainMenu {
-      @include heightAndWidth(60px, 447px);
+      //@include heightAndWidth(60px, 447px);
+      width: 100%;
+      max-height: 60px;
+      height: 100%;
       display: inline-block;
       border-radius: 10px 10px 0 0;
       background: #F0F0FF;
     }
 
     .headerSpan {
-      @include heightAndWidth(26px, 106px);
+      //@include heightAndWidth(26px, 106px);
       display: flex;
-      margin: 17px auto auto 21px;
+      //margin: 17px auto auto 21px;
+      padding-top: 17px;
+      padding-left: 21px;
       font-size: 24px;
       font-weight: 500;
       line-height: 29px;
@@ -632,8 +620,12 @@ body {
     }
 
     .choiceChapter {
-      @include heightAndWidth(676px, 447px);
+      //@include heightAndWidth(676px, 447px);
       @extend %tplFlexAndColumn;
+      max-width: 447px;
+      width: 100%;
+      max-height: 676px;
+      height: 100%;
       box-shadow: $boxShadow;
     }
 
@@ -675,11 +667,13 @@ body {
     #smallOneImageSize {
       @include heightAndWidth(24px, 15px);
       margin-top: -1px;
-      margin-left: 22px;
+      margin-left: 24px;
     }
 
     .commonSpanMainMenu {
-      @include flexAndAlign(space-between, center);
+      //@include flexAndAlign(space-between, center);
+      display: flex;
+      align-items: center;
       flex-direction: row;
       flex-grow: 1;
       cursor: pointer;
@@ -696,60 +690,74 @@ body {
       flex-grow: 1;
     }
 
-    .one {
-      margin-right: 85px;
+    //.one {
+    //  //margin-right: 85px;
+    //  margin-left: 0;
+    //}
+    //
+    //.two {
+    //  margin-right: 138px;
+    //}
+    //
+    //.three {
+    //  margin-right: 152px;
+    //}
+    //
+    //.four {
+    //  margin-right: 159px;
+    //}
+    //
+    //.five {
+    //  margin-right: 162px;
+    //}
+    //
+    //.six {
+    //  margin-right: 36px;
+    //}
+    //
+    //.seven {
+    //  margin-right: 53px;
+    //}
+    //
+    //.eight {
+    //  margin-right: 146px;
+    //}
+    //
+    //.nine {
+    //  margin-right: 106px;
+    //}
+    //
+    //.ten {
+    //  margin-right: 93px;
+    //}
+    //
+    //.eleven {
+    //  margin-right: 210px;
+    //}
+    //
+    //.twelve {
+    //  margin-right: 173px;
+    //}
+    //
+    //.thirteen {
+    //  margin-right: 310px;
+    //}
+
+    //.fourteen {
+    //  margin-right: 289px;
+    //}
+
+    .twoChoice {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 386px;
+      width: 100%;
+      overflow: hidden;
     }
 
-    .two {
-      margin-right: 138px;
-    }
-
-    .three {
-      margin-right: 152px;
-    }
-
-    .four {
-      margin-right: 159px;
-    }
-
-    .five {
-      margin-right: 162px;
-    }
-
-    .six {
-      margin-right: 36px;
-    }
-
-    .seven {
-      margin-right: 53px;
-    }
-
-    .eight {
-      margin-right: 146px;
-    }
-
-    .nine {
-      margin-right: 106px;
-    }
-
-    .ten {
-      margin-right: 93px;
-    }
-
-    .eleven {
-      margin-right: 210px;
-    }
-
-    .twelve {
-      margin-right: 173px;
-    }
-
-    .thirteen {
-      margin-right: 310px;
-    }
-
-    .fourteen {
-      margin-right: 289px;
+    .rightSmall {
+      margin-right: 12px;
     }
 
     .afterNavBarBannerAndSpan {
@@ -757,7 +765,11 @@ body {
       margin-left: 42px;
 
       .productMenu {
-        @include heightAndWidth(752px, 922px);
+        //@include heightAndWidth(736px, 922px);
+        max-width: 922px;
+        width: 100%;
+        max-height: 736px;
+        height: 100%;
         display: none;
         position: relative;
         justify-content: space-between;
@@ -765,6 +777,10 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         animation: fadeIn 0.9s ease-in-out;
+        
+        @media (max-width: 1426px) {
+          max-height: 1567px;
+        }
 
         @keyframes fadeIn {
           from {
@@ -786,6 +802,7 @@ body {
           transition: $backgroundTransition;
           font-size: 14px;
           text-align: center;
+          margin-bottom: 96px;
         }
 
         .oneProduct:hover, .twoProduct:hover,
@@ -962,15 +979,23 @@ body {
       }
 
       .mainBanner {
-        @include heightAndWidth(132px, 922px);
+        //@include heightAndWidth(132px, 922px);
+        width: 100%;
+        max-width: 922px;
+        max-height: 132px;
         display: flex;
         font-size: 36px;
-        line-height: 44px;
+        //line-height: 44px;
+        line-height: 122%;
         letter-spacing: 0;
         text-align: left;
         color: $colorGray;
         font-family: $fontFamilyMontserrat;
         animation: fadeIn 0.5s ease-in-out;
+
+        @media (max-width: 1473px) {
+          font-size: 30px;
+        }
 
         @keyframes fadeIn {
           from {
@@ -993,7 +1018,8 @@ body {
       }
 
       .mainBannerImage {
-        @include heightAndWidth(590px, 922px);
+        //@include heightAndWidth(590px, 922px);
+        width: 100%;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -1128,6 +1154,7 @@ body {
           @include heightAndWidth(20px, 152px);
           display: flex;
           margin: 170px auto auto 370px;
+          padding-bottom: 35px;
 
           .circlePagination {
             @include heightAndWidth(20px, 20px);
@@ -1628,24 +1655,34 @@ body {
   }
 
   .bannerManyPictures {
+    //@include heightAndWidth(804px, 1410px);
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-
-    @include minWidth() {
-      @include heightAndWidth(804px, 1410px);
-      margin: 100px auto auto auto;
-      grid-gap: 30px;
-    }
+    width: 100%;
+    height: 100%;
+    max-height: 804px;
+    max-width: 1410px;
+    margin: 100px auto 100px auto;
+    //grid-gap: 30px;
+    grid-column-gap: 2.12%;
+    grid-row-gap: 3.73%;
+    //grid-row-gap: 3.73%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     @include maxWidth() {
-      @include heightAndWidth(648px, 1137px);
-      margin: 80.64px auto auto auto;
-      grid-gap: 24.19px;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: 1fr 1fr;
+      max-height: 1262px;
+      margin: 100px auto 300px auto;
     }
 
     .oneBannerManyPictures, .bannersManyPicturesContainer {
       @include flexAndAlign(center, center);
+      justify-content: space-around;
+      max-height: 248px;
+      max-width: 330px;
+      width: 100%;
+      height: 100%;
       display: flex;
       position: relative;
       flex-direction: column;
@@ -1660,15 +1697,9 @@ body {
     }
 
     .commonImageBannerManyPictures {
-      @include minWidth() {
-        @include heightAndWidth(154px, 180px);
-        margin-top: -20px;
-      }
-
-      @include maxWidth() {
-        @include heightAndWidth(124px, 145.16px);
-        margin-top: -16px;
-      }
+      //@include heightAndWidth(154px, 180px);
+      width: 55%;
+      //padding-top: 15%;
     }
 
     .oneBannerManyPictures {
@@ -1677,16 +1708,8 @@ body {
 
       .oneBannerManyPicturesSpan {
         text-align: center;
-
-        @include minWidth() {
-          font-size: 30px;
-          line-height: 37px;
-        }
-
-        @include maxWidth() {
-          font-size: 24.19px;
-          line-height: 29.83px;
-        }
+        font-size: 30px;
+        line-height: 37px;
       }
     }
 
@@ -1694,92 +1717,42 @@ body {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
-
-      @include minWidth() {
-        @include heightAndWidth(21px, 303px);
-        margin-top: 30px;
-      }
-
-      @include maxWidth() {
-        @include heightAndWidth(16.93px, 244.35px);
-        margin-top: 24.19px;
-      }
+      width: 92%;
     }
 
     .arrowBannerManyPictures {
       position: absolute;
-
-      @include minWidth() {
-        top: 146px;
-        left: 158px;
-      }
-
-      @include maxWidth() {
-        top: 117px;
-        left: 127px;
-      }
+      //top: 159px;
+      top: 62%;
+      //left: 158px;
+      left: 48%;
     }
 
     .eightImageBannerManyPictures {
+      //@include heightAndWidth(187px, 222px);
+      width: 67%;
       position: absolute;
-
-      @include minWidth() {
-        @include heightAndWidth(187px, 222px);
-        top: 5px;
-      }
-
-      @include maxWidth() {
-        @include heightAndWidth(150.8px, 179px);
-        top: 4px;
-      }
+      top: 5px;
     }
 
     .elevenImageBannerManyPictures {
-      @include minWidth() {
-        @include heightAndWidth(126px, 195px);
-        top: 5px;
-      }
-
-      @include maxWidth() {
-        @include heightAndWidth(101.6px, 157.2px);
-        top: 4px;
-      }
+      @include heightAndWidth(126px, 195px);
+      top: 5px;
     }
 
     .eightBannerManyPicturesTwoSpan {
-      @include minWidth() {
-        margin-top: 165px;
-      }
-
-      @include maxWidth() {
-        margin-top: 133px;
-      }
+      margin-top: 165px;
     }
 
     .spanElevenBannerManyPictures {
       font-weight: 400;
       font-family: $fontFamilyMontserrat;
-
-      @include minWidth() {
-        font-size: 14px;
-      }
-
-      @include maxWidth() {
-        font-size: 11.29px;
-      }
+      font-size: 14px;
     }
 
     #showAllOffer {
-      @include minWidth() {
-        @include heightAndWidth(70px, 283px);
-        font-size: 14px;
-      }
-
-      @include maxWidth() {
-        @include heightAndWidth(56.45px, 228.22px);
-        font-size: 11.29px;
-      }
+      @include heightAndWidth(70px, 283px);
+      font-size: 14px;
     }
   }
 
@@ -2160,7 +2133,7 @@ body {
         .maps {
           @include heightAndWidth(423px, 553px);
           background: url("../images_adaptive_layout/bannerBeforeLastFooter/maps.png");
-          background-size: cover;
+          background-size: center / cover;
         }
       }
     }

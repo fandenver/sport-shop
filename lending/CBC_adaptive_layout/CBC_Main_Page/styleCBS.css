@@ -1,14 +1,25 @@
-body .afterNavBar, body .bottom_navBar .alignSpan {
+html .afterNavBar, body .afterNavBar, html .bottom_navBar .alignSpan, body .bottom_navBar .alignSpan {
   display: flex;
   justify-content: space-between;
 }
 
-body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan, body .lastFooter .lastFooterMainBlock .lastFooterOneBlock, body .lastFooter .lastFooterMainBlock .lastFooterTwoBlock,
+html .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan, html .lastFooter .lastFooterMainBlock .lastFooterOneBlock, html .lastFooter .lastFooterMainBlock .lastFooterTwoBlock,
+html .lastFooter .lastFooterMainBlock .lastFooterThreeBlock, html .lastFooter .lastFooterMainBlock .lastFooterFourBlock,
+html .lastFooter .lastFooterMainBlock .lastFooterFiveBlock, html .lastFooter .lastFooterMainBlock .lastFooterSixBlock, body .lastFooter .lastFooterMainBlock .lastFooterOneBlock, body .lastFooter .lastFooterMainBlock .lastFooterTwoBlock,
 body .lastFooter .lastFooterMainBlock .lastFooterThreeBlock, body .lastFooter .lastFooterMainBlock .lastFooterFourBlock,
-body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage, body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage, body .twoBannerAfterTwoFooter, body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock, body .twoFooter .twoFooterBlockAndImage .twoFooterBlock, body .twoBannersNextDiv .oneBannerSpanAndButton, body .twoBannersNextDiv .twoBannerSpanAndButton, body .manyBanners .cooperation, body .manyBanners .qualityService, body .manyBanners .spanAndImageReliable, body .manyBanners .spanAndImageFullComplex,
-body .manyBanners .spanAndImageOrderKey, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productMenuBlock, body .afterNavBar .afterNavBarBannerAndSpan, body .afterNavBar .choiceChapter, body .afterNavBar .mainMenu, body .hatBlock .phoneNumber #modalGetCall .modalContentBlock {
+body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock, html .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock, html .bannerBeforeLastFooter .beforeLastFooterSpanAndImage, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage, html .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage, body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage, html .twoBannerAfterTwoFooter, body .twoBannerAfterTwoFooter, html .bannerAfterTwoFooter .bannerAfterTwoFooterBlock, body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock, html .twoFooter .twoFooterBlockAndImage .twoFooterBlock, body .twoFooter .twoFooterBlockAndImage .twoFooterBlock, html .twoBannersNextDiv .oneBannerSpanAndButton, html .twoBannersNextDiv .twoBannerSpanAndButton, body .twoBannersNextDiv .oneBannerSpanAndButton, body .twoBannersNextDiv .twoBannerSpanAndButton, html .manyBanners .cooperation, body .manyBanners .cooperation, html .manyBanners .qualityService, body .manyBanners .qualityService, html .manyBanners .spanAndImageReliable, html .manyBanners .spanAndImageFullComplex,
+html .manyBanners .spanAndImageOrderKey, body .manyBanners .spanAndImageReliable, body .manyBanners .spanAndImageFullComplex,
+body .manyBanners .spanAndImageOrderKey, html .afterNavBar .afterNavBarBannerAndSpan .productMenu .productMenuBlock, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productMenuBlock, html .afterNavBar .afterNavBarBannerAndSpan, body .afterNavBar .afterNavBarBannerAndSpan, html .afterNavBar .choiceChapter, body .afterNavBar .choiceChapter, html .afterNavBar .mainMenu, body .afterNavBar .mainMenu, html .hatBlock .phoneNumber #modalGetCall .modalContentBlock, body .hatBlock .phoneNumber #modalGetCall .modalContentBlock {
   display: flex;
   flex-direction: column;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 button {
@@ -174,32 +185,29 @@ input:focus {
   width: 95px;
 }
 
-body {
+html, body {
   font-family: Rubik, sans-serif;
   font-weight: 500;
   color: rgb(74, 77, 74);
   overflow: visible;
+  height: 100%;
 }
 @media (min-width: 1920px) {
-  body {
+  html, body {
     margin: 15px 0 0 0;
     line-height: 24px;
     font-size: 18px;
   }
 }
-@media (max-width: 1919px) {
-  body {
+@media (max-width: 1280px) {
+  html, body {
     margin: 12.09px 0 0 0;
     line-height: 19.3px;
     font-size: 14.51px;
   }
 }
-body *,
-body *:before,
-body *:after {
-  box-sizing: border-box;
-}
-body .circle, body .circleTwoBanners, body .circleAfterManyPicturesBanner,
+html .circle, html .circleTwoBanners, html .circleAfterManyPicturesBanner,
+html .circleAfterTwoFooter, html .circleBannerBeforeLastFooter, body .circle, body .circleTwoBanners, body .circleAfterManyPicturesBanner,
 body .circleAfterTwoFooter, body .circleBannerBeforeLastFooter {
   height: 24px;
   width: 24px;
@@ -207,69 +215,47 @@ body .circleAfterTwoFooter, body .circleBannerBeforeLastFooter {
   background-color: #1F347B;
   border-radius: 50%;
 }
-body .circle {
+html .circle, body .circle {
   top: 430px;
   left: 939px;
+  padding-bottom: 10px;
 }
-body .circleTwoBanners {
+html .circleTwoBanners, body .circleTwoBanners {
   top: 138px;
   left: -42px;
 }
-body .circleAfterManyPicturesBanner {
+html .circleAfterManyPicturesBanner, body .circleAfterManyPicturesBanner {
   top: 247px;
   left: 1424px;
 }
-body .circleAfterTwoFooter {
+html .circleAfterTwoFooter, body .circleAfterTwoFooter {
   left: 143px;
   bottom: 171px;
   background-color: rgba(31, 52, 123, 0.2);
 }
-body .circleBannerBeforeLastFooter {
+html .circleBannerBeforeLastFooter, body .circleBannerBeforeLastFooter {
   top: -9px;
   left: 147px;
   background-color: rgba(31, 52, 123, 0.2);
 }
-body .arrowLeftManyPictures {
-  position: relative;
+html .arrowLeftManyPictures, body .arrowLeftManyPictures {
+  height: 20px;
+  width: 20px;
   display: inline-flex;
   cursor: pointer;
 }
-@media (min-width: 1920px) {
-  body .arrowLeftManyPictures {
-    height: 20px;
-    width: 20px;
-  }
-}
-@media (max-width: 1919px) {
-  body .arrowLeftManyPictures {
-    height: 16.12px;
-    width: 16.12px;
-  }
-}
-body .arrowLeftManyPictures::before {
+html .arrowLeftManyPictures::before, body .arrowLeftManyPictures::before {
   background-color: rgb(74, 77, 74);
+  height: 2px;
+  width: 40px;
+  top: 58px;
+  left: 117px;
 }
-@media (min-width: 1920px) {
-  body .arrowLeftManyPictures::before {
-    height: 2px;
-    width: 40px;
-    top: 58px;
-    left: 117px;
-  }
-}
-@media (max-width: 1919px) {
-  body .arrowLeftManyPictures::before {
-    height: 1.612px;
-    width: 32.25px;
-    top: 46.77px;
-    left: 94.35px;
-  }
-}
-body .arrowLeftManyPictures::before, body .arrowLeftManyPictures::after {
+html .arrowLeftManyPictures::before, html .arrowLeftManyPictures::after, body .arrowLeftManyPictures::before, body .arrowLeftManyPictures::after {
   content: "";
   position: absolute;
 }
-body .arrowLeftManyPictures::after {
+html .arrowLeftManyPictures::after, body .arrowLeftManyPictures::after {
   height: 10px;
   width: 10px;
   top: 54px;
@@ -278,29 +264,13 @@ body .arrowLeftManyPictures::after {
   border-left: 2px solid rgb(74, 77, 74);
   transform: rotate(-225deg);
 }
-@media (min-width: 1920px) {
-  body .arrowLeftManyPictures::after {
-    height: 10px;
-    width: 10px;
-    top: 54px;
-    left: 147px;
-  }
-}
-@media (max-width: 1919px) {
-  body .arrowLeftManyPictures::after {
-    height: 8.06px;
-    width: 8.06px;
-    top: 43.5px;
-    left: 118.54px;
-  }
-}
-body .checkBoxAndSpan {
+html .checkBoxAndSpan, body .checkBoxAndSpan {
   height: 30px;
   width: 205px;
   display: flex;
   justify-content: space-between;
 }
-body .checkBoxAndSpan .checkMarkBlock {
+html .checkBoxAndSpan .checkMarkBlock, body .checkBoxAndSpan .checkMarkBlock {
   height: 30px;
   width: 30px;
   display: flex;
@@ -309,20 +279,20 @@ body .checkBoxAndSpan .checkMarkBlock {
   cursor: pointer;
   background-color: rgb(74, 77, 74);
 }
-body .checkBoxAndSpan .checkMarkBlock .checkMark {
+html .checkBoxAndSpan .checkMarkBlock .checkMark, body .checkBoxAndSpan .checkMarkBlock .checkMark {
   height: 15px;
   width: 15px;
 }
-body .checkBoxAndSpan .spanAfterCheckMark {
+html .checkBoxAndSpan .spanAfterCheckMark, body .checkBoxAndSpan .spanAfterCheckMark {
   cursor: text;
   font-weight: 400;
   font-size: 10px;
   line-height: 15px;
 }
-body .checkBoxAndSpan .spanAfterCheckMark:hover {
+html .checkBoxAndSpan .spanAfterCheckMark:hover, body .checkBoxAndSpan .spanAfterCheckMark:hover {
   text-decoration: underline;
 }
-body .hatBlock {
+html .hatBlock, body .hatBlock {
   height: 163px;
   width: 1395px;
   position: relative;
@@ -331,13 +301,13 @@ body .hatBlock {
   grid-template-columns: 767px 641px;
   margin: auto;
 }
-body .hatBlock .labelImg {
+html .hatBlock .labelImg, body .hatBlock .labelImg {
   grid-area: 1/1/2/1;
   height: 138px;
   width: 329px;
   margin: -12px 0 0 -7px;
 }
-body .hatBlock .navBar {
+html .hatBlock .navBar, body .hatBlock .navBar {
   height: 24px;
   width: 1046px;
   grid-area: 1/1/1/2;
@@ -346,10 +316,10 @@ body .hatBlock .navBar {
   gap: 44px;
   margin: 0 0 0 360px;
 }
-body .hatBlock .navBar .relativeDivNavBar {
+html .hatBlock .navBar .relativeDivNavBar, body .hatBlock .navBar .relativeDivNavBar {
   position: relative;
 }
-body .hatBlock .navBar .commonSizesNumber {
+html .hatBlock .navBar .commonSizesNumber, body .hatBlock .navBar .commonSizesNumber {
   cursor: pointer;
   margin: 0;
   font-weight: 500;
@@ -359,7 +329,7 @@ body .hatBlock .navBar .commonSizesNumber {
   letter-spacing: 0;
   transition: color 0.5s;
 }
-body .hatBlock .navBar .commonSizesNumber::after {
+html .hatBlock .navBar .commonSizesNumber::after, body .hatBlock .navBar .commonSizesNumber::after {
   background-image: linear-gradient(to right, rgb(74, 77, 74) 60%, transparent 0);
   content: "";
   display: inline-block;
@@ -372,58 +342,61 @@ body .hatBlock .navBar .commonSizesNumber::after {
   background-repeat: repeat-x;
   transition: linear-gradient 0.5s;
 }
-body .hatBlock .navBar .sizesOne {
+html .hatBlock .navBar .sizesOne, body .hatBlock .navBar .sizesOne {
   height: 24px;
   width: 178px;
 }
-body .hatBlock .navBar .sizesOne:after {
+html .hatBlock .navBar .sizesOne:after, body .hatBlock .navBar .sizesOne:after {
   width: 178px;
 }
-body .hatBlock .navBar .sizesOne:hover, body .hatBlock .navBar .sizesTwo:hover, body .hatBlock .navBar .sizesThree:hover,
+html .hatBlock .navBar .sizesOne:hover, html .hatBlock .navBar .sizesTwo:hover, html .hatBlock .navBar .sizesThree:hover,
+html .hatBlock .navBar .sizesFour:hover, html .hatBlock .navBar .sizesFive:hover, html .hatBlock .navBar .sizesSix:hover, body .hatBlock .navBar .sizesOne:hover, body .hatBlock .navBar .sizesTwo:hover, body .hatBlock .navBar .sizesThree:hover,
 body .hatBlock .navBar .sizesFour:hover, body .hatBlock .navBar .sizesFive:hover, body .hatBlock .navBar .sizesSix:hover {
   color: #FFAF37;
 }
-body .hatBlock .navBar .sizesOne:hover:after, body .hatBlock .navBar .sizesTwo:hover:after,
+html .hatBlock .navBar .sizesOne:hover:after, html .hatBlock .navBar .sizesTwo:hover:after,
+html .hatBlock .navBar .sizesThree:hover:after, html .hatBlock .navBar .sizesFour:hover:after,
+html .hatBlock .navBar .sizesFive:hover:after, html .hatBlock .navBar .sizesSix:hover:after, body .hatBlock .navBar .sizesOne:hover:after, body .hatBlock .navBar .sizesTwo:hover:after,
 body .hatBlock .navBar .sizesThree:hover:after, body .hatBlock .navBar .sizesFour:hover:after,
 body .hatBlock .navBar .sizesFive:hover:after, body .hatBlock .navBar .sizesSix:hover:after {
   background-image: linear-gradient(to right, #FFAF37 100%, transparent 0);
 }
-body .hatBlock .navBar .sizesTwo {
+html .hatBlock .navBar .sizesTwo, body .hatBlock .navBar .sizesTwo {
   height: 24px;
   width: 187px;
 }
-body .hatBlock .navBar .sizesTwo:after {
+html .hatBlock .navBar .sizesTwo:after, body .hatBlock .navBar .sizesTwo:after {
   width: 186px;
 }
-body .hatBlock .navBar .sizesThree {
+html .hatBlock .navBar .sizesThree, body .hatBlock .navBar .sizesThree {
   height: 24px;
   width: 78px;
 }
-body .hatBlock .navBar .sizesThree:after {
+html .hatBlock .navBar .sizesThree:after, body .hatBlock .navBar .sizesThree:after {
   width: 78px;
 }
-body .hatBlock .navBar .sizesFour {
+html .hatBlock .navBar .sizesFour, body .hatBlock .navBar .sizesFour {
   height: 24px;
   width: 167px;
 }
-body .hatBlock .navBar .sizesFour:after {
+html .hatBlock .navBar .sizesFour:after, body .hatBlock .navBar .sizesFour:after {
   width: 166px;
 }
-body .hatBlock .navBar .sizesFive {
+html .hatBlock .navBar .sizesFive, body .hatBlock .navBar .sizesFive {
   height: 24px;
   width: 117px;
 }
-body .hatBlock .navBar .sizesFive:after {
+html .hatBlock .navBar .sizesFive:after, body .hatBlock .navBar .sizesFive:after {
   width: 116px;
 }
-body .hatBlock .navBar .sizesSix {
+html .hatBlock .navBar .sizesSix, body .hatBlock .navBar .sizesSix {
   height: 24px;
   width: 99px;
 }
-body .hatBlock .navBar .sizesSix:after {
+html .hatBlock .navBar .sizesSix:after, body .hatBlock .navBar .sizesSix:after {
   width: 96px;
 }
-body .hatBlock .description {
+html .hatBlock .description, body .hatBlock .description {
   height: 45px;
   width: 403px;
   display: flex;
@@ -433,7 +406,7 @@ body .hatBlock .description {
   letter-spacing: 0;
   text-align: left;
 }
-body .hatBlock .phoneNumber {
+html .hatBlock .phoneNumber, body .hatBlock .phoneNumber {
   height: 37px;
   width: 569px;
   display: flex;
@@ -443,22 +416,22 @@ body .hatBlock .phoneNumber {
   margin: 5px 0 auto auto;
   padding-right: 4px;
 }
-body .hatBlock .phoneNumber .phoneImage {
+html .hatBlock .phoneNumber .phoneImage, body .hatBlock .phoneNumber .phoneImage {
   height: 30px;
   width: 30px;
 }
-body .hatBlock .phoneNumber .number {
+html .hatBlock .phoneNumber .number, body .hatBlock .phoneNumber .number {
   font-family: Montserrat, sans-serif;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0;
   line-height: 36px;
 }
-body .hatBlock .phoneNumber #requestCall {
+html .hatBlock .phoneNumber #requestCall, body .hatBlock .phoneNumber #requestCall {
   height: 37px;
   width: 240px;
 }
-body .hatBlock .phoneNumber #modalGetCall {
+html .hatBlock .phoneNumber #modalGetCall, body .hatBlock .phoneNumber #modalGetCall {
   height: 500px;
   width: 764px;
   top: 68px;
@@ -472,11 +445,11 @@ body .hatBlock .phoneNumber #modalGetCall {
   border: 2px solid rgb(74, 77, 74);
   background-color: white;
 }
-body .hatBlock .phoneNumber #modalGetCall .modalContentSpanAndClose {
+html .hatBlock .phoneNumber #modalGetCall .modalContentSpanAndClose, body .hatBlock .phoneNumber #modalGetCall .modalContentSpanAndClose {
   display: flex;
   flex-direction: row;
 }
-body .hatBlock .phoneNumber #modalGetCall .modalContentSpanAndClose .modalContentHeader {
+html .hatBlock .phoneNumber #modalGetCall .modalContentSpanAndClose .modalContentHeader, body .hatBlock .phoneNumber #modalGetCall .modalContentSpanAndClose .modalContentHeader {
   height: 48px;
   width: 382px;
   text-align: center;
@@ -484,7 +457,7 @@ body .hatBlock .phoneNumber #modalGetCall .modalContentSpanAndClose .modalConten
   color: rgb(74, 77, 74);
   font-size: 20px;
 }
-body .hatBlock .phoneNumber #modalGetCall .modalContentBlock {
+html .hatBlock .phoneNumber #modalGetCall .modalContentBlock, body .hatBlock .phoneNumber #modalGetCall .modalContentBlock {
   height: 346px;
   width: 331px;
   align-items: flex-start;
@@ -492,19 +465,19 @@ body .hatBlock .phoneNumber #modalGetCall .modalContentBlock {
   margin-left: 80px;
   z-index: 100;
 }
-body .hatBlock .phoneNumber #modalGetCall .modalContentBlock .modalContentBlockOneInput, body .hatBlock .phoneNumber #modalGetCall .modalContentBlock #sendRequest {
+html .hatBlock .phoneNumber #modalGetCall .modalContentBlock .modalContentBlockOneInput, html .hatBlock .phoneNumber #modalGetCall .modalContentBlock #sendRequest, body .hatBlock .phoneNumber #modalGetCall .modalContentBlock .modalContentBlockOneInput, body .hatBlock .phoneNumber #modalGetCall .modalContentBlock #sendRequest {
   height: 60px;
   width: 330px;
   margin-bottom: 20px;
 }
-body .hatBlock .phoneNumber #modalGetCall .oneModalImage {
+html .hatBlock .phoneNumber #modalGetCall .oneModalImage, body .hatBlock .phoneNumber #modalGetCall .oneModalImage {
   height: 254px;
   width: 397px;
   top: 230px;
   left: 360px;
   position: absolute;
 }
-body .hatBlock #overModal {
+html .hatBlock #overModal, body .hatBlock #overModal {
   height: 500px;
   width: 500px;
   top: 70px;
@@ -519,73 +492,78 @@ body .hatBlock #overModal {
   z-index: 200;
   justify-content: space-between;
 }
-body .hatBlock #overModal .oneRowOverModal {
+html .hatBlock #overModal .oneRowOverModal, body .hatBlock #overModal .oneRowOverModal {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
   height: auto;
 }
-body .hatBlock #overModal .oneRowOverModal .overModalLabel {
+html .hatBlock #overModal .oneRowOverModal .overModalLabel, body .hatBlock #overModal .oneRowOverModal .overModalLabel {
   height: 99px;
   width: 146px;
   margin: 15px auto auto 38px;
 }
-body .hatBlock #overModal .twoRowOverModal {
+html .hatBlock #overModal .twoRowOverModal, body .hatBlock #overModal .twoRowOverModal {
   margin-top: 33px;
   font-size: 20px;
   line-height: 30px;
   text-align: center;
 }
-body .hatBlock #overModal .threeRowOverModal {
+html .hatBlock #overModal .threeRowOverModal, body .hatBlock #overModal .threeRowOverModal {
   height: 295px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
-body .hatBlock #overModal .threeRowOverModal .overModalBigImage {
+html .hatBlock #overModal .threeRowOverModal .overModalBigImage, body .hatBlock #overModal .threeRowOverModal .overModalBigImage {
   height: 185px;
   width: 190px;
   top: 259px;
   left: 38px;
   position: absolute;
 }
-body .hatBlock #overModal .threeRowOverModal .overModalSmallImage {
+html .hatBlock #overModal .threeRowOverModal .overModalSmallImage, body .hatBlock #overModal .threeRowOverModal .overModalSmallImage {
   height: 146px;
   width: 146px;
   top: 298px;
   left: 184px;
   position: absolute;
 }
-body .hatBlock #overModal .threeRowOverModal #threeRowOverModalSpan {
+html .hatBlock #overModal .threeRowOverModal #threeRowOverModalSpan, body .hatBlock #overModal .threeRowOverModal #threeRowOverModalSpan {
   cursor: pointer;
   font-size: 14px;
   color: #001569;
   transition: color 0.5s;
   margin: auto 25px 40px auto;
 }
-body .hatBlock #overModal .threeRowOverModal #threeRowOverModalSpan:hover {
+html .hatBlock #overModal .threeRowOverModal #threeRowOverModalSpan:hover, body .hatBlock #overModal .threeRowOverModal #threeRowOverModalSpan:hover {
   color: #001569;
   text-decoration: underline;
 }
-body .hatBlock .inputAndButton {
+html .hatBlock .inputAndButton, body .hatBlock .inputAndButton {
   display: flex;
   grid-area: 3/1/3/1;
   margin: 15px 0 0 -7px;
 }
-body .hatBlock .inputAndButton .searchField {
+html .hatBlock .inputAndButton .searchField, body .hatBlock .inputAndButton .searchField {
   height: 40px;
   width: 690px;
 }
-body .hatBlock .inputAndButton #searchButton {
+html .hatBlock .inputAndButton .searchField[type=search]::-webkit-search-cancel-button, body .hatBlock .inputAndButton .searchField[type=search]::-webkit-search-cancel-button {
+  margin-right: 70px;
+  font-size: 20px;
+  cursor: pointer;
+}
+html .hatBlock .inputAndButton #searchButton, body .hatBlock .inputAndButton #searchButton {
   position: absolute;
   font-size: 20px;
   background-color: white;
   border: none;
   margin: 8px 0 0 639px;
 }
-body .hatBlock #oneDropDawn {
+html .hatBlock #oneDropDawn, body .hatBlock #oneDropDawn {
   top: 165px;
   left: -7px;
   display: none;
@@ -601,22 +579,22 @@ body .hatBlock #oneDropDawn {
   border-bottom-right-radius: 2px;
   border: 1px solid #001569;
 }
-body .hatBlock #oneDropDawn::-webkit-scrollbar {
+html .hatBlock #oneDropDawn::-webkit-scrollbar, body .hatBlock #oneDropDawn::-webkit-scrollbar {
   background-color: white;
   width: 7px;
 }
-body .hatBlock #oneDropDawn::-webkit-scrollbar-thumb {
+html .hatBlock #oneDropDawn::-webkit-scrollbar-thumb, body .hatBlock #oneDropDawn::-webkit-scrollbar-thumb {
   background-color: rgba(0, 21, 105, 0.7);
   border-radius: 10px;
 }
-body .hatBlock #oneDropDawn .noResultsMessage {
+html .hatBlock #oneDropDawn .noResultsMessage, body .hatBlock #oneDropDawn .noResultsMessage {
   height: 69px;
   width: 688px;
   display: none;
   padding-left: 20px;
   align-items: center;
 }
-body .hatBlock #oneDropDawn .optionDropDawn {
+html .hatBlock #oneDropDawn .optionDropDawn, body .hatBlock #oneDropDawn .optionDropDawn {
   height: 69px;
   width: 688px;
   display: flex;
@@ -626,11 +604,11 @@ body .hatBlock #oneDropDawn .optionDropDawn {
   padding-left: 20px;
   border-bottom: 1px solid rgba(74, 77, 74, 0.5);
 }
-body .hatBlock #oneDropDawn .optionDropDawn:hover {
+html .hatBlock #oneDropDawn .optionDropDawn:hover, body .hatBlock #oneDropDawn .optionDropDawn:hover {
   background-color: #001569;
   color: #FFAF37;
 }
-body .hatBlock .contactWithMe {
+html .hatBlock .contactWithMe, body .hatBlock .contactWithMe {
   display: flex;
   grid-area: 3/2/3/2;
   flex-direction: row;
@@ -640,48 +618,48 @@ body .hatBlock .contactWithMe {
   width: 624px;
   margin-left: 14px;
 }
-body .hatBlock .contactWithMe .contactWithMeBlock {
+html .hatBlock .contactWithMe .contactWithMeBlock, body .hatBlock .contactWithMe .contactWithMeBlock {
   display: flex;
 }
-body .hatBlock .contactWithMe .whatsApp {
+html .hatBlock .contactWithMe .whatsApp, body .hatBlock .contactWithMe .whatsApp {
   height: 24px;
   width: 24px;
   margin-left: 20px;
 }
-body .hatBlock .contactWithMe .contactsOne {
+html .hatBlock .contactWithMe .contactsOne, body .hatBlock .contactWithMe .contactsOne {
   margin-left: 10px;
   height: 34px;
   width: 130px;
   font-size: 14px;
   line-height: 17px;
 }
-body .hatBlock .contactWithMe .sms {
+html .hatBlock .contactWithMe .sms, body .hatBlock .contactWithMe .sms {
   height: 18px;
   width: 24px;
   margin: 9px 0 0 55px;
 }
-body .hatBlock .contactWithMe .contactsTwo {
+html .hatBlock .contactWithMe .contactsTwo, body .hatBlock .contactWithMe .contactsTwo {
   height: 21px;
   width: 164px;
   margin: 4px 0 0 12px;
 }
-body .hatBlock .contactWithMe .geo {
+html .hatBlock .contactWithMe .geo, body .hatBlock .contactWithMe .geo {
   height: 27px;
   width: 20px;
   margin: 14px 0 0 14px;
 }
-body .hatBlock .contactWithMe .contactsThree {
+html .hatBlock .contactWithMe .contactsThree, body .hatBlock .contactWithMe .contactsThree {
   height: 50px;
   width: 176px;
   font-size: 16px;
   text-align: center;
   margin: 4px 0 0 -8px;
 }
-body .hatBlock .contactWithMe .city {
+html .hatBlock .contactWithMe .city, body .hatBlock .contactWithMe .city {
   font-size: 20px;
   font-weight: 600;
 }
-body .bottom_navBar {
+html .bottom_navBar, body .bottom_navBar {
   height: 60px;
   width: 100%;
   width: 100%;
@@ -690,22 +668,25 @@ body .bottom_navBar {
   margin-top: 28px;
   padding: 15px;
 }
-body .bottom_navBar .alignSpan {
+html .bottom_navBar .alignSpan, body .bottom_navBar .alignSpan {
   width: 1394px;
   margin: auto;
 }
-body .bottom_navBar .alignSpan .bottom_navBar_one, body .bottom_navBar .alignSpan .bottom_navBar_two,
+html .bottom_navBar .alignSpan .bottom_navBar_one, html .bottom_navBar .alignSpan .bottom_navBar_two,
+html .bottom_navBar .alignSpan .bottom_navBar_three, html .bottom_navBar .alignSpan .bottom_navBar_four, body .bottom_navBar .alignSpan .bottom_navBar_one, body .bottom_navBar .alignSpan .bottom_navBar_two,
 body .bottom_navBar .alignSpan .bottom_navBar_three, body .bottom_navBar .alignSpan .bottom_navBar_four {
   display: flex;
   position: relative;
   cursor: pointer;
   transition: color 0.5s;
 }
-body .bottom_navBar .alignSpan .bottom_navBar_one:hover, body .bottom_navBar .alignSpan .bottom_navBar_two:hover,
+html .bottom_navBar .alignSpan .bottom_navBar_one:hover, html .bottom_navBar .alignSpan .bottom_navBar_two:hover,
+html .bottom_navBar .alignSpan .bottom_navBar_three:hover, html .bottom_navBar .alignSpan .bottom_navBar_four:hover, body .bottom_navBar .alignSpan .bottom_navBar_one:hover, body .bottom_navBar .alignSpan .bottom_navBar_two:hover,
 body .bottom_navBar .alignSpan .bottom_navBar_three:hover, body .bottom_navBar .alignSpan .bottom_navBar_four:hover {
   color: #FFAF37;
 }
-body .bottom_navBar .alignSpan .bottom_navBar_one::after, body .bottom_navBar .alignSpan .bottom_navBar_two::after,
+html .bottom_navBar .alignSpan .bottom_navBar_one::after, html .bottom_navBar .alignSpan .bottom_navBar_two::after,
+html .bottom_navBar .alignSpan .bottom_navBar_three::after, html .bottom_navBar .alignSpan .bottom_navBar_four::after, body .bottom_navBar .alignSpan .bottom_navBar_one::after, body .bottom_navBar .alignSpan .bottom_navBar_two::after,
 body .bottom_navBar .alignSpan .bottom_navBar_three::after, body .bottom_navBar .alignSpan .bottom_navBar_four::after {
   background-image: linear-gradient(to right, black 60%, transparent 0);
   content: "";
@@ -717,79 +698,84 @@ body .bottom_navBar .alignSpan .bottom_navBar_three::after, body .bottom_navBar 
   background-repeat: repeat-x;
   cursor: pointer;
 }
-body .bottom_navBar .alignSpan .bottom_navBar_one:hover:after, body .bottom_navBar .alignSpan .bottom_navBar_two:hover:after,
+html .bottom_navBar .alignSpan .bottom_navBar_one:hover:after, html .bottom_navBar .alignSpan .bottom_navBar_two:hover:after,
+html .bottom_navBar .alignSpan .bottom_navBar_three:hover:after, html .bottom_navBar .alignSpan .bottom_navBar_four:hover:after, body .bottom_navBar .alignSpan .bottom_navBar_one:hover:after, body .bottom_navBar .alignSpan .bottom_navBar_two:hover:after,
 body .bottom_navBar .alignSpan .bottom_navBar_three:hover:after, body .bottom_navBar .alignSpan .bottom_navBar_four:hover:after {
   background-image: linear-gradient(to right, #FFAF37 100%, transparent 0);
 }
-body .bottom_navBar .alignSpan .bottom_navBar_one {
+html .bottom_navBar .alignSpan .bottom_navBar_one, body .bottom_navBar .alignSpan .bottom_navBar_one {
   height: 29px;
   width: 245px;
   position: relative;
   left: -7px;
 }
-body .bottom_navBar .alignSpan .bottom_navBar_one::after {
+html .bottom_navBar .alignSpan .bottom_navBar_one::after, body .bottom_navBar .alignSpan .bottom_navBar_one::after {
   left: 0;
   width: 240px;
 }
-body .bottom_navBar .alignSpan .bottom_navBar_two {
+html .bottom_navBar .alignSpan .bottom_navBar_two, body .bottom_navBar .alignSpan .bottom_navBar_two {
   height: 25px;
   width: 350px;
   line-height: 21px;
 }
-body .bottom_navBar .alignSpan .bottom_navBar_two::after {
+html .bottom_navBar .alignSpan .bottom_navBar_two::after, body .bottom_navBar .alignSpan .bottom_navBar_two::after {
   width: 346px;
 }
-body .bottom_navBar .alignSpan .bottom_navBar_three {
+html .bottom_navBar .alignSpan .bottom_navBar_three, body .bottom_navBar .alignSpan .bottom_navBar_three {
   height: 21px;
   width: 385px;
   padding-left: 12px;
 }
-body .bottom_navBar .alignSpan .bottom_navBar_three::after {
+html .bottom_navBar .alignSpan .bottom_navBar_three::after, body .bottom_navBar .alignSpan .bottom_navBar_three::after {
   width: 368px;
 }
-body .bottom_navBar .alignSpan .bottom_navBar_four {
+html .bottom_navBar .alignSpan .bottom_navBar_four, body .bottom_navBar .alignSpan .bottom_navBar_four {
   height: 21px;
   width: 99px;
   padding-left: 21px;
 }
-body .bottom_navBar .alignSpan .bottom_navBar_four::after {
+html .bottom_navBar .alignSpan .bottom_navBar_four::after, body .bottom_navBar .alignSpan .bottom_navBar_four::after {
   left: 0;
   margin-left: 23px;
   width: 85px;
 }
-body .afterNavBar {
-  height: 736px;
-  width: 1410px;
+html .afterNavBar, body .afterNavBar {
+  max-width: 1470px;
+  width: 100%;
   margin: 50px auto auto auto;
+  padding: 0 30px;
 }
-body .afterNavBar .mainMenu {
-  height: 736px;
-  width: 448px;
+html .afterNavBar .mainMenu, body .afterNavBar .mainMenu {
+  max-width: 448px;
+  width: 100%;
+  min-width: 316px;
 }
-body .afterNavBar .headerMainMenu {
-  height: 60px;
-  width: 447px;
+html .afterNavBar .headerMainMenu, body .afterNavBar .headerMainMenu {
+  width: 100%;
+  max-height: 60px;
+  height: 100%;
   display: inline-block;
   border-radius: 10px 10px 0 0;
   background: #F0F0FF;
 }
-body .afterNavBar .headerSpan {
-  height: 26px;
-  width: 106px;
+html .afterNavBar .headerSpan, body .afterNavBar .headerSpan {
   display: flex;
-  margin: 17px auto auto 21px;
+  padding-top: 17px;
+  padding-left: 21px;
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
   letter-spacing: 0;
   text-align: left;
 }
-body .afterNavBar .choiceChapter {
-  height: 676px;
-  width: 447px;
+html .afterNavBar .choiceChapter, body .afterNavBar .choiceChapter {
+  max-width: 447px;
+  width: 100%;
+  max-height: 676px;
+  height: 100%;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
 }
-body .afterNavBar .left {
+html .afterNavBar .left, body .afterNavBar .left {
   height: 9px;
   width: 9px;
   margin-right: 15px;
@@ -799,98 +785,70 @@ body .afterNavBar .left {
   transform: rotate(-225deg);
   transition: border-top-color 0.5s, border-left-color 0.5s, transform 0.3s;
 }
-body .afterNavBar .commonSpanMainMenu:hover .left {
+html .afterNavBar .commonSpanMainMenu:hover .left, body .afterNavBar .commonSpanMainMenu:hover .left {
   border-top-color: #FFFFFF;
   border-left-color: #FFFFFF;
 }
-body .afterNavBar .choiceChapter > div > :nth-child(1) {
+html .afterNavBar .choiceChapter > div > :nth-child(1), body .afterNavBar .choiceChapter > div > :nth-child(1) {
   height: 16px;
   width: 20px;
   margin-left: 20px;
 }
-body .afterNavBar .choiceChapter > div > :nth-child(2) {
+html .afterNavBar .choiceChapter > div > :nth-child(2), body .afterNavBar .choiceChapter > div > :nth-child(2) {
   margin-left: 12px;
 }
-body .afterNavBar #smallImageSize, body .afterNavBar #smallTwoImageSize,
+html .afterNavBar #smallImageSize, html .afterNavBar #smallTwoImageSize,
+html .afterNavBar #smallFourImageSize, html .afterNavBar #smallFiveImageSize,
+html .afterNavBar #smallSixImageSize, body .afterNavBar #smallImageSize, body .afterNavBar #smallTwoImageSize,
 body .afterNavBar #smallFourImageSize, body .afterNavBar #smallFiveImageSize,
 body .afterNavBar #smallSixImageSize {
   height: 20px;
 }
-body .afterNavBar #newSticker {
+html .afterNavBar #newSticker, body .afterNavBar #newSticker {
   height: 10px;
   margin-top: 6px;
 }
-body .afterNavBar #smallOneImageSize {
+html .afterNavBar #smallOneImageSize, body .afterNavBar #smallOneImageSize {
   height: 24px;
   width: 15px;
   margin-top: -1px;
-  margin-left: 22px;
+  margin-left: 24px;
 }
-body .afterNavBar .commonSpanMainMenu {
+html .afterNavBar .commonSpanMainMenu, body .afterNavBar .commonSpanMainMenu {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-direction: row;
   flex-grow: 1;
   cursor: pointer;
   transition: background-color 0.5s, color 0.3s;
 }
-body .afterNavBar .commonSpanMainMenu:hover {
+html .afterNavBar .commonSpanMainMenu:hover, body .afterNavBar .commonSpanMainMenu:hover {
   background-color: #FFAF37;
   color: #FFFFFF;
 }
-body .afterNavBar .choiceChapterOneBlockBack {
+html .afterNavBar .choiceChapterOneBlockBack, body .afterNavBar .choiceChapterOneBlockBack {
   background-color: #001569;
   flex-grow: 1;
 }
-body .afterNavBar .one {
-  margin-right: 85px;
+html .afterNavBar .twoChoice, body .afterNavBar .twoChoice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 386px;
+  width: 100%;
+  overflow: hidden;
 }
-body .afterNavBar .two {
-  margin-right: 138px;
+html .afterNavBar .rightSmall, body .afterNavBar .rightSmall {
+  margin-right: 12px;
 }
-body .afterNavBar .three {
-  margin-right: 152px;
-}
-body .afterNavBar .four {
-  margin-right: 159px;
-}
-body .afterNavBar .five {
-  margin-right: 162px;
-}
-body .afterNavBar .six {
-  margin-right: 36px;
-}
-body .afterNavBar .seven {
-  margin-right: 53px;
-}
-body .afterNavBar .eight {
-  margin-right: 146px;
-}
-body .afterNavBar .nine {
-  margin-right: 106px;
-}
-body .afterNavBar .ten {
-  margin-right: 93px;
-}
-body .afterNavBar .eleven {
-  margin-right: 210px;
-}
-body .afterNavBar .twelve {
-  margin-right: 173px;
-}
-body .afterNavBar .thirteen {
-  margin-right: 310px;
-}
-body .afterNavBar .fourteen {
-  margin-right: 289px;
-}
-body .afterNavBar .afterNavBarBannerAndSpan {
+html .afterNavBar .afterNavBarBannerAndSpan, body .afterNavBar .afterNavBarBannerAndSpan {
   margin-left: 42px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu {
-  height: 752px;
-  width: 922px;
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu, body .afterNavBar .afterNavBarBannerAndSpan .productMenu {
+  max-width: 922px;
+  width: 100%;
+  max-height: 736px;
+  height: 100%;
   display: none;
   position: relative;
   justify-content: space-between;
@@ -898,6 +856,11 @@ body .afterNavBar .afterNavBarBannerAndSpan .productMenu {
   flex-direction: row;
   flex-wrap: wrap;
   animation: fadeIn 0.9s ease-in-out;
+}
+@media (max-width: 1426px) {
+  html .afterNavBar .afterNavBarBannerAndSpan .productMenu, body .afterNavBar .afterNavBarBannerAndSpan .productMenu {
+    max-height: 1567px;
+  }
 }
 @keyframes fadeIn {
   from {
@@ -907,7 +870,7 @@ body .afterNavBar .afterNavBarBannerAndSpan .productMenu {
     opacity: 1;
   }
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productMenuBlock {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .productMenuBlock, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productMenuBlock {
   height: 320px;
   width: 210px;
   align-items: center;
@@ -918,104 +881,106 @@ body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productMenuBlock {
   transition: background-color 0.5s;
   font-size: 14px;
   text-align: center;
+  margin-bottom: 96px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct:hover, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct:hover,
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct:hover, html .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct:hover,
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct:hover, html .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct:hover, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct:hover, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct:hover,
 body .afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct:hover, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct:hover {
   background-color: #cec9c9;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct {
   background-color: #F0F0FF;
   cursor: pointer;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct .pmPhoneMain {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct .pmPhoneMain, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct .pmPhoneMain {
   height: 116px;
   width: 45px;
   margin-top: 45px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct .oneProductSpan {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct .oneProductSpan, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .oneProduct .oneProductSpan {
   margin-top: 22px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct {
   background-color: #F0F0FF;
   cursor: pointer;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct .pmTabletMain {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct .pmTabletMain, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct .pmTabletMain {
   height: 118px;
   width: 81px;
   margin-top: 45px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct .twoProductSpan {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct .twoProductSpan, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .twoProduct .twoProductSpan {
   margin-top: 20px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct {
   background-color: #F0F0FF;
   cursor: pointer;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct .pmPodsMain {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct .pmPodsMain, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct .pmPodsMain {
   height: 117px;
   width: 93px;
   margin-top: 48px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct .threeProductSpan {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct .threeProductSpan, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .threeProduct .threeProductSpan {
   margin-top: 18px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct {
   background-color: #F0F0FF;
   cursor: pointer;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct .pmCaseMain {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct .pmCaseMain, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct .pmCaseMain {
   height: 117px;
   width: 93px;
   margin-top: 48px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct .fourProductSpan {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct .fourProductSpan, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fourProduct .fourProductSpan {
   margin-top: 18px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fiveProduct, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .sixProduct, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .sevenProduct, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .eightProduct {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .fiveProduct, html .afterNavBar .afterNavBarBannerAndSpan .productMenu .sixProduct, html .afterNavBar .afterNavBarBannerAndSpan .productMenu .sevenProduct, html .afterNavBar .afterNavBarBannerAndSpan .productMenu .eightProduct, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fiveProduct, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .sixProduct, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .sevenProduct, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .eightProduct {
   display: flex;
   justify-content: space-between;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmPhone {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmPhone, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmPhone {
   height: 94px;
   width: 59px;
   margin-top: 8px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmPods {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmPods, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmPods {
   margin-top: 16px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmClock {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmClock, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmClock {
   margin-top: 9px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmTablet {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmTablet, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .pmTablet {
   margin-top: 9px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanOne {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanOne, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanOne {
   margin-top: 12px;
   font-weight: 600;
   color: black;
   line-height: 17px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fiveProductSpanOneTwo {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .fiveProductSpanOneTwo, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .fiveProductSpanOneTwo {
   margin-top: 4px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanTwo {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanTwo, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanTwo {
   font-weight: 300;
   line-height: 21px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .sevenProductSpanOneTwo {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .sevenProductSpanOneTwo, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .sevenProductSpanOneTwo {
   margin-top: 11px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanThree {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanThree, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanThree {
   font-weight: 400;
   line-height: 21px;
   color: black;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanFour {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanFour, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .productBlockSpanFour {
   color: #001569;
   font-size: 24px;
   line-height: 29px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .inBasket {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .inBasket, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .inBasket {
   height: 50px;
   width: 190px;
   display: flex;
@@ -1024,7 +989,7 @@ body .afterNavBar .afterNavBarBannerAndSpan .productMenu .inBasket {
   gap: 11px;
   margin-bottom: 14px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct {
   height: 20px;
   width: 350px;
   display: flex;
@@ -1038,20 +1003,20 @@ body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProd
   color: #4A4D4A;
   font-size: 14px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductOneSpan {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductOneSpan, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductOneSpan {
   cursor: pointer;
   transition: color 0.5s;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductSpan {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductSpan, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductSpan {
   font-weight: 400;
   line-height: 21px;
   cursor: pointer;
   transition: color 0.5s;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductSpan:hover, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductOneSpan:hover {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductSpan:hover, html .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductOneSpan:hover, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductSpan:hover, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .blockBetweenTwoRowProductOneSpan:hover {
   color: #FFAF37;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenOne, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenTwo, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenThree {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenOne, html .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenTwo, html .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenThree, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenOne, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenTwo, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenThree {
   height: 8px;
   width: 8px;
   position: absolute;
@@ -1061,29 +1026,35 @@ body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProd
   border-left: 1px solid #4A4D4A;
   transform: rotate(-135deg);
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenOne {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenOne, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenOne {
   top: 3px;
   left: 127px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenTwo {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenTwo, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenTwo {
   top: 3px;
   left: 258px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenThree {
+html .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenThree, body .afterNavBar .afterNavBarBannerAndSpan .productMenu .blockBetweenTwoRowProduct .leftBlockBetweenThree {
   top: 3px;
   left: 357px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBanner {
-  height: 132px;
-  width: 922px;
+html .afterNavBar .afterNavBarBannerAndSpan .mainBanner, body .afterNavBar .afterNavBarBannerAndSpan .mainBanner {
+  width: 100%;
+  max-width: 922px;
+  max-height: 132px;
   display: flex;
   font-size: 36px;
-  line-height: 44px;
+  line-height: 122%;
   letter-spacing: 0;
   text-align: left;
   color: rgb(74, 77, 74);
   font-family: Montserrat, sans-serif;
   animation: fadeIn 0.5s ease-in-out;
+}
+@media (max-width: 1473px) {
+  html .afterNavBar .afterNavBarBannerAndSpan .mainBanner, body .afterNavBar .afterNavBarBannerAndSpan .mainBanner {
+    font-size: 30px;
+  }
 }
 @keyframes fadeIn {
   from {
@@ -1093,17 +1064,16 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBanner {
     opacity: 1;
   }
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBanner .bigText {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBanner .bigText, body .afterNavBar .afterNavBarBannerAndSpan .mainBanner .bigText {
   font-weight: 700;
   line-height: 44px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBanner .orangeText {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBanner .orangeText, body .afterNavBar .afterNavBarBannerAndSpan .mainBanner .orangeText {
   font-family: Rubik, sans-serif;
   color: #FFAF37;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage {
-  height: 590px;
-  width: 922px;
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage {
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1122,7 +1092,7 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage {
     opacity: 1;
   }
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .leftMain {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .leftMain, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .leftMain {
   height: 175px;
   width: 240px;
   position: absolute;
@@ -1132,7 +1102,7 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .leftMain {
   border-left: 8px solid #1F347B;
   transform: rotate(-180deg);
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerTextOnImage {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerTextOnImage, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerTextOnImage {
   height: 116px;
   width: 422px;
   margin-left: 400px;
@@ -1144,7 +1114,7 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerTextOnImage 
   line-height: 37px;
   transition: color 0.5s;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage #showOffer {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage #showOffer, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage #showOffer {
   height: 69px;
   width: 330px;
   display: flex;
@@ -1152,13 +1122,13 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage #showOffer {
   align-items: center;
   margin-left: 440px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon {
   height: 50px;
   width: 100%;
   display: flex;
   flex-direction: row;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBanner {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBanner, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBanner {
   height: 50px;
   width: 50px;
   cursor: pointer;
@@ -1167,10 +1137,10 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon
   transition: background-color 0.5s;
   padding: 20px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBanner:hover {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBanner:hover, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBanner:hover {
   background-color: #FFAF37;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBannerLeft {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBannerLeft, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBannerLeft {
   display: none;
   margin-left: 5px;
   animation: fadeIn 0.5s ease-in-out;
@@ -1183,7 +1153,7 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon
     opacity: 1;
   }
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBannerRight {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBannerRight, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .buttonBannerRight {
   display: none;
   margin-left: 812px;
   animation: fadeIn 0.5s ease-in-out;
@@ -1196,41 +1166,42 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon
     opacity: 1;
   }
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftBannerButton, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightBannerButton {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftBannerButton, html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightBannerButton, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftBannerButton, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightBannerButton {
   height: 16px;
   width: 16px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftBannerButton {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftBannerButton, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftBannerButton {
   border-top: 5px solid #001569;
   border-left: 5px solid #001569;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerOne {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerOne, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerOne {
   position: relative;
   bottom: 2px;
   right: 2px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightButtonBannerOne {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightButtonBannerOne, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightButtonBannerOne {
   left: 2px;
   top: 16px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerOne {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerOne, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerOne {
   transform: rotate(-45deg);
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerTwo, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightButtonBannerTwo {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerTwo, html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightButtonBannerTwo, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .leftButtonBannerTwo, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .bannerButtonCommon .rightButtonBannerTwo {
   position: relative;
   right: 3px;
   bottom: 2px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .leftButtonBannerTwo {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .leftButtonBannerTwo, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .leftButtonBannerTwo {
   transform: rotate(-225deg);
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner {
   height: 20px;
   width: 152px;
   display: flex;
   margin: 170px auto auto 370px;
+  padding-bottom: 35px;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePagination {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePagination, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePagination {
   height: 20px;
   width: 20px;
   cursor: pointer;
@@ -1239,13 +1210,13 @@ body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .
   border: 1px solid white;
   transition: background-color 0.5s;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePagination:hover {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePagination:hover, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePagination:hover {
   background-color: #FFAF37;
 }
-body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePaginationOne {
+html .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePaginationOne, body .afterNavBar .afterNavBarBannerAndSpan .mainBannerImage .paginationBanner .circlePaginationOne {
   background-color: #FFAF37;
 }
-body .sideButtons {
+html .sideButtons, body .sideButtons {
   height: 271px;
   width: 90px;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
@@ -1258,46 +1229,46 @@ body .sideButtons {
   z-index: 1000;
 }
 @media (max-width: 1536px) {
-  body .sideButtons {
+  html .sideButtons, body .sideButtons {
     display: none;
   }
 }
-body .sideButtons .oneSideButton, body .sideButtons .twoSideButton, body .sideButtons .threeSideButton {
+html .sideButtons .oneSideButton, html .sideButtons .twoSideButton, html .sideButtons .threeSideButton, body .sideButtons .oneSideButton, body .sideButtons .twoSideButton, body .sideButtons .threeSideButton {
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-color 0.5s;
 }
-body .sideButtons .oneSideButton {
+html .sideButtons .oneSideButton, body .sideButtons .oneSideButton {
   height: 90px;
   width: 90px;
   background-color: #1F347B;
   border-top-left-radius: 10px;
   transition: background-color 0.5s;
 }
-body .sideButtons .oneSideButton:hover, body .sideButtons .twoSideButton:hover, body .sideButtons .threeSideButton:hover {
+html .sideButtons .oneSideButton:hover, html .sideButtons .twoSideButton:hover, html .sideButtons .threeSideButton:hover, body .sideButtons .oneSideButton:hover, body .sideButtons .twoSideButton:hover, body .sideButtons .threeSideButton:hover {
   background-color: #001569;
 }
-body .sideButtons .twoSideButton {
+html .sideButtons .twoSideButton, body .sideButtons .twoSideButton {
   height: 90px;
   width: 90px;
   background-color: white;
   transition: background-color 0.5s;
 }
-body .sideButtons .threeSideButton {
+html .sideButtons .threeSideButton, body .sideButtons .threeSideButton {
   height: 91px;
   width: 90px;
   background-color: white;
   border-bottom-left-radius: 10px;
   border-top: 1px solid #1F347B;
 }
-body .sideButtons .oneSideButtonImage {
+html .sideButtons .oneSideButtonImage, body .sideButtons .oneSideButtonImage {
   height: 30px;
   width: 30px;
   top: 7px;
   left: 15px;
 }
-body .manyBanners {
+html .manyBanners, body .manyBanners {
   height: 530px;
   width: 1410px;
   display: grid;
@@ -1307,7 +1278,10 @@ body .manyBanners {
   flex-wrap: wrap;
   margin: 100px auto auto auto;
 }
-body .manyBanners .workCBC, body .manyBanners .reliableSupplier,
+html .manyBanners .workCBC, html .manyBanners .reliableSupplier,
+html .manyBanners .fullComplex, html .manyBanners .orderKey,
+html .manyBanners .directDeliveries, html .manyBanners .qualityService,
+html .manyBanners .cooperation, body .manyBanners .workCBC, body .manyBanners .reliableSupplier,
 body .manyBanners .fullComplex, body .manyBanners .orderKey,
 body .manyBanners .directDeliveries, body .manyBanners .qualityService,
 body .manyBanners .cooperation {
@@ -1320,125 +1294,130 @@ body .manyBanners .cooperation {
   cursor: pointer;
   background-color: white;
 }
-body .manyBanners .reliableSupplierSpanOne, body .manyBanners .fullComplexSpanOne {
+html .manyBanners .reliableSupplierSpanOne, html .manyBanners .fullComplexSpanOne, body .manyBanners .reliableSupplierSpanOne, body .manyBanners .fullComplexSpanOne {
   font-size: 24px;
   margin-top: 10px;
 }
-body .manyBanners .reliableSupplierSpanTwo, body .manyBanners .fullComplexSpanTwo,
+html .manyBanners .reliableSupplierSpanTwo, html .manyBanners .fullComplexSpanTwo,
+html .manyBanners .orderKeySpanTwo, html .manyBanners .cooperationSpanTwo, html .manyBanners .qualityServiceSpanTwo, body .manyBanners .reliableSupplierSpanTwo, body .manyBanners .fullComplexSpanTwo,
 body .manyBanners .orderKeySpanTwo, body .manyBanners .cooperationSpanTwo, body .manyBanners .qualityServiceSpanTwo {
   font-weight: 400;
 }
-body .manyBanners .spanAndImageReliable, body .manyBanners .spanAndImageFullComplex,
+html .manyBanners .spanAndImageReliable, html .manyBanners .spanAndImageFullComplex,
+html .manyBanners .spanAndImageOrderKey, body .manyBanners .spanAndImageReliable, body .manyBanners .spanAndImageFullComplex,
 body .manyBanners .spanAndImageOrderKey {
   align-items: center;
   text-align: center;
 }
-body .manyBanners .workCBC:hover, body .manyBanners .reliableSupplier:hover,
+html .manyBanners .workCBC:hover, html .manyBanners .reliableSupplier:hover,
+html .manyBanners .fullComplex:hover, html .manyBanners .orderKey:hover,
+html .manyBanners .directDeliveries:hover, html .manyBanners .qualityService:hover,
+html .manyBanners .cooperation:hover, body .manyBanners .workCBC:hover, body .manyBanners .reliableSupplier:hover,
 body .manyBanners .fullComplex:hover, body .manyBanners .orderKey:hover,
 body .manyBanners .directDeliveries:hover, body .manyBanners .qualityService:hover,
 body .manyBanners .cooperation:hover {
   background-color: #cec9c9;
 }
-body .manyBanners .workCBC {
+html .manyBanners .workCBC, body .manyBanners .workCBC {
   height: 250px;
   width: 330px;
   background-color: #F0F0FF;
 }
-body .manyBanners .workCBC .workCBCSpan {
+html .manyBanners .workCBC .workCBCSpan, body .manyBanners .workCBC .workCBCSpan {
   height: 111px;
   width: 256px;
   font-size: 30px;
   line-height: 38px;
 }
-body .manyBanners .reliableSupplier {
+html .manyBanners .reliableSupplier, body .manyBanners .reliableSupplier {
   height: 250px;
   width: 323px;
 }
-body .manyBanners .reliableSupplier .spanAndImageReliable {
+html .manyBanners .reliableSupplier .spanAndImageReliable, body .manyBanners .reliableSupplier .spanAndImageReliable {
   height: 172px;
   width: 269px;
   margin: 37px 30px;
 }
-body .manyBanners .reliableSupplier .spanAndImageReliable .oneImageReliable {
+html .manyBanners .reliableSupplier .spanAndImageReliable .oneImageReliable, body .manyBanners .reliableSupplier .spanAndImageReliable .oneImageReliable {
   height: 60px;
   width: 60px;
 }
-body .manyBanners .reliableSupplier .spanAndImageReliable .reliableSupplierSpanOne {
+html .manyBanners .reliableSupplier .spanAndImageReliable .reliableSupplierSpanOne, body .manyBanners .reliableSupplier .spanAndImageReliable .reliableSupplierSpanOne {
   height: 29px;
   width: 269px;
   line-height: 29px;
 }
-body .manyBanners .reliableSupplier .spanAndImageReliable .reliableSupplierSpanTwo {
+html .manyBanners .reliableSupplier .spanAndImageReliable .reliableSupplierSpanTwo, body .manyBanners .reliableSupplier .spanAndImageReliable .reliableSupplierSpanTwo {
   height: 63px;
   width: 194px;
   margin-top: 10px;
 }
-body .manyBanners .fullComplex {
+html .manyBanners .fullComplex, body .manyBanners .fullComplex {
   height: 250px;
   width: 330px;
 }
-body .manyBanners .fullComplex .spanAndImageFullComplex {
+html .manyBanners .fullComplex .spanAndImageFullComplex, body .manyBanners .fullComplex .spanAndImageFullComplex {
   height: 181px;
   width: 292px;
   margin: 43px 27px;
 }
-body .manyBanners .fullComplex .spanAndImageFullComplex .twoImageReliableOne {
+html .manyBanners .fullComplex .spanAndImageFullComplex .twoImageReliableOne, body .manyBanners .fullComplex .spanAndImageFullComplex .twoImageReliableOne {
   height: 62px;
   width: 72px;
   margin-top: 2px;
 }
-body .manyBanners .fullComplex .spanAndImageFullComplex .fullComplexSpanOne {
+html .manyBanners .fullComplex .spanAndImageFullComplex .fullComplexSpanOne, body .manyBanners .fullComplex .spanAndImageFullComplex .fullComplexSpanOne {
   height: 31px;
   width: 215px;
   padding-top: 2px;
 }
-body .manyBanners .fullComplex .spanAndImageFullComplex .fullComplexSpanTwo {
+html .manyBanners .fullComplex .spanAndImageFullComplex .fullComplexSpanTwo, body .manyBanners .fullComplex .spanAndImageFullComplex .fullComplexSpanTwo {
   height: 71px;
   width: 292px;
   padding-top: 8px;
 }
-body .manyBanners .orderKey {
+html .manyBanners .orderKey, body .manyBanners .orderKey {
   height: 250px;
   width: 330px;
 }
-body .manyBanners .orderKey .spanAndImageOrderKey {
+html .manyBanners .orderKey .spanAndImageOrderKey, body .manyBanners .orderKey .spanAndImageOrderKey {
   height: 181px;
   width: 178px;
   margin: 29px 36px;
 }
-body .manyBanners .orderKey .spanAndImageOrderKey .threeImageOrderKey {
+html .manyBanners .orderKey .spanAndImageOrderKey .threeImageOrderKey, body .manyBanners .orderKey .spanAndImageOrderKey .threeImageOrderKey {
   height: 70px;
   width: 50px;
 }
-body .manyBanners .orderKey .spanAndImageOrderKey .orderKeySpanOne {
+html .manyBanners .orderKey .spanAndImageOrderKey .orderKeySpanOne, body .manyBanners .orderKey .spanAndImageOrderKey .orderKeySpanOne {
   height: 29px;
   width: 187px;
   font-size: 24px;
   margin-top: 6px;
 }
-body .manyBanners .orderKey .spanAndImageOrderKey .orderKeySpanTwo {
+html .manyBanners .orderKey .spanAndImageOrderKey .orderKeySpanTwo, body .manyBanners .orderKey .spanAndImageOrderKey .orderKeySpanTwo {
   height: 63px;
   width: 281px;
   margin-top: 8px;
 }
-body .manyBanners .directDeliveries {
+html .manyBanners .directDeliveries, body .manyBanners .directDeliveries {
   height: 250px;
   width: 690px;
   grid-area: 2/1/2/2;
   flex-direction: column;
 }
-body .manyBanners .directDeliveries .fourImageDirectDeliveries {
+html .manyBanners .directDeliveries .fourImageDirectDeliveries, body .manyBanners .directDeliveries .fourImageDirectDeliveries {
   height: 73px;
   width: 70px;
   margin-top: -1px;
 }
-body .manyBanners .directDeliveries .directDeliveriesSpanOne {
+html .manyBanners .directDeliveries .directDeliveriesSpanOne, body .manyBanners .directDeliveries .directDeliveriesSpanOne {
   height: 29px;
   width: 213px;
   font-size: 24px;
   padding-top: 12px;
 }
-body .manyBanners .directDeliveries .manyPictures {
+html .manyBanners .directDeliveries .manyPictures, body .manyBanners .directDeliveries .manyPictures {
   height: 67px;
   width: 630px;
   display: flex;
@@ -1447,80 +1426,80 @@ body .manyBanners .directDeliveries .manyPictures {
   flex-direction: row;
   margin-top: 40px;
 }
-body .manyBanners .directDeliveries .manyPictures .oneBottom {
+html .manyBanners .directDeliveries .manyPictures .oneBottom, body .manyBanners .directDeliveries .manyPictures .oneBottom {
   height: 56px;
   width: 45px;
 }
-body .manyBanners .directDeliveries .manyPictures .twoBottom {
+html .manyBanners .directDeliveries .manyPictures .twoBottom, body .manyBanners .directDeliveries .manyPictures .twoBottom {
   height: 44px;
   width: 50px;
 }
-body .manyBanners .directDeliveries .manyPictures .threeBottom {
+html .manyBanners .directDeliveries .manyPictures .threeBottom, body .manyBanners .directDeliveries .manyPictures .threeBottom {
   height: 15px;
   width: 75px;
 }
-body .manyBanners .directDeliveries .manyPictures .fourBottom {
+html .manyBanners .directDeliveries .manyPictures .fourBottom, body .manyBanners .directDeliveries .manyPictures .fourBottom {
   height: 60px;
   width: 60px;
 }
-body .manyBanners .directDeliveries .manyPictures .fiveBottom {
+html .manyBanners .directDeliveries .manyPictures .fiveBottom, body .manyBanners .directDeliveries .manyPictures .fiveBottom {
   height: 12px;
   width: 80px;
 }
-body .manyBanners .directDeliveries .manyPictures .sixBottom {
+html .manyBanners .directDeliveries .manyPictures .sixBottom, body .manyBanners .directDeliveries .manyPictures .sixBottom {
   height: 46px;
   width: 70px;
 }
-body .manyBanners .directDeliveries .manyPictures .sevenBottom {
+html .manyBanners .directDeliveries .manyPictures .sevenBottom, body .manyBanners .directDeliveries .manyPictures .sevenBottom {
   height: 23px;
   width: 70px;
 }
-body .manyBanners .qualityService {
+html .manyBanners .qualityService, body .manyBanners .qualityService {
   height: 250px;
   width: 330px;
   align-items: center;
   grid-area: 2/3/2/3;
 }
-body .manyBanners .qualityService .fiveImageOrderKey {
+html .manyBanners .qualityService .fiveImageOrderKey, body .manyBanners .qualityService .fiveImageOrderKey {
   height: 63px;
   width: 60px;
   background: url("../images_adaptive_layout/manyBanners/fiveImage.png");
 }
-body .manyBanners .qualityService .qualityServiceSpanOne {
+html .manyBanners .qualityService .qualityServiceSpanOne, body .manyBanners .qualityService .qualityServiceSpanOne {
   height: 29px;
   width: 267px;
   font-size: 24px;
   margin-top: 15px;
 }
-body .manyBanners .qualityService .qualityServiceSpanTwo {
+html .manyBanners .qualityService .qualityServiceSpanTwo, body .manyBanners .qualityService .qualityServiceSpanTwo {
   height: 84px;
   width: 292px;
   margin-top: 6px;
 }
-body .manyBanners .cooperation {
+html .manyBanners .cooperation, body .manyBanners .cooperation {
   height: 250px;
   width: 330px;
   align-items: center;
   grid-area: 2/4/2/4;
 }
-body .manyBanners .sixImageCooperation {
+html .manyBanners .sixImageCooperation, body .manyBanners .sixImageCooperation {
   height: 54px;
   width: 60px;
   margin-top: -8px;
 }
-body .manyBanners .cooperationSpanOne {
+html .manyBanners .cooperationSpanOne, body .manyBanners .cooperationSpanOne {
   height: 29px;
   width: 202px;
   padding-top: 11px;
   font-size: 24px;
 }
-body .manyBanners .cooperationSpanTwo {
+html .manyBanners .cooperationSpanTwo, body .manyBanners .cooperationSpanTwo {
   height: 84px;
   width: 292px;
   padding-top: 20px;
   line-height: 21px;
 }
-body .twoBannersNextDiv {
+html .twoBannersNextDiv, body .twoBannersNextDiv {
   height: 402px;
   width: 1410px;
   display: flex;
@@ -1528,7 +1507,7 @@ body .twoBannersNextDiv {
   justify-content: space-between;
   margin: 130px auto auto auto;
 }
-body .twoBannersNextDiv .leftTwoBanners {
+html .twoBannersNextDiv .leftTwoBanners, body .twoBannersNextDiv .leftTwoBanners {
   height: 175px;
   width: 240px;
   top: -33px;
@@ -1538,78 +1517,78 @@ body .twoBannersNextDiv .leftTwoBanners {
   border-left: 8px solid #1F347B;
   transform: rotate(0deg);
 }
-body .twoBannersNextDiv .oneBanner, body .twoBannersNextDiv .twoBanner {
+html .twoBannersNextDiv .oneBanner, html .twoBannersNextDiv .twoBanner, body .twoBannersNextDiv .oneBanner, body .twoBannersNextDiv .twoBanner {
   height: 402px;
   width: 688px;
   display: flex;
 }
-body .twoBannersNextDiv .oneSpanOneBannerTwoBanners, body .twoBannersNextDiv .oneSpanTwoBannerTwoBanners {
+html .twoBannersNextDiv .oneSpanOneBannerTwoBanners, html .twoBannersNextDiv .oneSpanTwoBannerTwoBanners, body .twoBannersNextDiv .oneSpanOneBannerTwoBanners, body .twoBannersNextDiv .oneSpanTwoBannerTwoBanners {
   font-size: 24px;
   text-align: right;
   line-height: 29px;
 }
-body .twoBannersNextDiv .oneBannerSpanAndButton, body .twoBannersNextDiv .twoBannerSpanAndButton {
+html .twoBannersNextDiv .oneBannerSpanAndButton, html .twoBannersNextDiv .twoBannerSpanAndButton, body .twoBannersNextDiv .oneBannerSpanAndButton, body .twoBannersNextDiv .twoBannerSpanAndButton {
   align-items: self-end;
   margin-top: 82px;
   height: 239px;
 }
-body .twoBannersNextDiv .twoSpanOneBannerTwoBanners, body .twoBannersNextDiv .twoSpanTwoBannerTwoBanners {
+html .twoBannersNextDiv .twoSpanOneBannerTwoBanners, html .twoBannersNextDiv .twoSpanTwoBannerTwoBanners, body .twoBannersNextDiv .twoSpanOneBannerTwoBanners, body .twoBannersNextDiv .twoSpanTwoBannerTwoBanners {
   text-align: right;
   font-weight: 400;
   line-height: 21px;
 }
-body .twoBannersNextDiv .oneAndTwoBannerSmallImage {
+html .twoBannersNextDiv .oneAndTwoBannerSmallImage, body .twoBannersNextDiv .oneAndTwoBannerSmallImage {
   height: 59px;
   width: 60px;
   position: absolute;
   margin-left: 15px;
   margin-top: 27px;
 }
-body .twoBannersNextDiv .oneBanner {
+html .twoBannersNextDiv .oneBanner, body .twoBannersNextDiv .oneBanner {
   background-color: #F0F0FF;
 }
-body .twoBannersNextDiv .oneBanner .oneBannerImage {
+html .twoBannersNextDiv .oneBanner .oneBannerImage, body .twoBannersNextDiv .oneBanner .oneBannerImage {
   height: 240px;
   width: 323px;
   position: absolute;
   margin-top: 162px;
 }
-body .twoBannersNextDiv .oneBanner .oneBannerSpanAndButton {
+html .twoBannersNextDiv .oneBanner .oneBannerSpanAndButton, body .twoBannersNextDiv .oneBanner .oneBannerSpanAndButton {
   width: 537px;
   margin-left: 106px;
 }
-body .twoBannersNextDiv .oneBanner .oneBannerSpanAndButton .twoSpanOneBannerTwoBanners {
+html .twoBannersNextDiv .oneBanner .oneBannerSpanAndButton .twoSpanOneBannerTwoBanners, body .twoBannersNextDiv .oneBanner .oneBannerSpanAndButton .twoSpanOneBannerTwoBanners {
   margin-top: 32px;
 }
-body .twoBannersNextDiv .oneBanner .oneBannerSpanAndButton #chooseTechnique {
+html .twoBannersNextDiv .oneBanner .oneBannerSpanAndButton #chooseTechnique, body .twoBannersNextDiv .oneBanner .oneBannerSpanAndButton #chooseTechnique {
   height: 70px;
   width: 300px;
   margin-top: 16px;
   text-transform: uppercase;
 }
-body .twoBannersNextDiv .twoBanner {
+html .twoBannersNextDiv .twoBanner, body .twoBannersNextDiv .twoBanner {
   background-color: #E3E1FF;
 }
-body .twoBannersNextDiv .twoBanner .twoBannerImage {
+html .twoBannersNextDiv .twoBanner .twoBannerImage, body .twoBannersNextDiv .twoBanner .twoBannerImage {
   height: 262px;
   width: 344px;
   position: absolute;
   margin-top: 115px;
 }
-body .twoBannersNextDiv .twoBanner .twoBannerSpanAndButton {
+html .twoBannersNextDiv .twoBanner .twoBannerSpanAndButton, body .twoBannersNextDiv .twoBanner .twoBannerSpanAndButton {
   width: 268px;
   margin-left: 389px;
 }
-body .twoBannersNextDiv .twoBanner .twoBannerSpanAndButton .twoSpanTwoBannerTwoBanners {
+html .twoBannersNextDiv .twoBanner .twoBannerSpanAndButton .twoSpanTwoBannerTwoBanners, body .twoBannersNextDiv .twoBanner .twoBannerSpanAndButton .twoSpanTwoBannerTwoBanners {
   margin-top: 6px;
 }
-body .twoBannersNextDiv .twoBanner .twoBannerSpanAndButton #assembleOffice {
+html .twoBannersNextDiv .twoBanner .twoBannerSpanAndButton #assembleOffice, body .twoBannersNextDiv .twoBanner .twoBannerSpanAndButton #assembleOffice {
   height: 69px;
   width: 268px;
   margin-top: 17px;
   text-transform: uppercase;
 }
-body .oneFooter {
+html .oneFooter, body .oneFooter {
   height: 300px;
   width: 100%;
   display: flex;
@@ -1617,7 +1596,7 @@ body .oneFooter {
   background-color: #F0F0FF;
   margin-top: 100px;
 }
-body .oneFooter .oneFooterCenterBanner {
+html .oneFooter .oneFooterCenterBanner, body .oneFooter .oneFooterCenterBanner {
   height: 258px;
   width: 1389px;
   display: grid;
@@ -1629,7 +1608,7 @@ body .oneFooter .oneFooterCenterBanner {
   margin: auto;
   padding: 0;
 }
-body .oneFooter .oneFooterCenterBanner .onBlockOneFooter {
+html .oneFooter .oneFooterCenterBanner .onBlockOneFooter, body .oneFooter .oneFooterCenterBanner .onBlockOneFooter {
   height: 74px;
   width: 687px;
   line-height: 37px;
@@ -1638,7 +1617,7 @@ body .oneFooter .oneFooterCenterBanner .onBlockOneFooter {
   grid-column-start: 1;
   grid-row-start: 1;
 }
-body .oneFooter .oneFooterCenterBanner #twoBlockOneFooter {
+html .oneFooter .oneFooterCenterBanner #twoBlockOneFooter, body .oneFooter .oneFooterCenterBanner #twoBlockOneFooter {
   height: 60px;
   width: 400px;
   display: flex;
@@ -1653,16 +1632,16 @@ body .oneFooter .oneFooterCenterBanner #twoBlockOneFooter {
   background-color: #F0F0FF;
   color: rgb(74, 77, 74);
 }
-body .oneFooter .oneFooterCenterBanner #twoBlockOneFooter:hover {
+html .oneFooter .oneFooterCenterBanner #twoBlockOneFooter:hover, body .oneFooter .oneFooterCenterBanner #twoBlockOneFooter:hover {
   background-color: #001569;
   color: white;
 }
-body .oneFooter .oneFooterCenterBanner .arrowTwoBlockOneFooterSpan {
+html .oneFooter .oneFooterCenterBanner .arrowTwoBlockOneFooterSpan, body .oneFooter .oneFooterCenterBanner .arrowTwoBlockOneFooterSpan {
   top: -30px;
   left: 1215px;
   position: absolute;
 }
-body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter {
+html .oneFooter .oneFooterCenterBanner .threeBlockOneFooter, body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter {
   height: 166px;
   width: 1327px;
   display: flex;
@@ -1675,7 +1654,9 @@ body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter {
   margin-left: 62px;
   font-size: 20px;
 }
-body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesOneBlockOneFooter, body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesTwoBlockOneFooter,
+html .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesOneBlockOneFooter, html .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesTwoBlockOneFooter,
+html .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesThreeBlockOneFooter, html .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFourBlockOneFooter,
+html .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFiveBlockOneFooter, body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesOneBlockOneFooter, body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesTwoBlockOneFooter,
 body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesThreeBlockOneFooter, body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFourBlockOneFooter,
 body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFiveBlockOneFooter {
   display: flex;
@@ -1683,59 +1664,63 @@ body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFiveBlockOneF
   align-items: center;
   text-align: center;
 }
-body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesOneBlockOneFooter {
+html .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesOneBlockOneFooter, body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesOneBlockOneFooter {
   height: 161px;
   width: 291px;
 }
-body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesOneBlockOneFooter .oneImageOneFooter {
+html .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesOneBlockOneFooter .oneImageOneFooter, body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesOneBlockOneFooter .oneImageOneFooter {
   height: 100px;
   width: 120px;
 }
-body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesTwoBlockOneFooter {
+html .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesTwoBlockOneFooter, body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesTwoBlockOneFooter {
   height: 104px;
   width: 200px;
 }
-body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesTwoBlockOneFooter .twoImageOneFooter {
+html .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesTwoBlockOneFooter .twoImageOneFooter, body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesTwoBlockOneFooter .twoImageOneFooter {
   height: 66px;
   width: 200px;
 }
-body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesThreeBlockOneFooter {
+html .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesThreeBlockOneFooter, body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesThreeBlockOneFooter {
   height: 161px;
   width: 342px;
 }
-body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFourBlockOneFooter {
+html .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFourBlockOneFooter, body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFourBlockOneFooter {
   height: 85px;
   width: 200px;
 }
-body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFiveBlockOneFooter {
+html .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFiveBlockOneFooter, body .oneFooter .oneFooterCenterBanner .threeBlockOneFooter .imagesFiveBlockOneFooter {
   height: 162px;
   width: 1509x;
 }
-body .bannerManyPictures {
+html .bannerManyPictures, body .bannerManyPictures {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  max-height: 804px;
+  max-width: 1410px;
+  margin: 100px auto 100px auto;
+  grid-column-gap: 2.12%;
+  grid-row-gap: 3.73%;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
-@media (min-width: 1920px) {
-  body .bannerManyPictures {
-    height: 804px;
-    width: 1410px;
-    margin: 100px auto auto auto;
-    grid-gap: 30px;
+@media (max-width: 1280px) {
+  html .bannerManyPictures, body .bannerManyPictures {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: 1fr 1fr;
+    max-height: 1262px;
+    margin: 100px auto 300px auto;
   }
 }
-@media (max-width: 1919px) {
-  body .bannerManyPictures {
-    height: 648px;
-    width: 1137px;
-    margin: 80.64px auto auto auto;
-    grid-gap: 24.19px;
-  }
-}
-body .bannerManyPictures .oneBannerManyPictures, body .bannerManyPictures .bannersManyPicturesContainer {
+html .bannerManyPictures .oneBannerManyPictures, html .bannerManyPictures .bannersManyPicturesContainer, body .bannerManyPictures .oneBannerManyPictures, body .bannerManyPictures .bannersManyPicturesContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-around;
+  max-height: 248px;
+  max-width: 330px;
+  width: 100%;
+  height: 100%;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -1744,147 +1729,56 @@ body .bannerManyPictures .oneBannerManyPictures, body .bannerManyPictures .banne
   transition: color 0.5s;
   cursor: pointer;
 }
-body .bannerManyPictures .oneBannerManyPictures:hover, body .bannerManyPictures .bannersManyPicturesContainer:hover {
+html .bannerManyPictures .oneBannerManyPictures:hover, html .bannerManyPictures .bannersManyPicturesContainer:hover, body .bannerManyPictures .oneBannerManyPictures:hover, body .bannerManyPictures .bannersManyPicturesContainer:hover {
   color: #001569;
 }
-@media (min-width: 1920px) {
-  body .bannerManyPictures .commonImageBannerManyPictures {
-    height: 154px;
-    width: 180px;
-    margin-top: -20px;
-  }
+html .bannerManyPictures .commonImageBannerManyPictures, body .bannerManyPictures .commonImageBannerManyPictures {
+  width: 55%;
 }
-@media (max-width: 1919px) {
-  body .bannerManyPictures .commonImageBannerManyPictures {
-    height: 124px;
-    width: 145.16px;
-    margin-top: -16px;
-  }
-}
-body .bannerManyPictures .oneBannerManyPictures {
+html .bannerManyPictures .oneBannerManyPictures, body .bannerManyPictures .oneBannerManyPictures {
   grid-area: 1/1/1/1;
   background-color: #F0F0FF;
 }
-body .bannerManyPictures .oneBannerManyPictures .oneBannerManyPicturesSpan {
+html .bannerManyPictures .oneBannerManyPictures .oneBannerManyPicturesSpan, body .bannerManyPictures .oneBannerManyPictures .oneBannerManyPicturesSpan {
   text-align: center;
+  font-size: 30px;
+  line-height: 37px;
 }
-@media (min-width: 1920px) {
-  body .bannerManyPictures .oneBannerManyPictures .oneBannerManyPicturesSpan {
-    font-size: 30px;
-    line-height: 37px;
-  }
-}
-@media (max-width: 1919px) {
-  body .bannerManyPictures .oneBannerManyPictures .oneBannerManyPicturesSpan {
-    font-size: 24.19px;
-    line-height: 29.83px;
-  }
-}
-body .bannerManyPictures .twoBannerManyPicturesTwoSpan, body .bannerManyPictures .eightBannerManyPicturesTwoSpan {
+html .bannerManyPictures .twoBannerManyPicturesTwoSpan, html .bannerManyPictures .eightBannerManyPicturesTwoSpan, body .bannerManyPictures .twoBannerManyPicturesTwoSpan, body .bannerManyPictures .eightBannerManyPicturesTwoSpan {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  width: 92%;
 }
-@media (min-width: 1920px) {
-  body .bannerManyPictures .twoBannerManyPicturesTwoSpan, body .bannerManyPictures .eightBannerManyPicturesTwoSpan {
-    height: 21px;
-    width: 303px;
-    margin-top: 30px;
-  }
-}
-@media (max-width: 1919px) {
-  body .bannerManyPictures .twoBannerManyPicturesTwoSpan, body .bannerManyPictures .eightBannerManyPicturesTwoSpan {
-    height: 16.93px;
-    width: 244.35px;
-    margin-top: 24.19px;
-  }
-}
-body .bannerManyPictures .arrowBannerManyPictures {
+html .bannerManyPictures .arrowBannerManyPictures, body .bannerManyPictures .arrowBannerManyPictures {
   position: absolute;
+  top: 62%;
+  left: 48%;
 }
-@media (min-width: 1920px) {
-  body .bannerManyPictures .arrowBannerManyPictures {
-    top: 146px;
-    left: 158px;
-  }
-}
-@media (max-width: 1919px) {
-  body .bannerManyPictures .arrowBannerManyPictures {
-    top: 117px;
-    left: 127px;
-  }
-}
-body .bannerManyPictures .eightImageBannerManyPictures {
+html .bannerManyPictures .eightImageBannerManyPictures, body .bannerManyPictures .eightImageBannerManyPictures {
+  width: 67%;
   position: absolute;
+  top: 5px;
 }
-@media (min-width: 1920px) {
-  body .bannerManyPictures .eightImageBannerManyPictures {
-    height: 187px;
-    width: 222px;
-    top: 5px;
-  }
+html .bannerManyPictures .elevenImageBannerManyPictures, body .bannerManyPictures .elevenImageBannerManyPictures {
+  height: 126px;
+  width: 195px;
+  top: 5px;
 }
-@media (max-width: 1919px) {
-  body .bannerManyPictures .eightImageBannerManyPictures {
-    height: 150.8px;
-    width: 179px;
-    top: 4px;
-  }
+html .bannerManyPictures .eightBannerManyPicturesTwoSpan, body .bannerManyPictures .eightBannerManyPicturesTwoSpan {
+  margin-top: 165px;
 }
-@media (min-width: 1920px) {
-  body .bannerManyPictures .elevenImageBannerManyPictures {
-    height: 126px;
-    width: 195px;
-    top: 5px;
-  }
-}
-@media (max-width: 1919px) {
-  body .bannerManyPictures .elevenImageBannerManyPictures {
-    height: 101.6px;
-    width: 157.2px;
-    top: 4px;
-  }
-}
-@media (min-width: 1920px) {
-  body .bannerManyPictures .eightBannerManyPicturesTwoSpan {
-    margin-top: 165px;
-  }
-}
-@media (max-width: 1919px) {
-  body .bannerManyPictures .eightBannerManyPicturesTwoSpan {
-    margin-top: 133px;
-  }
-}
-body .bannerManyPictures .spanElevenBannerManyPictures {
+html .bannerManyPictures .spanElevenBannerManyPictures, body .bannerManyPictures .spanElevenBannerManyPictures {
   font-weight: 400;
   font-family: Montserrat, sans-serif;
+  font-size: 14px;
 }
-@media (min-width: 1920px) {
-  body .bannerManyPictures .spanElevenBannerManyPictures {
-    font-size: 14px;
-  }
+html .bannerManyPictures #showAllOffer, body .bannerManyPictures #showAllOffer {
+  height: 70px;
+  width: 283px;
+  font-size: 14px;
 }
-@media (max-width: 1919px) {
-  body .bannerManyPictures .spanElevenBannerManyPictures {
-    font-size: 11.29px;
-  }
-}
-@media (min-width: 1920px) {
-  body .bannerManyPictures #showAllOffer {
-    height: 70px;
-    width: 283px;
-    font-size: 14px;
-  }
-}
-@media (max-width: 1919px) {
-  body .bannerManyPictures #showAllOffer {
-    height: 56.45px;
-    width: 228.22px;
-    font-size: 11.29px;
-  }
-}
-body .twoBannersAfterManyPicturesBanner {
+html .twoBannersAfterManyPicturesBanner, body .twoBannersAfterManyPicturesBanner {
   height: 402px;
   width: 1408px;
   display: flex;
@@ -1892,77 +1786,77 @@ body .twoBannersAfterManyPicturesBanner {
   justify-content: space-between;
   margin: 100px auto auto auto;
 }
-body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner, body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner {
+html .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner, html .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner, body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner, body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner {
   height: 402px;
   width: 690px;
   display: flex;
   position: relative;
 }
-body .twoBannersAfterManyPicturesBanner .smallOneAfterManyPicturesBanner, body .twoBannersAfterManyPicturesBanner .smallTwoAfterManyPicturesBanner {
+html .twoBannersAfterManyPicturesBanner .smallOneAfterManyPicturesBanner, html .twoBannersAfterManyPicturesBanner .smallTwoAfterManyPicturesBanner, body .twoBannersAfterManyPicturesBanner .smallOneAfterManyPicturesBanner, body .twoBannersAfterManyPicturesBanner .smallTwoAfterManyPicturesBanner {
   height: 60px;
   width: 60px;
   position: absolute;
   top: 30px;
   left: 15px;
 }
-body .twoBannersAfterManyPicturesBanner .oneSpanAfterManyPictures, body .twoBannersAfterManyPicturesBanner .fourSpanAfterManyPictures {
+html .twoBannersAfterManyPicturesBanner .oneSpanAfterManyPictures, html .twoBannersAfterManyPicturesBanner .fourSpanAfterManyPictures, body .twoBannersAfterManyPicturesBanner .oneSpanAfterManyPictures, body .twoBannersAfterManyPicturesBanner .fourSpanAfterManyPictures {
   text-align: right;
   font-size: 24px;
   line-height: 30px;
   margin-bottom: 20px;
 }
-body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBlock, body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBlock {
+html .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBlock, html .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBlock, body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBlock, body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBlock {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner {
+html .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner, body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner {
   background-color: #F0F0FF;
 }
-body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .bigOneAfterManyPicturesBanner {
+html .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .bigOneAfterManyPicturesBanner, body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .bigOneAfterManyPicturesBanner {
   height: 228px;
   width: 273px;
   position: absolute;
   top: 180px;
   z-index: 100;
 }
-body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .oneAfterManyPicturesBlock {
+html .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .oneAfterManyPicturesBlock, body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .oneAfterManyPicturesBlock {
   height: 227px;
   width: 520px;
   margin: 100px 35px auto auto;
 }
-body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .oneSpanAfterManyPictures {
+html .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .oneSpanAfterManyPictures, body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .oneSpanAfterManyPictures {
   height: 84px;
   width: 520px;
 }
-body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .twoSpanAfterManyPictures {
+html .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .twoSpanAfterManyPictures, body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner .twoSpanAfterManyPictures {
   height: 42px;
   width: 464px;
 }
-body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner #oneButtonAfterManyPicturesBanner {
+html .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner #oneButtonAfterManyPicturesBanner, body .twoBannersAfterManyPicturesBanner .oneAfterManyPicturesBanner #oneButtonAfterManyPicturesBanner {
   height: 65px;
   width: 348px;
   text-transform: uppercase;
 }
-body .twoBannersAfterManyPicturesBanner .twoSpanAfterManyPictures, body .twoBannersAfterManyPicturesBanner .fiveSpanAfterManyPictures {
+html .twoBannersAfterManyPicturesBanner .twoSpanAfterManyPictures, html .twoBannersAfterManyPicturesBanner .fiveSpanAfterManyPictures, body .twoBannersAfterManyPicturesBanner .twoSpanAfterManyPictures, body .twoBannersAfterManyPicturesBanner .fiveSpanAfterManyPictures {
   text-align: right;
   margin-bottom: 20px;
   font-weight: 400;
 }
-body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner {
+html .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner, body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner {
   background-color: #E3E1FF;
 }
-body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .fiveSpanAfterManyPictures {
+html .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .fiveSpanAfterManyPictures, body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .fiveSpanAfterManyPictures {
   height: 63px;
   width: 263px;
 }
-body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner #twoButtonAfterManyPicturesBanner {
+html .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner #twoButtonAfterManyPicturesBanner, body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner #twoButtonAfterManyPicturesBanner {
   height: 69px;
   width: 268px;
   text-transform: uppercase;
   z-index: 100;
 }
-body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .bigTwoAfterManyPicturesBanner {
+html .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .bigTwoAfterManyPicturesBanner, body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .bigTwoAfterManyPicturesBanner {
   height: 254px;
   width: 330px;
   position: absolute;
@@ -1970,16 +1864,16 @@ body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .bigTwoAfter
   left: 5px;
   z-index: 100;
 }
-body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .twoAfterManyPicturesBlock {
+html .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .twoAfterManyPicturesBlock, body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .twoAfterManyPicturesBlock {
   height: 220px;
   width: 311px;
   margin: 100px 35px auto auto;
 }
-body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .fourSpanAfterManyPictures {
+html .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .fourSpanAfterManyPictures, body .twoBannersAfterManyPicturesBanner .twoAfterManyPicturesBanner .fourSpanAfterManyPictures {
   height: 52px;
   width: 311px;
 }
-body .twoBannersAfterManyPicturesBanner .leftAfterManyPicturesBanner {
+html .twoBannersAfterManyPicturesBanner .leftAfterManyPicturesBanner, body .twoBannersAfterManyPicturesBanner .leftAfterManyPicturesBanner {
   height: 175px;
   width: 240px;
   top: 260px;
@@ -1989,17 +1883,17 @@ body .twoBannersAfterManyPicturesBanner .leftAfterManyPicturesBanner {
   border-left: 8px solid #1F347B;
   transform: rotate(-180deg);
 }
-body .twoBannersAfterManyPicturesBanner .circleAfterManyPicturesBanner {
+html .twoBannersAfterManyPicturesBanner .circleAfterManyPicturesBanner, body .twoBannersAfterManyPicturesBanner .circleAfterManyPicturesBanner {
   top: 247px;
   left: 1424px;
 }
-body .twoFooter {
+html .twoFooter, body .twoFooter {
   height: 300px;
   width: 100%;
   margin: 100px auto auto auto;
   background-color: #F0F0FF;
 }
-body .twoFooter .twoFooterBlockAndImage {
+html .twoFooter .twoFooterBlockAndImage, body .twoFooter .twoFooterBlockAndImage {
   height: 260px;
   width: 1225px;
   display: flex;
@@ -2007,28 +1901,28 @@ body .twoFooter .twoFooterBlockAndImage {
   justify-content: space-between;
   margin: auto;
 }
-body .twoFooter .twoFooterBlockAndImage .twoFooterBlock {
+html .twoFooter .twoFooterBlockAndImage .twoFooterBlock, body .twoFooter .twoFooterBlockAndImage .twoFooterBlock {
   height: 199px;
   width: 487px;
   margin: 55px 240px auto auto;
   left: 100px;
   align-items: flex-start;
 }
-body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterOneSpan {
+html .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterOneSpan, body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterOneSpan {
   height: 60px;
   width: 487px;
   font-size: 24px;
   line-height: 30px;
   margin-bottom: 20px;
 }
-body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterTwoSpan {
+html .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterTwoSpan, body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterTwoSpan {
   height: 42px;
   width: 343px;
   font-size: 17px;
   font-weight: 400;
   margin-bottom: 20px;
 }
-body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton {
+html .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton, body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton {
   height: 61px;
   width: 450px;
   display: flex;
@@ -2039,21 +1933,21 @@ body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton {
   transition: background-color 0.5s, color 0.5s;
   padding-left: 20px;
 }
-body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton:hover {
+html .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton:hover, body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .twoFooterButton:hover {
   background-color: #001569;
   color: white;
 }
-body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .arrowTwoFooter {
+html .twoFooter .twoFooterBlockAndImage .twoFooterBlock .arrowTwoFooter, body .twoFooter .twoFooterBlockAndImage .twoFooterBlock .arrowTwoFooter {
   top: 166px;
   left: 310px;
   position: absolute;
 }
-body .twoFooter .twoFooterBlockAndImage .twoFooterImage {
+html .twoFooter .twoFooterBlockAndImage .twoFooterImage, body .twoFooter .twoFooterBlockAndImage .twoFooterImage {
   height: 251px;
   width: 464px;
   margin-top: 25px;
 }
-body .bannerAfterTwoFooter {
+html .bannerAfterTwoFooter, body .bannerAfterTwoFooter {
   height: 334px;
   width: 1410px;
   display: flex;
@@ -2065,18 +1959,18 @@ body .bannerAfterTwoFooter {
   border-left: 8px solid rgba(31, 52, 123, 0.2);
   box-sizing: border-box;
 }
-body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock {
+html .bannerAfterTwoFooter .bannerAfterTwoFooterBlock, body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock {
   height: 270px;
   width: 1330px;
 }
-body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterSpan {
+html .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterSpan, body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterSpan {
   height: 74px;
   width: 680px;
   display: inline-block;
   font-size: 30px;
   line-height: 37px;
 }
-body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv {
+html .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv, body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2084,32 +1978,32 @@ body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv {
   width: 1326px;
   margin: auto auto 20px auto;
 }
-body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterOne {
+html .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterOne, body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterOne {
   height: 146px;
   width: 150px;
 }
-body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterTwo {
+html .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterTwo, body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterTwo {
   height: 80px;
   width: 200px;
 }
-body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterThree {
+html .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterThree, body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterThree {
   height: 138px;
   width: 200px;
 }
-body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterFour {
+html .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterFour, body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterFour {
   height: 133px;
   width: 200px;
 }
-body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterFive {
+html .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterFive, body .bannerAfterTwoFooter .bannerAfterTwoFooterBlock .bannerAfterTwoFooterDiv .bannerAfterTwoFooterFive {
   height: 112px;
   width: 200px;
 }
-body .bannerAfterTwoFooter .leftAndRightMainAfterTwoFooter {
+html .bannerAfterTwoFooter .leftAndRightMainAfterTwoFooter, body .bannerAfterTwoFooter .leftAndRightMainAfterTwoFooter {
   display: flex;
   position: absolute;
   margin: 45px 0 0 710px;
 }
-body .bannerAfterTwoFooter .leftAndRightMainAfterTwoFooter .leftMainAfterTwoFooter {
+html .bannerAfterTwoFooter .leftAndRightMainAfterTwoFooter .leftMainAfterTwoFooter, body .bannerAfterTwoFooter .leftAndRightMainAfterTwoFooter .leftMainAfterTwoFooter {
   height: 110px;
   width: 240px;
   position: absolute;
@@ -2119,7 +2013,7 @@ body .bannerAfterTwoFooter .leftAndRightMainAfterTwoFooter .leftMainAfterTwoFoot
   border-left: 8px solid rgba(31, 52, 123, 0.2);
   transform: rotate(-270deg);
 }
-body .bannerAfterTwoFooter .leftAndRightMainAfterTwoFooter .leftMainAfterTwoFooterAfter {
+html .bannerAfterTwoFooter .leftAndRightMainAfterTwoFooter .leftMainAfterTwoFooterAfter, body .bannerAfterTwoFooter .leftAndRightMainAfterTwoFooter .leftMainAfterTwoFooterAfter {
   height: 1200px;
   width: 240px;
   top: -666px;
@@ -2128,12 +2022,12 @@ body .bannerAfterTwoFooter .leftAndRightMainAfterTwoFooter .leftMainAfterTwoFoot
   border-left: 8px solid rgba(31, 52, 123, 0.2);
   transform: rotate(90deg);
 }
-body .twoBannerAfterTwoFooter {
+html .twoBannerAfterTwoFooter, body .twoBannerAfterTwoFooter {
   height: 660px;
   width: 1405px;
   margin: 100px auto auto auto;
 }
-body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterSpanBlock {
+html .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterSpanBlock, body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterSpanBlock {
   height: 84px;
   width: 1146px;
   display: flex;
@@ -2142,16 +2036,16 @@ body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterSpanBlock {
   flex-direction: column;
   margin: 0 auto 33px auto;
 }
-body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterSpanBlock .twoBannerAfterTwoFooterOneSpan {
+html .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterSpanBlock .twoBannerAfterTwoFooterOneSpan, body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterSpanBlock .twoBannerAfterTwoFooterOneSpan {
   font-size: 36px;
   line-height: 30px;
 }
-body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterSpanBlock .twoBannerAfterTwoFooterTwoSpan {
+html .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterSpanBlock .twoBannerAfterTwoFooterTwoSpan, body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterSpanBlock .twoBannerAfterTwoFooterTwoSpan {
   padding-top: 10px;
   font-size: 24px;
   line-height: 42px;
 }
-body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain {
+html .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain, body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain {
   height: 546px;
   width: 1405px;
   display: flex;
@@ -2159,24 +2053,24 @@ body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain {
   bottom: 0;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2509803922);
 }
-body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .mainPicture {
+html .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .mainPicture, body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .mainPicture {
   height: 471px;
   width: 774px;
   margin: 75px 0 0 90px;
 }
-body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage {
+html .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage, body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage {
   height: 461px;
   width: 331px;
   margin: 42px 115px 0 0;
 }
-body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage .twoBannerAfterTwoFooterField {
+html .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage .twoBannerAfterTwoFooterField, body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage .twoBannerAfterTwoFooterField {
   height: 80px;
   width: 330px;
   width: 330px;
   height: 80px;
   margin-bottom: 30px;
 }
-body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage #getConsultation {
+html .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage #getConsultation, body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterTwoFooterBlockAfterImage #getConsultation {
   height: 80px;
   width: 330px;
   text-transform: uppercase;
@@ -2184,7 +2078,7 @@ body .twoBannerAfterTwoFooter .twoBannerAfterTwoFooterBlockMain .twoBannerAfterT
   height: 80px;
   margin-bottom: 20px;
 }
-body .bannerBeforeLastFooter {
+html .bannerBeforeLastFooter, body .bannerBeforeLastFooter {
   height: 608px;
   width: 1408px;
   display: flex;
@@ -2193,12 +2087,12 @@ body .bannerBeforeLastFooter {
   border-right: 8px solid rgba(31, 52, 123, 0.2);
   border-bottom: 8px solid rgba(31, 52, 123, 0.2);
 }
-body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage {
+html .bannerBeforeLastFooter .beforeLastFooterSpanAndImage, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage {
   height: 514px;
   width: 1188px;
   margin: auto;
 }
-body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterSpanImage {
+html .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterSpanImage, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterSpanImage {
   height: 74px;
   width: 579px;
   font-size: 30px;
@@ -2206,7 +2100,7 @@ body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterSpan
   text-align: center;
   margin: 0 auto auto auto;
 }
-body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock {
+html .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock {
   height: 428px;
   width: 1188px;
   display: flex;
@@ -2214,65 +2108,66 @@ body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnde
   align-items: center;
   flex-direction: row;
 }
-body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock {
+html .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock {
   height: 274px;
   width: 459px;
   font-size: 20px;
   margin-top: 86px;
 }
-body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock {
+html .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock {
   display: flex;
   align-items: center;
   padding-bottom: 10px;
   flex-grow: 1;
 }
-body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .newGeo {
+html .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .newGeo, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .newGeo {
   height: 40px;
   width: 30px;
 }
-body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .newPhone, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .clock {
+html .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .newPhone, html .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .clock, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .newPhone, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .clock {
   width: 30px;
   height: 30px;
 }
-body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .clock {
+html .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .clock, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .clock {
   margin-bottom: 8px;
 }
-body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .newSMS {
+html .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .newSMS, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .newSMS {
   width: 30px;
   height: 22px;
   margin-bottom: 8px;
 }
-body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .newWhatsApp {
+html .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .newWhatsApp, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .newWhatsApp {
   width: 26px;
   height: 26px;
   margin-bottom: 8px;
 }
-body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .bannerBeforeLastFooterSpan {
+html .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .bannerBeforeLastFooterSpan, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .beforeLastFooterSpanColumnBlock .oneBeforeLastFooterSpanColumnBlock .bannerBeforeLastFooterSpan {
   margin: 0 0 10px 10px;
 }
-body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .maps {
+html .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .maps, body .bannerBeforeLastFooter .beforeLastFooterSpanAndImage .beforeLastFooterUnderSpanBlock .maps {
   height: 423px;
   width: 553px;
   background: url("../images_adaptive_layout/bannerBeforeLastFooter/maps.png");
-  background-size: cover;
+  background-size: center/cover;
 }
-body .bannerBeforeLastFooter .lineBorderLeftBannerBeforeLastFooter,
+html .bannerBeforeLastFooter .lineBorderLeftBannerBeforeLastFooter,
+html .bannerBeforeLastFooter .lineBorderTopBannerBeforeLastFooter, body .bannerBeforeLastFooter .lineBorderLeftBannerBeforeLastFooter,
 body .bannerBeforeLastFooter .lineBorderTopBannerBeforeLastFooter {
   position: absolute;
   border-top: 8px solid rgba(31, 52, 123, 0.2);
 }
-body .bannerBeforeLastFooter .lineBorderLeftBannerBeforeLastFooter {
+html .bannerBeforeLastFooter .lineBorderLeftBannerBeforeLastFooter, body .bannerBeforeLastFooter .lineBorderLeftBannerBeforeLastFooter {
   height: 430px;
   width: 120px;
   top: 170px;
   border-left: 8px solid rgba(31, 52, 123, 0.2);
 }
-body .bannerBeforeLastFooter .lineBorderTopBannerBeforeLastFooter {
+html .bannerBeforeLastFooter .lineBorderTopBannerBeforeLastFooter, body .bannerBeforeLastFooter .lineBorderTopBannerBeforeLastFooter {
   height: 10px;
   width: 1230px;
   left: 170px;
 }
-body .lastFooter {
+html .lastFooter, body .lastFooter {
   height: 343px;
   width: 100%;
   display: flex;
@@ -2282,126 +2177,129 @@ body .lastFooter {
   margin-top: 100px;
   background-color: #F0F0FF;
 }
-body .lastFooter .lastFooterMainBlock {
+html .lastFooter .lastFooterMainBlock, body .lastFooter .lastFooterMainBlock {
   height: 267px;
   width: 1408px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterOneBlock, body .lastFooter .lastFooterMainBlock .lastFooterTwoBlock,
+html .lastFooter .lastFooterMainBlock .lastFooterOneBlock, html .lastFooter .lastFooterMainBlock .lastFooterTwoBlock,
+html .lastFooter .lastFooterMainBlock .lastFooterThreeBlock, html .lastFooter .lastFooterMainBlock .lastFooterFourBlock,
+html .lastFooter .lastFooterMainBlock .lastFooterFiveBlock, html .lastFooter .lastFooterMainBlock .lastFooterSixBlock, body .lastFooter .lastFooterMainBlock .lastFooterOneBlock, body .lastFooter .lastFooterMainBlock .lastFooterTwoBlock,
 body .lastFooter .lastFooterMainBlock .lastFooterThreeBlock, body .lastFooter .lastFooterMainBlock .lastFooterFourBlock,
 body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock {
   justify-content: space-between;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterOneBlock {
+html .lastFooter .lastFooterMainBlock .lastFooterOneBlock, body .lastFooter .lastFooterMainBlock .lastFooterOneBlock {
   height: 222px;
   width: 209px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterOneBlock .cbsFooter {
+html .lastFooter .lastFooterMainBlock .lastFooterOneBlock .cbsFooter, body .lastFooter .lastFooterMainBlock .lastFooterOneBlock .cbsFooter {
   height: 94px;
   width: 209px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterOneBlock .lastFooterOneSpan {
+html .lastFooter .lastFooterMainBlock .lastFooterOneBlock .lastFooterOneSpan, body .lastFooter .lastFooterMainBlock .lastFooterOneBlock .lastFooterOneSpan {
   height: 103px;
   width: 209px;
   line-height: 21px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterTwoBlock {
+html .lastFooter .lastFooterMainBlock .lastFooterTwoBlock, body .lastFooter .lastFooterMainBlock .lastFooterTwoBlock {
   height: 212px;
   width: 247px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterBlockBigSpan {
+html .lastFooter .lastFooterMainBlock .lastFooterBlockBigSpan, body .lastFooter .lastFooterMainBlock .lastFooterBlockBigSpan {
   line-height: 21px;
   font-weight: 700;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterBlockSmallSpan {
+html .lastFooter .lastFooterMainBlock .lastFooterBlockSmallSpan, body .lastFooter .lastFooterMainBlock .lastFooterBlockSmallSpan {
   font-size: 14px;
   line-height: 17px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterThreeBlock {
+html .lastFooter .lastFooterMainBlock .lastFooterThreeBlock, body .lastFooter .lastFooterMainBlock .lastFooterThreeBlock {
   height: 176px;
   width: 167px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterFourBlock {
+html .lastFooter .lastFooterMainBlock .lastFooterFourBlock, body .lastFooter .lastFooterMainBlock .lastFooterFourBlock {
   height: 212px;
   width: 155px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock {
+html .lastFooter .lastFooterMainBlock .lastFooterFiveBlock, body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock {
   height: 220px;
   width: 31px;
   align-items: center;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock .ig, body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock .goldWhatsApp, body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock .human {
+html .lastFooter .lastFooterMainBlock .lastFooterFiveBlock .ig, html .lastFooter .lastFooterMainBlock .lastFooterFiveBlock .goldWhatsApp, html .lastFooter .lastFooterMainBlock .lastFooterFiveBlock .human, body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock .ig, body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock .goldWhatsApp, body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock .human {
   height: 30px;
   width: 30px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock .faceB {
+html .lastFooter .lastFooterMainBlock .lastFooterFiveBlock .faceB, body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock .faceB {
   height: 41px;
   width: 20px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock .vk {
+html .lastFooter .lastFooterMainBlock .lastFooterFiveBlock .vk, body .lastFooter .lastFooterMainBlock .lastFooterFiveBlock .vk {
   height: 17px;
   width: 30px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterSixBlock {
+html .lastFooter .lastFooterMainBlock .lastFooterSixBlock, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock {
   height: 168px;
   width: 185px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageOne, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageTwo,
+html .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageOne, html .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageTwo,
+html .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageOne, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageTwo,
 body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageOne {
+html .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageOne, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageOne {
   height: 22px;
   width: 185px;
   font-family: Montserrat, sans-serif;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageOne .lastPhone {
+html .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageOne .lastPhone, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageOne .lastPhone {
   height: 19px;
   width: 18px;
   width: 18px;
   height: 19px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageTwo {
+html .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageTwo, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageTwo {
   height: 21px;
   width: 162px;
   margin-left: -3px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageTwo .lastSMS {
+html .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageTwo .lastSMS, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageTwo .lastSMS {
   height: 18px;
   width: 24px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree {
+html .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree {
   height: 50px;
   width: 185px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastGeo {
+html .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastGeo, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastGeo {
   height: 27px;
   width: 20px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan {
+html .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan {
   height: 50px;
   width: 146px;
   text-align: center;
   margin-right: 8px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan .lastFooterTwoSpanOne {
+html .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan .lastFooterTwoSpanOne, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan .lastFooterTwoSpanOne {
   font-family: Montserrat, sans-serif;
   font-weight: 600;
   text-align: left;
   line-height: 29px;
   font-size: 20px;
 }
-body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan .lastFooterTwoSpanTwo {
+html .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan .lastFooterTwoSpanTwo, body .lastFooter .lastFooterMainBlock .lastFooterSixBlock .lastFooterSixBlockSpanImageThree .lastFooterTwoSpan .lastFooterTwoSpanTwo {
   font-family: Montserrat, sans-serif;
   line-height: 23px;
   font-size: 16px;
 }
-body .lastFooter .lastFooterMainBlock .visa {
+html .lastFooter .lastFooterMainBlock .visa, body .lastFooter .lastFooterMainBlock .visa {
   height: 60px;
   width: 197px;
   position: absolute;

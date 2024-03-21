@@ -6,6 +6,8 @@
 // 6. @include draft(18px) - использование миксина
 // 7. математические формулы: width: 300px / 960px *100%;
 
+// Получение процентной высоты линии = выстота line-height / font-size * 100% (32 / 24 = 133% - line-height)
+
 // выстоа ноута - 696px
 // высота монитора - 912px
 // ширина ноута - 1536px
@@ -58,7 +60,7 @@ $backgroundTransition: background-color 0.5s;
 }
 
 @mixin maxWidth() {
-  @media (max-width: 1919px) {
+  @media (max-width: 1280px) {
     @content
   }
 }
@@ -71,6 +73,15 @@ $backgroundTransition: background-color 0.5s;
 //-----------------------------------------------
 
 // Стили повторяющихся элементов
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  //border: 0;
+}
+
 button {
   background-color: $colorOrange;
   color: $colorWhite;
