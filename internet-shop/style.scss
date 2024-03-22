@@ -2,5 +2,88 @@
 
 
 .header {
-  background: #cec9c9;
+
+  .top-header {
+
+    &_content {
+      background: #cec9c9;
+      display: flex;
+      align-items: center;
+    }
+
+    &_column {
+      flex: 0 1 50%;
+
+      &_logo {
+        align-self: flex-start;
+        flex: 0 0 190px;
+        text-align: center;
+        padding: 25px 0 0 0;
+        font-family: Play, sans-serif;
+        color: #FFFFFF;
+        font-size: 13.5px;
+
+        & > span > span {
+          font-size: 50px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .menu {
+      &_list {
+        display: grid;
+        grid-template-columns: 110px 130px 180px;
+
+        li {
+          margin: 1px 0;
+        }
+      }
+
+      &_link {
+        font-family: Play, sans-serif;
+        min-height: 27px;
+        white-space: nowrap;
+        text-decoration: underline;
+        color: #FFF;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 22px;
+        transition: all 0.3s ease 0s;
+        @media (min-width: $md2+px) {
+          &:hover {
+            border-radius: 20px;
+            background-color: #068292;
+          }
+        }
+      }
+    }
+
+    .contacts-header {
+      display: flex;
+      justify-content: center;
+
+      &_column {
+        padding: 0 30px;
+        border-right: 1px solid #FFF;
+
+        &:last-child {
+          border: 0;
+        }
+      }
+
+      &_label {
+        font-size: 12px;
+        font-weight: 300;
+        color: #FFF;
+      }
+
+      &_phone {
+        color: #FFF;
+        font-size: 18px;
+        font-weight: 900;
+      }
+    }
+  }
 }
