@@ -3,14 +3,26 @@ $fontFamily: "Roboto";
 
 $maxWidth: 1400px;
 
-$maxWidthContainer: 1180px;
+$maxWidthContainer: 1180;
+
+$md2: 320;
 
 
 // ------------------------------
 ul {
   list-style-type: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 0;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: $fontFamily;
 }
 
 .wrapper {
