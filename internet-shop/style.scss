@@ -3,22 +3,27 @@
 
 .header {
 
+  .color_width {
+    background-color: #1ab9ce;
+  }
+
   .top-header {
 
     &_content {
-      background: #cec9c9;
+      background: #1ab9ce;
       display: flex;
       align-items: center;
+      height: 90px;
     }
 
     &_column {
       flex: 0 1 50%;
 
       &_logo {
-        align-self: flex-start;
+        align-self: center;
         flex: 0 0 190px;
         text-align: center;
-        padding: 25px 0 0 0;
+        padding: 0 0 0 0;
         font-family: Play, sans-serif;
         color: #FFFFFF;
         font-size: 13.5px;
@@ -83,7 +88,144 @@
         color: #FFF;
         font-size: 18px;
         font-weight: 900;
+        white-space: nowrap;
       }
     }
   }
 }
+
+.bottom-header {
+
+  &_container {
+    display: flex;
+    height: 63px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_column {
+    flex: 0 1 calc(50% - 95px);
+  }
+}
+
+.actions-header {
+  display: flex;
+  align-items: center;
+
+li {
+  margin: 0 54px 0 0 ;
+  
+  @media (max-width: $maxWidthContainer +px) {
+    margin: 0 54 / $maxWidthContainer * 100vw 0 0 ;
+  }
+}
+
+  &_login {
+    padding: 0 0 0 36px;
+    display: inline-block;
+    line-height: 24px;
+    color: #999999;
+    transition: color 0.3s;
+    span {
+      border-bottom: 1px dotted;
+    }
+    &:hover {
+      color: #1ab9ce;
+    }
+  }
+
+  &_reg {
+    padding: 0 0 0 36px;
+    display: inline-block;
+    line-height: 24px;
+    color: #999999;
+    transition: color 0.3s;
+    span {
+      border-bottom: 1px dotted;
+    }
+    &:hover {
+      color: #1ab9ce;
+    }
+  }
+
+  &_email {
+    padding: 0 0 0 36px;
+    display: inline-block;
+    line-height: 13px;
+    color: #999999;
+    transition: color 0.3s;
+    span {
+      border-bottom: 1px dotted;
+    }
+    &:hover {
+      color: #1ab9ce;
+    }
+  }
+}
+
+.info-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_column {
+    padding: 0 54px 0 0;
+
+    @media (max-width: $maxWidthContainer +px) {
+      padding: 0 54 / $maxWidthContainer * 100vw 0 0 ;
+    }
+    &:last-child {
+      padding: 0;
+    }
+  }
+
+  &_callback {
+    display: inline-block;
+    color: #999999;
+    transition: color 0.3s;
+    line-height: 20px;
+    padding: 0 0 0 32px;
+    span {
+      border-bottom: 1px dotted;
+    }
+    &:hover {
+      color: #1ab9ce;
+    }
+  }
+
+  &_schedule {
+    padding: 0 0 0 37px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #999999;
+    span {
+      font-weight: 900;
+    }
+  }
+
+  &_cart {
+    width: 43px;
+    height: 43px;
+    display: inline-block;
+    position: relative;
+    span {
+      padding: 0 11px;
+      border-radius: 20px;
+      background-color: #f68038;
+      position: absolute;
+      right: 0;
+      top: -3px;
+      line-height: 25px;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+
+      @media (min-width: 1200px) {
+        transform: translate(60%, 0);
+      }
+    }
+  }
+}
+
+
