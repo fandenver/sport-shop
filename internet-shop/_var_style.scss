@@ -3,12 +3,20 @@ $fontFamily: "Roboto";
 
 $maxWidth: 1400px;
 
+$minWidth: 320px;
+$maxWidth: 1400;
 $maxWidthContainer: 1180;
-
-$md2: 320;
-
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
 
 // ------------------------------
+
+.rub:after {
+  content: "₽";
+}
+
 ul {
   list-style-type: none;
 }
