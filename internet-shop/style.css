@@ -291,8 +291,8 @@ ul {
 }
 
 .menu-page {
+  background: #1ab9ce;
   position: relative;
-  background-color: #14c0d4;
 }
 .menu-page_header {
   padding: 20px;
@@ -349,14 +349,25 @@ ul {
   height: 16px;
   position: relative;
 }
-.menu-page_content {
-  position: relative;
-  z-index: 2;
-  background: #1ab9ce;
-  width: 280px;
-}
-.menu-page_list li {
+.menu-page_list > li {
   border-bottom: 1px solid #1aa7b9;
+}
+.menu-page_parent .menu-page_link::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translate(0, -50%);
+  background: url("img/icons/sideMenu/arrows.png") 0 0 no-repeat;
+}
+.menu-page_parent._active .submenu-page_item {
+  z-index: 2;
+  transform: translate(0, 0);
+}
+.menu-page_parent._active .menu-page_link {
+  background-color: #098494;
 }
 .menu-page_link {
   letter-spacing: 0.3px;
@@ -367,19 +378,18 @@ ul {
   padding: 12px 20px;
   position: relative;
 }
-.menu-page_link_parent::after {
-  content: "";
-}
 @media (min-width: 991.98px) {
   .menu-page_link:hover {
     background-color: #098494;
   }
 }
 .menu-page_submenu {
+  width: 100%;
   position: absolute;
   top: 0;
   height: 100%;
   left: 100%;
+  overflow: hidden;
 }
 
 .submenu-page {
@@ -387,20 +397,19 @@ ul {
   border-left: 0;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 100%;
   height: 100%;
 }
 .submenu-page_item {
-  width: 280px;
+  width: 100%;
   border: 2px solid #098494;
   background-color: #FFF;
   position: absolute;
   height: 100%;
   top: 0;
   left: 0;
-}
-.submenu-page_item._active {
-  left: 100%;
+  transform: translate(-100%, 0);
+  transition: all 0.3s ease 0.3s;
 }
 .submenu-page_menu {
   border-bottom: 1px solid #dedede;
