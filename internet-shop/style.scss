@@ -300,8 +300,8 @@
 }
 
 .menu-page {
+  background: #1ab9ce;
   position: relative;
-  background-color: #14c0d4;
 
   &_header {
     padding: 20px;
@@ -372,16 +372,33 @@
   &_body {
   }
 
-  &_content {
-    position: relative;
-    z-index: 2;
-    background: #1ab9ce;
-    width: 280px;
+  &_list {
+    > li {
+      border-bottom: 1px solid #1aa7b9;
+    }
   }
 
-  &_list {
-    li {
-      border-bottom: 1px solid #1aa7b9;
+  &_parent {
+    .menu-page_link {
+      &::after {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        width: 14px;
+        height: 14px;
+        transform: translate(0, -50%);
+        background: url("img/icons/sideMenu/arrows.png") 0 0 no-repeat;
+      }
+    }
+    &._active {
+      .submenu-page_item {
+        z-index: 2;
+        transform: translate(0, 0);
+      }
+      .menu-page_link {
+        background-color: #098494;
+      }
     }
   }
 
@@ -394,12 +411,6 @@
     padding: 12px 20px;
     position: relative;
 
-    &_parent {
-      &::after {
-        content: "";
-      }
-    }
-
     @media (min-width: $md2+px) {
       &:hover {
         background-color: #098494;
@@ -408,10 +419,12 @@
   }
 
   &_submenu {
+    width: 100%;
     position: absolute;
     top: 0;
     height: 100%;
     left: 100%;
+    overflow: hidden;
   }
 }
 
@@ -420,21 +433,19 @@
   border-left: 0;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 100%;
   height: 100%;
 
   &_item {
-    width: 280px;
+    width: 100%;
     border: 2px solid #098494;
     background-color: #FFF;
     position: absolute;
     height: 100%;
     top: 0;
     left: 0;
-
-    &._active {
-      left: 100%;
-    }
+    transform: translate(-100%, 0);
+    transition: all 0.3s ease 0.3s;
   }
 
   &_menu {
@@ -560,4 +571,4 @@
   }
 }
 
-// Адаптивная верстка интернет-магазина с нуля. Часть #2. GULP SCSS JS, 1:23:12
+// Адаптивная верстка интернет-магазина с нуля. Часть #2. GULP SCSS JS, 1:52:22
