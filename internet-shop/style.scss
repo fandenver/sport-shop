@@ -280,6 +280,7 @@
 
 .page {
   flex: 1 1 auto;
+  //padding: 160px 0 0 0;
 
   &_container {
     display: flex;
@@ -329,6 +330,10 @@
     z-index: 5;
     padding: 10px 6px;
 
+    &_active {
+      opacity: 0.5;
+    }
+
     span {
       transition: all 0.3s ease 0s;
       top: calc(50% - 1px);
@@ -370,6 +375,10 @@
   }
 
   &_body {
+    //display: none;
+    &._active {
+      display: block;
+    }
   }
 
   &_list {
@@ -568,6 +577,129 @@
     &::after {
       font-size: 18px;
     }
+  }
+}
+
+//>========================================================================================================
+
+.search-page {
+  display: flex;
+  position: relative;
+  border-top: 2px solid #f2f2f2;
+  border-bottom: 2px solid #f2f2f2;
+
+  &_select {
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    background-color: #f3f3f3;
+    cursor: pointer;
+      &::before {
+        content: "";
+        width: 17px;
+        height: 17px;
+        background: url("img/searchField/magnifying.png") 0 0 no-repeat;
+      }
+
+    &::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: url("img/searchField/searchArrows.png");
+      transform: rotate(-270deg);
+    }
+  }
+
+  &_title {
+    display: flex;
+    align-items: center;
+    > span {
+      margin: 0 13px;
+      color: #66666666;
+      font-weight: 300;
+      border-bottom: 1px dashed;
+    }
+  }
+
+  &_categories {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+  &_input {
+    flex: 1 1 auto;
+    input {
+      height: 100%;
+    }
+  }
+
+  .btn {
+    display: inline-flex;
+    padding: 0 25px;
+    justify-content: center;
+    align-items: center;
+    height: 39px;
+    background-color: #f68038;
+    transition: all 0.3s ease 0s;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    @media (min-width: 992px) {
+      &:hover {
+        background-color: #b86029;
+      }
+    }
+
+    &._fw {
+      width: 100%;
+    }
+  }
+}
+
+.checkbox {
+  position: relative;
+
+  &_input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    &:checked + .checkbox_text:before {
+      background: #FFF url("img/searchField/checkbox.png") center no-repeat;
+    }
+  }
+}
+
+.categories-search {
+  background-color: #FFF;
+  display: flex;
+
+  &_column {
+    flex: 0 1 33.333%;
+    border-right: 1px solid#f3f3f3;
+    padding: 27px 40px;
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  &_list {
+    li {
+      margin: 0 0 20px 0;
+      &:last-child {
+        margin: 0 0 0 0;
+      }
+    }
+  }
+
+  &_link {
+    color: #999999;
   }
 }
 
