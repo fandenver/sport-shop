@@ -298,6 +298,14 @@
 
   }
 
+  &_search {
+    margin: 0 0 22px 0;
+  }
+
+  &_slider {
+    margin: 0 0 65px 0;
+  }
+
   &_content {
     flex: 1 1 auto;
     padding: 0 0 0 30px;
@@ -603,7 +611,7 @@
   }
 
   &_title {
-    color: #66666666;
+    color: #666666;
     font-weight: 300;
     display: flex;
     align-items: center;
@@ -634,6 +642,16 @@
       opacity: 0.6;
     }
 
+    &._categories {
+      span {
+        display: none;
+
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+
     &._active {
       &::after {
         transform: rotate(-90deg);
@@ -655,6 +673,8 @@
 
     input {
       height: 100%;
+      width: 100%;
+      padding: 0 15px;
     }
   }
 
@@ -689,6 +709,7 @@
   border: 1px solid #f3f3f3;
   background-color: #FFF;
   display: none;
+
 
   &::after {
     content: "";
@@ -747,5 +768,5 @@
   }
 }
 
-// Адаптивная верстка интернет-магазина с нуля. Часть #2. GULP SCSS JS, 1:52:21
+// Адаптивная верстка интернет-магазина с нуля. Часть #2. GULP SCSS JS, 2:51:41
 //

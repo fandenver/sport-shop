@@ -15,6 +15,7 @@ $md4: 479.98;
 
 .rub:after {
   content: "₽";
+  font-size: inherit;
 }
 
 ul {
@@ -31,6 +32,10 @@ ul {
   text-decoration: none;
   font-size: 14px;
   font-family: $fontFamily;
+}
+
+input:focus {
+  outline: none;
 }
 
 .wrapper {

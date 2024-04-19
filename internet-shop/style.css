@@ -1,6 +1,7 @@
 @charset "UTF-8";
 .rub:after {
   content: "₽";
+  font-size: inherit;
 }
 
 ul {
@@ -17,6 +18,10 @@ ul {
   text-decoration: none;
   font-size: 14px;
   font-family: "Roboto";
+}
+
+input:focus {
+  outline: none;
 }
 
 .wrapper {
@@ -288,6 +293,12 @@ ul {
 .page_side {
   flex: 0 0 260px;
 }
+.page_search {
+  margin: 0 0 22px 0;
+}
+.page_slider {
+  margin: 0 0 65px 0;
+}
 .page_content {
   flex: 1 1 auto;
   padding: 0 0 0 30px;
@@ -538,7 +549,7 @@ ul {
   cursor: pointer;
 }
 .search-page_title {
-  color: rgba(102, 102, 102, 0.4);
+  color: #666666;
   font-weight: 300;
   display: flex;
   align-items: center;
@@ -566,6 +577,12 @@ ul {
   transform: rotate(-270deg);
   opacity: 0.6;
 }
+.search-page_title._categories span {
+  display: none;
+}
+.search-page_title._categories span:last-child {
+  display: block;
+}
 .search-page_title._active::after {
   transform: rotate(-90deg);
 }
@@ -582,6 +599,8 @@ ul {
 }
 .search-page_input input {
   height: 100%;
+  width: 100%;
+  padding: 0 15px;
 }
 .search-page .btn {
   display: inline-flex;

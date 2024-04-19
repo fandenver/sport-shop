@@ -44,16 +44,18 @@ const checkboxCategories = document.querySelectorAll('.categories-search_checkbo
 
 for (let index = 0; index < checkboxCategories.length; index++) {
     const checkboxCategory = checkboxCategories[index];
-    checkboxCategory.addEventListener('click', () => {
-        console.log(checkboxCategory);
+    checkboxCategory.addEventListener('change', () => {
+
             checkboxCategory.classList.toggle('_active');
 
-            const checkboxActiveCategory = document.querySelectorAll('.categories-search_checkbox');
+            const checkboxActiveCategory = document.querySelectorAll('.categories-search_checkbox._active');
 
             if (checkboxActiveCategory.length > 0) {
-                selectBtnSearch.classList.add('_categories')
+                selectBtnSearch.classList.add('_categories');
+                let searchQuantity = selectBtnSearch.querySelector('.search-page_quantity');
+                searchQuantity.innerHTML = searchQuantity.getAttribute('data-text') + ' ' + checkboxActiveCategory.length;
             } else {
-                selectBtnSearch.classList.remove('_categories')
+                selectBtnSearch.classList.remove('_categories');
             }
         }
     )
