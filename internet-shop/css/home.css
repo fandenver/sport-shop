@@ -1,9 +1,13 @@
+.mainSlider_body {
+  overflow: hidden;
+}
 .mainSlider_slide {
   position: relative;
+  overflow: hidden;
 }
 .mainSlider_content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .mainSlider_image {
   position: absolute;
@@ -15,12 +19,13 @@
 .mainSlider_dots {
   position: relative;
   z-index: 2;
-  margin: -27.5px 23px 0 23px;
+  margin: -40px 0 0 0;
   display: flex;
   justify-content: center;
   counter-reset: item;
 }
 .mainSlider_dots .swiper-pagination-bullet {
+  margin: 0 23px;
   cursor: pointer;
   width: 55px;
   height: 55px;
@@ -28,8 +33,13 @@
   border-radius: 50%;
   overflow: hidden;
   position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.mainSlider_dots .swiper-pagination-bullet-active::after {
+.mainSlider_dots .swiper-pagination-bullet::after {
+  opacity: 0;
+  transition: all 0.3s ease 0s;
   color: #fff;
   font-size: 16px;
   font-weight: 900;
@@ -44,6 +54,9 @@
   background-color: #f68038;
   counter-increment: item;
   content: counter(item);
+}
+.mainSlider_dots .swiper-pagination-bullet-active::after {
+  opacity: 1;
 }
 
 .content-mainSlider {
@@ -94,7 +107,7 @@
   color: #fff;
   text-transform: uppercase;
   padding: 0 30px 0 0;
-  background: url("img/icons/sideMenu/arrows.png") right no-repeat;
+  background: url("../img/icons/sideMenu/arrows.png") right no-repeat;
 }
 
 .text-mainSlider {

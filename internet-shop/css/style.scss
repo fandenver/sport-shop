@@ -1,6 +1,5 @@
 @import "var_style";
 
-
 .header {
   .color_width {
     background-color: #1ab9ce;
@@ -407,11 +406,11 @@
   }
 
   &_body {
-    display: block;
+    display: none;
 
-    //&._active {
-    //  display: block;
-    //}
+    &._active {
+      display: block;
+    }
   }
 
   &_list {
@@ -432,7 +431,7 @@
         width: 14px;
         height: 14px;
         transform: translate(0, -50%);
-        background: url("img/icons/sideMenu/arrows.png") 0 0 no-repeat;
+        background: url("../img/icons/sideMenu/arrows.png") 0 0 no-repeat;
       }
     }
 
@@ -489,12 +488,15 @@
 }
 
 .submenu-page {
-  width: 100%;
-  border-left: 0;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  height: 100%;
+  @media (max-width: $md2+px) {
+    background-color: #fff;
+  }
+  //width: 100%;
+  //border-left: 0;
+  //position: absolute;
+  //top: 0;
+  //left: 100%;
+  //height: 100%;
 
   @media (max-width: md2+px) {
     background-color: #fff;
@@ -633,7 +635,7 @@
   &_add {
     width: 40px;
     height: 40px;
-    background: url("img/icons/shoppingBasket.png") 0 0 no-repeat;
+    background: url("../img/icons/shoppingBasket.png") 0 0 no-repeat;
     opacity: 0.6;
   }
 
@@ -681,7 +683,7 @@
       content: "";
       width: 17px;
       height: 17px;
-      background: url("img/searchField/magnifying.png") 0 0 no-repeat;
+      background: url("../img/searchField/magnifying.png") 0 0 no-repeat;
       opacity: 0.6;
     }
 
@@ -690,7 +692,7 @@
       content: "";
       width: 10px;
       height: 10px;
-      background: url("img/searchField/searchArrows.png");
+      background: url("../img/searchField/searchArrows.png");
       transform: rotate(-270deg);
       opacity: 0.6;
     }
@@ -822,4 +824,4 @@
   }
 }
 
-// Адаптивная верстка интернет-магазина с нуля. Часть #2. GULP SCSS JS, 4:00:00
+// Адаптивная верстка интернет-магазина с нуля. Часть #2. GULP SCSS JS, 4:01:54
