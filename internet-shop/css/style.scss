@@ -30,17 +30,35 @@
         & > span > span {
           font-size: 50px;
           font-weight: 700;
+
+          @media (max-width: $md3 + px) {
+            font-size: 40px;
+          }
         }
       }
     }
 
     .menu {
+      &_body {
+        //  position: fixed;
+        //  height: 100%;
+        //  width: 100%;
+        //  top: 0;
+        //  left: 0;
+        //  overflow: auto;
+        //  display: none;
+      }
+
       &_list {
         display: grid;
         grid-template-columns: 110px 130px 180px;
 
         @media (max-width: $md1+px) {
           grid-template-columns: 90px 130px 160px;
+        }
+
+        @media (max-width: $md2+px) {
+          display: none;
         }
 
         li {
@@ -156,21 +174,20 @@
     color: #999999;
     transition: color 0.3s;
 
+    @media (max-width: $md1 + px) {
+      padding: 0 0 0 30px;
+    }
+
+    @media (max-width: $md2 + px) {
+      padding: 0 0 0 0;
+    }
+
     @media (min-width: $md2+px) {
       &:hover {
         color: #1ab9ce;
       }
     }
   }
-
-  @media (max-width: $md1+px) {
-    padding: 0 0 0 30px;
-  }
-
-  @media (max-width: $md1+px) {
-    padding: 0 0 0 30px;
-  }
-
 
   &_login {
     //background: url('') left no-repeat;
@@ -179,9 +196,9 @@
       border-bottom: 1px dotted;
     }
 
-    @media (max-width: $md1+px) {
-      padding: 0 0 0 30px;
-    }
+    //@media (max-width: $md1+px) {
+    //  padding: 0 0 0 30px;
+    //}
   }
 
   &_reg {
@@ -225,6 +242,7 @@
     transition: color 0.3s;
     line-height: 20px;
     padding: 0 0 0 32px;
+    white-space: nowrap;
 
     span {
       border-bottom: 1px dotted;
@@ -249,6 +267,10 @@
 
     @media (max-width: $md1+px) {
       padding: 0;
+    }
+    
+    @media (max-width: $md2+px) {
+      display: none;
     }
   }
 
@@ -299,7 +321,7 @@
 
   &_side {
     position: relative;
-    z-index: 3;
+    z-index: 10;
     flex: 0 0 260px;
 
     @media (max-width: $md2+px) {
@@ -314,7 +336,7 @@
   &_search {
     margin: 0 0 22px 0;
     position: relative;
-    z-index: 2;
+    z-index: 5;
   }
 
   &_slider {
@@ -424,6 +446,7 @@
       cursor: pointer;
 
       &::after {
+        transition: all 0.3s ease 0s;
         content: "";
         position: absolute;
         right: 10px;
@@ -432,6 +455,10 @@
         height: 14px;
         transform: translate(0, -50%);
         background: url("../img/icons/sideMenu/arrows.png") 0 0 no-repeat;
+
+        @media (max-width: $md2+px) {
+          transform: translate(0, -50%) rotate(90deg);
+        }
       }
     }
 
@@ -450,6 +477,12 @@
 
       .menu-page_link {
         background-color: #098494;
+
+        @media (max-width: $md2+px) {
+          &::after {
+            transform: translate(0, -50%) rotate(-90deg);
+          }
+        }
       }
     }
   }
@@ -476,7 +509,7 @@
 
   &_submenu {
     @media (min-width: $md2+px) {
-      width: 100%;
+      width: 108%;
       position: absolute;
       top: 0;
       height: 100%;
@@ -661,6 +694,10 @@
     align-items: center;
     padding: 0 14px;
     background-color: #f3f3f3;
+
+    @media (max-width: $md3+px) {
+      display: none;
+    }
   }
 
   &_title {
@@ -722,8 +759,9 @@
   }
 
   &_input {
-    border-top: 2px solid #f2f2f2;
-    border-bottom: 2px solid #f2f2f2;
+    border: 2px solid #f2f2f2;
+    //border-bottom: 2px solid #f2f2f2;
+    //border-left: 2px solid #f2f2f2;
     flex: 1 1 auto;
 
     input {
@@ -777,16 +815,34 @@
   }
 
   &_row {
-    display: flex;
+    @media (min-width: $md3+px) {
+      display: flex;
+    }
+
+    @media (max-width: $md2+px) {
+      padding: 20px 0;
+    }
   }
 
   &_column {
     flex: 0 1 33.333%;
-    border-right: 1px solid #f3f3f3;
     padding: 27px 40px;
+    border-right: 1px solid #f3f3f3;
 
     &:last-child {
       border: 0;
+    }
+
+    @media (max-width: $md1+px) {
+      padding: 27px 20px;
+    }
+
+    @media (max-width: $md3+px) {
+      padding: 10px 20px;
+      margin: 0 0 20px 0;
+      &:last-child {
+        margin: 0 0 0 0;
+      }
     }
   }
 
@@ -824,4 +880,4 @@
   }
 }
 
-// Адаптивная верстка интернет-магазина с нуля. Часть #2. GULP SCSS JS, 4:01:54
+// Адаптивная верстка интернет-магазина с нуля. Часть #2. GULP SCSS JS, 4:10:34
