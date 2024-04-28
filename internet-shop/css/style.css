@@ -72,6 +72,19 @@ input:focus {
     font-size: 40px;
   }
 }
+@media (max-width: 991.98px) {
+  .header .top-header .menu_body {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    padding: 70px 20px 30px 20px;
+    z-index: 2;
+    background-color: #fff;
+  }
+}
 .header .top-header .menu_list {
   display: grid;
   grid-template-columns: 110px 130px 180px;
@@ -143,10 +156,34 @@ input:focus {
     display: none;
   }
 }
+@media (max-width: 991.98px) and (max-width: 640px) {
+  .header .top-header .contacts-header_column {
+    padding: 0;
+  }
+}
+.header .top-header .contacts-header_item_icon {
+  background: url("../img/icons/header/phone.png") left no-repeat;
+}
+@media (max-width: 1192px) {
+  .header .top-header .contacts-header_item_icon {
+    padding: 0 0 0 25px;
+  }
+}
+@media (max-width: 640px) {
+  .header .top-header .contacts-header_item_icon {
+    background: none;
+    padding: 0;
+  }
+}
 .header .top-header .contacts-header_label {
   font-size: 12px;
   font-weight: 300;
   color: #FFF;
+}
+@media (max-width: 640px) {
+  .header .top-header .contacts-header_label {
+    font-size: 0;
+  }
 }
 .header .top-header .contacts-header_phone {
   color: #FFF;
@@ -157,6 +194,16 @@ input:focus {
 @media (max-width: 1192px) {
   .header .top-header .contacts-header_phone {
     font-size: 16px;
+  }
+}
+@media (max-width: 640px) {
+  .header .top-header .contacts-header_phone {
+    font-size: 0;
+    background: url("../img/icons/header/phone.png") left no-repeat;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
   }
 }
 
@@ -412,12 +459,12 @@ input:focus {
   top: 50%;
   width: 14px;
   height: 14px;
-  transform: translate(0, -50%);
+  transform: translate(0, -50%) rotate(-90deg);
   background: url("../img/icons/sideMenu/arrows.png") 0 0 no-repeat;
 }
 @media (max-width: 991.98px) {
   .menu-page_parent .menu-page_link::after {
-    transform: translate(0, -50%) rotate(90deg);
+    transform: translate(0, -50%);
   }
 }
 .menu-page_parent._active .menu-page_submenu {
@@ -437,7 +484,7 @@ input:focus {
 }
 @media (max-width: 991.98px) {
   .menu-page_parent._active .menu-page_link::after {
-    transform: translate(0, -50%) rotate(-90deg);
+    transform: translate(0, -50%) rotate(180deg);
   }
 }
 .menu-page_link {

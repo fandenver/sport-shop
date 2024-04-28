@@ -65,3 +65,4 @@ export let _slideToggle = (target, duration = 500) => {
         }
     }
 }
+
