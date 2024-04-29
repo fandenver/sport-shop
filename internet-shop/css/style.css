@@ -121,13 +121,15 @@ input:focus {
 }
 @media (max-width: 991.98px) {
   .header .top-header .menu_body {
-    display: none;
+    transition: all 0.5s ease 0s;
+    visibility: hidden;
+    opacity: 0;
     position: fixed;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-    overflow: auto;
+    overflow: hidden;
     padding: 110px 20px 30px 20px;
     z-index: 11;
     background-color: #fff;
@@ -142,7 +144,8 @@ input:focus {
     background-color: #1ab9ce;
   }
   .header .top-header .menu_body._active {
-    display: block;
+    opacity: 1;
+    visibility: visible;
   }
 }
 .header .top-header .menu_list {
@@ -189,6 +192,8 @@ input:focus {
 @media (max-width: 991.98px) {
   .header .top-header .menu_link {
     color: #000;
+    font-size: 24px;
+    padding: 5px 0;
   }
 }
 .header .top-header .contacts-header {
@@ -224,10 +229,11 @@ input:focus {
 }
 .header .top-header .contacts-header_item_icon {
   background: url("../img/icons/header/phone.png") left no-repeat;
+  padding: 0 0 0 37px;
 }
 @media (max-width: 1192px) {
   .header .top-header .contacts-header_item_icon {
-    padding: 0 0 0 25px;
+    padding: 0 0 0 30px;
   }
 }
 @media (max-width: 640px) {
@@ -276,15 +282,18 @@ input:focus {
 }
 .bottom-header_column {
   flex: 0 1 calc(50% - 95px);
+  transition: all 0.3s ease 0s;
 }
 .bottom-header_column._active {
   display: block;
   z-index: 15;
-  margin-top: -7px;
+  opacity: 1;
+  visibility: visible;
 }
 @media (max-width: 640px) {
   .bottom-header_column {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
 }
 
@@ -298,12 +307,6 @@ input:focus {
 @media (max-width: 1180px) {
   .actions-header li {
     margin: 0 2.5423728814vw 0 0;
-  }
-}
-@media (max-width: 640px) {
-  .actions-header {
-    display: flex;
-    justify-content: space-between;
   }
 }
 .actions-header_item {
@@ -320,7 +323,7 @@ input:focus {
 }
 @media (max-width: 991.98px) {
   .actions-header_item {
-    padding: 0 0 0 0;
+    padding: 0 20px 0 0;
   }
 }
 @media (min-width: 991.98px) {
@@ -406,7 +409,7 @@ input:focus {
   border-radius: 20px;
   background-color: #f68038;
   position: absolute;
-  right: 0;
+  left: 12px;
   top: -3px;
   line-height: 25px;
   color: #ffffff;
@@ -415,12 +418,15 @@ input:focus {
 }
 @media (min-width: 1200px) {
   .info-header_cart span {
-    transform: translate(60%, 0);
+    transform: translate(10%, 0);
   }
 }
 
 .page {
   flex: 1 1 auto;
+}
+.page._active {
+  display: none;
 }
 @media (min-width: 991.98px) {
   .page_container {

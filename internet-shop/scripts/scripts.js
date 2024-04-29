@@ -63,9 +63,11 @@ for (let index = 0; index < checkboxCategories.length; index++) {
 
 // Бургер меню
 const iconMenu = document.querySelector('.icon-menu');
+const pageContent = document.querySelector('.page')
 
 iconMenu.addEventListener('click', () => {
     iconMenu.classList.toggle('_active');
+    pageContent.classList.toggle('_active');
 });
 
 const mainMenu = document.querySelector('.menu-page_burger');
@@ -75,9 +77,13 @@ mainMenu.addEventListener('click', () => {
 });
 
 const headerBurgerMenu = document.querySelector('.menu_body');
+let infoHeaderCallBack = document.querySelector('.info-header_callback');
+let infoHeaderEmail = document.querySelector('.actions-header_email');
 
 iconMenu.addEventListener('click', () => {
     headerBurgerMenu.classList.toggle('_active');
+    infoHeaderCallBack.style.display = 'none';
+    infoHeaderEmail.style.display = 'none';
 
     const bottomHeaderColumns = document.querySelectorAll('.bottom-header_column');
 
