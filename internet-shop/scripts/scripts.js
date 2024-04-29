@@ -60,3 +60,33 @@ for (let index = 0; index < checkboxCategories.length; index++) {
         }
     )
 }
+
+// Бургер меню
+const iconMenu = document.querySelector('.icon-menu');
+
+iconMenu.addEventListener('click', () => {
+    iconMenu.classList.toggle('_active');
+});
+
+const mainMenu = document.querySelector('.menu-page_burger');
+
+mainMenu.addEventListener('click', () => {
+    mainMenu.classList.toggle('_active');
+});
+
+const headerBurgerMenu = document.querySelector('.menu_body');
+
+iconMenu.addEventListener('click', () => {
+    headerBurgerMenu.classList.toggle('_active');
+
+    const bottomHeaderColumns = document.querySelectorAll('.bottom-header_column');
+
+    if (window.innerWidth <= 640) {
+        for (let index = 0; index < bottomHeaderColumns.length; index++) {
+            let bottomHeaderColumn = bottomHeaderColumns[index];
+            bottomHeaderColumn.classList.toggle('_active');
+        }
+    }
+});
+
+

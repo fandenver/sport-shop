@@ -1,3 +1,47 @@
+@charset "UTF-8";
+.rub:after {
+  content: "₽";
+  font-size: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Roboto";
+}
+
+input:focus {
+  outline: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+._limit_container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
 .mainSlider_body {
   overflow: hidden;
 }
@@ -69,6 +113,12 @@
   text-transform: uppercase;
   line-height: 43px;
   margin: 0 0 53px 0;
+}
+@media (max-width: 479.98px) {
+  .content-mainSlider_title {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 .content-mainSlider_title span {
   font-size: inherit;
