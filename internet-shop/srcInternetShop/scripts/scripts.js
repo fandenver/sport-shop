@@ -1,6 +1,7 @@
 import {_slideToggle} from "./slider.js";
 import {isMobile} from "./isMobile.js";
 
+
 if (isMobile.any()) {
     const menuParents = document.querySelectorAll('.menu-page_parent a');
     for (let index = 0; index < menuParents.length; index++) {

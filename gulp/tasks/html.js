@@ -11,7 +11,9 @@ export const html = () => {
             })
         ))
         .pipe(fileInclude())
-        .pipe(app.plugins.replace(/img\//g, './../src/img/'))
+        .pipe(app.plugins.replace(/img\//g, '../../srcInternetShop/img/'))
+        .pipe(app.plugins.replace(/scss\//g, '../css/'))
+        .pipe(app.plugins.replace(/src="scripts\//g, 'src="../js/scripts/'))
         .pipe(app.plugins.if(
             app.isBuild,
             webpHtmlnoSvg()
