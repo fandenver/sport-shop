@@ -66,17 +66,17 @@ input:focus {
   margin: -40px 0 0 0;
   display: flex;
   justify-content: center;
+  gap: 33px;
   counter-reset: item;
 }
 .mainSlider_dots .swiper-pagination-bullet {
-  margin: 0 23px;
+  position: relative;
   cursor: pointer;
   width: 55px;
   height: 55px;
   border: 2px solid #fff;
   border-radius: 50%;
   overflow: hidden;
-  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -191,6 +191,20 @@ input:focus {
 }
 .text-mainSlider_text-3 {
   color: #979797;
+}
+
+.products-slider_header {
+  display: flex;
+  margin: 0 0 30px 0;
+}
+.products-slider_title {
+  flex: 1 1 auto;
+  color: #dadada;
+  font-family: Play, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
 }
 
 /*# sourceMappingURL=home.css.map */
