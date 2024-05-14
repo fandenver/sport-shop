@@ -45,6 +45,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+
       &::after {
         opacity: 0;
         transition: all 0.3s ease 0s;
@@ -83,7 +84,7 @@
     text-transform: uppercase;
     line-height: 43px;
     margin: 0 0 53px 0;
-    
+
     @media (max-width: $md4 + px) {
       font-size: 30px;
       line-height: 30px;
@@ -177,8 +178,11 @@
 .products-slider {
 
   &_header {
-    display: flex;
     margin: 0 0 30px 0;
+    
+    @media (min-width: $md3+px) {
+      display: flex;
+    }
   }
 
   &_title {
@@ -189,5 +193,63 @@
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 0.75px;
+
+    @media (max-width: $md3+px) {
+      margin: 0 0 15px 0;
+    }
   }
+
+  &_control {
+    display: inline-flex;
+  }
+
+  &_arrow {
+    background: url("../img/icons/productsSlider/blueArrow.png") 0 0 no-repeat;
+    width: 83px;
+    height: 50px;
+    cursor: pointer;
+
+    @media (min-width: $md2+px) {
+      &:hover {
+        background: url("../img/icons/productsSlider/orangeArrow.png") 0 0 no-repeat;
+      }
+    }
+
+    &_prev {
+      transform: rotate(-180deg);
+      transition: all 0.3s ease 0s;
+
+      @media (min-width: $md2+px) {
+        &:hover {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    &_next {
+      transition: all 0.3s ease 0s;
+      @media (min-width: $md2+px) {
+        &:hover {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+
+  &_info {
+    //padding: 0 20px;
+    color: #999999;
+    font-weight: 500;
+    text-align: center;
+
+    .swiper-pagination-current {
+      color: #333333;
+      font-size: 39px;
+      font-weight: 900;
+    }
+  }
+}
+
+.swiper-pagination-fraction {
+  width: 30% !important;
 }

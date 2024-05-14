@@ -84,12 +84,13 @@ if (document.querySelector('.products-slider')) {
         observeParents: true,
         slidesPerView: 1,
         spaceBetween: 0,
+        autoHeight: true,
         speed: 800,
         loop: true,
-        // pagination: {
-        //     el: '.mainSlider_dots',
-        //     clickable: true
-        // },
+        pagination: {
+            el: '.products-slider_info',
+            type: 'fraction'
+        },
         // Arrows
         navigation: {
             nextEl: '.products-slider_arrow_next',
