@@ -42,6 +42,38 @@ input:focus {
   flex: 1 1 auto;
 }
 
+._arrow {
+  background: url("../img/icons/productsSlider/blueArrow.png") 0 0 no-repeat;
+  width: 83px;
+  height: 50px;
+  cursor: pointer;
+}
+@media (min-width: 991.98px) {
+  ._arrow:hover {
+    background: url("../img/icons/productsSlider/orangeArrow.png") 0 0 no-repeat;
+  }
+}
+
+._arrow_prev {
+  transform: rotate(-180deg) translate(0, 5px);
+  transition: all 0.3s ease 0s;
+}
+@media (min-width: 991.98px) {
+  ._arrow_prev:hover {
+    transform: rotate(-180deg) translate(0, 5px);
+  }
+}
+
+._arrow_next {
+  transition: all 0.3s ease 0s;
+  transform: translate(0, -5px);
+}
+@media (min-width: 991.98px) {
+  ._arrow_next:hover {
+    transform: rotate(0deg) translate(0, -5px);
+  }
+}
+
 .header .color_width {
   background-color: #1ab9ce;
 }
@@ -428,6 +460,9 @@ input:focus {
 .page._active {
   display: none;
 }
+.page_container {
+  padding: 0 0 20px 0;
+}
 @media (min-width: 991.98px) {
   .page_container {
     display: flex;
@@ -804,7 +839,7 @@ input:focus {
   top: 0;
   left: 0;
   transition: 0.3s ease 0s;
-  transform: translate(-100%, 0);
+  transform: translate(-110%, 0);
 }
 @media (min-width: 991.98px) {
   .item-product:hover .item-product_hover {

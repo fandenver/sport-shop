@@ -105,6 +105,33 @@ if (document.querySelector('.products-slider')) {
 }
 
 
+if (document.querySelector('.brands-slider')) {
+    let brandsSlider = new Swiper('.brands-slider_body', {
+        observer: true,
+        observeParents: true,
+        slidesPerView: 5,
+        spaceBetween: 30,
+        // autoHeight: true,
+        speed: 800,
+        loop: true,
+        // pagination: {
+        //     el: '.products-slider_info',
+        //     type: 'fraction'
+        // },
+        // Arrows
+        navigation: {
+            nextEl: '.brands-slider_arrow_next',
+            prevEl: '.brands-slider_arrow_prev'
+        },
+        // on: {
+        //     lazyImageReady: function () {
+        //         ibg();
+        //     }
+        // }
+    });
+}
+
+
 
 
 

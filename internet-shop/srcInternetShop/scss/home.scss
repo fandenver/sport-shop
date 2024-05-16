@@ -33,6 +33,10 @@
     gap: 33px;
     counter-reset: item;
 
+    @media (max-width: $md3+px) {
+      gap: 9px
+    }
+
     .swiper-pagination-bullet {
       position: relative;
       //margin: 0 23px;
@@ -179,7 +183,7 @@
 
   &_header {
     margin: 0 0 30px 0;
-    
+
     @media (min-width: $md3+px) {
       display: flex;
     }
@@ -204,35 +208,11 @@
   }
 
   &_arrow {
-    background: url("../img/icons/productsSlider/blueArrow.png") 0 0 no-repeat;
-    width: 83px;
-    height: 50px;
-    cursor: pointer;
-
-    @media (min-width: $md2+px) {
-      &:hover {
-        background: url("../img/icons/productsSlider/orangeArrow.png") 0 0 no-repeat;
-      }
-    }
 
     &_prev {
-      transform: rotate(-180deg);
-      transition: all 0.3s ease 0s;
-
-      @media (min-width: $md2+px) {
-        &:hover {
-          transform: rotate(-180deg);
-        }
-      }
     }
 
     &_next {
-      transition: all 0.3s ease 0s;
-      @media (min-width: $md2+px) {
-        &:hover {
-          transform: rotate(0deg);
-        }
-      }
     }
   }
 
@@ -244,7 +224,7 @@
 
     .swiper-pagination-current {
       color: #333333;
-      font-size: 39px;
+      font-size: 30px;
       font-weight: 900;
     }
   }
@@ -252,4 +232,50 @@
 
 .swiper-pagination-fraction {
   width: 30% !important;
+}
+
+.brands-slider {
+  border-top: 3px dashed #dadada;
+  border-bottom: 3px dashed #dadada;
+  padding: 25px 0;
+
+  &_container {
+    position: relative;
+  }
+
+  &_body {
+    width: 88%;
+    overflow: hidden;
+    padding: 0 70px;
+  }
+
+  &_slide {
+    padding: 0 10px;
+
+    img {
+      @extend %grayStyle;
+      max-width: 100%;
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+
+      &:hover {
+        @extend %grayStyleOff;
+      }
+    }
+  }
+
+  &_arrow {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    margin: -15px 0 0 0;
+
+    &_prev {
+      left: 0;
+    }
+
+    &_next {
+      right: 0;
+    }
+  }
 }

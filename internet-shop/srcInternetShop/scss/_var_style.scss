@@ -56,6 +56,56 @@ input:focus {
   flex: 1 1 auto;
 }
 
+._arrow {
+  background: url("../img/icons/productsSlider/blueArrow.png") 0 0 no-repeat;
+  width: 83px;
+  height: 50px;
+  cursor: pointer;
+
+  @media (min-width: $md2+px) {
+    &:hover {
+      background: url("../img/icons/productsSlider/orangeArrow.png") 0 0 no-repeat;
+    }
+  }
+}
+
+._arrow_prev {
+  transform: rotate(-180deg) translate(0, 5px);
+  transition: all 0.3s ease 0s;
+
+  @media (min-width: $md2+px) {
+    &:hover {
+      transform: rotate(-180deg) translate(0, 5px);
+    }
+  }
+}
+
+._arrow_next {
+  transition: all 0.3s ease 0s;
+  transform: translate(0, -5px);
+
+  @media (min-width: $md2+px) {
+    &:hover {
+      transform: rotate(0deg) translate(0, -5px);
+    }
+  }
+}
+
+%grayStyle {
+  transition: all 0.3s ease 0s;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+}
+
+%grayStyleOff {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  -o-filter: grayscale(0);
+}
+
 // Бургер меню заготовка
 //   .icon-menu {
 //      display: none;
