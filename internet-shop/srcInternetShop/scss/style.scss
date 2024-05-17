@@ -315,7 +315,22 @@
   }
 
   &_login {
-    //background: url('') left no-repeat;
+    //background: url('../img/icons/header/key.png') left no-repeat;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background: url("../img/icons/header/key.png") 0 0 no-repeat;
+      width: 32px;
+      height: 30px;
+      transform: translate(-67px, -5px);
+      opacity: 0.5;
+
+      @media (max-width: $md2+px) {
+        display: none;
+      }
+    }
 
     span {
       border-bottom: 1px dotted;
@@ -327,7 +342,20 @@
   }
 
   &_reg {
-    //background: url('') left no-repeat;
+    //background: url('../img/icons/header/head.png') left no-repeat;
+    &::after {
+      position: absolute;
+      content: "";
+      background: url("../img/icons/header/head.png") 0 0 no-repeat;
+      width: 32px;
+      height: 30px;
+      transform: translate(-117px, -5px);
+      opacity: 0.5;
+
+      @media (max-width: $md2+px) {
+        display: none;
+      }
+    }
 
     span {
       border-bottom: 1px dotted;
@@ -337,6 +365,20 @@
   &_email {
     line-height: 13px;
     //background: url('') left no-repeat;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background: url("../img/icons/header/message.png") 0 0 no-repeat;
+      width: 32px;
+      height: 30px;
+      transform: translate(-147px, -5px);
+      opacity: 0.6;
+
+      @media (max-width: $md2+px) {
+        display: none;
+      }
+    }
 
     span {
       border-bottom: 1px solid;
@@ -369,6 +411,20 @@
     padding: 0 0 0 32px;
     white-space: nowrap;
 
+    &::after {
+      position: absolute;
+      content: "";
+      background: url("../img/icons/header/phone-gray.png") 0 0 no-repeat;
+      width: 32px;
+      height: 30px;
+      transform: translate(-148px, -5px);
+      opacity: 0.6;
+
+      @media (max-width: $md2+px) {
+        display: none;
+      }
+    }
+
     span {
       border-bottom: 1px dotted;
     }
@@ -386,12 +442,26 @@
     color: #999999;
     white-space: nowrap;
 
+    &::after {
+      position: absolute;
+      content: "";
+      background: url("../img/icons/header/calendar.png") 0 0 no-repeat;
+      width: 32px;
+      height: 30px;
+      transform: translate(-40px, -35px);
+      opacity: 0.6;
+
+      @media (max-width: $md2+px) {
+        display: none;
+      }
+    }
+
     span {
       font-weight: 900;
     }
 
     @media (max-width: $md1+px) {
-      padding: 0;
+      padding: 0 15px;
     }
 
     @media (max-width: $md2+px) {
@@ -497,10 +567,14 @@
   }
 
   &_brands {
+    margin: 0 0 32px 0;
+  }
+
+  &_text {
   }
 }
 
-.products-slider_item{
+.products-slider_item {
   overflow: hidden;
 }
 
@@ -676,12 +750,6 @@
   @media (max-width: $md2+px) {
     background-color: #fff;
   }
-  //width: 100%;
-  //border-left: 0;
-  //position: absolute;
-  //top: 0;
-  //left: 100%;
-  //height: 100%;
 
   @media (max-width: md2+px) {
     background-color: #fff;
@@ -750,7 +818,7 @@
     flex: 0 1 33.333%;
     padding: 0 15px;
     margin: 0 0 30px 0;
-    
+
     @media (max-width: $md1+px) and (min-width: $md2+px) {
       flex: 0 1 50%;
     }
@@ -893,6 +961,7 @@
       .item-product_hover {
         transform: translate(0, 0);
       }
+
       .item-product_title,
       .item-product_footer {
         // todo: баг с исчезанием футеры из бокового меню

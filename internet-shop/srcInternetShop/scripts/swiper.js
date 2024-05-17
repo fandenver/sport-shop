@@ -110,7 +110,7 @@ if (document.querySelector('.brands-slider')) {
         observer: true,
         observeParents: true,
         slidesPerView: 5,
-        spaceBetween: 30,
+        // spaceBetween: 30,
         // autoHeight: true,
         speed: 800,
         loop: true,
@@ -128,6 +128,23 @@ if (document.querySelector('.brands-slider')) {
         //         ibg();
         //     }
         // }
+        breakpoints: {
+            320: {
+                slidesPerView: 1
+            },
+            480: {
+                slidesPerView: 2
+            },
+            600: {
+                slidesPerView: 3
+            },
+            768: {
+                slidesPerView: 4
+            },
+            992: {
+                slidesPerView: 5
+            }
+        }
     });
 }
 

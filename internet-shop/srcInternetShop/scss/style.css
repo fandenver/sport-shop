@@ -363,14 +363,59 @@ input:focus {
     color: #1ab9ce;
   }
 }
+.actions-header_login {
+  position: relative;
+}
+.actions-header_login::after {
+  position: absolute;
+  content: "";
+  background: url("../img/icons/header/key.png") 0 0 no-repeat;
+  width: 32px;
+  height: 30px;
+  transform: translate(-67px, -5px);
+  opacity: 0.5;
+}
+@media (max-width: 991.98px) {
+  .actions-header_login::after {
+    display: none;
+  }
+}
 .actions-header_login span {
   border-bottom: 1px dotted;
+}
+.actions-header_reg::after {
+  position: absolute;
+  content: "";
+  background: url("../img/icons/header/head.png") 0 0 no-repeat;
+  width: 32px;
+  height: 30px;
+  transform: translate(-117px, -5px);
+  opacity: 0.5;
+}
+@media (max-width: 991.98px) {
+  .actions-header_reg::after {
+    display: none;
+  }
 }
 .actions-header_reg span {
   border-bottom: 1px dotted;
 }
 .actions-header_email {
   line-height: 13px;
+}
+.actions-header_email::after {
+  position: absolute;
+  content: "";
+  background: url("../img/icons/header/message.png") 0 0 no-repeat;
+  width: 32px;
+  height: 30px;
+  transform: translate(-147px, -5px);
+  opacity: 0.6;
+}
+@media (max-width: 991.98px) {
+  .actions-header_email::after {
+    display: none;
+  }
 }
 .actions-header_email span {
   border-bottom: 1px solid;
@@ -400,6 +445,20 @@ input:focus {
   padding: 0 0 0 32px;
   white-space: nowrap;
 }
+.info-header_callback::after {
+  position: absolute;
+  content: "";
+  background: url("../img/icons/header/phone-gray.png") 0 0 no-repeat;
+  width: 32px;
+  height: 30px;
+  transform: translate(-148px, -5px);
+  opacity: 0.6;
+}
+@media (max-width: 991.98px) {
+  .info-header_callback::after {
+    display: none;
+  }
+}
 .info-header_callback span {
   border-bottom: 1px dotted;
 }
@@ -414,12 +473,26 @@ input:focus {
   color: #999999;
   white-space: nowrap;
 }
+.info-header_schedule::after {
+  position: absolute;
+  content: "";
+  background: url("../img/icons/header/calendar.png") 0 0 no-repeat;
+  width: 32px;
+  height: 30px;
+  transform: translate(-40px, -35px);
+  opacity: 0.6;
+}
+@media (max-width: 991.98px) {
+  .info-header_schedule::after {
+    display: none;
+  }
+}
 .info-header_schedule span {
   font-weight: 900;
 }
 @media (max-width: 1192px) {
   .info-header_schedule {
-    padding: 0;
+    padding: 0 15px;
   }
 }
 @media (max-width: 991.98px) {
@@ -501,6 +574,9 @@ input:focus {
     min-width: 0;
     padding: 0 0 0 30px;
   }
+}
+.page_brands {
+  margin: 0 0 32px 0;
 }
 .products-slider_item {
   overflow: hidden;
