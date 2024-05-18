@@ -298,13 +298,27 @@
 
 .text-block {
 
+  &_container {
+    @media (max-width: $md2+px) {
+      padding: 0;
+    }
+
+    @media (max-width: $md3+px) {
+      padding: 0;
+    }
+  }
+
   &_body {
-    padding: 45px 30px;
+    padding: 45px 35px;
     background-color: #1ab9ce;
+
+    @media (max-width: $md2+px) {
+      padding: 25px 20px 15px 20px;
+    }
   }
 
   &_title {
-    color: #0c7d88;
+    color: #068292;
     font-family: Play, sans-serif;
     font-size: 30px;
     text-transform: uppercase;
@@ -313,14 +327,20 @@
   }
 
   &_row {
-    display: flex;
-    margin: 0 -30px;
+    @media (min-width: $md2+px) {
+      display: flex;
+      margin: 0 -30px;
+    }
   }
 
   &_column {
-    padding: 0 30px;
-    flex: 0 1 50%;
     color: #FFFFFF;
+    position: relative;
+    margin: 0 0 30px 0;
+    @media (min-width: $md2+px) {
+      padding: 0 30px;
+      flex: 0 1 50%;
+    }
 
     p {
       font-size: 12px;
@@ -345,15 +365,41 @@
       font-size: 12px;
       line-height: 20px;
       letter-spacing: 0.3px;
+      margin: 0 0 5px 0;
+
+      &:last-child {
+        margin: 0 0 0 0;
+      }
 
       &::before {
         content: "";
         display: inline-block;
         width: 11px;
         height: 11px;
-        background: url("../img/icons/sideMenu/arrows.png") left no-repeat;
+        margin: 2px 17px 0 7px;
+        background: url("../img/textBlock/arrows-11x11.png") left no-repeat;
         transform: rotate(-90deg);
       }
+
+      @media (max-width: $md1+px) {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &_image {
+    position: absolute;
+    right: 0;
+    bottom: -220px;
+
+    @media (max-width: $md1+px) {
+      display: none;
+    }
+
+    img {
+      width: 280px;
     }
   }
 }

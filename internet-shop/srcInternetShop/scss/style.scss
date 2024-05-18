@@ -318,13 +318,13 @@
     //background: url('../img/icons/header/key.png') left no-repeat;
     position: relative;
 
-    &::after {
+    &::before {
       position: absolute;
       content: "";
       background: url("../img/icons/header/key.png") 0 0 no-repeat;
       width: 32px;
       height: 30px;
-      transform: translate(-67px, -5px);
+      transform: translate(-35px, -5px);
       opacity: 0.5;
 
       @media (max-width: $md2+px) {
@@ -342,14 +342,13 @@
   }
 
   &_reg {
-    //background: url('../img/icons/header/head.png') left no-repeat;
-    &::after {
+    &::before {
       position: absolute;
       content: "";
       background: url("../img/icons/header/head.png") 0 0 no-repeat;
       width: 32px;
       height: 30px;
-      transform: translate(-117px, -5px);
+      transform: translate(-30px, -5px);
       opacity: 0.5;
 
       @media (max-width: $md2+px) {
@@ -364,15 +363,14 @@
 
   &_email {
     line-height: 13px;
-    //background: url('') left no-repeat;
 
-    &::after {
+    &::before {
       position: absolute;
       content: "";
       background: url("../img/icons/header/message.png") 0 0 no-repeat;
       width: 32px;
       height: 30px;
-      transform: translate(-147px, -5px);
+      transform: translate(-33px, -5px);
       opacity: 0.6;
 
       @media (max-width: $md2+px) {
@@ -411,13 +409,13 @@
     padding: 0 0 0 32px;
     white-space: nowrap;
 
-    &::after {
+    &::before {
       position: absolute;
       content: "";
       background: url("../img/icons/header/phone-gray.png") 0 0 no-repeat;
       width: 32px;
       height: 30px;
-      transform: translate(-148px, -5px);
+      transform: translate(-30px, -5px);
       opacity: 0.6;
 
       @media (max-width: $md2+px) {
@@ -442,13 +440,13 @@
     color: #999999;
     white-space: nowrap;
 
-    &::after {
+    &::before {
       position: absolute;
       content: "";
       background: url("../img/icons/header/calendar.png") 0 0 no-repeat;
       width: 32px;
       height: 30px;
-      transform: translate(-40px, -35px);
+      transform: translate(-40px, 0);
       opacity: 0.6;
 
       @media (max-width: $md2+px) {
@@ -571,6 +569,11 @@
   }
 
   &_text {
+    margin: 0 0 38px 0;
+  }
+
+  &_info-menu {
+
   }
 }
 
@@ -1433,4 +1436,76 @@
   }
 }
 
-// Адаптивная верстка интернет-магазина с нуля. Часть #3. GULP SCSS JS, 1:34:18
+.info-menu {
+  border-top: 3px dashed #dadada;
+  border-bottom: 3px dashed #dadada;
+  padding: 10px 0;
+
+  &_body {
+    display: inline-block;
+
+    @media (max-width: $md3+px) {
+      display: flex;
+    }
+  }
+
+  &_line {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    border-bottom: 1px solid #b0b0b0;
+
+    &:last-child {
+      border: 0;
+    }
+
+    @media (max-width: $md3+px) {
+      display: block;
+      flex: 0 1 50%;
+      border: 0;
+    }
+  }
+
+  &_label {
+    color: #333333;
+    font-weight: 900;
+    margin: 0 35px 0 0;
+
+    @media (max-width: $md3+px) {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &_list {
+    @media (min-width: $md3+px) {
+      display: flex;
+      align-items: center;
+    }
+
+    li {
+      margin: 0 30px 0 0;
+
+      @media (max-width: $md3+px) {
+        margin: 0 0 10px 0;
+
+        &:last-child {
+          margin: 0 0 0 0;
+        }
+      }
+    }
+  }
+
+  &_link {
+    color: #1ab9ce;
+    font-size: 12px;
+    font-weight: 300;
+    transition: all 0.3s ease 0s;
+    @media (min-width: $md2+px) {
+      &:hover {
+        color: #333333;
+      }
+    }
+  }
+}
+
+// Адаптивная верстка интернет-магазина с нуля. Часть #3. GULP SCSS JS, 2:27:30

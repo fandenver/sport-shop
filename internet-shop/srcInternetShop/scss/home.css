@@ -334,26 +334,49 @@ input:focus {
   right: 0;
 }
 
+@media (max-width: 991.98px) {
+  .text-block_container {
+    padding: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .text-block_container {
+    padding: 0;
+  }
+}
 .text-block_body {
-  padding: 45px 30px;
+  padding: 45px 35px;
   background-color: #1ab9ce;
 }
+@media (max-width: 991.98px) {
+  .text-block_body {
+    padding: 25px 20px 15px 20px;
+  }
+}
 .text-block_title {
-  color: #0c7d88;
+  color: #068292;
   font-family: Play, sans-serif;
   font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 0.75px;
   margin: 0 0 28px 0;
 }
-.text-block_row {
-  display: flex;
-  margin: 0 -30px;
+@media (min-width: 991.98px) {
+  .text-block_row {
+    display: flex;
+    margin: 0 -30px;
+  }
 }
 .text-block_column {
-  padding: 0 30px;
-  flex: 0 1 50%;
   color: #FFFFFF;
+  position: relative;
+  margin: 0 0 30px 0;
+}
+@media (min-width: 991.98px) {
+  .text-block_column {
+    padding: 0 30px;
+    flex: 0 1 50%;
+  }
 }
 .text-block_column p {
   font-size: 12px;
@@ -373,14 +396,37 @@ input:focus {
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 0.3px;
+  margin: 0 0 5px 0;
+}
+.text-block_list li:last-child {
+  margin: 0 0 0 0;
 }
 .text-block_list li::before {
   content: "";
   display: inline-block;
   width: 11px;
   height: 11px;
-  background: url("../img/icons/sideMenu/arrows.png") left no-repeat;
+  margin: 2px 17px 0 7px;
+  background: url("../img/textBlock/arrows-11x11.png") left no-repeat;
   transform: rotate(-90deg);
+}
+@media (max-width: 1192px) {
+  .text-block_list li br {
+    display: none;
+  }
+}
+.text-block_image {
+  position: absolute;
+  right: 0;
+  bottom: -220px;
+}
+@media (max-width: 1192px) {
+  .text-block_image {
+    display: none;
+  }
+}
+.text-block_image img {
+  width: 280px;
 }
 
 /*# sourceMappingURL=home.css.map */
