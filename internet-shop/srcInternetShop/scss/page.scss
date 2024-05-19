@@ -1,6 +1,4 @@
-@import "var_style";
-@import "home";
-@import "footer";
+@import "var";
 
 .header {
   .color_width {
@@ -8,7 +6,6 @@
   }
 
   .top-header {
-
     &_contacts {
       position: relative;
       z-index: 15;
@@ -751,7 +748,7 @@
 }
 
 .submenu-page {
-  @media (max-width: $md2+px) {
+  @media (max-width: $md2 + px) {
     background-color: #fff;
   }
 
@@ -968,7 +965,6 @@
 
       .item-product_title,
       .item-product_footer {
-        // todo: баг с исчезанием футеры из бокового меню
         opacity: 0;
       }
     }
@@ -1510,4 +1506,4 @@
 }
 
 // Баг с исчезновением товара в выпадающей боковой карточке
-// Адаптивная верстка интернет-магазина с нуля. Часть #3. GULP SCSS JS, 2:27:30
+// Адаптивная верстка интернет-магазина с нуля. Часть #4. GULP SCSS JS, 0:00:00

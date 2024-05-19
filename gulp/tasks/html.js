@@ -12,7 +12,7 @@ export const html = () => {
         ))
         .pipe(fileInclude())
         .pipe(app.plugins.replace(/img\//g, '../../srcInternetShop/img/'))
-        .pipe(app.plugins.replace(/scss\//g, '../../srcInternetShop/scss/'))
+        .pipe(app.plugins.replace(/scss\//g, '../css/'))
         .pipe(app.plugins.replace(/src="scripts\//g, 'src="../../srcInternetShop/scripts/'))
         .pipe(app.plugins.if(
             app.isBuild,
