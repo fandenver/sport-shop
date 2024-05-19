@@ -1,5 +1,6 @@
 @import "var_style";
-//@import "home";
+@import "home";
+@import "footer";
 
 .header {
   .color_width {
@@ -573,7 +574,7 @@
   }
 
   &_info-menu {
-
+    margin: 0 0 38px 0;
   }
 }
 
@@ -1508,4 +1509,5 @@
   }
 }
 
+// Баг с исчезновением товара в выпадающей боковой карточке
 // Адаптивная верстка интернет-магазина с нуля. Часть #3. GULP SCSS JS, 2:27:30
