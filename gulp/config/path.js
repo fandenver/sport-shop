@@ -14,7 +14,7 @@ export const path = {
         files: `internet-shop/${buildFolder}/files/`,
     },
     src: {
-        js: `internet-shop/${srcFolder}/**/*.js`,
+        js: `internet-shop/${srcFolder}/scripts/scripts.js`,
         images: `internet-shop/${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
         svg: `internet-shop/${srcFolder}/img/**/*.svg`,
         scss: `internet-shop/${srcFolder}/scss/**/*.scss`,

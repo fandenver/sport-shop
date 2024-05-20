@@ -41,6 +41,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "nouislider": "^15.7.2",
     "swiper": "^11.1.1"
   },
   "baseUrl": ".",

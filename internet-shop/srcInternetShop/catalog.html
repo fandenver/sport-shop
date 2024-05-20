@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My shop</title>
+    <title>Каталог</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap"
@@ -11,6 +11,7 @@
     <link href="scss/home.css" rel="stylesheet">
     <link href="scss/footer.css" rel="stylesheet">
     <link href="scss/common_style.css" rel="stylesheet">
+    <link href="scss/catalog.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
@@ -188,57 +189,16 @@
                         </div>
                     </div>
                 </nav>
-                <div class="pag_content-side-top">
-                    <div class="page_news-side news-side">
-                        <a href="#" class="news-side_title side-title">Новости</a>
-                        <div class="new-side_items">
-                            <div class="news-side_item">
-                                <a href="#" class="news-side_label">Снижение цен на игровые площадки Jungle Gym</a>
-                                <div class="news-side_body">
-                                    <div class="news-side_data"><span>12</span>авг</div>
-                                    <div class="news-side_text">Уважаемые покупатели! Мы рады сообщить вам о снижении
-                                        цены с
-                                        27 июля на детский игровой комплекс
-                                    </div>
+                <div class="filter">
+                    <div class="filter_title">Фильтр товаров</div>
+                    <div class="filter_body">
+                        <div class="filter_section section-filter">
+                            <div class="section-filter_title">Цена (руб.):</div>
+                            <div class="section-filter_body">
+                                <div class="price-filter">
+
                                 </div>
                             </div>
-                            <div class="news-side_item">
-                                <a href="#" class="news-side_label">Поступление батутов Eclipse!</a>
-                                <div class="news-side_body">
-                                    <div class="news-side_data"><span>19</span>авг</div>
-                                    <div class="news-side_text">Уважаемые покупатели! Мы рады сообщить вам о снижении
-                                        цены с
-                                        27 июля на детский игровой комплекс
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="page_reviews-side reviews-side">
-                        <a href="#" class="reviews-side_title side-title">Отзывы</a>
-                        <div class="reviews-side_items">
-                            <a href="#" class="reviews-side_item">
-                                <div class="reviews-side_header">
-                                    <div class="reviews-side_user">Павел Никифоров</div>
-                                    <div class="reviews-side_data">15.07.2023</div>
-                                </div>
-                                <div class="reviews-side_body">
-                                    Ради экономии места в тренажерном зале приобрел многофункциональный силовой тренажер
-                                    Life Gear. За такую небольшую стоимость и с такими возможностями, он просто не
-                                    заменим.
-                                </div>
-                            </a>
-                            <a href="#" class="reviews-side_item">
-                                <div class="reviews-side_header">
-                                    <div class="reviews-side_user">Степан Николаевич</div>
-                                    <div class="reviews-side_data">15.07.2023</div>
-                                </div>
-                                <div class="reviews-side_body">
-                                    Спасибо за прекрасный совет, велосипед всей семье понравился и цену за него
-                                    достойную
-                                    запросили.
-                                </div>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -1146,162 +1106,6 @@
                 </div>
             </div>
         </div>
-        <div class="page_brands brands-slider">
-            <div class="brands-slider_container _limit_container">
-                <div class="brands-slider_body _swiper">
-                    <div class="brands-slider_slide">
-                        <img src="img/company-logo/01.png" alt="logo">
-                    </div>
-                    <div class="brands-slider_slide">
-                        <img src="img/company-logo/02.png" alt="logo">
-                    </div>
-                    <div class="brands-slider_slide">
-                        <img src="img/company-logo/03.png" alt="logo">
-                    </div>
-                    <div class="brands-slider_slide">
-                        <img src="img/company-logo/04.png" alt="logo">
-                    </div>
-                    <div class="brands-slider_slide">
-                        <img src="img/company-logo/05.png" alt="logo">
-                    </div>
-                    <div class="brands-slider_slide">
-                        <img src="img/company-logo/03.png" alt="logo">
-                    </div>
-                    <div class="brands-slider_slide">
-                        <img src="img/company-logo/02.png" alt="logo">
-                    </div>
-                    <div class="brands-slider_slide">
-                        <img src="img/company-logo/01.png" alt="logo">
-                    </div>
-                    <div class="brands-slider_slide">
-                        <img src="img/company-logo/05.png" alt="logo">
-                    </div>
-                    <div class="brands-slider_slide">
-                        <img src="img/company-logo/04.png" alt="logo">
-                    </div>
-                </div>
-                <div class="brands-slider_arrows">
-                    <div class="brands-slider_arrow brands-slider_arrow_prev _arrow _arrow_prev"></div>
-                    <div class="brands-slider_arrow brands-slider_arrow_next _arrow _arrow_next"></div>
-                </div>
-            </div>
-        </div>
-        <section class="page_text text-block">
-            <div class="text-block_container _limit_container">
-                <div class="text-block_body">
-                    <h1 class="text-block_title">О компании</h1>
-                    <div class="text-block_row">
-                        <div class="text-block_column">
-                            <p>
-                                Кампания "ClEAR FIT" была организована для создания и реализации качественного и
-                                надежного
-                                спортивного
-                                оборудования для домашнего и легкого коммерческого использования. Дефицит качественных
-                                тренажеров в
-                                среднем ценовом сегменте повлек за собой не мотивированный рост цена на надежное
-                                оборудование,
-                                создав
-                                дополнительный сегмент "полу-коммерческих" тренажеров, что приблизило их стоимость к
-                                профессиональному оборудованию.
-                                А заполнение среднего ценового сегмента сложилось из роста количества брендов и
-                                производителей
-                                недорогих
-                                тренажеров с невысокими техническими характеристиками, за счет увеличения количества
-                                дополнительных опций.
-                                Главным критерием для выпуска продукции с маркой "CLEAR FIT" являются: высокое качество,
-                                разумная цена и комфорт тренировок.
-                                Осуществить эту непростую задачу позволил тандем европейских разработок и размещение
-                                основного
-                                производства в Тайване.
-                                Узкая специализация на кардио-тренажеры для дома позволяет поддерживать высокий контроль
-                                качества на всех ступенях
-                                производства.
-                            </p>
-                            <p>
-                                Разумный показатель "цена/качество" среди предлагаемых разными компаниями спортивных
-                                тренажеров
-                                в последние годы - довольно редкое явление. Мы достаточно кропотливо потрудились над
-                                тренажерами
-                                CLEAR FIT,
-                                чтобы продемонстрировать новых подход к выпуску доступной, красивой и надежной
-                                продукции.
-                                Современные технологии
-                                обеспечивают комфорт и легкость управления тренажерами CLEAR FIT. Многочисленные отзывы
-                                от
-                                наших
-                                покупателей поступили и продолжают поступать feedbacks от конечных потребителей. И
-                                теперь мы
-                                с
-                                гордостью можем заявить, что учли многие Ваши пожелания предложения в обновленных
-                                версиях
-                                тренажеров CLEAR FIT.
-                                Мы рады представить Вам новое удобное поколение наших тренажеров. Теперь оборудование
-                                стало
-                                не
-                                только "умнее",
-                                удобнее, комфортнее, но и сохранило прежние показатели цены, оставаясь доступным
-                                спортивным
-                                оборудованием
-                                для тех, кто ценит качество.
-                            </p>
-                        </div>
-                        <div class="text-block_column">
-                            <h2 class="text-block_label">Концепция CLEAR FIT строится на следующих тезисах:</h2>
-                            <ul class="text-block_list">
-                                <li>Спортивное оборудование для дома не отличается по эффективности и безопасности от
-                                    профессионального
-                                    оборудования - от пользователя не требуется специальная подготовка и первичные
-                                    навыки,
-                                    наличие
-                                    индивидуального профессионального тренера, соответственно требует более тщательного
-                                    контроля.
-                                </li>
-                                <li>Тренажеры CLEAR FIT просты в управлении, легко адаптируются под индивидуальные
-                                    особенности
-                                    пользователя,
-                                    эффективны и безопасны, рассчитаны на самостоятельные тренировки.
-                                    Основное требование к тренажерам под маркой "CLEAR FIT" высокое качество по разумной
-                                    стоимости -
-                                    сохранить это равновесие основная задача профессионалов из всех областей
-                                    производства
-                                    CLEAR
-                                    FIT.
-                                </li>
-                                <li>Мир не стоит на месте - каждое поколение соответствует современным технологиям.
-                                    Продукция
-                                    CLEAR FIT
-                                    производится с четом новейших разработок по современной технологии, совершенствуя и
-                                    улучшая
-                                    популярные серии
-                                    оборудования и создавая принципиально новые актуальные модели.
-                                </li>
-                                <li>Прежде всего оборудование CLEAR FIT ориентировано на<br> конечного пользователя -
-                                    компания
-                                    открыта для диалога,
-                                    мы<br> рады всем нашим отзывам и замечаниям, это основной<br> фактор создания
-                                    комфортной и
-                                    удобной
-                                    продукции.
-                                </li>
-                                <li>Качественный продукт не мыслим без качественного<br> сервисного обслуживания -
-                                    официальный
-                                    сервисный<br> центр CLEAR FIT
-                                    обеспечивает техническую поддержку<br> в течении всего времени эксплуатации
-                                    тренажера,<br>
-                                    качественные услуги
-                                    сервисного
-                                    обслуживания<br> как в течении
-                                    гарантийного срока, так и в<br> пост гарантийный период.
-                                </li>
-                            </ul>
-                            <div class="text-block_image">
-                                <img src="img/textBlock/women-bike.png" alt="bike">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <div class="page_info-menu info-menu">
             <div class="info-menu_container _limit_container">
                 <div class="info-menu_body">
@@ -1333,7 +1137,5 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script type="module" src="scripts/scripts.js"></script>
-<!--<script src="scripts/disabledA.js"></script>-->
-<!--<script type="module" src="scripts/scripts.js"></script>-->
 </body>
 </html>
