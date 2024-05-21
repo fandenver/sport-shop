@@ -196,7 +196,23 @@
                             <div class="section-filter_title">Цена (руб.):</div>
                             <div class="section-filter_body">
                                 <div class="price-filter">
-
+                                    <div class="price-filter_slider"></div>
+                                    <div class="price-filter_values values-price-filter">
+                                        <div class="values-price-filter_column">
+                                            <div class="values-price-filter_label">от</div>
+                                            <label class="values-price-filter_input">
+                                                <input autocomplete="off" type="text" name="form[]"
+                                                       class="input">
+                                            </label>
+                                        </div>
+                                        <div class="values-price-filter_column">
+                                            <div class="values-price-filter_label">до</div>
+                                            <label class="values-price-filter_input">
+                                                <input autocomplete="off" type="text" name="form[]"
+                                                       class="input">
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1136,6 +1152,7 @@
     @@include('html/footer.html', {})
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script type="module" src="scripts/scripts.js"></script>
+<script type="module" src="./scripts/scripts.js"></script>
+<script type="module" src="./scripts/noUiSlider.js"></script>
 </body>
 </html>
