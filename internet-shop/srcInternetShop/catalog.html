@@ -201,14 +201,14 @@
                                         <div class="values-price-filter_column">
                                             <div class="values-price-filter_label">от</div>
                                             <label class="values-price-filter_input">
-                                                <input autocomplete="off" type="text" name="form[]"
+                                                <input id="price-start" autocomplete="off" type="text" name="form[]"
                                                        class="input">
                                             </label>
                                         </div>
                                         <div class="values-price-filter_column">
                                             <div class="values-price-filter_label">до</div>
                                             <label class="values-price-filter_input">
-                                                <input autocomplete="off" type="text" name="form[]"
+                                                <input id="price-end" autocomplete="off" type="text" name="form[]"
                                                        class="input">
                                             </label>
                                         </div>
@@ -1152,7 +1152,8 @@
     @@include('html/footer.html', {})
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="wnumb-1.2.0/wNumb.min.js"></script>
+<script type="module" src="../../node_modules/nouislider/dist/nouislider.min.js"></script>
 <script type="module" src="./scripts/scripts.js"></script>
-<script type="module" src="./scripts/noUiSlider.js"></script>
 </body>
 </html>

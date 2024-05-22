@@ -12,9 +12,12 @@ export const html = () => {
         ))
         .pipe(fileInclude())
         .pipe(app.plugins.replace(/img\//g, '../../srcInternetShop/img/'))
-        .pipe(app.plugins.replace(/scss\//g, '../css/'))
-        .pipe(app.plugins.replace(/scripts\/scripts\.js/g, '../js/scripts.min.js'))
-        // .pipe(app.plugins.replace(/src=".\/scripts\//g, 'src="../../srcInternetShop/scripts/'))
+        // .pipe(app.plugins.replace(/scss\//g, '../css/'))
+        .pipe(app.plugins.replace(/scss\//g, '../../srcInternetShop/scss/'))
+        // .pipe(app.plugins.replace(/scripts\/scripts\.js/g, '../js/scripts.min.js'))
+        .pipe(app.plugins.replace(/src=".\/scripts\//g, 'src="../../srcInternetShop/scripts/'))
+        .pipe(app.plugins.replace(/src="wnumb-1.2.0\//g, 'src="../../srcInternetShop/wnumb-1.2.0/'))
+        .pipe(app.plugins.replace(/src="..\/..\/node_modules\//g, 'src="../../../node_modules/'))
         .pipe(app.plugins.if(
             app.isBuild,
             webpHtmlnoSvg()

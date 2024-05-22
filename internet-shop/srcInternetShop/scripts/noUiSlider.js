@@ -1,8 +1,3 @@
-import noUiSlider from 'nouislider';
-// Or the namespace:
-// import * as noUiSlider from 'nouislider';
-// import 'nouislider/dist/nouislider.css';
-
 const priceSlider = document.querySelector('.price-filter_slider');
 noUiSlider.create(priceSlider, {
     start: [0, 100000],
@@ -12,4 +7,15 @@ noUiSlider.create(priceSlider, {
         'min': [0],
         'max': [200000]
     }
+});
+
+const priceStart = document.getElementById('price-start');
+const priceEnd = document.getElementById('price-end');
+
+priceStart.addEventListener('change', function () {
+    priceSlider.noUiSlider.set([priceStart.value, null]);
+});
+
+priceEnd.addEventListener('change', function () {
+    priceSlider.noUiSlider.set([null, priceEnd.value]);
 });
