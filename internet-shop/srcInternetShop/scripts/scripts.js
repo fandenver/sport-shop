@@ -1,6 +1,7 @@
 import * as disabledA from './disabledA.js';
 import * as swiper from './swiper.js'
 import * as noUiSlider from './noUiSlider.js'
+import * as spoller from './spoller.js'
 
 import {_slideToggle} from "./slider.js";
 import {isMobile} from "./isMobile.js";
@@ -30,6 +31,7 @@ if (isMobile.any()) {
     }
 }
 
+// ==============================================================================================
 const selectBtnSearch = document.querySelector('.search-page_title');
 const searchCategories = document.querySelector('.categories-search');
 

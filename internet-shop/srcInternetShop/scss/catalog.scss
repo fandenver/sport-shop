@@ -1,3 +1,5 @@
+@import "var";
+
 .filter {
   border: 4px solid #72c9d4;
 
@@ -13,7 +15,7 @@
 }
 
 .section-filter {
-  padding: 30px 15px;
+  padding: 20px 15px;
   border-bottom: 1px solid #72c9d4;
 
   &_title {
@@ -21,10 +23,50 @@
     font-size: 16px;
     font-weight: 700;
     line-height: 22px;
-    margin: 0 0 15px 0;
     min-width: 30px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    &._spoller {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+
+      &::after {
+        transition: all 0.3s ease 0s;
+        content: "";
+        border-radius: 50%;
+        flex: 0 0 30px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #72c9d4;
+        background: url("../img/catalog/arrows-spoller.png") 5px center no-repeat;
+      }
+
+      &._active {
+        color: #000000;
+        &::after {
+          transform: rotate(90deg);
+          filter: grayscale(6);
+        }
+      }
+
+      &._spoller + .section-filter_body {
+        display: none;
+      }
+    }
+  }
+
+  &_body {
+    padding: 15px 0 0 0;
+  }
+
+  &_checkbox {
+    display: block;
+    margin: 0 0 15px 0;
+    &:last-child {
+      margin: 0 0 0 0;
+    }
   }
 }
 
@@ -135,11 +177,94 @@
   &_input {
     flex: 1 1 auto;
     padding: 0 0 0 10px;
+
     .input {
       height: 20px;
       padding: 0 10px;
       font-size: 12px;
     }
+  }
+}
+
+.compare-filter {
+
+  &_items {
+    padding: 0 13px 0 0;
+    margin: 0 0 20px 0;
+  }
+
+  &_item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+
+    &:last-child {
+      margin: 0 0 0 0;
+    }
+  }
+
+  &_link {
+    line-height: 16px;
+    color: #1ab9ce;
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: underline;
+  }
+
+  &_remove {
+    flex: 0 0 10px;
+    position: relative;
+    margin: 3px 0 0 0;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      right: 1px;
+      background: url("../img/catalog/closeIcon.png") 0 0 no-repeat;
+      opacity: 0.6;
+      transition: all 0.3s ease 0s;
+    }
+
+    @media (min-width: $md2+px) {
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 33px;
+    background-color: #1ab9ce;
+    padding: 0 13px;
+    border-radius: 25px;
+
+    span {
+      background: url("../img/catalog/compare.png") left no-repeat;
+      padding: 0 0 0 30px;
+      line-height: 33px;
+      display: inline-block;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      font-weight: 900;
+    }
+  }
+
+  &_clean {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: #e6e6e6 url("../img/catalog/trash.png") center no-repeat;
   }
 }
 
