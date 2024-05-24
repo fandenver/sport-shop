@@ -146,4 +146,42 @@ input:focus {
   }
 }
 
+.btn {
+  display: inline-flex;
+  padding: 0 25px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease 0s;
+  height: 39px;
+  background-color: #f68038;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  @media (min-width: $md2+px) {
+    &:hover {
+      background-color: #b86029;
+    }
+  }
+
+  &_grey {
+    color: #666666;
+    background-color: #e6e6e6;
+
+    @media (min-width: $md2+px) {
+      &:hover {
+        color: #000000;
+        background-color: #a1a1a1;
+      }
+    }
+  }
+
+  &._fw {
+    width: 100%;
+  }
+}
+
 

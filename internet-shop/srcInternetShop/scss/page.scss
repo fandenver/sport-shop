@@ -575,6 +575,37 @@
   }
 }
 
+.breadcrumbs {
+  overflow: auto;
+  margin: 0 0 25px 0;
+  height: 15px;
+
+  &_list {
+    display: flex;
+    align-items: center;
+
+    li {
+      padding: 0 20px 0 0;
+      margin: 0 10px 0 0;
+      background: url("../img/catalog/arrows-spoller.png") right /13px no-repeat;
+      &:last-child {
+        margin: 0;
+        background: none;
+      }
+    }
+  }
+
+  &_link {
+    color: #1ab9ce;
+    text-decoration: underline;
+  }
+
+  &_item {
+    color: #999999;
+    font-weight: 300;
+  }
+}
+
 .products-slider_item {
   overflow: hidden;
 }
