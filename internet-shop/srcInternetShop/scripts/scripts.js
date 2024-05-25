@@ -2,6 +2,7 @@ import * as disabledA from './disabledA.js';
 import * as swiper from './swiper.js'
 import * as noUiSlider from './noUiSlider.js'
 import * as spoller from './filter-block_spoller.js'
+import * as sorting from './sorting-block.js'
 
 import {_slideToggle} from "./slider.js";
 import {isMobile} from "./isMobile.js";

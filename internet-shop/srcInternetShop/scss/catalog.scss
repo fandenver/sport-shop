@@ -303,5 +303,111 @@
     background: #e6e6e6 url("../img/catalog/trash.png") center no-repeat;
   }
 }
+//===================================================================================
+.catalog {
+
+  &_title {
+    color: #dadada;
+    font-family: Play, sans-serif;
+    font-size: 30px;
+    line-height: 130%;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+  }
+
+  &_actions {
+  }
+}
+
+.actions-catalog {
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.order-catalog {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+
+  &_label {
+    margin: 0 20px 0 0;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 900;
+  }
+}
+
+.select-catalog {
+    color: #0097ac;
+    position: relative;
+    padding: 0 15px;
+    line-height: 30px;
+    background-color: #FFFFFF;
+    min-width: 166px;
+    cursor: pointer;
+
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      transition: all 0.3s ease 0s;
+      width: 14px;
+      height: 7px;
+      right: 5%;
+      top: 40%;
+      background: #FFFFFF url("../img/catalog/triangle.png") right /14px no-repeat;
+    }
+
+    &_form {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #000000;
+      background-color: #FFFFFF;
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+      padding: 0 15px;
+      min-width: 166px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      &._active {
+        display: block;
+      }
+    }
+}
+
+.view-catalog {
+  display: flex;
+
+  &_item {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    margin: 0 0 0 8px;
+  }
+
+  &_grid {
+    background: #4da0b9 url("../img/catalog/grid-white.png") center /25px no-repeat;
+
+    &._active {
+      background: #FFFFFF url("../img/catalog/grid-black.png") center /25px no-repeat;
+    }
+  }
+
+  &_list {
+    background: #4da0b9 url("../img/catalog/list-white.png") center /27px no-repeat;
+
+    &._active {
+      background: #FFFFFF url("../img/catalog/list-black.png") center /27px no-repeat;
+    }
+  }
+}
+
 
 // Адаптивная верстка интернет-магазина с нуля. Часть #4. GULP SCSS JS 2:21:30

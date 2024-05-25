@@ -511,12 +511,13 @@
 
 .breadcrumbs {
   overflow: auto;
-  margin: 0 0 25px 0;
-  height: 15px;
+  margin: 0 0 20px 0;
+  height: 20px;
 }
 .breadcrumbs_list {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 .breadcrumbs_list li {
   padding: 0 20px 0 0;
