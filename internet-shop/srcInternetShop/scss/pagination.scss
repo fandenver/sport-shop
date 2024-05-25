@@ -1,0 +1,55 @@
+@import "var";
+
+.pagging {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &_arrow {
+    width: 50px;
+    height: 44px;
+    cursor: pointer;
+    background: url("../img/icons/productsSlider/blueArrow.png") 0 0 /44px no-repeat;
+    transition: all 0.3s ease 0s;
+
+    @media (min-width: $md2+px) {
+      &:hover {
+        background: url("../img/icons/productsSlider/orangeArrow.png") 0 0 /44px no-repeat;
+      }
+    }
+
+    &:first-child {
+      transform: rotate(-180deg);
+
+    }
+
+    &:last-child {
+    }
+
+  }
+
+  &_list {
+    display: flex;
+    margin: 0 25px;
+
+    li {
+
+    }
+  }
+
+  &_item {
+    width: 33px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #333333;
+    font-weight: 900;
+
+    &._active {
+      color: #FFFFFF;
+      background-color: #fd8424;
+    }
+  }
+}

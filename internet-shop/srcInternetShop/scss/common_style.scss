@@ -184,79 +184,81 @@ input:focus, select:focus {
   }
 }
 
-.select {
-  position: relative;
+// Стилизация select с дропдауном
 
-  &_item {
-    position: relative;
-    min-width: 166px;
-  }
-
-  &_title {
-    color: #000000;
-    //border: 1px solid #d9d9d9;
-    background-color: #FFFFFF;
-    cursor: pointer;
-    //border-radius: 4px;
-
-    //@media (max-width: $md2+px) {
-    //  font-size: 18px;
-    //}
-  }
-
-  &_value {
-    display: flex;
-    font-size: 14px;
-    color: #0097ac;
-    height: 30px;
-    padding: 0 15px;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-
-    span {
-      height: 1em;
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-    }
-
-    &:before {
-      content: "";
-      display: inline-block;
-      transition: all 0.3s ease 0s;
-      width: 11px;
-      height: 7px;
-      background: url("../img/catalog/triangle.png") center / 100% no-repeat;
-    }
-  }
-
-  &_input {
-    width: 100%;
-    background-color: transparent;
-    height: 100%;
-  }
-
-  &_options {
-    color: #000000;
-    display: none;
-    position: absolute;
-    top: 29px;
-    //border-radius: 0 0 4px 4px;
-    min-width: 100%;
-    left: 0;
-    background-color: #FFFFFF;
-    border-top: 0;
-    //border: 1px solid #d9d9d9;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
-    font-size: 14px;
-    padding: 10px 0 5px 0;
-
-    @media (max-width: $md2+px) {
-      font-size: 18px;
-    }
-  }
-}
+//.select {
+//  position: relative;
+//
+//  &_item {
+//    position: relative;
+//    min-width: 166px;
+//  }
+//
+//  &_title {
+//    color: #000000;
+//    //border: 1px solid #d9d9d9;
+//    background-color: #FFFFFF;
+//    cursor: pointer;
+//    //border-radius: 4px;
+//
+//    //@media (max-width: $md2+px) {
+//    //  font-size: 18px;
+//    //}
+//  }
+//
+//  &_value {
+//    display: flex;
+//    font-size: 14px;
+//    color: #0097ac;
+//    height: 30px;
+//    padding: 0 15px;
+//    align-items: center;
+//    justify-content: space-between;
+//    flex-direction: row-reverse;
+//
+//    span {
+//      height: 1em;
+//      overflow: hidden;
+//      display: -webkit-box;
+//      -webkit-line-clamp: 1;
+//      -webkit-box-orient: vertical;
+//    }
+//
+//    &:before {
+//      content: "";
+//      display: inline-block;
+//      transition: all 0.3s ease 0s;
+//      width: 11px;
+//      height: 7px;
+//      background: url("../img/catalog/triangle.png") center / 100% no-repeat;
+//    }
+//  }
+//
+//  &_input {
+//    width: 100%;
+//    background-color: transparent;
+//    height: 100%;
+//  }
+//
+//  &_options {
+//    color: #000000;
+//    display: none;
+//    position: absolute;
+//    top: 29px;
+//    //border-radius: 0 0 4px 4px;
+//    min-width: 100%;
+//    left: 0;
+//    background-color: #FFFFFF;
+//    border-top: 0;
+//    //border: 1px solid #d9d9d9;
+//    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+//    font-size: 14px;
+//    padding: 10px 0 5px 0;
+//
+//    @media (max-width: $md2+px) {
+//      font-size: 18px;
+//    }
+//  }
+//}
 
 

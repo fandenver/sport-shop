@@ -12,7 +12,7 @@
     text-transform: uppercase;
     letter-spacing: 0;
     transition: all 0.3s ease 0s;
-    
+
     @media (max-width: $md2+px) {
       padding: 25px 15px 25px 15px;
 
@@ -303,6 +303,7 @@
     background: #e6e6e6 url("../img/catalog/trash.png") center no-repeat;
   }
 }
+
 //===================================================================================
 .catalog {
 
@@ -317,69 +318,103 @@
   }
 
   &_actions {
+    margin: 0 0 15px 0;
+  }
+
+  &_navi {
   }
 }
 
 .actions-catalog {
   background-color: #f3f3f3;
-  display: flex;
   align-items: center;
   padding: 10px 20px;
+
+  @media(min-width: 540px) {
+    display: flex;
+  }
+
+  &_order {
+    @media(max-width: 540px) {
+      margin: 0 0 15px 0;
+    }
+  }
 }
 
 .order-catalog {
-  flex: 1 1 auto;
-  display: flex;
-  align-items: center;
+  @media(min-width: 540px) {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+  }
 
   &_label {
     margin: 0 20px 0 0;
     color: #333333;
     font-size: 14px;
     font-weight: 900;
+
+    @media(max-width: 540px) {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &_select {
   }
 }
 
 .select-catalog {
-    color: #0097ac;
-    position: relative;
-    padding: 0 15px;
-    line-height: 30px;
+  color: #0097ac;
+  position: relative;
+  padding: 0 15px;
+  line-height: 30px;
+  background-color: #FFFFFF;
+  min-width: 166px;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    width: 14px;
+    height: 7px;
+    right: 5%;
+    top: 40%;
+    background: #FFFFFF url("../img/catalog/triangle.png") right /14px no-repeat;
+  }
+
+  &._active:before {
+    transform: rotate(180deg);
+  }
+
+  &_form {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    color: #000000;
     background-color: #FFFFFF;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
     min-width: 166px;
-    cursor: pointer;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    z-index: 5;
 
-
-    &:before {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      transition: all 0.3s ease 0s;
-      width: 14px;
-      height: 7px;
-      right: 5%;
-      top: 40%;
-      background: #FFFFFF url("../img/catalog/triangle.png") right /14px no-repeat;
+    &._active {
+      display: block !important;
     }
+  }
 
-    &_form {
-      display: none;
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: #000000;
-      background-color: #FFFFFF;
-      box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
-      padding: 0 15px;
-      min-width: 166px;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
+  &_option {
+    padding: 0 15px;
 
-      &._active {
-        display: block;
-      }
+    &:hover {
+      background-color: #f3f3f3;
     }
+  }
 }
 
 .view-catalog {
@@ -405,6 +440,98 @@
 
     &._active {
       background: #FFFFFF url("../img/catalog/list-black.png") center /27px no-repeat;
+    }
+  }
+
+  @media(max-width: 540px) {
+    margin: 0 10px 0 0;
+  }
+}
+
+.navi-catalog {
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  padding: 10px 15px;
+
+  @media (min-width: 540px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.show-catalog {
+  @media (min-width: 540px) {
+    display: flex;
+    align-items: center;
+  }
+
+  &_label {
+    margin: 0 20px 0 0;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 900;
+
+    @media(max-width: 540px) {
+      margin: 0 0 10px 0;
+    }
+  }
+}
+
+.show-catalog {
+  color: #0097ac;
+  position: relative;
+  padding: 0 15px;
+  line-height: 30px;
+  background-color: #FFFFFF;
+  min-width: 166px;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    width: 14px;
+    height: 7px;
+    right: 5%;
+    top: 40%;
+    background: #FFFFFF url("../img/catalog/triangle.png") right/14px no-repeat;
+  }
+
+  &._active:before {
+    transform: rotate(180deg);
+  }
+
+  &_select {
+    position: relative;
+    border: 2px solid #000000;
+  }
+
+  &_form {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    color: #000000;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    //width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    z-index: 5;
+
+    &._active {
+      display: block !important;
+    }
+  }
+
+  &_option {
+    padding: 0 15px;
+
+    &:hover {
+      background-color: #f3f3f3;
     }
   }
 }

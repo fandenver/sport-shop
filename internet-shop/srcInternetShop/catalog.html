@@ -12,6 +12,7 @@
     <link href="scss/footer.css" rel="stylesheet">
     <link href="scss/common_style.css" rel="stylesheet">
     <link href="scss/catalog.css" rel="stylesheet">
+    <link href="scss/pagination.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
@@ -529,7 +530,8 @@
                     <div class="catalog_actions actions-catalog">
                         <div class="actions-catalog_order order-catalog">
                             <div class="order-catalog_label">Сортировать по:</div>
-                            <div class="order-catalog_select select-catalog">По умолчанию
+                            <div class="order-catalog_select select-catalog">
+                                <span>По умолчанию</span>
                                 <ul class="select-catalog_form">
                                     <li class="select-catalog_option">По умолчанию</li>
                                     <li class="select-catalog_option">По цене</li>
@@ -540,6 +542,23 @@
                         <div class="actions-catalog_view view-catalog">
                             <div class="view-catalog_item view-catalog_grid grid-catalog _active"></div>
                             <div class="view-catalog_item view-catalog_list list-catalog"></div>
+                        </div>
+                    </div>
+                    <div class="catalog_navi navi-catalog">
+                        <div class="navi-catalog_show show-catalog">
+                            <div class="show-catalog_label">На странице:</div>
+                            <span>9</span>
+                            <div class="show-catalog_select">
+                                <ul class="show-catalog_form">
+                                    <li class="show-catalog_option">9</li>
+                                    <li class="show-catalog_option">18</li>
+                                    <li class="show-catalog_option">32</li>
+                                    <li class="show-catalog_option">50</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="navi-catalog_pages">
+                            @@include('html/_paggination.html', {})
                         </div>
                     </div>
                 </div>
