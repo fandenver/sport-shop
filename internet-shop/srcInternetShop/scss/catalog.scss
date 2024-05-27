@@ -363,8 +363,7 @@
   }
 }
 
-.select-catalog {
-  color: #0097ac;
+.select-catalog, .select-show {
   position: relative;
   padding: 0 15px;
   line-height: 30px;
@@ -372,7 +371,11 @@
   min-width: 166px;
   cursor: pointer;
 
-  &:before {
+  span {
+    font-weight: 900;
+  }
+
+  &::before {
     content: "";
     position: absolute;
     display: inline-block;
@@ -383,6 +386,7 @@
     top: 40%;
     background: #FFFFFF url("../img/catalog/triangle.png") right /14px no-repeat;
   }
+
 
   &._active:before {
     transform: rotate(180deg);
@@ -396,7 +400,6 @@
     color: #000000;
     background-color: #FFFFFF;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
-    min-width: 166px;
     width: 100%;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -415,6 +418,39 @@
       background-color: #f3f3f3;
     }
   }
+}
+
+.select-show {
+  color: #999999;
+  border: 2px solid #f3f3f3;
+  min-width: 56px;
+  padding: 0 0 0 12px;
+
+  &::before {
+    right: 10%;
+  }
+}
+
+.show-catalog {
+  @media (min-width: 540px) {
+    display: flex;
+    align-items: center;
+  }
+
+  &_label {
+    margin: 0 20px 0 0;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 900;
+
+    @media(max-width: 540px) {
+      margin: 0 0 10px 0;
+    }
+  }
+}
+
+.select-catalog {
+  color: #0097ac;
 }
 
 .view-catalog {
@@ -453,6 +489,10 @@
   border-bottom: 1px solid #ededed;
   padding: 10px 15px;
 
+  &_top {
+    margin: 0 0 23px 0;
+  }
+
   @media (min-width: 540px) {
     display: flex;
     align-items: center;
@@ -460,81 +500,5 @@
   }
 }
 
-.show-catalog {
-  @media (min-width: 540px) {
-    display: flex;
-    align-items: center;
-  }
-
-  &_label {
-    margin: 0 20px 0 0;
-    color: #333333;
-    font-size: 14px;
-    font-weight: 900;
-
-    @media(max-width: 540px) {
-      margin: 0 0 10px 0;
-    }
-  }
-}
-
-.show-catalog {
-  color: #0097ac;
-  position: relative;
-  padding: 0 15px;
-  line-height: 30px;
-  background-color: #FFFFFF;
-  min-width: 166px;
-  cursor: pointer;
-
-  &:before {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    transition: all 0.3s ease 0s;
-    width: 14px;
-    height: 7px;
-    right: 5%;
-    top: 40%;
-    background: #FFFFFF url("../img/catalog/triangle.png") right/14px no-repeat;
-  }
-
-  &._active:before {
-    transform: rotate(180deg);
-  }
-
-  &_select {
-    position: relative;
-    border: 2px solid #000000;
-  }
-
-  &_form {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    color: #000000;
-    background-color: #FFFFFF;
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
-    //width: 100%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    z-index: 5;
-
-    &._active {
-      display: block !important;
-    }
-  }
-
-  &_option {
-    padding: 0 15px;
-
-    &:hover {
-      background-color: #f3f3f3;
-    }
-  }
-}
-
-
-// Адаптивная верстка интернет-магазина с нуля. Часть #4. GULP SCSS JS 2:21:30
+// todo: недоделан ползунок цены товаров
+// Адаптивная верстка интернет-магазина с нуля. Часть #5. GULP SCSS JS 0:0:00

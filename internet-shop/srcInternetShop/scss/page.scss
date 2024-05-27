@@ -1039,6 +1039,10 @@
     margin: 0 auto 25px auto;
     cursor: pointer;
     display: block;
+
+    &_catalog {
+      margin: 0;
+    }
   }
 
   &_footer {
@@ -1081,6 +1085,19 @@
 
     &::after {
       font-size: 18px;
+    }
+  }
+
+  &_compare {
+    background: url("../img/icons/compare.png") left no-repeat;
+    padding: 0 0 0 33px;
+    display: inline-block;
+    line-height: 21px;
+    color: #FFFFFF;
+
+    span {
+      font-weight: 300;
+      border-bottom: 1px dashed;
     }
   }
 }

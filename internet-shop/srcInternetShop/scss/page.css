@@ -917,6 +917,9 @@
   cursor: pointer;
   display: block;
 }
+.hover-item-product_cart_catalog {
+  margin: 0;
+}
 .hover-item-product_footer {
   display: flex;
   flex-wrap: wrap;
@@ -953,6 +956,17 @@
 }
 .hover-item-product_price::after {
   font-size: 18px;
+}
+.hover-item-product_compare {
+  background: url("../img/icons/compare.png") left no-repeat;
+  padding: 0 0 0 33px;
+  display: inline-block;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+.hover-item-product_compare span {
+  font-weight: 300;
+  border-bottom: 1px dashed;
 }
 
 .options-item-product_item {

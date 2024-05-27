@@ -58,46 +58,97 @@ document.addEventListener('click', function (event) {
     }
 });
 
+// todo: внизу много кода который дублирует код выше
 //=======================================================================================
 // Дроп даун пагинации
-const selectPagination = document.querySelector('.show-catalog')
-const inputSelectPagination = document.querySelector('.navi-catalog_show');
-const inputFormPagination = document.querySelector('.show-catalog_form');
-const selectOptionsPagination = document.querySelectorAll('.show-catalog_option');
+const inputSelectPagination = document.querySelectorAll('.navi-catalog_show');
+const selectOptionsPagination = document.querySelectorAll('.select-show_option');
 
-inputSelectPagination.addEventListener('click', function () {
-    inputFormPagination.classList.toggle('_active');
+inputSelectPagination.forEach(item => {
+    item.addEventListener('click', function () {
+        const inputFormPagination = this.querySelector('.select-show_form');
+        const selectPagination = this.querySelector('.select-show');
 
-    if (inputFormPagination.classList.contains('_active')) {
-        selectPagination.classList.add('_active');
-    } else {
-        selectPagination.classList.remove('_active');
-    }
+        inputFormPagination.classList.toggle('_active');
 
-    selectOptionsPagination.forEach(option => {
-        if (option.textContent === inputSelectPagination.querySelector('span').textContent) {
-            option.style.display = 'none';
+        if (inputFormPagination.classList.contains('_active')) {
+            selectPagination.classList.add('_active');
         } else {
-            option.style.display = 'block';
+            selectPagination.classList.remove('_active');
         }
+
+        const selectOptionsPagination = this.querySelectorAll('.select-show_option');
+        selectOptionsPagination.forEach(selectOption => {
+            if (selectOption.textContent === this.querySelector('span').textContent) {
+                selectOption.style.display = 'none';
+            } else {
+                selectOption.style.display = 'block';
+            }
+        });
     });
 });
 
-selectOptionsPagination.forEach(option => {
-    option.addEventListener('click', function () {
-        if (option.textContent !== inputSelectPagination.querySelector('span').textContent) {
-            inputSelectPagination.querySelector('span').textContent = option.textContent;
+selectOptionsPagination.forEach(item => {
+    item.addEventListener('click', function () {
+        if (this.textContent !== this.closest('.navi-catalog_show').querySelector('span').textContent) {
+            this.closest('.navi-catalog_show').querySelector('span').textContent = this.textContent;
         }
-        inputFormPagination.style.display = 'none';
+        this.closest('.select-show_form').style.display = 'none';
     });
 });
 
 document.addEventListener('click', function (event) {
-    const isClickInside = inputSelectPagination.contains(event.target) || inputFormPagination.contains(event.target);
+    inputSelectPagination.forEach(item => {
+        const isClickInside = item.contains(event.target) || item.querySelector('.select-show_form').contains(event.target);
 
-    if (!isClickInside) {
-        inputFormPagination.classList.remove('_active');
-        selectPagination.classList.remove('_active');
-    }
+        if (!isClickInside) {
+            item.querySelector('.select-show_form').classList.remove('_active');
+            item.querySelector('.select-show').classList.remove('_active');
+        }
+    });
 });
+
+// Для одного дропдауна
+// const selectPagination = document.querySelectorAll('.select-show')
+// const inputSelectPagination = document.querySelectorAll('.navi-catalog_show');
+// const inputFormPagination = document.querySelectorAll('.select-show_form');
+// const selectOptionsPagination = document.querySelectorAll('.select-show_option');
+//
+// inputSelectPagination.forEach(option => {
+//     option.addEventListener('click', function () {
+//         inputFormPagination.classList.toggle('_active');
+//
+//         if (inputFormPagination.classList.contains('_active')) {
+//             selectPagination.classList.add('_active');
+//         } else {
+//             selectPagination.classList.remove('_active');
+//         }
+//
+//         selectOptionsPagination.forEach(selectOption => {
+//             if (selectOption.textContent === inputSelectPagination.querySelector('span').textContent) {
+//                 selectOption.style.display = 'none';
+//             } else {
+//                 selectOption.style.display = 'block';
+//             }
+//         });
+//     });
+// });
+//
+// selectOptionsPagination.forEach(option => {
+//     option.addEventListener('click', function () {
+//         if (option.textContent !== inputSelectPagination.querySelector('span').textContent) {
+//             inputSelectPagination.querySelector('span').textContent = option.textContent;
+//         }
+//         inputFormPagination.style.display = 'none';
+//     });
+// });
+//
+// document.addEventListener('click', function (event) {
+//     const isClickInside = inputSelectPagination.contains(event.target) || inputFormPagination.contains(event.target);
+//
+//     if (!isClickInside) {
+//         inputFormPagination.classList.remove('_active');
+//         selectPagination.classList.remove('_active');
+//     }
+// });
 
