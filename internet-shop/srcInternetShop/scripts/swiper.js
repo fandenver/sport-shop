@@ -149,6 +149,19 @@ if (document.querySelector('.brands-slider')) {
 }
 
 
+if (document.querySelector('.images-product')) {
+    let imagesMainSlider = new Swiper('.images-product_mainslider', {
+        observer: true,
+        observeParents: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        // autoHeight: true,
+        speed: 800,
+        // loop: true,
+    });
+}
+
+
 
 
 
