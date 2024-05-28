@@ -110,6 +110,7 @@ input:focus, select:focus {
       border: 2px solid #009aaf;
     }
 
+    //todo: разобраться с чек боксами в выдадающем списке вверху и в боковом меню
     &:checked + .checkbox_text:after {
       content: "";
       position: absolute;
