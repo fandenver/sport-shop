@@ -185,6 +185,64 @@ input:focus, select:focus {
   }
 }
 
+.quantity {
+  width: 150px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+
+  &_button {
+    flex: 0 0 48px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    background: url("../img/product-page/arrow_gray.png") 0 0 /70% no-repeat;
+    width: 48px;
+    height: 34px;
+
+    //&::before,
+    //&::after {
+    //  content: "";
+    //  position: absolute;
+    //  top: 50%;
+    //  left: 50%;
+    //  //transition: all 0.3s ease 0s;
+    //  //margin: 0 0 0 -4.5px;
+    //  //background: url("../img/product-page/arrow-gray.png") 0 0 /100% no-repeat;
+    //  //width: 20px;
+    //  //height: 17px;
+    //}
+
+    @media (min-width: $md2+px) {
+      &:hover {
+        background: url("../img/product-page/arrow_orange.png") 0 0 /70% no-repeat;
+      }
+    }
+
+    &_plus {
+    }
+
+    &_minus {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &_input {
+    flex: 1 1 auto;
+    padding: 0 6px;
+    height: 33px;
+
+    input {
+      color: #999999;
+      font-size: 16px;
+      border: 2px solid #e5e5e5;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
 // Стилизация select с дропдауном
 
 //.select {

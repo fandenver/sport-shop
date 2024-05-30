@@ -150,6 +150,16 @@ if (document.querySelector('.brands-slider')) {
 
 
 if (document.querySelector('.images-product')) {
+    let imagesSubSlider = new Swiper('.images-product_subslider', {
+        observer: true,
+        observeParents: true,
+        slidesPerView: 4,
+        spaceBetween: 10.5,
+        // autoHeight: true,
+        speed: 800,
+        // loop: true,
+    });
+
     let imagesMainSlider = new Swiper('.images-product_mainslider', {
         observer: true,
         observeParents: true,
@@ -157,6 +167,9 @@ if (document.querySelector('.images-product')) {
         spaceBetween: 0,
         // autoHeight: true,
         speed: 800,
+        thumbs: {
+            swiper: imagesSubSlider
+        }
         // loop: true,
     });
 }

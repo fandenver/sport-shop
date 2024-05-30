@@ -1,6 +1,9 @@
 @import "var";
 
 .product {
+  &_body {
+
+  }
 
   &_title {
     margin: 0 0 18px 0;
@@ -8,6 +11,7 @@
     font-size: 36px;
     font-family: Play, sans-serif;
     text-transform: uppercase;
+
     span {
       display: block;
       font-size: 30px;
@@ -16,29 +20,49 @@
   }
 
   &_content {
-    display: flex;
+    margin: 0 0 35px 0;
+    @media (min-width: 700px) {
+      display: flex;
+    }
   }
 
   &_images {
-    flex: 0 0 42%;
+    flex: 0 0 360px;
     min-width: 0;
     overflow: hidden;
+
+    @media (max-width: $md1+px) {
+      flex: 0 0 330px;
+    }
+
+    @media (max-width: 700px) {
+      margin: 0 0 30px 0;
+    }
   }
 
   &_body {
     flex: 1 1 auto;
+
+    @media (min-width: 700px) {
+      padding: 0 0 0 39px;
+    }
   }
 }
 
 .images-product {
+  //max-height: 308px;
+  //max-width: 359px;
+  //357 308
+  // 214 241
 
   &_mainslider {
 
   }
 
   &_mainslide {
+    //height: 308px !important;
+    //width: 357px !important;
     border: 1px solid #f5f5f5;
-    height: 308px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,5 +82,239 @@
     width: 58px;
     height: 58px;
     background-color: #f65738;
+    //img {
+    //  max-width: 100%;
+    //}
+  }
+
+  &_image {
+    //padding: 65px 90px 65px 90px; 355 310
+    padding: 18% 33% 18% 21%;
   }
 }
+
+.images-product {
+
+  &_mainslider {
+    margin: 0 0 13px 0;
+  }
+
+  &_slider {
+  }
+
+  &_subslide {
+    cursor: pointer;
+
+    &.swiper-slide-thumb-active {
+      .images-product_subimage {
+        border: 1px solid #f68038;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &_subimage {
+    transition: all 0.5s ease 0s;
+    border: 1px solid #e4e4e4;
+    padding: 7% 0 18% 0;
+    display: flex;
+    justify-content: center;
+
+    &::after {
+      content: "";
+      transition: all 0.5s ease 0s;
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border: 3px solid #f68038;
+    }
+  }
+}
+
+.body-product {
+
+  &_top {
+    border-bottom: 1px solid #ededed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 12px 0;
+  }
+
+  &_compare {
+    z-index: 1;
+    border-radius: 25px;
+    min-height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    background-color: #f3f3f3;
+    font-weight: 900;
+    color: #666666;
+    text-transform: uppercase;
+
+    span {
+      background: url("../img/product-page/compare-black.png") left no-repeat;
+      padding: 0 0 0 30px;
+      line-height: 21px;
+    }
+  }
+
+  &_stock {
+    height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f68038;
+    color: #FFFFFF;
+    padding: 0 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  &_actions {
+    margin: 0 0 22px 0;
+  }
+
+  &_include {
+  }
+}
+
+.actions-product {
+  border-bottom: 1px solid #ededed;
+  padding: 30px 0;
+
+  &_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+  }
+
+  &_column {
+    padding: 0 15px;
+    @media (max-width: $md1+px) {
+      padding: 12px;
+
+      &:last-child {
+        flex: 1 1 100%;
+      }
+    }
+  }
+
+  &_price {
+    white-space: nowrap;
+    color: #333333;
+    font-size: 24px;
+    font-weight: 900;
+
+    &::after {
+      font-size: 18px;
+    }
+
+    &_old {
+      color: #999999;
+      font-size: 18px;
+      font-weight: 300;
+      text-decoration: line-through;
+      margin: 0 0 5px 0;
+
+      &::after {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &_cart {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    height: 57px;
+    padding: 0 38px 0 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      background: url("../img/icons/orangeBucket.png") right no-repeat;
+      width: 57px;
+      height: 57px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    span {
+      margin: 5px 0 0 0;
+      padding: 0 18px;
+      height: 24px;
+      display: flex;
+      flex: 1 1 100%;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      color: #999999;
+      font-weight: 900;
+      border-radius: 15px;
+      background-color: #f3f3f3;
+      white-space: nowrap;
+
+      @media (max-width: $md1+px) {
+        margin: 15px 0 0 0;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.include-product {
+  border-bottom: 1px solid #ededed;
+
+  &_title {
+    font-weight: 900;
+    color: #333333;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+  }
+
+  &_items {
+    display: inline-flex;
+  }
+
+  &_item {
+    text-align: center;
+    flex: 0 1 33.333%;
+    margin: 0 30px 13px 0;
+
+    &:last-child {
+      margin: 0 0 0 0;
+    }
+  }
+
+  &_icon {
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 10px 0;
+  }
+
+  &_text {
+    display: inline-block;
+    max-width: 100px;
+    color: #999999;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 14px;
+  }
+}
+
+// Адаптивная верстка интернет-магазина с нуля. Часть #5. GULP SCSS JS 0:52:59
