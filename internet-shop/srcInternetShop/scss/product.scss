@@ -47,6 +47,18 @@
       padding: 0 0 0 39px;
     }
   }
+
+  &_info {
+    margin: 0 0 70px 0;
+
+    @media (max-width: $md3+px) {
+      margin: 0 -10px 30px -10px;
+    }
+  }
+
+  &_same {
+
+  }
 }
 
 .images-product {
@@ -317,4 +329,206 @@
   }
 }
 
-// Адаптивная верстка интернет-магазина с нуля. Часть #5. GULP SCSS JS 0:52:59
+.info-product {
+
+  &_nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &_item {
+    cursor: pointer;
+    height: 49px;
+    color: #72c9d4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 0 30px;
+
+    span {
+      border-bottom: 1px dashed;
+    }
+
+    &._active {
+      background-color: #72c9d4;
+      color: #FFFFFF;
+
+      span {
+        border-bottom: 1px dashed transparent;
+      }
+    }
+
+    @media (max-width: $md3+px) {
+      flex: 1 1 auto;
+      padding: 0 15px;
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &_body {
+    background-color: #fafafa;
+    padding: 35px 30px;
+    @media (max-width: $md3+px) {
+      padding: 25px 15px;
+    }
+  }
+
+  &_block {
+    p {
+      color: #666666;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      margin: 0 0 20px 0;
+
+      &:last-child {
+        margin: 0 0 0 0;
+      }
+    }
+  }
+
+  .descriptionTabText {
+    display: none;
+
+    &._active {
+      display: block;
+    }
+  }
+
+  .characteristicsTabText {
+    display: none;
+
+    &._active {
+      display: block;
+    }
+  }
+
+  &_table {
+    border-collapse: collapse;
+    width: 100%;
+
+    tr {
+      border-bottom: 1px solid #e2e2e2;
+    }
+
+    td {
+      padding: 15px 0;
+      width: 50%;
+      color: #333333;
+    }
+  }
+
+  &_value {
+    font-weight: 300;
+
+    @media (max-width: $md3+px) {
+      font-size: 12px;
+    }
+  }
+
+  &_label {
+    @media (max-width: $md3+px) {
+      font-size: 12px;
+    }
+  }
+}
+
+.same-products {
+
+  &_title {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #dadada;
+    font-size: 30px;
+    margin: 0 0 10px 0;
+  }
+}
+
+.title-checkout {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #dadada;
+  font-family: Play, sans-serif;
+}
+
+.checkout {
+
+  &_title {
+    margin: 0 0 15px 0;
+  }
+}
+
+.order-checkout {
+
+  &_title {
+    margin: 0 0 15px 0;
+  }
+
+  &_item {
+  }
+}
+
+.item-order {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #f5f5f5;
+
+  &_content {
+    flex: 0 1 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  &_image {
+    flex: 0 0 110px;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &_body {
+    flex: 1 1 auto;
+    padding: 0 0 0 45px;
+  }
+
+  &_title {
+    color: #36949f;
+    line-height: 16px;
+    display: inline-block;
+    margin: 0 0 10px 0;
+    span {
+      font-weight: 900;
+    }
+  }
+
+  &_price {
+    color: #333333;
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  &_quantity {
+    flex: 1 1 auto;
+    padding: 0 30px;
+  }
+
+  &_label {
+    color: #999999;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 5px 0;
+  }
+
+  &_total {
+    flex: 1 1 auto;
+
+  }
+}
+
+// Адаптивная верстка интернет-магазина с нуля. Часть #5. GULP SCSS JS 1:43:17
