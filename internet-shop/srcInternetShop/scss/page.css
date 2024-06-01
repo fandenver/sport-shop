@@ -1122,6 +1122,9 @@
 .categories-search_list li:last-child {
   margin: 0 0 0 0;
 }
+.categories-search_list li .checkbox_input:checked + .checkbox_text:after {
+  display: none;
+}
 .categories-search_checkbox .checkbox_input {
   display: none;
 }

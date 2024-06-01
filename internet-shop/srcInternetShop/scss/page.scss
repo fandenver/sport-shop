@@ -1286,6 +1286,10 @@
       &:last-child {
         margin: 0 0 0 0;
       }
+
+      .checkbox_input:checked + .checkbox_text:after {
+        display: none;
+      }
     }
   }
 
