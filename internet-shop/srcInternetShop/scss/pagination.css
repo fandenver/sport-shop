@@ -1,0 +1,40 @@
+.pagging {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagging_arrow {
+  width: 50px;
+  height: 44px;
+  cursor: pointer;
+  background: url("../img/icons/productsSlider/blueArrow.png") 0 0/44px no-repeat;
+  transition: all 0.3s ease 0s;
+}
+@media (min-width: 991.98px) {
+  .pagging_arrow:hover {
+    background: url("../img/icons/productsSlider/orangeArrow.png") 0 0/44px no-repeat;
+  }
+}
+.pagging_arrow:first-child {
+  transform: rotate(-180deg);
+}
+.pagging_list {
+  display: flex;
+  margin: 0 25px;
+}
+.pagging_item {
+  width: 33px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #333333;
+  font-weight: 900;
+}
+.pagging_item._active {
+  color: #FFFFFF;
+  background-color: #fd8424;
+}
+
+/*# sourceMappingURL=pagination.css.map */
