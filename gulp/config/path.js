@@ -1,35 +1,35 @@
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
 
-const buildFolder = 'dist';
-const srcFolder = 'src';
+const buildFolder = './dist';
+const srcFolder = './src';
 
 export const path = {
     build: {
-        js: `internet-shop/${buildFolder}/js/`,
-        css: `internet-shop/${buildFolder}/css/`,
-        html: `internet-shop/${buildFolder}/html/`,
-        images: `internet-shop/${buildFolder}/img/`,
-        fonts: `internet-shop/${buildFolder}/fonts`,
-        files: `internet-shop/${buildFolder}/files/`,
+        js: `${buildFolder}/scripts/`,
+        css: `${buildFolder}/css/`,
+        html: `${buildFolder}/html/`,
+        images: `${buildFolder}/img/`,
+        fonts: `${buildFolder}/fonts`,
+        files: `${buildFolder}/files/`,
     },
     src: {
-        js: `internet-shop/${srcFolder}/scripts/scripts.js`,
-        images: `internet-shop/${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
-        svg: `internet-shop/${srcFolder}/img/**/*.svg`,
-        scss: `internet-shop/${srcFolder}/scss/**/*.scss`,
-        html: `internet-shop/${srcFolder}/*.html`,
-        files: `internet-shop/${srcFolder}/files/**/*.*`,
-        svgIcons: `internet-shop/${srcFolder}/svgIcons/*.svg`,
+        js: `${srcFolder}/scripts/*.js`,
+        images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+        svg: `${srcFolder}/img/**/*.svg`,
+        scss: `${srcFolder}/scss/page.scss`,
+        html: `${srcFolder}/*.html`,
+        files: `${srcFolder}/files/**/*.*`,
+        svgIcons: `${srcFolder}/svgIcons/*.svg`,
     },
     watch: {
-        js: `internet-shop/${srcFolder}/**/*.js`,
-        scss: `internet-shop/${srcFolder}/scss/**/*.scss`,
-        html: `internet-shop/${srcFolder}/**/*.html`,
-        images: `internet-shop/${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
-        files: `internet-shop/${srcFolder}/files/**/*.*`
+        js: `${srcFolder}/**/*.js`,
+        scss: `${srcFolder}/scss/**/*.scss`,
+        html: `${srcFolder}/**/*.html`,
+        images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
+        files: `${srcFolder}/files/**/*.*`
     },
-    clean: `internet-shop/${buildFolder}`,
+    clean: `${buildFolder}`,
     buildFolder: buildFolder,
     srcFolder: srcFolder,
     rootFolder: rootFolder,

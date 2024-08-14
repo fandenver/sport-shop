@@ -11,13 +11,11 @@ export const html = () => {
             })
         ))
         .pipe(fileInclude())
-        .pipe(app.plugins.replace(/img\//g, '../../src/img/'))
-        // .pipe(app.plugins.replace(/scss\//g, '../css/'))
-        .pipe(app.plugins.replace(/scss\//g, '../../src/scss/'))
-        // .pipe(app.plugins.replace(/scripts\/scripts\.js/g, '../js/scripts.min.js'))
-        .pipe(app.plugins.replace(/src=".\/scripts\//g, 'src="../../src/scripts/'))
-        .pipe(app.plugins.replace(/src="wnumb-1.2.0\//g, 'src="../../src/wnumb-1.2.0/'))
-        .pipe(app.plugins.replace(/src="..\/..\/node_modules\//g, 'src="../../../node_modules/'))
+        .pipe(app.plugins.replace(/scss\//g, 'css/'))
+        .pipe(app.plugins.replace(/"img\//g, '"../img/'))
+        .pipe(app.plugins.replace(/scripts\//g, 'scripts/'))
+        .pipe(app.plugins.replace(/node_modules\//g, 'node_modules/'))
+        .pipe(app.plugins.replace(/"..\/wnumb-1.2.0\//g, '"../libs/wnumb-1.2.0/'))
         .pipe(app.plugins.if(
             app.isBuild,
             webpHtmlnoSvg()

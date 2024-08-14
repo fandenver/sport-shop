@@ -1,4 +1,4 @@
 export const copy = () => {
-    return app.gulp.src(app.path.src.js)
-        .pipe(app.gulp.dest(app.path.build.js))
+    return app.gulp.src('src/wnumb-1.2.0/**/*.*')
+        .pipe(app.gulp.dest('dist/libs/wnumb-1.2.0/'))
 }
