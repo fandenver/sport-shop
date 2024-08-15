@@ -1,4 +1,5 @@
 @import "var";
+@import "fonts";
 @import "common_style";
 @import "pagination";
 @import "product";
@@ -788,12 +789,13 @@
     background-color: #fff;
   }
 
-  @media (max-width: md2+px) {
+  @media (max-width: $md2+px) {
     background-color: #fff;
   }
 
   &_item {
     display: none;
+
     @media (min-width: $md2+px) {
       display: block;
       width: 280px;

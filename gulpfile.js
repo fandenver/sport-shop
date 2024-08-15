@@ -24,7 +24,6 @@ import {ftp} from "./gulp/tasks/ftp.js";
 import {server} from "./gulp/tasks/server.js";
 import {otfToTtf, ttfToWoff, fontsStyle} from "./gulp/tasks/fonts.js";
 
-
 function watcher() {
     gulp.watch(path.watch.files, copy);
     gulp.watch(path.watch.html, {usePolling: true}, html); // gulp.series(html, ftp)
@@ -39,7 +38,7 @@ export {svgSprive};
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 // Основные задачи
-const mainTasks = gulp.series(/* fonts, */gulp.parallel(copy, html, scss, js, images));
+const mainTasks = gulp.series(/*fonts*/ gulp.parallel(/*copy,*/ html, scss, js, images));
 
 // Построение сценария выполнения задач
 const dev = gulp.series(reset, mainTasks, watcher /*gulp.parallel(watcher /* , server )*/);

@@ -14,8 +14,6 @@ export const html = () => {
         .pipe(app.plugins.replace(/scss\//g, 'css/'))
         .pipe(app.plugins.replace(/"img\//g, '"../img/'))
         .pipe(app.plugins.replace(/scripts\//g, 'scripts/'))
-        .pipe(app.plugins.replace(/node_modules\//g, 'node_modules/'))
-        .pipe(app.plugins.replace(/"..\/wnumb-1.2.0\//g, '"../libs/wnumb-1.2.0/'))
         .pipe(app.plugins.if(
             app.isBuild,
             webpHtmlnoSvg()
