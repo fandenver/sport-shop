@@ -2,7 +2,7 @@ import webp from "gulp-webp";
 import imagemin from "gulp-imagemin"
 
 export const images = () => {
-    return app.gulp.src(app.path.src.images, {encoding: false})
+    return app.gulp.src(app.path.src.images)
         .pipe(app.plugins.plumber(
                 app.plugins.notify.onError({
                         title: "IMAGES",
@@ -24,7 +24,7 @@ export const images = () => {
         )
         .pipe(app.plugins.if(
                 app.isBuild,
-                app.gulp.src(app.path.src.images, {encoding: false})
+                app.gulp.src(app.path.src.images)
             )
         )
         .pipe(app.plugins.if(

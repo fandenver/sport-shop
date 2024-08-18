@@ -1,4 +1,5 @@
 import noUiSlider from 'nouislider';
+window.noUiSlider = noUiSlider;
 import wNumb from '../wnumb-1.2.0/wNumb.js'
 
 const priceSlider = document.querySelector('.price-filter_slider');
