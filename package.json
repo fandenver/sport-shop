@@ -33,6 +33,7 @@
     "gulp-webp-html-nosvg": "^1.1.1",
     "gulp-webpcss": "^1.1.1",
     "gulp-zip": "^6.0.0",
+    "prettier": "^3.4.2",
     "sass": "^1.76.0",
     "style-loader": "^4.0.0",
     "typescript": "^5.3.2",

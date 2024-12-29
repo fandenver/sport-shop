@@ -1,28 +1,28 @@
 import noUiSlider from 'nouislider';
 window.noUiSlider = noUiSlider;
-import wNumb from '../wnumb-1.2.0/wNumb.js'
+import wNumb from '../wnumb-1.2.0/wNumb.js';
 
 const priceSlider = document.querySelector('.price-filter_slider');
 
 if (priceSlider) {
-    noUiSlider.create(priceSlider, {
-        start: [0, 100000],
-        connect: true,
-        tooltips: [wNumb({decimals: 0}), wNumb({decimals: 0})],
-        range: {
-            'min': [0],
-            'max': [200000]
-        }
-    });
+  noUiSlider.create(priceSlider, {
+    start: [0, 100000],
+    connect: true,
+    tooltips: [wNumb({ decimals: 0 }), wNumb({ decimals: 0 })],
+    range: {
+      min: [0],
+      max: [200000],
+    },
+  });
 
-    const priceStart = document.getElementById('price-start');
-    const priceEnd = document.getElementById('price-end');
+  const priceStart = document.getElementById('price-start');
+  const priceEnd = document.getElementById('price-end');
 
-    priceStart.addEventListener('change', function () {
-        priceSlider.noUiSlider.set([priceStart.value, null]);
-    });
+  priceStart.addEventListener('change', function () {
+    priceSlider.noUiSlider.set([priceStart.value, null]);
+  });
 
-    priceEnd.addEventListener('change', function () {
-        priceSlider.noUiSlider.set([null, priceEnd.value]);
-    });
+  priceEnd.addEventListener('change', function () {
+    priceSlider.noUiSlider.set([null, priceEnd.value]);
+  });
 }
